@@ -30,6 +30,8 @@ alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickroll
 alias tra='gio trash'
 alias trr='gio trash --restore'
 alias trl='gio trash --list'
+alias reload='source .config/fish/config.fish'
+alias backup='rsync -aPh --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Disk\ Romain/Backups/arch'
 
 function brightness
     command xrandr --output HDMI2 --brightness (math $argv/10)
