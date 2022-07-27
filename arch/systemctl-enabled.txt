@@ -1,0 +1,13 @@
+UNIT FILE                          STATE   PRESET
+bluetooth.service                  enabled disabled
+getty@.service                     enabled enabled
+lightdm.service                    enabled disabled
+NetworkManager-dispatcher.service  enabled disabled
+NetworkManager-wait-online.service enabled disabled
+NetworkManager.service             enabled disabled
+ufw.service                        enabled disabled
+remote-fs.target                   enabled enabled
+paccache.timer                     enabled disabled
+reflector.timer                    enabled disabled
+
+10 unit files listed.
