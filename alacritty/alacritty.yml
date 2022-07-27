@@ -1,0 +1,43 @@
+# example : /usr/share/doc/alacritty/example/alacritty.yml
+
+window:
+  padding:
+    x: 5
+    y: 5
+  opacity: 0.90
+
+font:
+  normal:
+    family: Hack Nerd Font
+  size: 12
+
+colors:
+  primary:
+    background: '#222222'
+    foreground: '#dddddd'
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
+selection:
+  save_to_clipboard: false
+
+key_bindings:
+   - { key: Up,         mods: Shift,                     action: ScrollLineUp     }
+   - { key: Down,       mods: Shift,                     action: ScrollLineDown   }
+   - { key: Numpad0,    mods: Control,                   action: ResetFontSize    }

@@ -1,0 +1,81 @@
+configuration {
+  display-drun: "Apps:";
+  display-run: "run:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "Hack Nerd Font 10";
+  modi: "window,run,drun";
+  // show-icons: true;
+  // icon-theme: "Tela Dark";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #18181888;
+  bg-alt: #33333388;
+
+  fg: #eeeeee;
+  fg-alt: #888888;
+
+  background-color: @bg;
+  text-color: @fg;
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+}
+
+element {
+  background-color: transparent;
+  padding: 8 0;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+}
+
+entry {
+  background-color: @bg-alt;
+  padding: 12;
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+listview {
+  padding: 8 12;
+  columns: 1;
+  lines: 8;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+prompt {
+  background-color: @bg-alt;
+  enabled: true;
+  padding: 12 0 0 12;
+}
+
+textbox {
+  padding: 12;
+}

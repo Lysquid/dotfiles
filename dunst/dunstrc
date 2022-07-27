@@ -1,0 +1,29 @@
+# example : /etc/dunst/dunstrc
+
+[global]
+    width = 300
+    height = 300
+    offset = 10x35
+    notification_limit = 0
+    frame_width = 2
+    gap_size = 10
+    font = Hack Nerd Font 10
+    min_icon_size = 16
+    max_icon_size = 32
+    foreground = "#dddddd"
+    background = "#222222"
+    transparency = 0
+    enable_recursive_icon_lookup = true
+    icon_theme = Tela-dark
+
+[urgency_low]
+    frame_color = "#444444"
+    timeout = 5
+
+[urgency_normal]
+    frame_color = "#3a94da"
+    timeout = 8
+
+[urgency_critical]
+    frame_color = "#e34444"
+    timeout = 0
