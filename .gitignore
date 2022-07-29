@@ -20,5 +20,6 @@
 !*rsync/**
 !*arch/**
 !*fcitx5/**
-*fcitx5/conf/*
+*fcitx5/conf/cached_layouts
+*fcitx5/conf/notifications.conf
 !*starship*
