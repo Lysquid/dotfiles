@@ -34,5 +34,13 @@ alias reload='source .config/fish/config.fish'
 alias backup='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Disk\ Romain/Backups/arch'
 
 function brightness
-    command xrandr --output HDMI2 --brightness (math $argv/10)
+    xrandr --output HDMI2 --brightness (math $argv/10)
 end
+
+function eject
+    sudo umount $argv
+    sleep 1
+    udisksctl power-off -b $argv
+end
+
+starship init fish | source

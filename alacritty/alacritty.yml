@@ -38,6 +38,4 @@ selection:
   save_to_clipboard: false
 
 key_bindings:
-   - { key: Up,         mods: Shift,                     action: ScrollLineUp     }
-   - { key: Down,       mods: Shift,                     action: ScrollLineDown   }
-   - { key: Numpad0,    mods: Control,                   action: ResetFontSize    }
+   - { key: O,    mods: Control,                   action: ResetFontSize    }

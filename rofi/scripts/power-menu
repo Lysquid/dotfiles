@@ -1,0 +1,16 @@
+#! /bin/sh
+
+case "$1" in
+    "Shutdown" ) systemctl poweroff && exit O;;
+    "Reboot" ) systemctl reboot && exit O;;
+    "Suspend" ) systemctl suspend && exit O;;
+    "Logout" ) i3-msg exit && exit O;;
+    "Lock" ) dm-tool lock && exit O;;
+esac
+
+echo -e "\0prompt\x1fPower:"
+echo "Shutdown"
+echo "Reboot"
+echo "Suspend"
+echo "Logout"
+echo "Lock"
