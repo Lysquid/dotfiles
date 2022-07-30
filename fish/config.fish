@@ -32,6 +32,11 @@ alias trr='gio trash --restore'
 alias trl='gio trash --list'
 alias reload='source .config/fish/config.fish'
 alias backup='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Disk\ Romain/Backups/arch'
+alias pico8='~/.local/share/pico8/pico8'
+
+function keylog
+    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+end
 
 function brightness
     xrandr --output HDMI2 --brightness (math $argv/10)

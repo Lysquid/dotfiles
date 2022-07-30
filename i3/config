@@ -34,7 +34,7 @@ bindsym $mod+p exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+p exec --no-startup-id rofi -show run
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+Shift+e exec --no-startup-id rofi -show power -modi power:.config/rofi/scripts/power-menu -theme power-menu
-bindsym $mod+Shift+o exec --no-startup-id rofimoji
+bindsym $mod+ugrave exec --no-startup-id rofimoji -a clipboard
 
 # Change focus
 bindsym $mod+h focus left
@@ -61,7 +61,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Split orientation
-bindsym $mod+g split h
+bindsym $mod+b split h
 bindsym $mod+v split v
 
 # Fullscreen mode
@@ -222,9 +222,11 @@ for_window [class="baobab"] border $border
 for_window [class="Peek"] border $border
 for_window [class="gnome-calculator"] border $border
 for_window [class="Weather"] border $border
+for_window [class="Steam"] border $border
 
 # Floating windows
 for_window [class="Steam"] floating enable
+for_window [title="Steam"] floating disable
 for_window [class="Gcolor3"] floating enable
 for_window [class="minecraft-launcher"] floating enable
 for_window [class="gnome-calculator"] floating enable
@@ -277,15 +279,16 @@ bindsym $mod+comma exec --no-startup-id dunstctl history-pop
 bindsym $mod+semicolon exec --no-startup-id dunstctl close-all
 
 # Main apps shortcuts
-bindsym $mod+b exec --no-startup-id firefox
-bindsym $mod+t exec --no-startup-id thunderbird
-bindsym $mod+n exec --no-startup-id nautilus
-bindsym $mod+c exec --no-startup-id code
-bindsym $mod+i exec --no-startup-id discord
-bindsym $mod+o exec --no-startup-id spotify
-bindsym $mod+y exec --no-startup-id anki
-bindsym $mod+u exec --no-startup-id pinta
-bindsym $mod+Shift+q exec --no-startup-id qalculate-gtk
+bindsym $mod+Ctrl+f exec --no-startup-id firefox
+bindsym $mod+Ctrl+t exec --no-startup-id thunderbird
+bindsym $mod+Ctrl+n exec --no-startup-id nautilus
+bindsym $mod+Ctrl+v exec --no-startup-id code
+bindsym $mod+Ctrl+d exec --no-startup-id discord
+bindsym $mod+Ctrl+s exec --no-startup-id spotify
+bindsym $mod+Ctrl+a exec --no-startup-id anki
+bindsym $mod+Ctrl+p exec --no-startup-id pinta
+bindsym $mod+Ctrl+c exec --no-startup-id qalculate-gtk
+bindsym $mod+Ctrl+o exec --no-startup-id gcolor3
 
 # Startup
 exec --no-startup-id dex --autostart --environment i3
