@@ -223,6 +223,7 @@ for_window [class="Peek"] border $border
 for_window [class="gnome-calculator"] border $border
 for_window [class="Weather"] border $border
 for_window [class="Steam"] border $border
+for_window [class="DesktopEditors"] border $border
 
 # Floating windows
 for_window [class="Steam"] floating enable
