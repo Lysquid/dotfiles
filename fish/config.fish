@@ -25,6 +25,7 @@ set -gx PATH $PATH $HOME/bin
 set -gx PATH $PATH $HOME/.local/bin
 
 # Alias
+alias rm='rm -I'
 alias ip='ip -color=auto'
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 alias tra='gio trash'
