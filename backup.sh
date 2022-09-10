@@ -1,10 +1,15 @@
 #!/bin/sh
+
+# pacman packages
 pacman -Qq > ~/.config/arch/pacman-Qq.txt
 pacman -Qqe > ~/.config/arch/pacman-Qqe.txt
 pacman -Qqm > ~/.config/arch/pacman-Qqm.txt
+
+# systemd unit files
 systemctl list-unit-files --state=enabled > ~/.config/arch/systemctl-enabled.txt
 systemctl list-unit-files > ~/.config/arch/systemctl.txt
 
+# edited etc files
 cp --parents -r \
 /etc/fstab \
 /etc/pacman.conf \

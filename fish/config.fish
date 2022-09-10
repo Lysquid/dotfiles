@@ -49,4 +49,11 @@ function eject
     udisksctl power-off -b $argv
 end
 
+function drive_sync
+    rclone sync Documents/Important/ drive:Important
+    rclone sync Pictures/ drive:Pictures/
+    rclone sync Documents/INSA/ drive:INSA
+    rclone size drive:
+end
+
 starship init fish | source
