@@ -46,7 +46,11 @@ gnome-clocks
 gnome-keyring
 gnome-weather
 go
+godot
 grub
+gvfs-gphoto2
+gvfs-mtp
+hdparm
 htop
 i3-gaps
 i3lock
@@ -58,6 +62,7 @@ jdownloader2
 jq
 jre11-openjdk
 jre11-openjdk-headless
+keepassxc
 lib32-giflib
 lib32-gnutls
 lib32-gst-plugins-base-libs
@@ -94,6 +99,7 @@ micro
 minecraft-launcher
 mpg123
 mpv
+mtpfs
 nautilus
 neofetch
 neovim
@@ -112,6 +118,7 @@ nvidia-dkms
 nvidia-settings
 ocl-icd
 onlyoffice-bin
+ookla-speedtest-bin
 openal
 opentabletdriver
 orchis-theme
@@ -158,7 +165,9 @@ python-urllib3
 python-werkzeug
 qalculate-gtk
 qt5ct
+rclone
 reflector
+renpy
 rofi
 rofimoji
 rsync
@@ -171,7 +180,7 @@ texinfo
 thunderbird
 touchpad-toggle-xinput
 tree
-ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-2048-em
 ufw
 unzip
 viewnior

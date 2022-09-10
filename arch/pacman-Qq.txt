@@ -10,6 +10,7 @@ alsa-topology-conf
 alsa-ucm-conf
 anki-official-binary-bundle
 aom
+appstream
 appstream-glib
 archlinux-keyring
 argon2
@@ -89,6 +90,7 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
+embree
 enchant
 eog
 evillimiter
@@ -165,6 +167,8 @@ gnutls
 go
 go-md2man
 gobject-introspection-runtime
+godot
+gperftools
 gpgme
 gpm
 gptfdisk
@@ -193,9 +197,12 @@ gts
 guile
 gupnp-dlna
 gvfs
+gvfs-gphoto2
+gvfs-mtp
 gzip
 harfbuzz
 harfbuzz-icu
+hdparm
 hicolor-icon-theme
 hidapi
 htop
@@ -235,6 +242,7 @@ json-glib
 jsoncpp
 jxrlib
 kbd
+keepassxc
 keyutils
 kguiaddons
 kitemviews
@@ -396,6 +404,7 @@ libb2
 libblockdev
 libbluray
 libbpf
+libbs2b
 libbytesize
 libcanberra
 libcap
@@ -441,6 +450,7 @@ libgit2
 libglvnd
 libgnome-keyring
 libgpg-error
+libgphoto2
 libgrss
 libgsf
 libgudev
@@ -450,6 +460,7 @@ libhandy
 libheif
 libical
 libice
+libid3tag
 libidn
 libidn2
 libiec61883
@@ -462,6 +473,7 @@ libiptcdata
 libisl
 libixion
 libjpeg-turbo
+libjxl
 libkeybinder3
 libksba
 liblangtag
@@ -469,6 +481,8 @@ libldac
 libldap
 liblqr
 libluv
+libmad
+libmalcontent
 libmanette
 libmfx
 libmm-glib
@@ -577,6 +591,7 @@ libwpd
 libwpe
 libwpg
 libwps
+libwslay
 libx11
 libxau
 libxaw
@@ -599,6 +614,7 @@ libxkbcommon-x11
 libxkbfile
 libxklavier
 libxml2
+libxmlb
 libxmu
 libxnvctrl
 libxpm
@@ -644,6 +660,7 @@ make
 man-db
 man-pages
 mathjax
+mbedtls
 md4c
 mdadm
 mesa
@@ -651,6 +668,7 @@ mesa-utils
 metis
 micro
 minecraft-launcher
+miniupnpc
 minizip
 mkinitcpio
 mkinitcpio-busybox
@@ -660,6 +678,7 @@ mpg123
 mpv
 msgpack-c
 mtdev
+mtpfs
 mujs
 mypaint-brushes1
 nautilus
@@ -693,6 +712,7 @@ oath-toolkit
 ocl-icd
 oniguruma
 onlyoffice-bin
+ookla-speedtest-bin
 openal
 openconnect
 opencore-amr
@@ -705,6 +725,7 @@ openssl
 opentabletdriver
 optipng
 opus
+opusfile
 orc
 orchis-theme
 os-prober
@@ -761,6 +782,7 @@ psmisc
 python
 python-appdirs
 python-apsw
+python-async-timeout
 python-attrs
 python-autocommand
 python-beautifulsoup4
@@ -816,6 +838,7 @@ python-nspektr
 python-ordered-set
 python-packaging
 python-pdftotext
+python-pefile
 python-pep517
 python-pillow
 python-pip
@@ -829,6 +852,7 @@ python-pycparser
 python-pycryptodome
 python-pycryptodomex
 python-pydantic
+python-pygame-sdl2
 python-pygments
 python-pyopenssl
 python-pyparsing
@@ -864,6 +888,7 @@ python-yaml
 python-zeroconf
 python-zipp
 qalculate-gtk
+qrencode
 qt5-base
 qt5-declarative
 qt5-svg
@@ -882,10 +907,12 @@ qt6-webengine
 raptor
 rasqal
 rav1e
+rclone
 re2
 readline
 redland
 reflector
+renpy
 rest
 rofi
 rofimoji
@@ -897,6 +924,9 @@ rust
 sbc
 sdl12-compat
 sdl2
+sdl2_image
+sdl2_mixer
+sdl2_ttf
 sed
 serd
 shaderc
@@ -928,6 +958,7 @@ systemd
 systemd-libs
 systemd-sysvcompat
 tar
+tbb
 tcpdump
 tdb
 tela-icon-theme
@@ -945,7 +976,7 @@ tslib
 ttf-carlito
 ttf-dejavu
 ttf-liberation
-ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-2048-em
 tzdata
 uchardet
 udisks2
@@ -1016,8 +1047,10 @@ xorg-xdpyinfo
 xorg-xev
 xorg-xinput
 xorg-xkbcomp
+xorg-xmodmap
 xorg-xprop
 xorg-xrandr
+xorg-xrdb
 xorg-xset
 xorgproto
 xvidcore

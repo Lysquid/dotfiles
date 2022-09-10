@@ -246,8 +246,8 @@ bindsym $mod+w exec --no-startup-id xset dpms force off && sleep 1
 bindsym $mod+Shift+w exec --no-startup-id systemctl suspend
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id brillo -A 5 -q
-bindsym XF86MonBrightnessDown exec --no-startup-id brillo -U 5 -q
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86ScreenSaver exec --no-startup-id xset dpms force off
 
 # Media player controls
@@ -266,10 +266,10 @@ bindsym $mod+End exec --no-startup-id playerctl stop
 # Other XF86
 bindsym XF86Mail exec --no-startup-id thunderbird
 bindsym XF86WWW exec --no-startup-id firefox
-bindsym XF86TouchpadToggle exec --no-startup-id touchpad-toggle
+bindsym XF86TouchpadToggle exec --no-startup-id touchpad-toggle && notify-send "Touchpad toggled" -u low -i input-touchpad -t 1000
 
 # Screenshot
-set $save_screenshot xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%s).png
+set $save_screenshot sleep 0.1 && xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%s).png
 bindsym Print exec --no-startup-id  maim | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the screen" -u low -i camera-photo && $save_screenshot
 bindsym Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -B | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the window" -u low -i camera-photo && $save_screenshot
 bindsym Shift+Print exec --no-startup-id maim -s -B -b 2 -b 2 -k | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the selection" -u low -i camera-photo && $save_screenshot

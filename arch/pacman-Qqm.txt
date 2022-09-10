@@ -7,6 +7,7 @@ jdownloader2
 minecraft-launcher
 nerd-fonts-hack
 onlyoffice-bin
+ookla-speedtest-bin
 opentabletdriver
 orchis-theme
 osu-lazer-bin
