@@ -4,6 +4,7 @@ evillimiter
 fcitx5-skin-adwaita-dark
 gallery-dl
 jdownloader2
+linux-wifi-hotspot
 minecraft-launcher
 nerd-fonts-hack
 onlyoffice-bin

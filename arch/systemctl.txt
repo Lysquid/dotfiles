@@ -32,6 +32,7 @@ canberra-system-shutdown-reboot.service    disabled        disabled
 canberra-system-shutdown.service           disabled        disabled
 console-getty.service                      disabled        disabled
 container-getty@.service                   static          -
+create_ap.service                          disabled        disabled
 daxdev-reconfigure@.service                static          -
 dbus-org.bluez.service                     alias           -
 dbus-org.freedesktop.hostname1.service     alias           -
@@ -47,6 +48,7 @@ debug-shell.service                        disabled        disabled
 display-manager.service                    alias           -
 dm-event.service                           static          -
 dmraid.service                             disabled        disabled
+dnsmasq.service                            disabled        disabled
 e2scrub@.service                           static          -
 e2scrub_all.service                        static          -
 e2scrub_fail@.service                      static          -
@@ -60,6 +62,7 @@ getty@.service                             enabled         enabled
 git-daemon@.service                        static          -
 gpm.service                                disabled        disabled
 healthd.service                            disabled        disabled
+hostapd.service                            disabled        disabled
 initrd-cleanup.service                     static          -
 initrd-parse-etc.service                   static          -
 initrd-switch-root.service                 static          -
@@ -332,4 +335,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-332 unit files listed.
+335 unit files listed.

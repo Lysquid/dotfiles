@@ -17,6 +17,7 @@ cmatrix
 compiler-rt
 dex
 discord
+dnsmasq
 dotnet-sdk
 dotnet-targeting-pack
 dunst
@@ -88,6 +89,7 @@ lightdm-gtk-greeter
 linux
 linux-firmware
 linux-headers
+linux-wifi-hotspot
 lutris
 lxappearance
 m4

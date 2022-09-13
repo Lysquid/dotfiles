@@ -75,6 +75,7 @@ discord
 djvulibre
 dkms
 dmraid
+dnsmasq
 dnssec-anchors
 dosfstools
 dotnet-host
@@ -205,6 +206,7 @@ harfbuzz-icu
 hdparm
 hicolor-icon-theme
 hidapi
+hostapd
 htop
 http-parser
 hunspell
@@ -223,6 +225,7 @@ iproute2
 iptables
 iputils
 iso-codes
+iw
 jansson
 jasper
 java-environment-common
@@ -640,6 +643,7 @@ linux-api-headers
 linux-firmware
 linux-firmware-whence
 linux-headers
+linux-wifi-hotspot
 llvm-libs
 lm_sensors
 lpsolve

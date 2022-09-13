@@ -20,4 +20,6 @@ cp --parents -r \
 /etc/locale.conf \
 /etc/locale.gen \
 /etc/xdg/reflector/reflector.conf \
+/etc/lightdm/lightdm.conf \
+/etc/lightdm/lightdm-gtk-greeter.conf \
 .

@@ -287,7 +287,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id thunderbird
 bindsym $mod+Ctrl+n exec --no-startup-id nautilus
 bindsym $mod+Ctrl+v exec --no-startup-id code
 bindsym $mod+Ctrl+d exec --no-startup-id discord
-bindsym $mod+Ctrl+s exec --no-startup-id spotify
+bindsym $mod+Ctrl+s exec --no-startup-id LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
 bindsym $mod+Ctrl+a exec --no-startup-id anki
 bindsym $mod+Ctrl+p exec --no-startup-id pinta
 bindsym $mod+Ctrl+c exec --no-startup-id qalculate-gtk
