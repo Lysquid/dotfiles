@@ -269,11 +269,13 @@ bindsym XF86WWW exec --no-startup-id firefox
 bindsym XF86TouchpadToggle exec --no-startup-id touchpad-toggle && notify-send "Touchpad toggled" -u low -i input-touchpad -t 1000
 
 # Screenshot
-set $save_screenshot sleep 0.1 && xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%s).png
-bindsym Print exec --no-startup-id  maim | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the screen" -u low -i camera-photo && $save_screenshot
-bindsym Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -B | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the window" -u low -i camera-photo && $save_screenshot
-bindsym Shift+Print exec --no-startup-id maim -s -B -b 2 -b 2 -k | xclip -selection clipboard -t image/png && notify-send "Took screenshot of the selection" -u low -i camera-photo && $save_screenshot
-bindsym $mod+Print exec --no-startup-id flameshot gui -c && $save_screenshot
+set $screenshot_path ~/Pictures/Screenshots/$(date +%s).png
+set $notify notify-send -u low -i camera-photo
+set $save_screenshot sleep 0.5 && xclip -selection clipboard -t image/png -o
+bindsym Print exec --no-startup-id flameshot full -c --region 1600x900+0+180 -p $screenshot_path && $notify "Took screenshot of laptop screen"
+bindsym Shift+Print exec --no-startup-id flameshot full -c --region 1920x1080+1600+0 -p $screenshot_path && $notify "Took screenshot of monitor screen"
+bindsym $mod+Print exec --no-startup-id flameshot gui -c -p $screenshot_path && $notify "Took screenshot of the selection"
+bindsym Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -B | xclip -selection clipboard -t image/png && $notify "Took screenshot of the window" && $save_screenshot > $screenshot_path
 
 # Notifications
 bindsym $mod+comma exec --no-startup-id dunstctl history-pop
