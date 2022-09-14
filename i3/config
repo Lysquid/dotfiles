@@ -232,6 +232,7 @@ for_window [class="Gcolor3"] floating enable
 for_window [class="minecraft-launcher"] floating enable
 for_window [class="gnome-calculator"] floating enable
 for_window [class="Qalculate-gtk"] floating enable
+for_window [class="Wihotspot-gui"] floating enable
 
 # Workspace assignements
 assign [class="firefox"] $ws1

@@ -32,7 +32,7 @@ alias tra='gio trash'
 alias trr='gio trash --restore'
 alias trl='gio trash --list'
 alias reload='source .config/fish/config.fish'
-alias backup='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Disk\ Romain/Backups/arch'
+alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
 alias pico8='~/.local/share/pico8/pico8'
 
 function keylog
@@ -50,10 +50,7 @@ function eject
 end
 
 function drive_sync
-    rclone sync Documents/Important/ drive:Important
-    rclone sync Pictures/ drive:Pictures/
-    rclone sync Documents/INSA/ drive:INSA
-    rclone size drive:
+    rclone sync ~/ drive:Laptop --filter-from .config/rclone/filter.txt --skip-links --delete-excluded
 end
 
 starship init fish | source

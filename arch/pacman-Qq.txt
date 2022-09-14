@@ -12,6 +12,7 @@ anki-official-binary-bundle
 aom
 appstream
 appstream-glib
+arandr
 archlinux-keyring
 argon2
 asciiquarium
@@ -794,6 +795,7 @@ python-brotli
 python-brotlicffi
 python-build
 python-cachecontrol
+python-cairo
 python-cchardet
 python-certifi
 python-cffi
