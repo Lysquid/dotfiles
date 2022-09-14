@@ -10,10 +10,10 @@ systemctl list-unit-files --state=enabled > ~/.config/arch/systemctl-enabled.txt
 systemctl list-unit-files > ~/.config/arch/systemctl.txt
 
 # edited etc files
-cp --parents -r \
+rsync --relative \
 /etc/fstab \
 /etc/pacman.conf \
-/etc/X11/xorg.conf.d/ \
+/etc/X11/xorg.conf.d/** \
 /etc/default/grub \
 /etc/environment \
 /etc/hostname \

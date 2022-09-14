@@ -35,6 +35,8 @@ alias reload='source .config/fish/config.fish'
 alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
 alias pico8='~/.local/share/pico8/pico8'
 
+# Functions
+
 function keylog
     xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
 end
@@ -53,4 +55,5 @@ function drive_sync
     rclone sync ~/ drive:Laptop --filter-from .config/rclone/filter.txt --skip-links --delete-excluded
 end
 
+# Starship
 starship init fish | source

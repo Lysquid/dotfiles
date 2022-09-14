@@ -9,7 +9,7 @@ UUID=f2a66d21-f6ac-4a44-9c2d-31832459266a	/         	ext4      	rw,relatime	0 1
 UUID=C686-2062      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # data
-UUID=EED8ACA8D8AC708F	/mnt/data	ntfs-3g		defaults,permissions,x-gvfs-show,uid=1000,gid=1000,umask=022	0 0
+UUID=EED8ACA8D8AC708F	/mnt/data	ntfs-3g		defaults,permissions,x-gvfs-show,uid=1000,gid=1000,umask=022,noauto	0 0
 
 # swap
 /swapfile 				none 		swap 		defaults 	0 0
