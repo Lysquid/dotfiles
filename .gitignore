@@ -22,6 +22,7 @@
 !*fcitx5/**
 *fcitx5/conf/cached_layouts
 *fcitx5/conf/notifications.conf
+*fcitx5/profile
 !*starship*
 !*etc/**
 !*backup.sh
