@@ -25,6 +25,7 @@ configuration {
   margin: 0;
   padding: 0;
   spacing: 0;
+  blink: false;
 }
 
 window {
