@@ -16,6 +16,7 @@
 !*nitrogen/**
 !*picom/**
 !*polybar/**
+!*rclone/filter.txt
 !*rofi/**
 !*rsync/**
 !*arch/**

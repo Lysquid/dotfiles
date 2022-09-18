@@ -12,6 +12,7 @@ etc/libaudit*
 etc/crypttab
 etc/.pwd*
 etc/shadow*
+/etc/hostapd
 
 Steam
 Games

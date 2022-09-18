@@ -1,0 +1,10 @@
+- /.steam/
+- /.local/
+- .git/**
++ /Documents/Important/**
++ /Documents/INSA/**
++ /Pictures/Screenshots/Saved/**
+- /Pictures/Wallpapers/Archive/**
+- /Pictures/Screenshots/**
++ /Pictures/**
+- *
