@@ -241,10 +241,10 @@ assign [class="discord"] $ws10
 assign [class="Code"] $ws2
 
 # Lock screen and turn off screen
-bindsym $mod+x exec --no-startup-id i3lock -c 000000 && xset dpms force off
+bindsym $mod+x exec --no-startup-id i3lock -c 000000 && sleep 1 && xset dpms force off
 bindsym $mod+Shift+x exec --no-startup-id i3lock -c 000000 && systemctl suspend
 bindsym $mod+w exec --no-startup-id xset dpms force off && sleep 1 && xset dpms force off
-bindsym $mod+Shift+w exec --no-startup-id systemctl suspend
+bindsym $mod+Shift+w exec --no-startup-id xset dpms force of && systemctl suspend
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
@@ -279,8 +279,12 @@ bindsym $mod+Print exec --no-startup-id flameshot gui -c -p $screenshot_path && 
 bindsym Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -B | xclip -selection clipboard -t image/png && $notify "Took screenshot of the window" && $save_screenshot > $screenshot_path
 
 # Notifications
-bindsym $mod+comma exec --no-startup-id dunstctl history-pop
+bindsym $mod+comma exec --no-startup-id dunstctl history-popmouseless
 bindsym $mod+semicolon exec --no-startup-id dunstctl close-all
+
+# Mouse shortcuts
+set $xbanish xbanish -i shift -i control -i mod1 -i mod4
+bindsym $mod+i exec --no-startup-id killall xbanish && xmouseless && $xbanish
 
 # Main apps shortcuts
 bindsym $mod+Ctrl+f exec --no-startup-id firefox
@@ -299,7 +303,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id numlockx
 exec --no-startup-id playerctld daemon
-exec --no-startup-id xbanish -i shift -i control -i mod1 -i mod4
+exec --no-startup-id $xbanish
 exec --no-startup-id dunst
 exec_always --no-startup-id picom -b --experimental-backends 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
