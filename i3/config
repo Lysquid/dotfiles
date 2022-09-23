@@ -208,22 +208,27 @@ smart_gaps on
 
 # Borders
 set $border pixel 2
-default_border $border
-default_floating_border none
+# default_border $border
+# default_floating_border none
+
+# Above stoped working properly, reverting to older solution
+for_window [class="^.*"] border $border
+new_window $border
 
 # Specific borders
-for_window [class="Org.gnome.*"] border $border
-for_window [class="Gcolor3*"] border $border
-for_window [class="Lutris"] border $border
-for_window [class="Eog"] border $border
-for_window [class="Code"] border $border
-for_window [class="Evince"] border $border
-for_window [class="baobab"] border $border
-for_window [class="Peek"] border $border
-for_window [class="gnome-calculator"] border $border
-for_window [class="Weather"] border $border
-for_window [class="Steam"] border $border
-for_window [class="DesktopEditors"] border $border
+for_window [class="discord"] border none
+# for_window [class="Org.gnome.*"] border $border
+# for_window [class="Gcolor3*"] border $border
+# for_window [class="Lutris"] border $border
+# for_window [class="Eog"] border $border
+# for_window [class="Code"] border $border
+# for_window [class="Evince"] border $border
+# for_window [class="baobab"] border $border
+# for_window [class="Peek"] border $border
+# for_window [class="gnome-calculator"] border $border
+# for_window [class="Weather"] border $border
+# for_window [class="Steam"] border $border
+# for_window [class="DesktopEditors"] border $border
 
 # Floating windows
 for_window [class="Steam"] floating enable
