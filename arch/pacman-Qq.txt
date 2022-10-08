@@ -16,9 +16,7 @@ arandr
 archlinux-keyring
 argon2
 asciiquarium
-at-spi2-atk
 at-spi2-core
-atk
 atkmm
 attr
 audit
@@ -37,6 +35,7 @@ blas
 bluez
 bluez-libs
 bluez-utils
+boost
 boost-libs
 botan
 box2d
@@ -56,6 +55,7 @@ calibre
 cantarell-fonts
 chmlib
 clucene
+cmake
 cmatrix
 compiler-rt
 coreutils
@@ -68,6 +68,7 @@ dbus
 dbus-glib
 dbus-python
 dconf
+debuginfod
 desktop-file-utils
 device-mapper
 dex
@@ -141,6 +142,7 @@ gdb-common
 gdbm
 gdk-pixbuf2
 gegl
+gendesk
 geoclue
 geocode-glib
 gettext
@@ -207,6 +209,7 @@ harfbuzz-icu
 hdparm
 hicolor-icon-theme
 hidapi
+highway
 hostapd
 htop
 http-parser
@@ -263,9 +266,7 @@ less
 lib32-acl
 lib32-alsa-lib
 lib32-alsa-plugins
-lib32-at-spi2-atk
 lib32-at-spi2-core
-lib32-atk
 lib32-attr
 lib32-brotli
 lib32-bzip2
@@ -378,6 +379,7 @@ lib32-p11-kit
 lib32-pam
 lib32-pango
 lib32-pcre
+lib32-pcre2
 lib32-pixman
 lib32-readline
 lib32-rest
@@ -489,6 +491,7 @@ libmad
 libmalcontent
 libmanette
 libmfx
+libmicrohttpd
 libmm-glib
 libmng
 libmnl
@@ -573,6 +576,7 @@ libtiff
 libtirpc
 libtommath
 libtool
+libudev0-shim
 libunistring
 libunrar
 libunwind
@@ -587,7 +591,7 @@ libverto
 libvisio
 libvorbis
 libvpx
-libvterm01
+libvterm
 libwacom
 libwebp
 libwmf
@@ -639,11 +643,11 @@ licenses
 lightdm
 lightdm-gtk-greeter
 lilv
-linux
 linux-api-headers
 linux-firmware
 linux-firmware-whence
-linux-headers
+linux-lts
+linux-lts-headers
 linux-wifi-hotspot
 llvm-libs
 lm_sensors
@@ -713,6 +717,7 @@ numlockx
 nvidia-dkms
 nvidia-settings
 nvidia-utils
+nvim-packer-git
 oath-toolkit
 ocl-icd
 oniguruma
@@ -767,6 +772,7 @@ pinentry
 pinta
 pipewire
 pipewire-alsa
+pipewire-audio
 pipewire-jack
 pipewire-pulse
 pixman
@@ -920,6 +926,7 @@ redland
 reflector
 renpy
 rest
+rhash
 rofi
 rofimoji
 rsync
@@ -935,6 +942,7 @@ sdl2_mixer
 sdl2_ttf
 sed
 serd
+sfml
 shaderc
 shadow
 shared-mime-info
@@ -952,6 +960,7 @@ spotify-adblock
 sqlite
 sratom
 srt
+sshfs
 starship
 startup-notification
 steam
@@ -983,6 +992,7 @@ ttf-carlito
 ttf-dejavu
 ttf-liberation
 ttf-nerd-fonts-symbols-2048-em
+ttf-nerd-fonts-symbols-common
 tzdata
 uchardet
 udisks2
@@ -996,13 +1006,16 @@ usbutils
 util-linux
 util-linux-libs
 v4l-utils
+valgrind
 vid.stab
 viewnior
 vimix-cursors
 virtualbox
-virtualbox-host-modules-arch
+virtualbox-host-dkms
 visual-studio-code-bin
 vmaf
+vmware-horizon-client
+vmware-keymaps
 volume_key
 vpnc
 vulkan-headers

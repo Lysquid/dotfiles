@@ -103,6 +103,7 @@ nvidia-powerd.service                      disabled        disabled
 nvidia-resume.service                      disabled        disabled
 nvidia-suspend.service                     disabled        disabled
 ostree-boot-complete.service               static          -
+ostree-finalize-staged-hold.service        static          -
 ostree-finalize-staged.service             static          -
 ostree-prepare-root.service                static          -
 ostree-remount.service                     disabled        disabled
@@ -205,7 +206,7 @@ systemd-volatile-root.service              static          -
 teamd@.service                             static          -
 udisks2-zram-setup@.service                static          -
 udisks2.service                            disabled        disabled
-ufw.service                                enabled         disabled
+ufw.service                                disabled        disabled
 upower.service                             disabled        disabled
 usbmuxd.service                            static          -
 user-runtime-dir@.service                  static          -
@@ -335,4 +336,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-335 unit files listed.
+336 unit files listed.
