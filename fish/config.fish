@@ -35,6 +35,7 @@ alias reload='source .config/fish/config.fish'
 alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
 alias pico8='~/.local/share/pico8/pico8'
 alias pixiv-dl='gallery-dl -D Pictures/Wallpapers/ https://www.pixiv.net/en/users/45725525/bookmarks/artworks/wallpaper'
+alias vmware='GTK_THEME=Orchis vmware-view'
 
 # Functions
 

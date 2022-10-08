@@ -7,6 +7,7 @@ jdownloader2
 linux-wifi-hotspot
 minecraft-launcher
 nerd-fonts-hack
+nvim-packer-git
 onlyoffice-bin
 ookla-speedtest-bin
 opentabletdriver
@@ -19,5 +20,7 @@ tela-icon-theme
 touchpad-toggle-xinput
 vimix-cursors
 visual-studio-code-bin
+vmware-horizon-client
+vmware-keymaps
 xbanish
 yay

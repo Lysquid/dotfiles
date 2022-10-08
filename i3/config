@@ -302,6 +302,7 @@ bindsym $mod+Ctrl+a exec --no-startup-id anki
 bindsym $mod+Ctrl+p exec --no-startup-id pinta
 bindsym $mod+Ctrl+c exec --no-startup-id qalculate-gtk
 bindsym $mod+Ctrl+o exec --no-startup-id gcolor3
+bindsym $mod+Ctrl+e exec --no-startup-id evince
 
 # Startup
 exec --no-startup-id dex --autostart --environment i3

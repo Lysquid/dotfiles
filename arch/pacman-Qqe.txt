@@ -11,9 +11,11 @@ bash-completion
 bison
 bluez
 bluez-utils
+boost
 brillo
 btop
 calibre
+cmake
 cmatrix
 compiler-rt
 dex
@@ -87,9 +89,9 @@ libreoffice-fresh
 libtool
 lightdm
 lightdm-gtk-greeter
-linux
 linux-firmware
-linux-headers
+linux-lts
+linux-lts-headers
 linux-wifi-hotspot
 lutris
 lxappearance
@@ -119,6 +121,7 @@ ntfs-3g
 numlockx
 nvidia-dkms
 nvidia-settings
+nvim-packer-git
 ocl-icd
 onlyoffice-bin
 ookla-speedtest-bin
@@ -174,7 +177,9 @@ renpy
 rofi
 rofimoji
 rsync
+sfml
 spotify-adblock
+sshfs
 starship
 steam
 sudo
@@ -186,10 +191,13 @@ tree
 ttf-nerd-fonts-symbols-2048-em
 ufw
 unzip
+valgrind
 viewnior
 vimix-cursors
 virtualbox
+virtualbox-host-dkms
 visual-studio-code-bin
+vmware-horizon-client
 which
 wine-staging
 wireplumber
