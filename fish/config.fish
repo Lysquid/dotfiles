@@ -14,6 +14,7 @@ set fish_greeting
 # Environnement variables
 set -gx BROWSER firefox
 set -gx TERM alacritty
+set -gx EDITOR nvim
 set -gx LESS '-R --use-color -Dd+r$Du+b'
 set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
 set -gx GTK_IM_MODULE fcitx
@@ -34,6 +35,11 @@ alias trl='gio trash --list'
 alias reload='source .config/fish/config.fish'
 alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
 alias pico8='~/.local/share/pico8/pico8'
+alias vmware='GTK_THEME=Orchis vmware-view'
+alias l='lfcd'
+
+# Keybindings
+bind \cs lfcd
 
 # Functions
 
