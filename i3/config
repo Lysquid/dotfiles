@@ -289,12 +289,20 @@ bindsym $mod+semicolon exec --no-startup-id dunstctl close-all
 
 # Mouse shortcuts
 set $xbanish xbanish -i shift -i control -i mod1 -i mod4
-bindsym $mod+i exec --no-startup-id killall xbanish && xmouseless && $xbanish
+bindsym $mod+u exec --no-startup-id killall xbanish && xmouseless && $xbanish
+
+# Invert colors
+bindsym $mod+i exec --no-startup-id xprop -id $(xdotool getwindowfocus) -format TAG_INVERT 8c \
+            -set TAG_INVERT $(\
+                                xprop -id $(xdotool getwindowfocus) 8c TAG_INVERT \
+                                | sed -e 's/.*= 1.*/0/' -e 's/.*= 0.*/1/'  -e 's/.*not found.*/1/'\
+                            )
 
 # Main apps shortcuts
 bindsym $mod+Ctrl+f exec --no-startup-id firefox
 bindsym $mod+Ctrl+t exec --no-startup-id thunderbird
 bindsym $mod+Ctrl+n exec --no-startup-id nautilus
+bindsym $mod+Ctrl+l exec --no-startup-id alacritty -e fish -C lfcd
 bindsym $mod+Ctrl+v exec --no-startup-id code
 bindsym $mod+Ctrl+d exec --no-startup-id discord
 bindsym $mod+Ctrl+s exec --no-startup-id LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
@@ -306,6 +314,7 @@ bindsym $mod+Ctrl+e exec --no-startup-id evince
 
 # Startup
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id lxpolkit
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id numlockx
 exec --no-startup-id playerctld daemon

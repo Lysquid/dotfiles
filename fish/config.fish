@@ -14,6 +14,7 @@ set fish_greeting
 # Environnement variables
 set -gx BROWSER firefox
 set -gx TERM alacritty
+set -gx EDITOR nvim
 set -gx LESS '-R --use-color -Dd+r$Du+b'
 set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
 set -gx GTK_IM_MODULE fcitx
@@ -36,6 +37,10 @@ alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/hom
 alias pico8='~/.local/share/pico8/pico8'
 alias pixiv-dl='gallery-dl -D Pictures/Wallpapers/ https://www.pixiv.net/en/users/45725525/bookmarks/artworks/wallpaper'
 alias vmware='GTK_THEME=Orchis vmware-view'
+alias l='lfcd'
+
+# Keybindings
+bind \cs lfcd
 
 # Functions
 

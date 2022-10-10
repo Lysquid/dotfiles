@@ -22,4 +22,6 @@ rsync --relative \
 /etc/xdg/reflector/reflector.conf \
 /etc/lightdm/lightdm.conf \
 /etc/lightdm/lightdm-gtk-greeter.conf \
+/etc/libvirt/libvirtd.conf \
+/etc/libvirt/qemu.conf \
 .

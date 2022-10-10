@@ -12,6 +12,7 @@
 *gtkfilechooser.ini
 !*htop/**
 !*i3/**
+!*lf/**
 !*micro/settings.json**
 !*nitrogen/**
 !*picom/**
