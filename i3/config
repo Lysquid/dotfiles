@@ -302,7 +302,6 @@ bindsym $mod+i exec --no-startup-id xprop -id $(xdotool getwindowfocus) -format 
 bindsym $mod+Ctrl+f exec --no-startup-id firefox
 bindsym $mod+Ctrl+t exec --no-startup-id thunderbird
 bindsym $mod+Ctrl+n exec --no-startup-id nautilus
-bindsym $mod+Ctrl+l exec --no-startup-id alacritty -e fish -C lfcd
 bindsym $mod+Ctrl+v exec --no-startup-id code
 bindsym $mod+Ctrl+d exec --no-startup-id discord
 bindsym $mod+Ctrl+s exec --no-startup-id LD_PRELOAD=/usr/lib/spotify-adblock.so spotify

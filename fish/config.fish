@@ -20,6 +20,7 @@ set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
 set -gx GTK_IM_MODULE fcitx
 set -gx QT_IM_MODULE fcitx
 set -gx XMODIFIERS @im=fcitx
+set -gx OPENER mimeopen
 
 # Path
 set -gx PATH $PATH $HOME/bin

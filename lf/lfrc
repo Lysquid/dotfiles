@@ -14,13 +14,6 @@ set cleaner ctpvclear
 &ctpvquit $id
 
 # Custom functions
-cmd open ${{
-    case $(file --mime-type -Lb $f) in
-        text/*) $EDITOR $fx;;
-        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
-    esac
-}}
-
 cmd mkdir %{{
     IFS=" "
     mkdir -- "$*"
@@ -85,6 +78,9 @@ cmd open-with ${{
     mimeopen --ask $f
 }}
 
+cmd open-change-default ${{
+    mimeopen --ask-default $f
+}}
 
 # Remove some defaults
 map d
@@ -104,8 +100,8 @@ map H hidepreview
 map . set hidden!
 map C code
 map é mark-save
-map o &mimeopen $f
-map O $mimeopen --ask $f
+map o open-with
+map O open-change-default
 map <c-j> push 5j
 map <c-k> push 5k
 
