@@ -29,17 +29,15 @@ set -gx PATH $PATH $HOME/.local/bin
 alias rm='rm -I'
 alias ip='ip -color=auto'
 alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias tra='gio trash'
-alias trr='gio trash --restore'
-alias trl='gio trash --list'
 alias reload='source .config/fish/config.fish'
 alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
 alias pico8='~/.local/share/pico8/pico8'
 alias vmware='GTK_THEME=Orchis vmware-view'
-alias l='lfcd'
+alias tp='trash-put'
+alias trs='trash-restore'
 
 # Keybindings
-bind \cs lfcd
+bind \ck 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint' 
 
 # Functions
 
@@ -49,12 +47,6 @@ end
 
 function brightness
     xrandr --output HDMI2 --brightness (math $argv/10)
-end
-
-function eject
-    sudo umount $argv
-    sleep 1
-    udisksctl power-off -b $argv
 end
 
 function drive_sync
