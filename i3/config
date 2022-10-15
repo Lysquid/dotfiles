@@ -27,7 +27,7 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id alacritty
 
 # Kill focused window
-bindsym $mod+Shift+a kill
+bindsym $mod+Shift+q kill
 
 # Launcher
 bindsym $mod+p exec --no-startup-id rofi -show drun
@@ -79,7 +79,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # Focus the parent container
-bindsym $mod+q focus parent
+bindsym $mod+a focus parent
 
 # Focus the child container
 bindsym $mod+d focus child
@@ -320,5 +320,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id playerctld daemon
 exec --no-startup-id $xbanish
 exec --no-startup-id dunst
+exec --no-startup-id udiskie -s -F
+exec --no-startup-id trash-empty 30
 exec_always --no-startup-id picom -b --experimental-backends 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
