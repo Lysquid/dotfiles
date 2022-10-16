@@ -194,9 +194,9 @@ bindsym $mod+r mode "resize"
 
 # Color scheme
 # class                 border  backgr. text    indicator child_border
-client.focused          #333333 #333333 #BBBBBB #a3d0f3   #3a94da
-client.focused_inactive #333333 #333333 #BBBBBB #444444   #444444
-client.unfocused        #181818 #181818 #BBBBBB #242424   #242424
+client.focused          #333333 #333333 #BBBBBB #3a94da   #3a94da
+client.focused_inactive #333333 #333333 #BBBBBB #333333   #333333
+client.unfocused        #181818 #181818 #BBBBBB #333333   #333333
 client.urgent           #e34444 #e34444 #BBBBBB #e34444   #e34444
 client.placeholder      #000000 #000000 #BBBBBB #000000   #000000
 client.background       #000000
@@ -208,27 +208,10 @@ smart_gaps on
 
 # Borders
 set $border pixel 2
-# default_border $border
-# default_floating_border none
-
-# Above stoped working properly, reverting to older solution
 for_window [class="^.*"] border $border
-new_window $border
 
 # Specific borders
 for_window [class="discord"] border none
-# for_window [class="Org.gnome.*"] border $border
-# for_window [class="Gcolor3*"] border $border
-# for_window [class="Lutris"] border $border
-# for_window [class="Eog"] border $border
-# for_window [class="Code"] border $border
-# for_window [class="Evince"] border $border
-# for_window [class="baobab"] border $border
-# for_window [class="Peek"] border $border
-# for_window [class="gnome-calculator"] border $border
-# for_window [class="Weather"] border $border
-# for_window [class="Steam"] border $border
-# for_window [class="DesktopEditors"] border $border
 
 # Floating windows
 for_window [class="Steam"] floating enable
@@ -244,12 +227,13 @@ assign [class="firefox"] $ws1
 for_window [class="Spotify"] move container to workspace $ws9
 assign [class="discord"] $ws10
 assign [class="Code"] $ws2
+assign [class="thunderbird"] $ws6
 
 # Lock screen and turn off screen
-bindsym $mod+x exec --no-startup-id i3lock -c 000000 && sleep 1 && xset dpms force off
-bindsym $mod+Shift+x exec --no-startup-id i3lock -c 000000 && systemctl suspend
-bindsym $mod+w exec --no-startup-id xset dpms force off && sleep 1 && xset dpms force off
-bindsym $mod+Shift+w exec --no-startup-id xset dpms force of && systemctl suspend
+bindsym $mod+x exec --no-startup-id i3lock -c 000000 && systemctl suspend
+bindsym $mod+Shift+x exec --no-startup-id i3lock -c 000000 && sleep 1 && xset dpms force off
+bindsym $mod+w exec --no-startup-id xset dpms force of && systemctl suspend
+bindsym $mod+Shift+w exec --no-startup-id xset dpms force off && sleep 1 && xset dpms force off
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
