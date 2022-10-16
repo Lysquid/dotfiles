@@ -75,11 +75,16 @@ cmd execute !{{
 }}
 
 cmd open-with ${{
-    mimeopen --ask $f
+    mimeopen --ask $f 2> /dev/null
 }}
 
 cmd open-change-default ${{
-    mimeopen --ask-default $f
+    mimeopen --ask-default $f 2> /dev/null
+}}
+
+cmd execute-permission :{{
+    $chmod +x $fx
+    :reload
 }}
 
 # Remove some defaults
@@ -94,7 +99,7 @@ map dd trash
 map dr trash-restore
 map df delete
 map x cut
-map X execute
+map E execute
 map <enter> open
 map H hidepreview 
 map . set hidden!
@@ -104,6 +109,7 @@ map o open-with
 map O open-change-default
 map <c-j> push 5j
 map <c-k> push 5k
+map X execute-permission
 
 # Movement
 map gh cd ~/
