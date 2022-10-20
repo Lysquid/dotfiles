@@ -52,7 +52,7 @@ cmd tar ${{
     rm -rf $1
 }}
 
-cmd zip !{{
+cmd zip ${{
     set -f
     mkdir $1
     cp -r $fx $1
