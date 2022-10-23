@@ -268,7 +268,7 @@ bindsym $mod+Print exec --no-startup-id flameshot gui -c -p $screenshot_path && 
 bindsym Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) -B | xclip -selection clipboard -t image/png && $notify "Took screenshot of the window" && $save_screenshot > $screenshot_path
 
 # Notifications
-bindsym $mod+comma exec --no-startup-id dunstctl history-popmouseless
+bindsym $mod+comma exec --no-startup-id dunstctl history-pop
 bindsym $mod+semicolon exec --no-startup-id dunstctl close-all
 
 # Mouse shortcuts
