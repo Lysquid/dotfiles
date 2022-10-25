@@ -28,3 +28,4 @@
 !*etc/**
 !*backup.sh
 !*nvim/**
+*nvim/plugin/packer_compiled.lua
