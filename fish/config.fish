@@ -17,10 +17,6 @@ set -gx TERM alacritty
 set -gx EDITOR nvim
 set -gx LESS '-R --use-color -Dd+r$Du+b'
 set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
-set -gx GTK_IM_MODULE fcitx
-set -gx QT_IM_MODULE fcitx
-set -gx XMODIFIERS @im=fcitx
-set -gx OPENER mimeopen
 
 # Path
 set -gx PATH $PATH $HOME/bin

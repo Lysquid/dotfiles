@@ -306,5 +306,6 @@ exec --no-startup-id $xbanish
 exec --no-startup-id dunst
 exec --no-startup-id udiskie -s -F
 exec --no-startup-id trash-empty 30
+exec --no-startup-id fcitx -d
 exec_always --no-startup-id picom -b --experimental-backends 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
