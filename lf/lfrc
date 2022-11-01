@@ -110,6 +110,7 @@ map O open-change-default
 map <c-j> push 5j
 map <c-k> push 5k
 map X execute-permission
+map U extract
 
 # Movement
 map gh cd ~/

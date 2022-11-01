@@ -1,18 +1,19 @@
-etc/NetworkManager
-etc/audit
-etc/pacman*
-etc/polkit*
-etc/sudoers*
-etc/gshadow*
-etc/apparmor*
-etc/default
-etc/ufw
-etc/vpnc
-etc/libaudit*
-etc/crypttab
-etc/.pwd*
-etc/shadow*
+/etc/NetworkManager
+/etc/audit
+/etc/pacman*
+/etc/polkit*
+/etc/sudoers*
+/etc/gshadow*
+/etc/apparmor*
+/etc/default
+/etc/ufw
+/etc/vpnc
+/etc/libaudit*
+/etc/crypttab
+/etc/.pwd*
+/etc/shadow*
 /etc/hostapd
+/etc/libvirt*
 
 Steam
 Games
@@ -33,6 +34,7 @@ Code
 discord
 spotify
 .local/share/gvfs-metadata/
+.local/lib/python3.10/site-packages/
 
 .Trash-1000
 Watching
