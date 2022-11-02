@@ -17,11 +17,17 @@ require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
 
     -- Theming
-    use {'kyazdani42/nvim-web-devicons'}
     use {'joshdick/onedark.vim'}
+    use {'folke/tokyonight.nvim'}
+    use {'ellisonleao/gruvbox.nvim'}
+    use {'kyazdani42/nvim-web-devicons'}
     use {
         'nvim-lualine/lualine.nvim',
         config = function() pcall(require, 'plugins.lualine') end,
+    }
+    use {
+        'akinsho/bufferline.nvim',
+        config = function() pcall(require, 'plugins.bufferline') end,
     }
     use {
         'lukas-reineke/indent-blankline.nvim',
@@ -33,6 +39,13 @@ require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         config = function() pcall(require, 'plugins.telescope') end,
     }
+
+    -- Git
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function() pcall(require, 'plugins.gitsigns') end,
+    }
+    use {'tpope/vim-fugitive'}
 
     -- Code manipulation
     use {
@@ -46,8 +59,28 @@ require('packer').startup(function(use)
     }
     use {'tpope/vim-surround'}
     use {'wellle/targets.vim'}
+    use {'tpope/vim-repeat'}
 
     -- Utilities
+    use {'moll/vim-bbye'}
     use {'nvim-lua/plenary.nvim'}
+    use {'editorconfig/editorconfig-vim'}
+    use {
+        'akinsho/toggleterm.nvim',
+        config = function() pcall(require, 'plugins.toggleterm') end,
+    }
+    use {'ggandor/leap.nvim'}
+    require('leap').add_default_mappings()
+
+    -- File explorer
+    use {
+        'ptzz/lf.vim',
+        requires = {'voldikss/vim-floaterm'}
+    }
+    use {
+        'kyazdani42/nvim-tree.lua',
+        config = function() pcall(require, 'plugins.nvim-tree') end,
+        opt = true,
+    }
 end)
 
