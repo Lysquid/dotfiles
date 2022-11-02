@@ -19,4 +19,4 @@ vim.opt.mouse = 'a'
 vim.opt.wrap = false
 
 vim.opt.termguicolors = true
-vim.cmd('colorscheme onedark')
+vim.cmd('colorscheme gruvbox')

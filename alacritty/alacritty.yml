@@ -5,6 +5,7 @@ window:
     x: 5
     y: 5
   opacity: 0.90
+  decorations: full
 
 font:
   normal:
