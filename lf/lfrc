@@ -16,12 +16,25 @@ set cleaner ctpvclear
 # Custom functions
 cmd mkdir %{{
     IFS=" "
-    mkdir -- "$*"
+    mkdir -p "$*"
+    lf -remote "send $id select \"$*\""
 }}
 
-cmd mkfile ${{
+cmd mkfile %{{
     IFS=" "
-    $EDITOR "$*" 
+    touch "$*"
+    lf -remote "send $id select \"$*\""
+}}
+
+cmd edit ${{
+    if [ -d $f ];
+    then
+        cd $f
+        $EDITOR
+    else
+        $EDITOR $f
+    fi
+
 }}
 
 cmd trash %{{
@@ -89,12 +102,12 @@ cmd execute-permission :{{
 
 # Remove some defaults
 map d
-map m
 
 # Bindings to built in function
 map r rename
-map mf push :mkfile<space>
-map md push :mkdir<space>
+map a push :mkfile<space>
+map z push :mkdir<space>
+map e edit
 map dd trash
 map dr trash-restore
 map df delete
@@ -104,7 +117,6 @@ map <enter> open
 map H hidepreview 
 map . set hidden!
 map C code
-map é mark-save
 map o open-with
 map O open-change-default
 map <c-j> push 5j
