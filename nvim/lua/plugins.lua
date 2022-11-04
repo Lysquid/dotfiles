@@ -46,7 +46,7 @@ require('packer').startup(function(use)
         config = function() require('plugins.highlight-current-n') end,
     }
     use { 'karb94/neoscroll.nvim',
-        config = function() require('plugins.neoscroll').setup() end,
+        config = function() require('plugins.neoscroll') end,
     }
 
     -- Fuzzy finder
