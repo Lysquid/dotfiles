@@ -4,14 +4,17 @@ vim.g.mapleader = ' '
 -- Shorthands
 vim.keymap.set('n', '<C-q>', '<cmd>quit<cr>')
 vim.keymap.set('n', '<C-s>', '<cmd>write<cr>')
-vim.keymap.set('n', '<leader>q', '<cmd>bdelete<cr>')
+
+-- Azerty fix
+vim.keymap.set('n', '((', '(')
+vim.keymap.set('n', '))', ')')
 
 -- Copy and paste
 vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('n', '<leader>p', '"+p')
 
 -- Terminal
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('t', '<C-q>', '<C-\\><C-n>')
 
 -- Windows
 vim.keymap.set('n', '<C-l>', '<C-w>l')

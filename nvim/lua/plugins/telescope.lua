@@ -18,5 +18,3 @@ vim.keymap.set('n', '<leader>fp', builtin.registers)
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references)
 vim.keymap.set('n', '<leader>fi', builtin.lsp_implementations)
 vim.keymap.set('n', '<leader>ft', builtin.builtin)
-
--- require('telescope').load_extension('fzf')
