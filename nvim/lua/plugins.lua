@@ -13,23 +13,26 @@ local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
 
-    use { 'karb94/neoscroll.nvim',
-        config = function() require('neoscroll').setup() end,
-    }
-
     -- Plugin manager
-    use { 'wbthomason/packer.nvim' }
+    use 'wbthomason/packer.nvim'
 
     -- Theming
-    use { 'joshdick/onedark.vim' }
-    use { 'folke/tokyonight.nvim' }
-    use { 'ellisonleao/gruvbox.nvim' }
+    use 'joshdick/onedark.vim'
+    use 'folke/tokyonight.nvim'
+    use 'ellisonleao/gruvbox.nvim'
     use 'marko-cerovac/material.nvim'
-    use { 'kyazdani42/nvim-web-devicons' }
+    use 'kyazdani42/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
         config = function() require('plugins.lualine') end,
     }
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function() require('plugins.alpha-nvim') end,
+    }
+
+    -- Improvements
     use {
         'lukas-reineke/indent-blankline.nvim',
         config = function() require('plugins.indent-blankline') end,
@@ -39,13 +42,11 @@ require('packer').startup(function(use)
         config = function() require('plugins.nvim-colorizer') end,
     }
     use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function() require('plugins.alpha-nvim') end,
-    }
-    use {
         'rktjmp/highlight-current-n.nvim',
         config = function() require('plugins.highlight-current-n') end,
+    }
+    use { 'karb94/neoscroll.nvim',
+        config = function() require('plugins.neoscroll').setup() end,
     }
 
     -- Fuzzy finder
@@ -59,25 +60,25 @@ require('packer').startup(function(use)
         'lewis6991/gitsigns.nvim',
         config = function() require('plugins.gitsigns') end,
     }
-    use { 'tpope/vim-fugitive' }
+    use 'tpope/vim-fugitive'
 
     -- Code manipulation
     use {
         'nvim-treesitter/nvim-treesitter',
         config = function() require('plugins.treesitter') end,
     }
-    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+    use 'nvim-treesitter/nvim-treesitter-textobjects'
     use {
         'numToStr/Comment.nvim',
         config = function() require('plugins.comment') end,
     }
-    use { 'tpope/vim-surround' }
-    use { 'wellle/targets.vim' }
-    use { 'tpope/vim-repeat' }
+    use 'tpope/vim-surround'
+    use 'wellle/targets.vim'
+    use 'tpope/vim-repeat'
 
     -- Utilities
-    use { 'moll/vim-bbye' }
-    use { 'nvim-lua/plenary.nvim' }
+    use 'moll/vim-bbye'
+    use 'nvim-lua/plenary.nvim'
     use {
         'akinsho/toggleterm.nvim',
         config = function() require('plugins.toggleterm') end,
@@ -97,10 +98,10 @@ require('packer').startup(function(use)
         'hrsh7th/nvim-cmp',
         config = function() require('plugins.nvim-cmp') end,
     }
-    use { 'hrsh7th/cmp-buffer' }
-    use { 'hrsh7th/cmp-path' }
-    use { 'saadparwaiz1/cmp_luasnip' }
-    use { 'hrsh7th/cmp-nvim-lsp' }
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-nvim-lsp-signature-help'
     use 'hrsh7th/cmp-nvim-lua'
 
@@ -109,7 +110,7 @@ require('packer').startup(function(use)
         'L3MON4D3/LuaSnip',
         config = function() require('plugins.luasnip') end,
     }
-    use { 'rafamadriz/friendly-snippets' }
+    use 'rafamadriz/friendly-snippets'
 
     -- Debug
     use {

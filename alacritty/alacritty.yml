@@ -42,4 +42,4 @@ key_bindings:
    - { key: O,    mods: Control,                  action: ResetFontSize    }
    - { key: Up,         mods: Shift,              action: ScrollLineUp     }
    - { key: Down,       mods: Shift,              action: ScrollLineDown   }
-   - { key: Return,     mods: Shift,              action: SpawnNewInstance }
+   - { key: Return,     mods: Super|Shift,        action: SpawnNewInstance }
