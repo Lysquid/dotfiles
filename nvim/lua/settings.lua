@@ -18,8 +18,5 @@ vim.opt.mouse = 'a'
 
 vim.opt.wrap = false
 
-vim.g.lf_replace_netrw = 1
-
 vim.opt.termguicolors = true
-vim.g.material_style = 'darker'
-vim.cmd('colorscheme tokyonight')
+vim.cmd.colorscheme('tokyonight')

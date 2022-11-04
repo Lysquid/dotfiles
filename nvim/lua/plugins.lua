@@ -13,6 +13,10 @@ local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
 
+    use { 'karb94/neoscroll.nvim',
+        config = function() require('neoscroll').setup() end,
+    }
+
     -- Plugin manager
     use { 'wbthomason/packer.nvim' }
 
@@ -24,40 +28,48 @@ require('packer').startup(function(use)
     use { 'kyazdani42/nvim-web-devicons' }
     use {
         'nvim-lualine/lualine.nvim',
-        config = function() pcall(require, 'plugins.lualine') end,
-    }
-    use {
-        'akinsho/bufferline.nvim',
-        config = function() pcall(require, 'plugins.bufferline') end,
-        opt = true
+        config = function() require('plugins.lualine') end,
     }
     use {
         'lukas-reineke/indent-blankline.nvim',
-        config = function() pcall(require, 'plugins.indent-blankline') end,
+        config = function() require('plugins.indent-blankline') end,
+    }
+    use {
+        'norcalli/nvim-colorizer.lua',
+        config = function() require('plugins.nvim-colorizer') end,
+    }
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function() require('plugins.alpha-nvim') end,
+    }
+    use {
+        'rktjmp/highlight-current-n.nvim',
+        config = function() require('plugins.highlight-current-n') end,
     }
 
     -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
-        config = function() pcall(require, 'plugins.telescope') end,
+        config = function() require('plugins.telescope') end,
     }
 
     -- Git
     use {
         'lewis6991/gitsigns.nvim',
-        config = function() pcall(require, 'plugins.gitsigns') end,
+        config = function() require('plugins.gitsigns') end,
     }
     use { 'tpope/vim-fugitive' }
 
     -- Code manipulation
     use {
         'nvim-treesitter/nvim-treesitter',
-        config = function() pcall(require, 'plugins.treesitter') end,
+        config = function() require('plugins.treesitter') end,
     }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use {
         'numToStr/Comment.nvim',
-        config = function() pcall(require, 'plugins.comment') end,
+        config = function() require('plugins.comment') end,
     }
     use { 'tpope/vim-surround' }
     use { 'wellle/targets.vim' }
@@ -66,53 +78,51 @@ require('packer').startup(function(use)
     -- Utilities
     use { 'moll/vim-bbye' }
     use { 'nvim-lua/plenary.nvim' }
-    use { 'editorconfig/editorconfig-vim' }
     use {
         'akinsho/toggleterm.nvim',
-        config = function() pcall(require, 'plugins.toggleterm') end,
+        config = function() require('plugins.toggleterm') end,
     }
-    use { 'ggandor/leap.nvim' }
-    require('leap').add_default_mappings()
+    use { 'ggandor/leap.nvim',
+        config = function() require('plugins.leap') end,
+    }
 
     -- LSP support
     use {
         'neovim/nvim-lspconfig',
-        config = function() pcall(require, 'plugins.lsp') end,
+        config = function() require('plugins.lsp') end,
     }
 
     -- Autocomplete
     use {
         'hrsh7th/nvim-cmp',
-        config = function() pcall(require, 'plugins.nvim-cmp') end,
+        config = function() require('plugins.nvim-cmp') end,
     }
     use { 'hrsh7th/cmp-buffer' }
     use { 'hrsh7th/cmp-path' }
     use { 'saadparwaiz1/cmp_luasnip' }
     use { 'hrsh7th/cmp-nvim-lsp' }
-
-    -- Debug
-    use {
-        'mfussenegger/nvim-dap',
-        config = function() pcall(require, 'plugins.nvim-dap') end,
-    }
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-nvim-lua'
 
     -- Snippets
     use {
         'L3MON4D3/LuaSnip',
-        config = function() pcall(require, 'plugins.luasnip') end,
+        config = function() require('plugins.luasnip') end,
     }
     use { 'rafamadriz/friendly-snippets' }
+
+    -- Debug
+    use {
+        'mfussenegger/nvim-dap',
+        config = function() require('plugins.nvim-dap') end,
+        opt = true,
+    }
 
     -- File explorer
     use {
         'ptzz/lf.vim',
         requires = { 'voldikss/vim-floaterm' },
-        opt = false,
-    }
-    use {
-        'kyazdani42/nvim-tree.lua',
-        config = function() pcall(require, 'plugins.nvim-tree') end,
-        opt = true,
+        config = function() require('plugins.lf') end,
     }
 
     if packer_bootstrap then
