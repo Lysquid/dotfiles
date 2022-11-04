@@ -50,7 +50,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-    vim.keymap.set('n', '<C-s>', vim.lsp.buf.signature_help, bufopts) -- default : <C-k>
+    vim.keymap.set('n', '<space>k', vim.lsp.buf.signature_help, bufopts) -- default : <C-k>
     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
     vim.keymap.set('n', '<space>wl', function()
@@ -67,7 +67,7 @@ end
 
 local lsp_flags = {}
 
-require('lspconfig')['sumneko_lua'].setup {
+require('lspconfig').sumneko_lua.setup {
     on_attach = on_attach,
     settings = {
         Lua = {
@@ -94,10 +94,20 @@ require('lspconfig')['sumneko_lua'].setup {
 require('lspconfig').clangd.setup {
     on_attach = on_attach,
     flags = lsp_flags,
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--pch-storage=memory",
+        "--clang-tidy",
+        "--suggest-missing-includes",
+        "--all-scopes-completion",
+        "-j=4",
+        "--inlay-hints",
+        "--header-insertion-decorators",
+    },
 }
 
 require('lspconfig').pyright.setup {
     on_attach = on_attach,
     flags = lsp_flags,
 }
-

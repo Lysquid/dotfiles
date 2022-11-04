@@ -1,5 +1,5 @@
 require('toggleterm').setup({
-    open_mapping = '<C-g>',
+    open_mapping = '<C-x>',
     direction = 'vertical',
     size = function(term)
         if term.direction == "horizontal" then

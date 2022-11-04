@@ -13,6 +13,13 @@ set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
+cmd open ${{
+    case $(file --mime-type -Lb $f) in
+        text/*) $EDITOR $fx;;
+        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
 # Custom functions
 cmd mkdir %{{
     IFS=" "
@@ -26,15 +33,8 @@ cmd mkfile %{{
     lf -remote "send $id select \"$*\""
 }}
 
-cmd edit ${{
-    if [ -d $f ];
-    then
-        cd $f
-        $EDITOR
-    else
-        $EDITOR $f
-    fi
-
+cmd editor ${{
+    $EDITOR
 }}
 
 cmd trash %{{
@@ -107,7 +107,7 @@ map d
 map r rename
 map a push :mkfile<space>
 map z push :mkdir<space>
-map e edit
+map <c-n> editor
 map dd trash
 map dr trash-restore
 map df delete
