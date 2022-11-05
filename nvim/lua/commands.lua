@@ -6,7 +6,7 @@
 -- )
 
 -- Open help files in vertical split by default
-vim.api.nvim_create_autocmd({'FileType'}, {
-  pattern = {'help'},
-  command = 'wincmd L',
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+    pattern = { 'help' },
+    command = 'wincmd L',
 })

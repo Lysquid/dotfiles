@@ -37,7 +37,7 @@ alias trs='trash-restore'
 
 # Keybindings
 bind \cg 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint' 
-bind \cn '$EDITOR' 
+bind \cy '$EDITOR' 
 bind \cz 'fg > /dev/null 2> /dev/null' 
 
 # Functions

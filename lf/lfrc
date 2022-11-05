@@ -8,10 +8,14 @@ set incsearch on
 set incfilter on
 
 # ctpv integration
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
+set previewer stpv
+set cleaner stpvimgclr
+&stpvimg --listen $id
+cmd on-quit $stpvimg --end $id
 
 cmd open ${{
     case $(file --mime-type -Lb $f) in
@@ -107,7 +111,7 @@ map d
 map r rename
 map a push :mkfile<space>
 map z push :mkdir<space>
-map <c-n> editor
+map <c-y> editor
 map dd trash
 map dr trash-restore
 map df delete
@@ -135,4 +139,5 @@ map gc cd ~/.config
 map gP cd ~/Prog
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
-map gm cd /run/media/rom1/
+map gm cd /run/media/rom1
+map gn cd ~/.config/nvim

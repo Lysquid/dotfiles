@@ -1,4 +1,4 @@
-require('nvim-treesitter.configs').setup({
+require('nvim-treesitter.configs').setup {
     highlight = {
         enable = true,
     },
@@ -13,6 +13,23 @@ require('nvim-treesitter.configs').setup({
                 ['ic'] = '@class.inner',
             }
         },
+        swap = {
+            enable = true,
+            swap_next = {
+                ['<leader>a'] = '@parameter.inner',
+            },
+            swap_previous = {
+                ['<leader>A'] = '@parameter.inner',
+            },
+        },
+        lsp_interop = {
+            enable = true,
+            border = 'none',
+            peek_definition_code = {
+                ['<leader>cf'] = '@function.outer',
+                ['<leader>cF'] = '@class.outer',
+            },
+        },
     },
     ensure_installed = {
         'lua',
@@ -26,4 +43,4 @@ require('nvim-treesitter.configs').setup({
         'css',
         'javascript',
     },
-})
+}

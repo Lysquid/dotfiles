@@ -1,3 +1,4 @@
-vim.cmd('nmap n <Plug>(highlight-current-n-n)')
-vim.cmd('nmap N <Plug>(highlight-current-n-N)')
-vim.cmd('nmap * *N')
+vim.keymap.set('n', 'n', '<Plug>(highlight-current-n-n)', { silent = true })
+vim.keymap.set('n', 'N', '<Plug>(highlight-current-n-N)', { silent = true })
+vim.keymap.set('n', '*', '*N', { remap = true })
+vim.keymap.set('n', '#', '#N', { remap = true })

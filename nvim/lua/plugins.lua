@@ -1,3 +1,4 @@
+-- Auto install if packer is not present
 local ensure_packer = function()
     local fn = vim.fn
     local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
@@ -8,41 +9,34 @@ local ensure_packer = function()
     end
     return false
 end
-
 local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
 
     -- Plugin manager
-    use 'wbthomason/packer.nvim'
+    use { 'wbthomason/packer.nvim' }
 
     -- Theming
-    use 'joshdick/onedark.vim'
-    use 'folke/tokyonight.nvim'
-    use 'ellisonleao/gruvbox.nvim'
-    use 'marko-cerovac/material.nvim'
-    use 'kyazdani42/nvim-web-devicons'
-    use {
-        'nvim-lualine/lualine.nvim',
+    use { 'joshdick/onedark.vim' }
+    use { 'folke/tokyonight.nvim' }
+    use { 'ellisonleao/gruvbox.nvim' }
+    use { 'marko-cerovac/material.nvim' }
+    use { 'kyazdani42/nvim-web-devicons' }
+    use { 'nvim-lualine/lualine.nvim',
         config = function() require('plugins.lualine') end,
     }
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' },
-        config = function() require('plugins.alpha-nvim') end,
+    use { 'goolord/alpha-nvim',
+        config = function() require('plugins.alpha') end,
     }
 
     -- Improvements
-    use {
-        'lukas-reineke/indent-blankline.nvim',
+    use { 'lukas-reineke/indent-blankline.nvim',
         config = function() require('plugins.indent-blankline') end,
     }
-    use {
-        'norcalli/nvim-colorizer.lua',
-        config = function() require('plugins.nvim-colorizer') end,
+    use { 'norcalli/nvim-colorizer.lua',
+        config = function() require('plugins.colorizer') end,
     }
-    use {
-        'rktjmp/highlight-current-n.nvim',
+    use { 'rktjmp/highlight-current-n.nvim',
         config = function() require('plugins.highlight-current-n') end,
     }
     use { 'karb94/neoscroll.nvim',
@@ -50,35 +44,31 @@ require('packer').startup(function(use)
     }
 
     -- Fuzzy finder
-    use {
-        'nvim-telescope/telescope.nvim',
+    use { 'nvim-telescope/telescope.nvim',
         config = function() require('plugins.telescope') end,
     }
 
     -- Git
-    use {
-        'lewis6991/gitsigns.nvim',
+    use { 'lewis6991/gitsigns.nvim',
         config = function() require('plugins.gitsigns') end,
     }
-    use 'tpope/vim-fugitive'
+    use { 'tpope/vim-fugitive' }
 
     -- Code manipulation
-    use {
-        'nvim-treesitter/nvim-treesitter',
+    use { 'nvim-treesitter/nvim-treesitter',
         config = function() require('plugins.treesitter') end,
     }
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
-    use {
-        'numToStr/Comment.nvim',
+    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+    use { 'numToStr/Comment.nvim',
         config = function() require('plugins.comment') end,
     }
-    use 'tpope/vim-surround'
-    use 'wellle/targets.vim'
-    use 'tpope/vim-repeat'
+    use { 'tpope/vim-surround' }
+    use { 'wellle/targets.vim' }
+    use { 'tpope/vim-repeat' }
 
     -- Utilities
-    use 'moll/vim-bbye'
-    use 'nvim-lua/plenary.nvim'
+    use { 'nvim-lua/plenary.nvim' }
+    use { 'moll/vim-bbye' }
     use {
         'akinsho/toggleterm.nvim',
         config = function() require('plugins.toggleterm') end,
@@ -88,44 +78,42 @@ require('packer').startup(function(use)
     }
 
     -- LSP support
-    use {
-        'neovim/nvim-lspconfig',
-        config = function() require('plugins.lsp') end,
+    use { 'neovim/nvim-lspconfig',
+        config = function() require('plugins.lspconfig') end,
     }
 
     -- Autocomplete
-    use {
-        'hrsh7th/nvim-cmp',
-        config = function() require('plugins.nvim-cmp') end,
+    use { 'hrsh7th/nvim-cmp',
+        config = function() require('plugins.cmp') end,
     }
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lsp-signature-help'
-    use 'hrsh7th/cmp-nvim-lua'
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer' }
+    use { 'hrsh7th/cmp-path' }
+    use { 'hrsh7th/cmp-cmdline' }
+    use { 'hrsh7th/cmp-nvim-lsp-signature-help' }
+    use { 'hrsh7th/cmp-nvim-lua' }
+    use { 'saadparwaiz1/cmp_luasnip' }
+    use { 'petertriho/cmp-git' }
 
     -- Snippets
-    use {
-        'L3MON4D3/LuaSnip',
+    use { 'L3MON4D3/LuaSnip',
         config = function() require('plugins.luasnip') end,
     }
-    use 'rafamadriz/friendly-snippets'
+    use { 'rafamadriz/friendly-snippets' }
 
     -- Debug
-    use {
-        'mfussenegger/nvim-dap',
-        config = function() require('plugins.nvim-dap') end,
+    use { 'mfussenegger/nvim-dap',
+        config = function() require('plugins.dap') end,
         opt = true,
     }
 
     -- File explorer
-    use {
-        'ptzz/lf.vim',
+    use { 'ptzz/lf.vim',
         requires = { 'voldikss/vim-floaterm' },
         config = function() require('plugins.lf') end,
     }
 
+    -- Sync on first launch
     if packer_bootstrap then
         require('packer').sync()
     end
