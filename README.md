@@ -26,7 +26,7 @@
 + Notification daemon : [dunst](https://github.com/dunst-project/dunst)
 + Wallpaper picker : [nitrogen](https://github.com/l3ib/nitrogen)
 + Screenshot tool : [Flameshot](https://github.com/flameshot-org/flameshot)
-+ Screencast : [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
++ Screen recorder : [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/)
 + Image editor : [Pinta](https://www.pinta-project.com/)
 + Input method : [Fcitx 5](https://fcitx-im.org/wiki/Fcitx_5)
 + Calculator : [Qalculate!](https://github.com/Qalculate/qalculate-gtk)
