@@ -3,7 +3,7 @@ local dashboard = require('alpha.themes.dashboard')
 
 dashboard.section.buttons.val = {
     dashboard.button('e', '  New file', '<cmd>enew<CR>'),
-    dashboard.button('SPC d', '  Find file'),
+    dashboard.button('SPC h', '  Find file'),
     dashboard.button('SPC b', '﬘  Find buffer'),
     dashboard.button('SPC o', '  Find in history'),
     dashboard.button('SPC f g', '  Find word'),
