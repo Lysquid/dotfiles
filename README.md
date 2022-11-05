@@ -20,7 +20,7 @@
 + Prompt : [Starship](https://starship.rs/)
 + Editor : [Neovim](https://neovim.io/)
 + File manager : [lf](https://github.com/gokcehan/lf/)
-+ Launcher : [rofi](https://github.com/davatorium/rofi)
++ Application launcher : [rofi](https://github.com/davatorium/rofi)
 + Browser : [Firefox](https://www.mozilla.org/firefox/)
 + Mail client : [Thunderbird](https://www.thunderbird.net)
 + Image viewer : [Viewnior](https://github.com/hellosiyan/Viewnior)
