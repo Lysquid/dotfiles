@@ -9,7 +9,7 @@
 + Window manager : [i3](https://i3wm.org/)
 + Status bar : [Polybar](https://github.com/polybar/polybar)
 + Compositor : [picom](https://github.com/yshui/picom)
-+ Display manager : [LightDM](https://wiki.archlinux.org/title/LightDM)
++ Display manager : [LightDM](https://github.com/canonical/lightdm)
 + Lock screen : [i3lock](https://github.com/i3/i3lock)
 + Font : [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 + Gtk theme : [Orchis](https://github.com/vinceliuice/Orchis-theme)
