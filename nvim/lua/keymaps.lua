@@ -21,7 +21,7 @@ vim.keymap.set('', '((', '(')
 vim.keymap.set('', '))', ')')
 vim.keymap.set('', 'é', '~', { remap = true })
 vim.keymap.set('', 'è', '`', { remap = true })
-vim.keymap.set('', 'à', 'a@', { remap = true })
+vim.keymap.set('', 'à', '@', { remap = true })
 vim.keymap.set('', 'ç', '^', { remap = true })
 vim.keymap.set('', 'ù', '%', { remap = true })
 
