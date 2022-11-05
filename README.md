@@ -51,6 +51,7 @@
 + [youtube-dl](https://github.com/ytdl-org/youtube-dl) : download youtube videos
 + [ani-cli](https://github.com/pystardust/ani-cli) : cli tool to watch anime
 + [Anki](https://apps.ankiweb.net/) : best flashcard app
++ [btop](https://github.com/aristocratos/btop) : ressource monitor
 + [xbanish](https://github.com/jcs/xbanish) : hide this useless mouse cursor
 + [trash-cli](https://github.com/andreafrancia/trash-cli) : trash management
 + [playerctl](https://github.com/altdesktop/playerctl) : controll media players from the command line
