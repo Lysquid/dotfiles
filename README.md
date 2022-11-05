@@ -35,7 +35,7 @@
 ## More cool softwares
 
 + [Rclone](https://github.com/rclone/rclone) : cli tool for cloud sync
-+ [Virt-Manager](https://virt-manager.org/) : virtual machines with QEMU/KVM
++ [Virt-Manager](https://virt-manager.org/) : virtual machine manager for QEMU/KVM
 + [Transmission](https://transmissionbt.com/) : BitTorrent client
 + [Lutris](https://lutris.net/) : game launcher
 + [Godot](https://godotengine.org/) : game engine
