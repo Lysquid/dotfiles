@@ -1,3 +1,14 @@
+require('telescope').setup {
+    defaults = {
+        borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        mappings = {
+            n = {
+                ['q'] = require('telescope.actions').close,
+            },
+        },
+    },
+}
+
 local builtin = require('telescope.builtin')
 
 vim.keymap.set('n', '<leader>d', builtin.find_files)
@@ -7,7 +18,7 @@ vim.keymap.set('n', '<leader>o', builtin.oldfiles)
 
 vim.keymap.set('n', '<leader>fo', builtin.oldfiles)
 vim.keymap.set('n', '<leader>ff', builtin.find_files)
-vim.keymap.set('n', '<leader>fc', function() return builtin.find_files {cwd = '~/.config/'} end)
+vim.keymap.set('n', '<leader>fc', function() return builtin.find_files { cwd = '~/.config/' } end)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep)
 vim.keymap.set('n', '<leader>fb', builtin.buffers)
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics)
