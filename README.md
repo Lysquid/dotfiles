@@ -65,10 +65,16 @@
 + [Brodie Robertson](https://www.youtube.com/c/BrodieRobertson) ([dotfiles](https://github.com/BrodieRobertson/dotfiles)) : cool software reviews from an epic weeb
 + [Luke Smith](https://www.youtube.com/c/LukeSmithxyz) ([dotfiles](https://github.com/LukeSmithxyz/voidrice)): bomer config
 + [DistroTube](https://www.youtube.com/c/DistroTube) ([dotfiles](https://gitlab.com/dwt1/dotfiles)) : window manager enthutiast with unpopular opinions
-+ [ThePrimeage](https://www.youtube.com/c/ThePrimeagen) ([dotfiles](https://github.com/ThePrimeagen/.dotfiles)) : vim guru
++ [ThePrimeagen](https://www.youtube.com/c/ThePrimeagen) ([dotfiles](https://github.com/ThePrimeagen/.dotfiles)) : vim guru
 + [Neovim Starter devlog](https://vonheikemen.github.io/devlog/tools/build-your-first-lua-config-for-neovim/) ([github](https://github.com/VonHeikemen/nvim-starter)) : to get started configuring neovim
-+ [TechHunt](https://www.youtube.com/c/TechHutHD) : more software reviews
-+ [The Linux Cast](https://www.youtube.com/c/TheLinuxCast) : distro hopper and reviewer
 + [A Mouseless Development Environment](https://thevaluable.dev/mouseless-development-environment/) : why I went down the rabbit hole in the first place
 + [Unixporn](https://www.reddit.com/r/unixporn/) : the reason why we keep ricing
+
+## More ressources
+
 + [Arch Wiki](https://wiki.archlinux.org/) : the bible
++ [How Linux Works](https://nostarch.com/howlinuxworks3) : very complete book on Linux theory
++ [TechHunt](https://www.youtube.com/c/TechHutHD) : more software reviews
++ [DJ Ware](https://www.youtube.com/c/DJWareCG) : deep dives into Linux technologies
++ [DevOnDuty](https://www.youtube.com/channel/UCFU7a7OMYfcpjtIpu2j47_Q) : neovim news
++ [The Linux Cast](https://www.youtube.com/c/TheLinuxCast) : distro hopper and reviewer
