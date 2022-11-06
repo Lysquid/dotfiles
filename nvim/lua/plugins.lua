@@ -117,6 +117,15 @@ require('packer').startup(function(use)
         config = function() require('plugins.lf') end,
     }
 
+    -- Sessions manager
+    use { 'rmagatti/auto-session',
+        config = function() require('plugins.auto-session') end,
+    }
+    use { 'rmagatti/session-lens',
+        requires = { 'rmagatti/auto-session' },
+        config = function() require('plugins.session-lens') end,
+    }
+
     -- Sync on first launch
     if packer_bootstrap then
         require('packer').sync()
