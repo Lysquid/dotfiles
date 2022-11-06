@@ -25,7 +25,7 @@
 + Mail client : [Thunderbird](https://www.thunderbird.net)
 + Image viewer : [Viewnior](https://github.com/hellosiyan/Viewnior)
 + Media player : [mpv](https://mpv.io/)
-+ Screenshot tool : [Flameshot](https://github.com/flameshot-org/flameshot)
++ Document viewer : [Evince](https://wiki.gnome.org/Apps/Evince)
 + Notification daemon : [dunst](https://github.com/dunst-project/dunst)
 + Input method : [Fcitx 5](https://fcitx-im.org/wiki/Fcitx_5)
 + Clipboard manager : [Parcelitte](https://parcellite.sourceforge.net/)
@@ -41,6 +41,7 @@
 + [Godot](https://godotengine.org/) : game engine
 + [Pinta](https://www.pinta-project.com/) : image editor
 + [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/) : screencast utility
++ [Flameshot](https://github.com/flameshot-org/flameshot) : screenshot tool
 + [Calibre](https://calibre-ebook.com/) : ebook reader and manager
 + [Qalculate!](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
