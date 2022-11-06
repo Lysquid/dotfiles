@@ -1,9 +1,9 @@
 require('session-lens').setup {
-    theme_conf = require("telescope.themes").get_dropdown {
+    theme_conf = require('telescope.themes').get_dropdown {
         borderchars = {
-            prompt = { "─", "│", " ", "│", '┌', '┐', "│", "│" },
-            results = { "─", "│", "─", "│", "├", "┤", '┘', '└' },
-            preview = { "─", "│", "─", "│", '┌', '┐', '┘', '└' },
+            prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
+            results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         },
     }
 }
