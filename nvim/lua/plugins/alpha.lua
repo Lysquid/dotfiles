@@ -6,7 +6,7 @@ dashboard.section.buttons.val = {
     dashboard.button('SPC f s', '  Restore session'),
     dashboard.button('SPC h', '  Find file'),
     dashboard.button('SPC b', '﬘  Find buffer'),
-    dashboard.button('SPC o', '  Find in history'),
+    dashboard.button('SPC f o', '  Find in history'),
     dashboard.button('SPC f g', '  Find word'),
     dashboard.button('SPC f c', '  Find config'),
     dashboard.button('<C-g>', '  File browser'),
