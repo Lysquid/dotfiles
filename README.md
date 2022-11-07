@@ -70,7 +70,7 @@
 + [A Mouseless Development Environment](https://thevaluable.dev/mouseless-development-environment/) : why I went down the rabbit hole in the first place
 + [Unixporn](https://www.reddit.com/r/unixporn/) : the reason why we keep ricing
 
-## More ressources
+## More resources
 
 + [Arch Wiki](https://wiki.archlinux.org/) : the bible
 + [How Linux Works](https://nostarch.com/howlinuxworks3) : very complete book on Linux theory

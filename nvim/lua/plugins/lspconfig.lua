@@ -6,20 +6,11 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
     require('cmp_nvim_lsp').default_capabilities()
 )
 
--- Diagnostic customization
-local sign = function(opts)
-    -- See :help sign_define()
-    vim.fn.sign_define(opts.name, {
-        texthl = opts.name,
-        text = opts.text,
-        numhl = ''
-    })
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl})
 end
-
-sign { name = 'DiagnosticSignError', text = '' }
-sign { name = 'DiagnosticSignWarn', text = '' }
-sign { name = 'DiagnosticSignHint', text = '' }
-sign { name = 'DiagnosticSignInfo', text = '' }
 
 vim.diagnostic.config {
     virtual_text = false,
