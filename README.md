@@ -77,4 +77,3 @@
 + [TechHunt](https://www.youtube.com/c/TechHutHD) : more software reviews
 + [DJ Ware](https://www.youtube.com/c/DJWareCG) : deep dives into Linux technologies
 + [DevOnDuty](https://www.youtube.com/channel/UCFU7a7OMYfcpjtIpu2j47_Q) : neovim news
-+ [The Linux Cast](https://www.youtube.com/c/TheLinuxCast) : distro hopper and reviewer

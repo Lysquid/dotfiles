@@ -110,7 +110,7 @@ map d
 # Bindings to built in function
 map r rename
 map a push :mkfile<space>
-map z push :mkdir<space>
+map A push :mkdir<space>
 map <c-y> editor
 map dd trash
 map dr trash-restore
