@@ -1,11 +1,11 @@
 require('toggleterm').setup {
     open_mapping = '<C-x>',
-    direction = 'vertical',
+    direction = 'horizontal',
     size = function(term)
         if term.direction == 'horizontal' then
-            return 12
+            return vim.o.lines / 3
         elseif term.direction == 'vertical' then
-            return vim.o.columns * 0.5
+            return vim.o.columns / 2
         end
     end,
 }
