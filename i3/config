@@ -202,7 +202,7 @@ client.placeholder      #000000 #000000 #BBBBBB #000000   #000000
 client.background       #000000
 
 # Gaps
-gaps inner 20
+gaps inner 10
 smart_borders no_gaps
 smart_gaps on
 

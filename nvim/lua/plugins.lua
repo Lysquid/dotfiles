@@ -47,6 +47,9 @@ require('packer').startup(function(use)
     use { 'nvim-telescope/telescope.nvim',
         config = function() require('plugins.telescope') end,
     }
+    use { 'nvim-telescope/telescope-fzf-native.nvim',
+        run = 'make'
+    }
 
     -- Git
     use { 'lewis6991/gitsigns.nvim',

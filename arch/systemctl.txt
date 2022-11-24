@@ -180,6 +180,9 @@ systemd-networkd-wait-online@.service      disabled        disabled
 systemd-networkd.service                   disabled        enabled
 systemd-nspawn@.service                    disabled        disabled
 systemd-oomd.service                       disabled        disabled
+systemd-pcrphase-initrd.service            static          -
+systemd-pcrphase-sysinit.service           static          -
+systemd-pcrphase.service                   static          -
 systemd-portabled.service                  static          -
 systemd-poweroff.service                   static          -
 systemd-pstore.service                     disabled        enabled
@@ -405,4 +408,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-405 unit files listed.
+408 unit files listed.
