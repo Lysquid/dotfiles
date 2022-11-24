@@ -8,14 +8,16 @@ set incsearch on
 set incfilter on
 
 # ctpv integration
-# set previewer ctpv
-# set cleaner ctpvclear
-# &ctpv -s $id
-# &ctpvquit $id
-set previewer stpv
-set cleaner stpvimgclr
-&stpvimg --listen $id
-cmd on-quit $stpvimg --end $id
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
+
+# stpv integration
+# set previewer stpv
+# set cleaner stpvimgclr
+# &stpvimg --listen $id
+# cmd on-quit $stpvimg --end $id
 
 cmd open ${{
     case $(file --mime-type -Lb $f) in
@@ -104,6 +106,18 @@ cmd execute-permission :{{
     :reload
 }}
 
+cmd fzf_jump ${{
+    res="$(fzfp)"
+    if [ -d "$res" ] ; then
+        cmd="cd"
+    elif [ -f "$res" ] ; then
+        cmd="select"
+    else
+        exit 0
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+
 # Remove some defaults
 map d
 
@@ -127,6 +141,7 @@ map <c-j> push 5j
 map <c-k> push 5k
 map X execute-permission
 map U extract
+map <c-f> fzf_jump
 
 # Movement
 map gh cd ~/
