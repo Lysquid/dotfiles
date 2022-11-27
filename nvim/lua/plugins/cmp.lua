@@ -3,6 +3,10 @@ vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
+-- Drop some default keymaps
+vim.keymap.set({ 'i', 's' }, '<C-n>', '<nop>')
+vim.keymap.set({ 'i', 's' }, '<C-p>', '<nop>')
+
 -- Funtion used in tab expansion
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -33,28 +37,35 @@ cmp.setup({
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
-        ['<Up>'] = cmp.mapping.select_prev_item(),
-        ['<Down>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-        ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+        -- Snippets
+        ['<C-n>'] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(1) then
+                luasnip.jump(1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<C-p>'] = cmp.mapping(function(fallback)
+            if luasnip.jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
 
+        -- Select completion
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
             elseif has_words_before() then
                 cmp.complete()
             else
                 fallback()
             end
         end, { 'i', 's' }),
-
         ['<S-Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
-            elseif luasnip.jumpable(-1) then
-                luasnip.jump(-1)
             else
                 fallback()
             end
@@ -76,7 +87,7 @@ cmp.setup.filetype('gitcommit', {
 cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
-        { name = 'buffer', keyword_length = 3  }
+        { name = 'buffer', keyword_length = 3 }
     }
 })
 

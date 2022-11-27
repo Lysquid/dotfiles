@@ -11,8 +11,6 @@ vim.keymap.set('t', '<C-q>', '<cmd>bdelete!<cr>')
 vim.keymap.set('', '<leader>t', '<C-w>v<cmd>terminal<cr>')
 vim.keymap.set('', '<leader>T', '<cmd>terminal<cr>')
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
-vim.keymap.set('', '<C-n>', '<cmd>bnext<cr>')
-vim.keymap.set('', '<C-p>', '<cmd>bprevious<cr>')
 
 -- Azerty fix
 vim.keymap.set('', '(', '[', { remap = true })
