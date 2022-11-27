@@ -10,3 +10,6 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
     pattern = { 'help' },
     command = 'wincmd L',
 })
+
+vim.cmd('autocmd TermOpen * setlocal nonumber norelativenumber')
+vim.cmd('autocmd TermOpen * setlocal signcolumn=no')
