@@ -149,9 +149,9 @@ map gd cd ~/Documents
 map gw cd ~/Downloads
 map gp cd ~/Pictures
 map gv cd ~/Videos
-map gM cd ~/Music
+map gu cd ~/Music
 map gc cd ~/.config
-map gP cd ~/Prog
+map go cd ~/Prog
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
 map gm cd /run/media/rom1

@@ -16,7 +16,7 @@ EnumerateSkipFirst=False
 2=Hangul
 
 [Hotkey/EnumerateGroupForwardKeys]
-0=Control+Shift+space
+0=Alt+Super+space
 
 [Hotkey/EnumerateGroupBackwardKeys]
 0=Shift+Super+space

@@ -5,12 +5,13 @@ vim.g.mapleader = ' '
 vim.keymap.set('', '<leader>', '<nop>')
 
 -- Shorthands
-vim.keymap.set('', '<C-s>', '<cmd>write<cr>')
+vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
 vim.keymap.set('', '<C-q>', '<cmd>bdelete<cr>')
 vim.keymap.set('t', '<C-q>', '<cmd>bdelete!<cr>')
 vim.keymap.set('', '<leader>t', '<C-w>v<cmd>terminal<cr>')
 vim.keymap.set('', '<leader>T', '<cmd>terminal<cr>')
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>') -- Esc to leave terminal mode
+vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
 
 -- Azerty fix
 vim.keymap.set('', '(', '[', { remap = true })
