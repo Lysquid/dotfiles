@@ -7,9 +7,17 @@
 
 -- Open help files in vertical split by default
 vim.api.nvim_create_autocmd({ 'FileType' }, {
-    pattern = { 'help' },
+    pattern = 'help',
     command = 'wincmd L',
 })
 
-vim.cmd('autocmd TermOpen * setlocal nonumber norelativenumber')
-vim.cmd('autocmd TermOpen * setlocal signcolumn=no')
+-- Disable line numbers and sign column in terminal buffers
+vim.api.nvim_create_autocmd({ 'TermOpen' }, {
+    command = 'setlocal nonumber norelativenumber | setlocal signcolumn=no'
+})
+
+-- Enter insert mode when entering a terminal
+vim.api.nvim_create_autocmd({ 'WinEnter' }, {
+    pattern = 'term://*',
+    command = 'startinsert',
+})

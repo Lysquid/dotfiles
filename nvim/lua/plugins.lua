@@ -72,10 +72,6 @@ require('packer').startup(function(use)
     -- Utilities
     use { 'nvim-lua/plenary.nvim' }
     use { 'moll/vim-bbye' }
-    use {
-        'akinsho/toggleterm.nvim',
-        config = function() require('plugins.toggleterm') end,
-    }
     use { 'ggandor/leap.nvim',
         config = function() require('plugins.leap') end,
     }
