@@ -26,23 +26,20 @@ cmp.setup({
     -- See :help cmp-mapping
     mapping = {
         -- Doc
-        ['<C-Up>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-Down>'] = cmp.mapping.scroll_docs(4),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
         -- Trigger completion
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
-        -- Accept completion
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<S-Tab>'] = cmp.mapping.abort(),
-
-        -- Select completion
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        -- Navigate completion results
+        ["<Tab>"] = cmp.mapping.select_next_item(),
+        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
 
         -- Navigate snippet
-        ['<C-f>'] = cmp.mapping(function(fallback)
+        ['<C-n>'] = cmp.mapping(function(fallback)
             if luasnip.jumpable(1) then
                 luasnip.jump(1)
             else
@@ -50,7 +47,7 @@ cmp.setup({
             end
         end, { 'i', 's' }),
 
-        ['<C-b>'] = cmp.mapping(function(fallback)
+        ['<C-p>'] = cmp.mapping(function(fallback)
             if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else

@@ -39,7 +39,9 @@ selection:
   save_to_clipboard: false
 
 key_bindings:
-   - { key: O,    mods: Control,                  action: ResetFontSize    }
-   - { key: Up,         mods: Shift,              action: ScrollLineUp     }
-   - { key: Down,       mods: Shift,              action: ScrollLineDown   }
-   - { key: Return,     mods: Super|Shift,        action: SpawnNewInstance }
+  - { key: O,         mods: Control,            action: ResetFontSize    }
+  - { key: Up,        mods: Shift,              action: ScrollLineUp     }
+  - { key: Down,      mods: Shift,              action: ScrollLineDown   }
+  - { key: Return,    mods: Super|Shift,        action: SpawnNewInstance }
+  - { key: Return,    mods: Shift,              chars: "\x1b[13;2u" }
+  - { key: Return,    mods: Control,            chars: "\x1b[13;5u" }
