@@ -7,12 +7,6 @@ local luasnip = require('luasnip')
 vim.keymap.set({ 'i', 's' }, '<C-n>', '<nop>')
 vim.keymap.set({ 'i', 's' }, '<C-p>', '<nop>')
 
--- Funtion used in tab expansion
-local has_words_before = function()
-    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
-end
-
 -- See :help cmp-config
 cmp.setup({
     snippet = {
@@ -31,21 +25,32 @@ cmp.setup({
     }),
     -- See :help cmp-mapping
     mapping = {
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        -- Doc
+        ['<C-Up>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-Down>'] = cmp.mapping.scroll_docs(4),
+
+        -- Trigger completion
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
-        -- Snippets
-        ['<C-n>'] = cmp.mapping(function(fallback)
+        -- Accept completion
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<S-Tab>'] = cmp.mapping.abort(),
+
+        -- Select completion
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+
+        -- Navigate snippet
+        ['<C-f>'] = cmp.mapping(function(fallback)
             if luasnip.jumpable(1) then
                 luasnip.jump(1)
             else
                 fallback()
             end
         end, { 'i', 's' }),
-        ['<C-p>'] = cmp.mapping(function(fallback)
+
+        ['<C-b>'] = cmp.mapping(function(fallback)
             if luasnip.jumpable(-1) then
                 luasnip.jump(-1)
             else
@@ -53,23 +58,6 @@ cmp.setup({
             end
         end, { 'i', 's' }),
 
-        -- Select completion
-        ['<Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_next_item()
-            elseif has_words_before() then
-                cmp.complete()
-            else
-                fallback()
-            end
-        end, { 'i', 's' }),
-        ['<S-Tab>'] = cmp.mapping(function(fallback)
-            if cmp.visible() then
-                cmp.select_prev_item()
-            else
-                fallback()
-            end
-        end, { 'i', 's' }),
     },
 })
 
