@@ -3,6 +3,7 @@ vim.g.mapleader = ' '
 
 -- Disable some defaults
 vim.keymap.set('', '<leader>', '<nop>')
+vim.keymap.set({ 'i', 's' }, '<C-b>', '<nop>')
 
 -- Shorthands
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
@@ -46,4 +47,3 @@ vim.keymap.set({ 't', 'i', 's' }, '<C-h>', '<Esc><C-w>h', { remap = true })
 vim.keymap.set({ 't', 'i', 's' }, '<C-j>', '<Esc><C-w>j', { remap = true })
 vim.keymap.set({ 't', 'i', 's' }, '<C-k>', '<Esc><C-w>k', { remap = true })
 vim.keymap.set({ 't', 'i', 's' }, '<C-q>', '<Esc><C-w>q', { remap = true })
-
