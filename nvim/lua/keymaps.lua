@@ -3,11 +3,11 @@ vim.g.mapleader = ' '
 
 -- Disable some defaults
 vim.keymap.set('', '<leader>', '<nop>')
-vim.keymap.set({ 'i', 's' }, '<C-b>', '<nop>')
 
 -- Shorthands
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
 vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<cmd>bdelete<cr>')
+vim.keymap.set('', '<S-CR>', 'o<Esc>') -- insert blank line below in normal mode
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
 vim.keymap.set('', '<C-a>', 'gg0vG$') -- select whole document
 
