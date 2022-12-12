@@ -2,8 +2,16 @@ require('telescope').setup {
     defaults = {
         borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         mappings = {
+            i = {
+                ['<C-q>'] = require('telescope.actions').close,
+                ['<C-s>'] = require('telescope.actions').select_horizontal,
+                ['<C-x>'] = require('telescope.actions').delete_buffer,
+            },
             n = {
                 ['q'] = require('telescope.actions').close,
+                ['<C-q>'] = require('telescope.actions').close,
+                ['<C-s>'] = require('telescope.actions').select_horizontal,
+                ['<C-x>'] = require('telescope.actions').delete_buffer,
             },
         },
     },

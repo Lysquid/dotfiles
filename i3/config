@@ -49,16 +49,17 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+set $float_move_speed 10 ppt
+bindsym $mod+Shift+h move left $float_move_speed
+bindsym $mod+Shift+j move down $float_move_speed
+bindsym $mod+Shift+k move up $float_move_speed
+bindsym $mod+Shift+l move right $float_move_speed
 
 # Alternatively, with the cursor keys
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left $float_move_speed
+bindsym $mod+Shift+Down move down $float_move_speed
+bindsym $mod+Shift+Up move up $float_move_speed
+bindsym $mod+Shift+Right move right $float_move_speed
 
 # Split orientation
 bindsym $mod+b split h
@@ -124,6 +125,18 @@ bindsym $mod+underscore workspace number $ws8
 bindsym $mod+ccedilla workspace number $ws9
 bindsym $mod+agrave workspace number $ws10
 
+# Switch to workspace NUMPAD
+bindsym $mod+mod2+KP_1 workspace $ws1
+bindsym $mod+mod2+KP_2 workspace $ws2
+bindsym $mod+mod2+KP_3 workspace $ws3
+bindsym $mod+mod2+KP_4 workspace $ws4
+bindsym $mod+mod2+KP_5 workspace $ws5
+bindsym $mod+mod2+KP_6 workspace $ws6
+bindsym $mod+mod2+KP_7 workspace $ws7
+bindsym $mod+mod2+KP_8 workspace $ws8
+bindsym $mod+mod2+KP_9 workspace $ws9
+bindsym $mod+mod2+KP_0 workspace $ws10
+
 # Switch to workspace QWERTY
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -168,21 +181,22 @@ bindsym $mod+Shift+r restart
 # Resize window
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
+        set $resize_strenght 10 px or 10 ppt
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width $resize_strenght
+        bindsym j resize grow height $resize_strenght
+        bindsym k resize shrink height $resize_strenght
+        bindsym l resize grow width $resize_strenght
 
         # With the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width $resize_strenght
+        bindsym Down resize grow height $resize_strenght
+        bindsym Up resize shrink height $resize_strenght
+        bindsym Right resize grow width $resize_strenght
 
         # Back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
