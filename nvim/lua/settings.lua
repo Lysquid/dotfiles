@@ -20,4 +20,4 @@ vim.opt.wrap = false
 vim.opt.timeoutlen = 3000
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('tokyonight')
+vim.cmd.colorscheme('tokyonight-moon')
