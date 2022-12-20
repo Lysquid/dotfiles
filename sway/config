@@ -1,0 +1,407 @@
+# Example : /etc/sway/config
+
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
+set $mod Mod4
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Azerty
+set $1 ampersand
+set $1 ampersand
+set $2 eacute
+set $3 quotedbl
+set $4 apostrophe
+set $5 parenleft
+set $6 minus
+set $7 egrave
+set $8 underscore
+set $9 ccedilla
+set $0 agrave
+# Your preferred terminal emulator
+set $term alacritty
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $bemenu 'bemenu --ignorecase \
+--line-height 24 \
+--fn "Hack Nerd Font 11"  \
+--tb "#181818" --tf "#3a94da" \
+--fb "#181818" --ff "#bbbbbb" \
+--cb "#181818" --cf "#bbbbbb" \
+--nb "#181818" --nf "#bbbbbb" \
+--hb "#181818" --hf "#3a94da" \
+--fbb "#181818" --fbf "#bbbbbb" \
+--sb "#181818" --sf "#bbbbbb" \
+--ab "#333333" --af "#bbbbbb" \'
+set $menu j4-dmenu-desktop --dmenu=$bemenu --no-exec | xargs swaymsg exec --
+
+set $move_strength 100 px
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output eDP-1 bg ~/Pictures/Wallpapers/shiroko-blue-archive.jpg fill
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000' \
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
+
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+
+input type:keyboard {
+    xkb_layout fr
+    xkb_options caps:escape_shifted_capslock
+    xkb_numlock enabled
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    dwt enabled
+}
+
+seat * {
+    hide_cursor when-typing enable
+}
+
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+### Key bindings
+#
+# Basics:
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+Shift+q kill
+
+    # Start your launcher
+    bindsym $mod+p exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # Exit sway (logs you out of your Wayland session)
+    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+#
+# Moving around:
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Or use $mod+[up|down|left|right]
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left $move_strength
+    bindsym $mod+Shift+$down move down $move_strength
+    bindsym $mod+Shift+$up move up $move_strength
+    bindsym $mod+Shift+$right move right $move_strength
+    # Ditto, with arrow keys
+    bindsym $mod+Shift+Left move left $move_strength
+    bindsym $mod+Shift+Down move down $move_strength
+    bindsym $mod+Shift+Up move up $move_strength
+    bindsym $mod+Shift+Right move right $move_strength
+#
+# Workspaces:
+#
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    # Switch to workspace AZERTY
+    bindsym $mod+$1 workspace number 1
+    bindsym $mod+$2 workspace number 2
+    bindsym $mod+$3 workspace number 3
+    bindsym $mod+$4 workspace number 4
+    bindsym $mod+$5 workspace number 5
+    bindsym $mod+$6 workspace number 6
+    bindsym $mod+$7 workspace number 7
+    bindsym $mod+$8 workspace number 8
+    bindsym $mod+$9 workspace number 9
+    bindsym $mod+$0 workspace number 10
+    # Switch to workspace NUMPAD
+    bindsym $mod+mod2+KP_1 workspace number 1
+    bindsym $mod+mod2+KP_2 workspace number 2
+    bindsym $mod+mod2+KP_3 workspace number 3
+    bindsym $mod+mod2+KP_4 workspace number 4
+    bindsym $mod+mod2+KP_5 workspace number 5
+    bindsym $mod+mod2+KP_6 workspace number 6
+    bindsym $mod+mod2+KP_7 workspace number 7
+    bindsym $mod+mod2+KP_8 workspace number 8
+    bindsym $mod+mod2+KP_9 workspace number 9
+    bindsym $mod+mod2+KP_0 workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    # Move focused container to workspace AZERTY
+    bindsym $mod+Shift+$1 move container to workspace number 1
+    bindsym $mod+Shift+$2 move container to workspace number 2
+    bindsym $mod+Shift+$3 move container to workspace number 3
+    bindsym $mod+Shift+$4 move container to workspace number 4
+    bindsym $mod+Shift+$5 move container to workspace number 5
+    bindsym $mod+Shift+$6 move container to workspace number 6
+    bindsym $mod+Shift+$7 move container to workspace number 7
+    bindsym $mod+Shift+$8 move container to workspace number 8
+    bindsym $mod+Shift+$9 move container to workspace number 9
+    bindsym $mod+Shift+$0 move container to workspace number 10
+    # Note: workspaces can have any name you want, not just numbers.
+    # We just use 1-10 as the default.
+#
+# Layout stuff:
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+z layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+#
+# Scratchpad:
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+twosuperior move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+twosuperior scratchpad show
+#
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width $move_strength
+    bindsym $down resize grow height $move_strength
+    bindsym $up resize shrink height $move_strength
+    bindsym $right resize grow width $move_strength
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width $move_strength
+    bindsym Down resize grow height $move_strength
+    bindsym Up resize shrink height $move_strength
+    bindsym Right resize grow width $move_strength
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+mode "power" {
+    bindsym s exec systemctl poweroff
+    bindsym r exec systemctl reboot
+    bindsym l exit
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "power"
+
+mode "launch" {
+    bindsym 1 workspace number 1
+    bindsym 2 workspace number 2
+    bindsym 3 workspace number 3
+    bindsym 4 workspace number 4
+    bindsym 5 workspace number 5
+    bindsym 6 workspace number 6
+    bindsym 7 workspace number 7
+    bindsym 8 workspace number 8
+    bindsym 9 workspace number 9
+    bindsym 0 workspace number 10
+
+    # Switch to workspace AZERTY
+    bindsym $1 workspace number 1
+    bindsym $2 workspace number 2
+    bindsym $3 workspace number 3
+    bindsym $4 workspace number 4
+    bindsym $5 workspace number 5
+    bindsym $6 workspace number 6
+    bindsym $7 workspace number 7
+    bindsym $8 workspace number 8
+    bindsym $9 workspace number 9
+    bindsym $0 workspace number 10
+
+    bindsym f exec firefox
+    bindsym t exec thunderbird
+    bindsym n exec nautilus
+    bindsym v exec code
+    bindsym d exec discord
+    bindsym s exec LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
+    bindsym a exec anki
+    bindsym p exec pinta
+    bindsym c exec qalculate-gtk
+    bindsym o exec gcolor3
+    bindsym e exec evince
+
+    bindsym Backspace kill
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+o mode "launch"
+
+
+# Bar
+bar swaybar_command waybar
+
+include /etc/sway/config.d/*
+
+
+# # GTK 3 settings
+# set $gnome-schema org.gnome.desktop.interface
+# exec_always {
+#     gsettings set $gnome-schema gtk-theme 'Orchis-Dark'
+#     gsettings set $gnome-schema icon-theme 'Tela-dark'
+#     gsettings set $gnome-schema cursor-theme 'Vimix-white-cursors'
+#     gsettings set $gnome-schema font-name 'Cantarell 11'
+# }
+
+# Color scheme
+# class                 border  backgr. text    indicator child_border
+client.focused          #333333 #333333 #BBBBBB #3a94da   #3a94da
+client.focused_inactive #333333 #333333 #BBBBBB #333333   #333333
+client.unfocused        #181818 #181818 #BBBBBB #333333   #333333
+client.urgent           #e34444 #e34444 #BBBBBB #e34444   #e34444
+client.placeholder      #000000 #000000 #BBBBBB #000000   #000000
+client.background       #000000
+
+# Gaps
+gaps inner 10
+smart_borders no_gaps
+smart_gaps on
+
+# Borders
+default_border pixel 2
+
+# Floating windows
+for_window [app_id="gcolor3"] floating enable
+for_window [app_id="qalculate-gtk"] floating enable
+for_window [app_id="wihotspot-gui"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
+
+# Workspace assignements
+assign [class="firefox"] workspace number 1
+assign [class="Code"] workspace number 2
+assign [class="thunderbird"] workspace number 6
+assign [class="discord"] workspace number 10
+for_window [class="Spotify"] move container to workspace number 9
+
+# Lock screen and turn off screen
+bindsym $mod+x exec systemctl suspend
+bindsym $mod+Shift+x exec loginctl lock-session
+
+# Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86ScreenSaver exec xset dpms force off
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Alternate media controls
+bindsym $mod+Next exec playerctl next
+bindsym $mod+Prior exec playerctl previous
+bindsym $mod+Home exec playerctl play-pause
+bindsym $mod+End exec playerctl stop
+
+# Other XF86
+bindsym XF86Mail exec thunderbird
+bindsym XF86WWW exec firefox
+bindsym XF86TouchpadToggle exec touchpad-toggle && notify-send "Touchpad toggled" -u low -i input-touchpad -t 1000
+
+# Screenshot
+set $save_screenshot wl-paste > ~/Pictures/Screenshots/$(date +%s).png
+set $edit_screenshot wl-paste | swappy -f -
+bindsym Print exec grimshot --notify copy output && $save_screenshot
+bindsym Shift+Print exec grimshot --notify copy screen && $save_screenshot
+bindsym Ctrl+Print exec grimshot --notify copy area && $save_screenshot
+bindsym Ctrl+Shift+Print exec grimshot --notify copy area && $save_screenshot && $edit_screenshot
+bindsym Alt+Print exec grimshot --notify copy active && $save_screenshot
+bindsym Alt+Shift+Print exec grimshot --notify copy window && $save_screenshot
+bindsym $mod+Print exec $edit_screenshot
+
+# Startup
+exec dex --autostart --environment i3
+exec lxpolkit
+exec playerctld daemon
+exec dunst
+exec udiskie -s -F
+exec trash-empty 30
+exec fcitx -d
+exec swayidle -w

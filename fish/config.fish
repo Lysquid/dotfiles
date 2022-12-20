@@ -21,8 +21,8 @@ set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
 set -gx OPENER mimeopen
 
 # Path
-set -gx PATH $PATH $HOME/bin
 set -gx PATH $PATH $HOME/.local/bin
+set -gx PATH $PATH $HOME/.config/bin
 
 # Alias
 alias rm='rm -I'
