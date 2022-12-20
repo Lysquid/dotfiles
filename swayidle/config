@@ -1,0 +1,4 @@
+lock swaylock
+before-sleep swaylock
+timeout 1800 swaylock
+timeout 10 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' resume 'swaymsg "output * dpms on"'

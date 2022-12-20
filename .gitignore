@@ -32,3 +32,9 @@
 !/backup.sh
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
+!/sway/**
+!/swayidle/**
+!/swaylock/**
+!/waybar/**
+!/bin/**
+!/swappy/**
