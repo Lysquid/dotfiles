@@ -1,4 +1,4 @@
-// example : /etc/xdg/waybar/config
+// Example : /etc/xdg/waybar/config
 
 {
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],

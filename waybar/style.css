@@ -1,4 +1,4 @@
-/* example : /etc/xdg/waybar/style.css */
+/* Example : /etc/xdg/waybar/style.css */
 
 @define-color background #181818;
 @define-color background-alt #333333;
@@ -75,7 +75,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 12px;
+    padding: 0 10px;
 }
 
 #battery.critical:not(.charging) {
