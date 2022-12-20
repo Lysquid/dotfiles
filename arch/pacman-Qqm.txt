@@ -3,7 +3,11 @@ anki-official-binary-bundle
 bash-pipes
 cava
 cbonsai
+cppreference
+cppreference-devhelp
 ctpv-git
+datagrip
+datagrip-jre
 digital
 evillimiter
 fcitx5-skin-adwaita-dark
@@ -12,7 +16,6 @@ jdownloader2
 linux-wifi-hotspot
 metis
 minecraft-launcher
-nvim-packer-git
 onlyoffice-bin
 ookla-speedtest-bin
 opentabletdriver
@@ -24,6 +27,7 @@ osu-lazer-bin
 osu-mime
 pfetch
 pipes.sh
+signal-desktop-beta-bin
 spotify
 spotify-adblock
 stpv-git

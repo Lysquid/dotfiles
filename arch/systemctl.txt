@@ -100,7 +100,6 @@ NetworkManager-dispatcher.service          enabled         disabled
 NetworkManager-wait-online.service         enabled         disabled
 NetworkManager.service                     enabled         disabled
 nftables.service                           disabled        disabled
-ninfod.service                             disabled        disabled
 nm-priv-helper.service                     static          -
 nscd.service                               disabled        disabled
 nvidia-hibernate.service                   disabled        disabled
@@ -121,8 +120,6 @@ plocate-updatedb.service                   static          -
 polkit.service                             static          -
 qemu-pr-helper.service                     static          -
 quotaon.service                            static          -
-rarpd@.service                             disabled        disabled
-rdisc.service                              disabled        disabled
 reflector.service                          disabled        disabled
 rescue.service                             static          -
 rfkill-block@.service                      disabled        disabled
@@ -408,4 +405,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-408 unit files listed.
+405 unit files listed.

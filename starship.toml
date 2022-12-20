@@ -4,7 +4,7 @@ add_newline = false
 disabled = true
 
 [python]
-disabled = true
+disabled = false
 
 [package]
 disabled = true
@@ -19,7 +19,7 @@ disabled = true
 disabled = true
 
 [java]
-disabled = true
+disabled = false
 
 [golang]
 disabled = true
