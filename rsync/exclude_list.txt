@@ -14,6 +14,7 @@
 /etc/shadow*
 /etc/hostapd
 /etc/libvirt*
+/etc/ssh*
 
 Steam
 Games
