@@ -43,7 +43,7 @@
 + [SimpleScreenRecorder](https://www.maartenbaert.be/simplescreenrecorder/) : screencast utility
 + [Flameshot](https://github.com/flameshot-org/flameshot) : screenshot tool
 + [Calibre](https://calibre-ebook.com/) : ebook reader and manager
-+ [Qalculate!](https://github.com/Qalculate/qalculate-gtk) : calculator
++ [Qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
 + [rsync](https://wiki.archlinux.org/title/rsync) : backups
 + [nitrogen](https://github.com/l3ib/nitrogen) : wallpaper picker

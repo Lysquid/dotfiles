@@ -27,7 +27,7 @@
 /fcitx5/conf/cached_layouts
 /fcitx5/conf/notifications.conf
 /fcitx5/profile
-!/starship*
+!/starship/**
 !/etc/**
 !/backup.sh
 !/nvim/**

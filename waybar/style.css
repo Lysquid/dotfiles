@@ -36,6 +36,7 @@ button {
 #workspaces button {
     padding: 0;
     background-color: transparent;
+    /* min-width: 40px; */
 }
 
 #workspaces button.focused {
