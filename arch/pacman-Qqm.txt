@@ -10,7 +10,6 @@ ctpv-git
 datagrip
 datagrip-jre
 digital
-evillimiter
 fcitx5-skin-adwaita-dark
 gallery-dl
 greetd

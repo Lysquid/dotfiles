@@ -11,6 +11,7 @@ max-icon-size=32
 icon-path=/usr/share/icons/Tela-dark/
 font=Hack Nerd Font 10
 background-color=#222222
+border-color=#3a94da
 text-color=#dddddd
 progress-color=#444444
 
@@ -19,7 +20,6 @@ border-color=#444444
 default-timeout=5000
 
 [urgency=normal]
-border-color=#3a94da
 default-timeout=8000
 
 [urgency=high]
