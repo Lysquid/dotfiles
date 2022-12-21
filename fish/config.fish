@@ -11,48 +11,5 @@ end
 # Remove 'Welcome to fish' message
 set fish_greeting
 
-# Environnement variables
-set -gx BROWSER firefox
-set -gx TERM alacritty
-set -gx TERMINAL alacritty -e
-set -gx EDITOR nvim
-set -gx LESS '-R --use-color -Dd+r$Du+b'
-set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
-set -gx OPENER mimeopen
-
-# Path
-set -gx PATH $PATH $HOME/.local/bin
-set -gx PATH $PATH $HOME/.config/bin
-
-# Alias
-alias rm='rm -I'
-alias ip='ip -color=auto'
-alias rickroll='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias reload='source .config/fish/config.fish'
-alias backup_to_disk='rsync -aPht --delete --delete-excluded --exclude-from=/home/rom1/.config/rsync/exclude_list.txt /etc /home /run/media/rom1/Backup\ Disk/arch'
-alias pico8='~/.local/share/pico8/pico8'
-alias vmware='GTK_THEME=Orchis vmware-view'
-alias tp='trash-put'
-alias trs='trash-restore'
-
-# Keybindings
-bind \cg 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint' 
-bind \cy '$EDITOR' 
-bind \cz 'fg > /dev/null 2> /dev/null' 
-
-# Functions
-
-function keylog
-    xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
-end
-
-function brightness
-    xrandr --output HDMI2 --brightness (math $argv/10)
-end
-
-function drive_sync
-    rclone sync ~/ drive:Laptop --filter-from .config/rclone/filter.txt --skip-links --delete-excluded
-end
-
 # Starship
 starship init fish | source

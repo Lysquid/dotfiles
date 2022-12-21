@@ -48,7 +48,7 @@ cmd trash %{{
     trash-put $fx
 }}
 
-cmd trash-restore ${{
+cmd trash_restore ${{
     trash-restore
 }}
 
@@ -80,7 +80,7 @@ cmd zip ${{
     rm -rf $1
 }}
 
-cmd hidepreview :{{
+cmd hide_preview :{{
     set nopreview
     set ratios 1:5
     $:
@@ -94,7 +94,7 @@ cmd execute !{{
     $f
 }}
 
-cmd open-with ${{
+cmd open_with ${{
     mimeopen --ask $f 2> /dev/null
 }}
 
@@ -102,7 +102,7 @@ cmd open-change-default ${{
     mimeopen --ask-default $f 2> /dev/null
 }}
 
-cmd execute-permission :{{
+cmd execute_permission :{{
     $chmod +x $fx
     :reload
 }}
@@ -119,6 +119,14 @@ cmd fzf_jump ${{
     lf -remote "send $id $cmd \"$res\""
 }}
 
+cmd background ${{
+    swaymsg output '*' bg $f fill
+}}
+
+cmd file_explorer &{{
+    nautilus .
+}}
+
 # Remove some defaults
 map d
 
@@ -128,21 +136,23 @@ map a push :mkfile<space>
 map A push :mkdir<space>
 map <c-y> editor
 map dd trash
-map dr trash-restore
+map dr trash_restore
 map df delete
 map x cut
 map E execute
 map <enter> open
-map H hidepreview 
+map H hide_preview 
 map . set hidden!
 map C code
-map o open-with
+map o open_with
 map O open-change-default
 map <c-j> push 5j
 map <c-k> push 5k
-map X execute-permission
+map X execute_permission
 map U extract
 map <c-f> fzf_jump
+map b background
+map n file_explorer
 
 # Movement
 map gh cd ~/

@@ -40,6 +40,8 @@ bash-pipes
 bat
 bat-extras
 bc
+bemenu
+bemenu-wayland
 binutils
 bison
 blas
@@ -50,6 +52,7 @@ boost
 boost-libs
 botan
 box2d
+brightnessctl
 brotli
 btop
 btrfs-progs
@@ -68,10 +71,13 @@ capstone
 cava
 cbonsai
 cdparanoia
+chafa
 cheese
 chmlib
 chromaprint
+chrono-date
 clang
+clipman
 clucene
 clutter
 clutter-gst
@@ -138,6 +144,7 @@ evince
 exempi
 exiv2
 expat
+extra-cmake-modules
 faac
 faad2
 fakeroot
@@ -235,7 +242,10 @@ graphene
 graphicsmagick
 graphite
 graphviz
+greetd
 grep
+grim
+grimshot
 groff
 grub
 gsettings-desktop-schemas
@@ -252,12 +262,14 @@ gst-plugins-base-libs
 gst-plugins-good
 gst-plugins-ugly
 gstreamer
+gtk-layer-shell
 gtk-update-icon-cache
 gtk-vnc
 gtk2
 gtk3
 gtk4
 gtkmm
+gtkmm3
 gtksourceview4
 gts
 guile
@@ -297,6 +309,7 @@ iptables-nft
 iputils
 iso-codes
 iw
+j4-dmenu-desktop
 jansson
 jasper
 java-environment-common
@@ -830,6 +843,7 @@ mdcat
 media-player-info
 mesa
 mesa-utils
+meson
 metis
 minecraft-launcher
 miniupnpc
@@ -863,6 +877,7 @@ network-manager-applet
 networkmanager
 networkmanager-openconnect
 nftables
+ninja
 nitrogen
 nm-connection-editor
 nodejs
@@ -882,6 +897,7 @@ nvidia-settings
 nvidia-utils
 nvtop
 oath-toolkit
+obs-studio
 ocl-icd
 octave
 oniguruma
@@ -910,6 +926,7 @@ osinfo-db
 ostree
 osu-lazer-bin
 osu-mime
+otf-font-awesome
 p11-kit
 p7zip
 pacman
@@ -1147,6 +1164,7 @@ qt6-imageformats
 qt6-positioning
 qt6-svg
 qt6-translations
+qt6-wayland
 qt6-webchannel
 qt6-webengine
 raptor
@@ -1162,6 +1180,7 @@ renpy
 rest
 rhash
 ripgrep
+rnnoise
 rofi
 rofimoji
 rsync
@@ -1238,6 +1257,7 @@ sdl2_image
 sdl2_mixer
 sdl2_ttf
 seabios
+seatd
 sed
 serd
 sfml
@@ -1250,6 +1270,7 @@ simplescreenrecorder
 sl
 slang
 slop
+slurp
 snappy
 sndio
 solid
@@ -1259,6 +1280,7 @@ sound-theme-freedesktop
 soundtouch
 source-highlight
 spandsp
+spdlog
 speex
 speexdsp
 spice
@@ -1280,6 +1302,11 @@ suitesparse
 sundials
 svt-av1
 svt-hevc
+swappy
+sway
+swaybg
+swayidle
+swaylock
 swtpm
 syndication
 syntax-highlighting
@@ -1354,6 +1381,7 @@ vte3
 vulkan-headers
 vulkan-icd-loader
 wavpack
+waybar
 wayland
 wayland-protocols
 webkit2gtk
@@ -1365,10 +1393,14 @@ which
 wildmidi
 wine
 wireplumber
+wl-clipboard
+wl-gammactl
+wlroots
 woff2
 wolfssl
 wpa_supplicant
 wpebackend-fdo
+wshowkeys-git
 x264
 x265
 xapian-core
@@ -1377,6 +1409,7 @@ xcb-imdkit
 xcb-proto
 xcb-util
 xcb-util-cursor
+xcb-util-errors
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
@@ -1386,6 +1419,7 @@ xclip
 xdg-dbus-proxy
 xdg-desktop-portal
 xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-utils
 xdotool
@@ -1411,6 +1445,7 @@ xorg-xprop
 xorg-xrandr
 xorg-xrdb
 xorg-xset
+xorg-xwayland
 xorgproto
 xvidcore
 xxhash
