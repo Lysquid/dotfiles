@@ -139,7 +139,6 @@ eglexternalplatform
 embree
 enchant
 eog
-evillimiter
 evince
 exempi
 exiv2
@@ -1045,7 +1044,6 @@ python-mechanize
 python-more-itertools
 python-msgpack
 python-multivolumefile
-python-netaddr
 python-netifaces
 python-nspektr
 python-ordered-set
@@ -1079,16 +1077,13 @@ python-regex
 python-requests
 python-resolvelib
 python-rich
-python-scapy
 python-setuptools
 python-sgmllib3k
 python-six
 python-soupsieve
 python-tenacity
-python-terminaltables
 python-texttable
 python-tomli
-python-tqdm
 python-trove-classifiers
 python-typing_extensions
 python-unrardll
@@ -1319,7 +1314,6 @@ taglib
 talloc
 tar
 tbb
-tcpdump
 tdb
 tela-icon-theme
 texinfo

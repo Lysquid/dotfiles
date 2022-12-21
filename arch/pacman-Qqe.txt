@@ -49,7 +49,6 @@ dust
 edk2-ovmf
 efibootmgr
 eog
-evillimiter
 evince
 fakeroot
 fcitx5
