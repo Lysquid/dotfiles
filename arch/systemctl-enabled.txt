@@ -1,8 +1,8 @@
 UNIT FILE                          STATE   PRESET
 bluetooth.service                  enabled disabled
 getty@.service                     enabled enabled
+greetd.service                     enabled disabled
 libvirtd.service                   enabled disabled
-lightdm.service                    enabled disabled
 NetworkManager-dispatcher.service  enabled disabled
 NetworkManager-wait-online.service enabled disabled
 NetworkManager.service             enabled disabled

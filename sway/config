@@ -1,5 +1,13 @@
 # Example : /etc/sway/config
 
+# Lock
+exec swaylock
+
+# Flameshot environnement variable
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -26,7 +34,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $bemenu 'bemenu --ignorecase \
+set $bemenu_args --ignorecase \
 --line-height 24 \
 --fn "Hack Nerd Font 11"  \
 --tb "#181818" --tf "#3a94da" \
@@ -36,32 +44,25 @@ set $bemenu 'bemenu --ignorecase \
 --hb "#181818" --hf "#3a94da" \
 --fbb "#181818" --fbf "#bbbbbb" \
 --sb "#181818" --sf "#bbbbbb" \
---ab "#333333" --af "#bbbbbb" \'
-set $menu j4-dmenu-desktop --dmenu=$bemenu --no-exec | xargs swaymsg exec --
+--ab "#333333" --af "#bbbbbb"
+set $bemenu bemenu $bemenu_args
+set $menu j4-dmenu-desktop --dmenu='$bemenu' --no-exec | xargs swaymsg exec --
 
 set $move_strength 100 px
+set $cursor_theme Vimix-white-cursors
+
+set $wallpaper1 wallhaven-8xg6qy.jpg
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 bg ~/Pictures/Wallpapers/shiroko-blue-archive.jpg fill
+output eDP-1 bg ~/Pictures/Wallpapers/$wallpaper1 fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-
-### Idle configuration
-
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000'
-
-# This will lock your screen after 300 seconds of inactivity, then turn off
-# your displays after another 300 seconds, and turn your screens back on when
-# resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
 
@@ -79,6 +80,8 @@ input type:touchpad {
 
 seat * {
     hide_cursor when-typing enable
+    xcursor_theme $cursor_theme
+    # shortcuts_inhibitor enable
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
@@ -263,7 +266,7 @@ mode "power" {
 }
 bindsym $mod+Shift+e mode "power"
 
-mode "launch" {
+mode "open" {
     bindsym 1 workspace number 1
     bindsym 2 workspace number 2
     bindsym 3 workspace number 3
@@ -294,17 +297,16 @@ mode "launch" {
     bindsym d exec discord
     bindsym s exec LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
     bindsym a exec anki
-    bindsym p exec pinta
     bindsym c exec qalculate-gtk
+    bindsym p exec pinta
     bindsym o exec gcolor3
     bindsym e exec evince
+    bindsym q kill
+    bindsym Return exec $term
 
-    bindsym Backspace kill
-
-    bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+o mode "launch"
+bindsym $mod+o mode "open"
 
 
 # Bar
@@ -324,11 +326,11 @@ include /etc/sway/config.d/*
 
 # Color scheme
 # class                 border  backgr. text    indicator child_border
-client.focused          #333333 #333333 #BBBBBB #3a94da   #3a94da
-client.focused_inactive #333333 #333333 #BBBBBB #333333   #333333
-client.unfocused        #181818 #181818 #BBBBBB #333333   #333333
-client.urgent           #e34444 #e34444 #BBBBBB #e34444   #e34444
-client.placeholder      #000000 #000000 #BBBBBB #000000   #000000
+client.focused          #333333 #333333 #bbbbbb #3a94da   #3a94da
+client.focused_inactive #333333 #333333 #bbbbbb #333333   #333333
+client.unfocused        #181818 #181818 #bbbbbb #333333   #333333
+client.urgent           #e34444 #e34444 #bbbbbb #e34444   #e34444
+client.placeholder      #000000 #000000 #bbbbbb #000000   #000000
 client.background       #000000
 
 # Gaps
@@ -383,7 +385,7 @@ bindsym $mod+End exec playerctl stop
 # Other XF86
 bindsym XF86Mail exec thunderbird
 bindsym XF86WWW exec firefox
-bindsym XF86TouchpadToggle exec touchpad-toggle && notify-send "Touchpad toggled" -u low -i input-touchpad -t 1000
+bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
 
 # Screenshot
 set $save_screenshot wl-paste > ~/Pictures/Screenshots/$(date +%s).png
@@ -396,12 +398,19 @@ bindsym Alt+Print exec grimshot --notify copy active && $save_screenshot
 bindsym Alt+Shift+Print exec grimshot --notify copy window && $save_screenshot
 bindsym $mod+Print exec $edit_screenshot
 
+# Various shortcuts
+bindsym $mod+i exec fish -c invert
+bindsym $mod+y exec clipman pick -t bemenu -T'$bemenu_args \
+--ab "#181818" --af "#bbbbbb"'
+
 # Startup
-exec dex --autostart --environment i3
+# dex --dry-run --autostart --environment sway
 exec lxpolkit
+exec nm-applet --indicator
 exec playerctld daemon
 exec dunst
 exec udiskie -s -F
 exec trash-empty 30
-exec fcitx -d
+exec fcitx5 -d
 exec swayidle -w
+exec wl-paste -t text --watch clipman store

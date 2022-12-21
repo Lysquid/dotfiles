@@ -3,8 +3,11 @@
 {
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["mpd", "pulseaudio", "backlight", "cpu", "memory", "battery", "tray"],
+    "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "battery", "tray"],
 
+    "sway/workspaces": {
+        "disable-scroll": true
+    },
     "sway/mode": {
         "format": "{}"
     },
@@ -16,23 +19,23 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": "<span color=\"#3a94da\"></span> {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩",
         "format-disconnected": "",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "<span color=\"#3a94da\"></span> {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
             "on": " "
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
+            "off": "<span color=\"#3a94da\"> </span>",
             "on": " "
         },
         "repeat-icons": {
             "on": " "
         },
         "single-icons": {
-            "on": "1 "
+            "on": " 1"
         },
         "state-icons": {
             "paused": "",

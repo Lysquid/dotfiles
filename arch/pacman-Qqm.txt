@@ -3,6 +3,7 @@ anki-official-binary-bundle
 bash-pipes
 cava
 cbonsai
+clipman
 cppreference
 cppreference-devhelp
 ctpv-git
@@ -12,6 +13,8 @@ digital
 evillimiter
 fcitx5-skin-adwaita-dark
 gallery-dl
+greetd
+grimshot
 jdownloader2
 linux-wifi-hotspot
 metis
@@ -39,5 +42,7 @@ vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client
 vmware-keymaps
+wl-gammactl
+wshowkeys-git
 xbanish
 yay

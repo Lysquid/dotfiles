@@ -16,7 +16,7 @@ gpm.path                                   static          -
 ostree-finalize-staged.path                disabled        disabled
 systemd-ask-password-console.path          static          -
 systemd-ask-password-wall.path             static          -
-session-2.scope                            transient       -
+session-1.scope                            transient       -
 archlinux-keyring-wkd-sync.service         static          -
 arptables.service                          disabled        disabled
 auditd.service                             disabled        disabled
@@ -63,6 +63,7 @@ geoclue.service                            static          -
 getty@.service                             enabled         enabled
 git-daemon@.service                        static          -
 gpm.service                                disabled        disabled
+greetd.service                             enabled         disabled
 healthd.service                            disabled        disabled
 hostapd.service                            disabled        disabled
 initrd-cleanup.service                     static          -
@@ -80,7 +81,7 @@ krb5-kpropd@.service                       static          -
 ldconfig.service                           static          -
 libvirt-guests.service                     disabled        disabled
 libvirtd.service                           enabled         disabled
-lightdm.service                            enabled         disabled
+lightdm.service                            disabled        disabled
 lm_sensors.service                         disabled        disabled
 lvm2-lvmpolld.service                      static          -
 lvm2-monitor.service                       static          -
@@ -127,6 +128,7 @@ rfkill-unblock@.service                    disabled        disabled
 rsyncd.service                             disabled        disabled
 rsyncd@.service                            static          -
 rtkit-daemon.service                       disabled        disabled
+seatd.service                              disabled        disabled
 sensord.service                            disabled        disabled
 serial-getty@.service                      disabled        disabled
 shadow.service                             static          -
@@ -405,4 +407,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-405 unit files listed.
+407 unit files listed.
