@@ -25,3 +25,7 @@ end
 function tra
     trash-put
 end
+
+function i3
+    exec startx /bin/i3 > /dev/null 2> /dev/null
+end

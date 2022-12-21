@@ -42,6 +42,7 @@ vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client
 vmware-keymaps
+wdisplays
 wl-gammactl
 wshowkeys-git
 xbanish

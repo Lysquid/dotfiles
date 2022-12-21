@@ -1,3 +1,5 @@
+# Backup all useful files to an external disk
+
 function backup_to_disk
     rsync \
     -aPht \

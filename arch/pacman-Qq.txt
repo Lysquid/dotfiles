@@ -329,6 +329,7 @@ json-c
 json-glib
 jsoncpp
 jxrlib
+kanshi
 karchive
 kauth
 kbd
@@ -738,6 +739,7 @@ libusb
 libusbmuxd
 libuv
 libva
+libvarlink
 libvdpau
 libverto
 libvirt
@@ -832,6 +834,7 @@ m4
 mailcap
 maim
 make
+mako
 man-db
 man-pages
 mathjax
@@ -897,7 +900,6 @@ nvidia-settings
 nvidia-utils
 nvtop
 oath-toolkit
-obs-studio
 ocl-icd
 octave
 oniguruma
@@ -1180,7 +1182,6 @@ renpy
 rest
 rhash
 ripgrep
-rnnoise
 rofi
 rofimoji
 rsync
@@ -1384,10 +1385,12 @@ wavpack
 waybar
 wayland
 wayland-protocols
+wdisplays
 webkit2gtk
 webkit2gtk-4.1
 webp-pixbuf-loader
 webrtc-audio-processing
+wf-recorder
 wget
 which
 wildmidi

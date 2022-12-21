@@ -4,7 +4,7 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{name}";
   font: "Hack Nerd Font 10";
-  modi: "window,run,drun";
+  modi: "drun,run,window";
   // show-icons: true;
   // icon-theme: "Tela Dark";
 }

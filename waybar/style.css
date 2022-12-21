@@ -13,6 +13,7 @@
 }
 
 #tray {
+    /* Not working as of now */
     font-family: Cantarell, sans-serif;
     font-size: 14px;
 }
@@ -32,13 +33,6 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    box-shadow: inset 0 -3px @primary;
-    color: @foreground;
-}
-
-
 #workspaces button {
     padding: 0;
     background-color: transparent;
@@ -49,9 +43,18 @@ button:hover {
     box-shadow: inset 0 -3px @primary;
 }
 
+#workspaces button.visible {
+    background-color: @background-alt;
+}
+
 #workspaces button.urgent {
     background-color: @alert;
     color: @white;
+}
+
+#workspaces button:hover {
+    background-color: @background-alt;
+    color: @foreground;
 }
 
 #mode {
