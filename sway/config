@@ -1,22 +1,21 @@
 # Example : /etc/sway/config
 
-# Lock
+# Lock session on startup
 exec swaylock
 
-# Flameshot environnement variable
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
-
 ### Variables
-#
-# Logo key. Use Mod1 for Alt.
+
+# Wallpapers
+set $wallpaper1 wallhaven-8xg6qy.jpg
+
+# Leader key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
+# Home row direction
 set $left h
 set $down j
 set $up k
 set $right l
+
 # Azerty
 set $1 ampersand
 set $1 ampersand
@@ -29,8 +28,12 @@ set $7 egrave
 set $8 underscore
 set $9 ccedilla
 set $0 agrave
-# Your preferred terminal emulator
+
+# Preferences
 set $term alacritty
+set $cursor_theme Vimix-white-cursors
+set $move_strength 100 px
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -47,21 +50,13 @@ set $bemenu_args --ignorecase \
 --ab "#333333" --af "#bbbbbb"
 set $bemenu bemenu $bemenu_args
 set $menu j4-dmenu-desktop --dmenu='$bemenu' --no-exec | xargs swaymsg exec --
+set $menu_bin bemenu-run --no-exec $bemenu_args | xargs swaymsg exec --
 
-set $move_strength 100 px
-set $cursor_theme Vimix-white-cursors
-
-set $wallpaper1 wallhaven-8xg6qy.jpg
 
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+
 output eDP-1 bg ~/Pictures/Wallpapers/$wallpaper1 fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
+# Example : output HDMI-A-1 resolution 1920x1080 position 1920,0
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Input configuration
@@ -81,16 +76,14 @@ input type:touchpad {
 seat * {
     hide_cursor when-typing enable
     xcursor_theme $cursor_theme
-    # shortcuts_inhibitor enable
 }
 
 # You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
-#
+
 # Basics:
-#
+
     # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -99,28 +92,23 @@ seat * {
 
     # Start your launcher
     bindsym $mod+p exec $menu
+    bindsym $mod+Shift+p exec $menu_bin
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
-    # Despite the name, also works for non-floating windows.
-    # Change normal to inverse to use left mouse button for resizing and right
-    # mouse button for dragging.
     floating_modifier $mod normal
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-#
 # Moving around:
-#
+
     # Move your focus around
     bindsym $mod+$left focus left
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
+    # Or use arrow keys
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
@@ -136,9 +124,20 @@ seat * {
     bindsym $mod+Shift+Down move down $move_strength
     bindsym $mod+Shift+Up move up $move_strength
     bindsym $mod+Shift+Right move right $move_strength
-#
+
 # Workspaces:
-#
+
+    set $KP_1 KP_End
+    set $KP_2 KP_Down
+    set $KP_3 KP_Next
+    set $KP_4 KP_Left
+    set $KP_5 KP_Begin
+    set $KP_6 KP_Right
+    set $KP_7 KP_Home
+    set $KP_8 KP_Up
+    set $KP_9 KP_Prior
+    set $KP_0 KP_Insert
+
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -162,16 +161,17 @@ seat * {
     bindsym $mod+$9 workspace number 9
     bindsym $mod+$0 workspace number 10
     # Switch to workspace NUMPAD
-    bindsym $mod+mod2+KP_1 workspace number 1
-    bindsym $mod+mod2+KP_2 workspace number 2
-    bindsym $mod+mod2+KP_3 workspace number 3
-    bindsym $mod+mod2+KP_4 workspace number 4
-    bindsym $mod+mod2+KP_5 workspace number 5
-    bindsym $mod+mod2+KP_6 workspace number 6
-    bindsym $mod+mod2+KP_7 workspace number 7
-    bindsym $mod+mod2+KP_8 workspace number 8
-    bindsym $mod+mod2+KP_9 workspace number 9
-    bindsym $mod+mod2+KP_0 workspace number 10
+    bindsym $mod+$KP_1 workspace number 1
+    bindsym $mod+$KP_2 workspace number 2
+    bindsym $mod+$KP_3 workspace number 3
+    bindsym $mod+$KP_4 workspace number 4
+    bindsym $mod+$KP_5 workspace number 5
+    bindsym $mod+$KP_6 workspace number 6
+    bindsym $mod+$KP_7 workspace number 7
+    bindsym $mod+$KP_8 workspace number 8
+    bindsym $mod+$KP_9 workspace number 9
+    bindsym $mod+$KP_0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -194,14 +194,21 @@ seat * {
     bindsym $mod+Shift+$8 move container to workspace number 8
     bindsym $mod+Shift+$9 move container to workspace number 9
     bindsym $mod+Shift+$0 move container to workspace number 10
-    # Note: workspaces can have any name you want, not just numbers.
-    # We just use 1-10 as the default.
-#
+    # Move focused container to workspace NUMPAD
+    bindsym $mod+Shift+$KP_1 move container to workspace number 1
+    bindsym $mod+Shift+$KP_2 move container to workspace number 2
+    bindsym $mod+Shift+$KP_3 move container to workspace number 3
+    bindsym $mod+Shift+$KP_4 move container to workspace number 4
+    bindsym $mod+Shift+$KP_5 move container to workspace number 5
+    bindsym $mod+Shift+$KP_6 move container to workspace number 6
+    bindsym $mod+Shift+$KP_7 move container to workspace number 7
+    bindsym $mod+Shift+$KP_8 move container to workspace number 8
+    bindsym $mod+Shift+$KP_9 move container to workspace number 9
+    bindsym $mod+Shift+$KP_0 move container to workspace number 10
+
 # Layout stuff:
-#
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
+
+    # Split direction
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
@@ -221,11 +228,8 @@ seat * {
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
-#
+
 # Scratchpad:
-#
-    # Sway has a "scratchpad", which is a bag of holding for windows.
-    # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
     bindsym $mod+Shift+twosuperior move scratchpad
@@ -233,9 +237,8 @@ seat * {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+twosuperior scratchpad show
-#
+
 # Resizing containers:
-#
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -258,6 +261,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# Power menu
 mode "power" {
     bindsym s exec systemctl poweroff
     bindsym r exec systemctl reboot
@@ -266,7 +270,9 @@ mode "power" {
 }
 bindsym $mod+Shift+e mode "power"
 
+# Quick launcher
 mode "open" {
+    # Switch to workspace
     bindsym 1 workspace number 1
     bindsym 2 workspace number 2
     bindsym 3 workspace number 3
@@ -277,7 +283,6 @@ mode "open" {
     bindsym 8 workspace number 8
     bindsym 9 workspace number 9
     bindsym 0 workspace number 10
-
     # Switch to workspace AZERTY
     bindsym $1 workspace number 1
     bindsym $2 workspace number 2
@@ -289,6 +294,51 @@ mode "open" {
     bindsym $8 workspace number 8
     bindsym $9 workspace number 9
     bindsym $0 workspace number 10
+    # Switch to workspace NUMPAD
+    bindsym $KP_1 workspace number 1
+    bindsym $KP_2 workspace number 2
+    bindsym $KP_3 workspace number 3
+    bindsym $KP_4 workspace number 4
+    bindsym $KP_5 workspace number 5
+    bindsym $KP_6 workspace number 6
+    bindsym $KP_7 workspace number 7
+    bindsym $KP_8 workspace number 8
+    bindsym $KP_9 workspace number 9
+    bindsym $KP_0 workspace number 10
+
+    # Move focused container to workspace
+    bindsym Shift+1 move container to workspace number 1
+    bindsym Shift+2 move container to workspace number 2
+    bindsym Shift+3 move container to workspace number 3
+    bindsym Shift+4 move container to workspace number 4
+    bindsym Shift+5 move container to workspace number 5
+    bindsym Shift+6 move container to workspace number 6
+    bindsym Shift+7 move container to workspace number 7
+    bindsym Shift+8 move container to workspace number 8
+    bindsym Shift+9 move container to workspace number 9
+    bindsym Shift+0 move container to workspace number 10
+    # Move focused container to workspace AZERTY
+    bindsym Shift+$1 move container to workspace number 1
+    bindsym Shift+$2 move container to workspace number 2
+    bindsym Shift+$3 move container to workspace number 3
+    bindsym Shift+$4 move container to workspace number 4
+    bindsym Shift+$5 move container to workspace number 5
+    bindsym Shift+$6 move container to workspace number 6
+    bindsym Shift+$7 move container to workspace number 7
+    bindsym Shift+$8 move container to workspace number 8
+    bindsym Shift+$9 move container to workspace number 9
+    bindsym Shift+$0 move container to workspace number 10
+    # Move focused container to workspace NUMPAD
+    bindsym Shift+$KP_1 move container to workspace number 1
+    bindsym Shift+$KP_2 move container to workspace number 2
+    bindsym Shift+$KP_3 move container to workspace number 3
+    bindsym Shift+$KP_4 move container to workspace number 4
+    bindsym Shift+$KP_5 move container to workspace number 5
+    bindsym Shift+$KP_6 move container to workspace number 6
+    bindsym Shift+$KP_7 move container to workspace number 7
+    bindsym Shift+$KP_8 move container to workspace number 8
+    bindsym Shift+$KP_9 move container to workspace number 9
+    bindsym Shift+$KP_0 move container to workspace number 10
 
     bindsym f exec firefox
     bindsym t exec thunderbird
@@ -308,21 +358,16 @@ mode "open" {
 }
 bindsym $mod+o mode "open"
 
-
 # Bar
 bar swaybar_command waybar
 
-include /etc/sway/config.d/*
 
 
-# # GTK 3 settings
-# set $gnome-schema org.gnome.desktop.interface
-# exec_always {
-#     gsettings set $gnome-schema gtk-theme 'Orchis-Dark'
-#     gsettings set $gnome-schema icon-theme 'Tela-dark'
-#     gsettings set $gnome-schema cursor-theme 'Vimix-white-cursors'
-#     gsettings set $gnome-schema font-name 'Cantarell 11'
-# }
+
+# Flameshot environnement variable
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 # Color scheme
 # class                 border  backgr. text    indicator child_border
@@ -341,21 +386,7 @@ smart_gaps on
 # Borders
 default_border pixel 2
 
-# Floating windows
-for_window [app_id="gcolor3"] floating enable
-for_window [app_id="qalculate-gtk"] floating enable
-for_window [app_id="wihotspot-gui"] floating enable
-for_window [app_id="nm-connection-editor"] floating enable
-for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
-
-# Workspace assignements
-assign [class="firefox"] workspace number 1
-assign [class="Code"] workspace number 2
-assign [class="thunderbird"] workspace number 6
-assign [class="discord"] workspace number 10
-for_window [class="Spotify"] move container to workspace number 9
-
-# Lock screen and turn off screen
+# Suspend and lock screen
 bindsym $mod+x exec systemctl suspend
 bindsym $mod+Shift+x exec loginctl lock-session
 
@@ -385,32 +416,55 @@ bindsym $mod+End exec playerctl stop
 # Other XF86
 bindsym XF86Mail exec thunderbird
 bindsym XF86WWW exec firefox
-bindsym XF86TouchpadToggle input type:touchpad events toggle enabled disabled
+bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enabled disabled \
+    && notify-send "Touchpad toggled" -u low -t 1000
 
-# Screenshot
+# Screenshots
 set $save_screenshot wl-paste > ~/Pictures/Screenshots/$(date +%s).png
-set $edit_screenshot wl-paste | swappy -f -
+set $edit_screenshot wl-paste | swappy --file - && $save_screenshot
 bindsym Print exec grimshot --notify copy output && $save_screenshot
 bindsym Shift+Print exec grimshot --notify copy screen && $save_screenshot
 bindsym Ctrl+Print exec grimshot --notify copy area && $save_screenshot
-bindsym Ctrl+Shift+Print exec grimshot --notify copy area && $save_screenshot && $edit_screenshot
+bindsym Ctrl+Shift+Print exec grimshot --notify copy area && $edit_screenshot
 bindsym Alt+Print exec grimshot --notify copy active && $save_screenshot
 bindsym Alt+Shift+Print exec grimshot --notify copy window && $save_screenshot
 bindsym $mod+Print exec $edit_screenshot
 
-# Various shortcuts
-bindsym $mod+i exec fish -c invert
-bindsym $mod+y exec clipman pick -t bemenu -T'$bemenu_args \
+# Notifications
+bindsym $mod+n exec makoctl restore
+bindsym $mod+Shift+n exec makoctl dismiss --all
+
+# Invert screen colors
+bindsym $mod+i exec fish --command invert && exit
+
+# Clipboard history
+bindsym $mod+y exec clipman pick --tool bemenu -T'$bemenu_args \
 --ab "#181818" --af "#bbbbbb"'
+
+# Workspace assignements
+assign [class="firefox"] workspace number 1
+assign [class="Code"] workspace number 2
+assign [class="thunderbird"] workspace number 6
+assign [class="discord"] workspace number 10
+for_window [class="Spotify"] move container to workspace number 9
+
+# Floating windows
+for_window [app_id="gcolor3"] floating enable
+for_window [app_id="qalculate-gtk"] floating enable
+for_window [app_id="wihotspot-gui"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
+for_window [app_id="wdisplays"] floating enable
 
 # Startup
 # dex --dry-run --autostart --environment sway
 exec lxpolkit
 exec nm-applet --indicator
 exec playerctld daemon
-exec dunst
-exec udiskie -s -F
-exec trash-empty 30
+exec mako
+exec udiskie --smart-tray --no-file-manager
+exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w
 exec wl-paste -t text --watch clipman store
+exec kanshi

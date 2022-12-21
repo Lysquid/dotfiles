@@ -98,6 +98,7 @@ jdownloader2
 jq
 jre11-openjdk
 jre11-openjdk-headless
+kanshi
 keepassxc
 lf
 lib32-giflib
@@ -137,6 +138,7 @@ lynx
 m4
 maim
 make
+mako
 man-db
 man-pages
 mdcat
@@ -163,7 +165,6 @@ nvidia
 nvidia-prime
 nvidia-settings
 nvtop
-obs-studio
 ocl-icd
 octave
 onlyoffice-bin
@@ -271,6 +272,8 @@ virt-manager
 visual-studio-code-bin
 vmware-horizon-client
 waybar
+wdisplays
+wf-recorder
 which
 wine
 wireplumber

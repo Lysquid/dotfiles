@@ -1,9 +1,9 @@
-# example : /etc/dunst/dunstrc
+# Example : /etc/dunst/dunstrc
 
 [global]
     width = 300
     height = 300
-    offset = 10x35
+    offset = 10x10
     notification_limit = 0
     frame_width = 2
     gap_size = 10

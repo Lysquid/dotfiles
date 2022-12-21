@@ -1,3 +1,5 @@
+# Invert screen colors
+
 function invert
     if pgrep -x wl-gammactl > /dev/null
         pkill wl-gammactl

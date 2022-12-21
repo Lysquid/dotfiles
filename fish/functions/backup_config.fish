@@ -1,3 +1,5 @@
+# Backup all config files that are not in .config
+
 function backup_config
     pacman -Qq > ~/.config/arch/pacman-Qq.txt
     pacman -Qqe > ~/.config/arch/pacman-Qqe.txt
@@ -23,5 +25,5 @@ function backup_config
     /etc/libvirt/libvirtd.conf \
     /etc/libvirt/qemu.conf \
     /etc/greetd/** \
-    .
+    .config/
 end
