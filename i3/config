@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango:Hack Nerd Font 10
+font pango:JetBrainsMono Nerd Font 10
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%

@@ -1,13 +1,13 @@
 function rm 
-    command rm -I
+    command rm -I $argv
 end
 
 function ip
-    command ip -color=auto
+    command ip -color=auto $argv
 end
 
 function rickroll
-    'curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
+    curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash
 end
 
 function reload
@@ -23,13 +23,17 @@ function pixiv-dl
 end
 
 function vmware
-    GTK_THEME=Orchis vmware-view
+    GTK_THEME=Orchis vmware-view $argv
 end
 
 function tra
-    trash-put
+    trash-put $argv
 end
 
 function i3
-    exec startx /bin/i3 > /dev/null 2> /dev/null
+    exec startx /bin/i3 > /dev/null 2> /dev/null $argv
+end
+
+function icat
+    kitty +kitten icat $argv
 end

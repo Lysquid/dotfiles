@@ -9,7 +9,7 @@ window:
 
 font:
   normal:
-    family: Hack Nerd Font
+    family: JetBrainsMono Nerd Font
   size: 13
 
 colors:

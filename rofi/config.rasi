@@ -3,7 +3,7 @@ configuration {
   display-run: "run:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "Hack Nerd Font 10";
+  font: "JetBrainsMono Nerd Font 10";
   modi: "drun,run,window";
   // show-icons: true;
   // icon-theme: "Tela Dark";
