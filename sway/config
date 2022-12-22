@@ -34,24 +34,6 @@ set $term kitty
 set $cursor_theme Vimix-white-cursors
 set $move_strength 100 px
 
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $bemenu_args --ignorecase \
---line-height 24 \
---fn "JetBrainsMono Nerd Font 11"  \
---tb "#181818" --tf "#3a94da" \
---fb "#181818" --ff "#bbbbbb" \
---cb "#181818" --cf "#bbbbbb" \
---nb "#181818" --nf "#bbbbbb" \
---hb "#181818" --hf "#3a94da" \
---fbb "#181818" --fbf "#bbbbbb" \
---sb "#181818" --sf "#bbbbbb" \
---ab "#333333" --af "#bbbbbb"
-set $bemenu bemenu $bemenu_args
-set $menu j4-dmenu-desktop --dmenu='$bemenu' --no-exec | xargs swaymsg exec --
-set $menu_bin bemenu-run --no-exec $bemenu_args | xargs swaymsg exec --
-
 # Font
 font JetBrainsMono Nerd Font 10
 
@@ -94,8 +76,8 @@ seat * {
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+p exec $menu
-    bindsym $mod+Shift+p exec $menu_bin
+    bindsym $mod+p exec rofi -show drun
+    bindsym $mod+Shift+p exec rofi -show run
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -441,8 +423,7 @@ bindsym $mod+Shift+n exec makoctl dismiss --all
 bindsym $mod+i exec fish --command invert && exit
 
 # Clipboard history
-bindsym $mod+y exec clipman pick --tool bemenu -T'$bemenu_args \
---ab "#181818" --af "#bbbbbb"'
+bindsym $mod+y exec clipman pick --tool rofi
 
 # Workspace assignements
 assign [app_id="firefox"] workspace number 1

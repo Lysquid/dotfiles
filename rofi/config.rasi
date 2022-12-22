@@ -1,19 +1,17 @@
 configuration {
-  display-drun: "Apps:";
+  display-drun: "Run:";
   display-run: "run:";
   display-window: "Windows:";
   drun-display-format: "{name}";
   font: "JetBrainsMono Nerd Font 10";
-  modi: "drun,run,window";
-  // show-icons: true;
-  // icon-theme: "Tela Dark";
+  modi: "drun,run";
 }
 
 @theme "/dev/null"
 
 * {
   bg: #18181888;
-  bg-alt: #33333388;
+  bg-alt: #29292988;
 
   fg: #eeeeee;
   fg-alt: #888888;
