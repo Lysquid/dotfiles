@@ -2,7 +2,7 @@
 
 [r/unixporn](https://www.reddit.com/r/unixporn/comments/wc7b33/i3wm_my_functional_first_rice/)
 
-I switched to Sway, but you can still find my i3 config on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
+I switched to Sway, but my i3 config is still on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
 
 ## Config
 
