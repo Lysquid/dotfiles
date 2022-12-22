@@ -14,7 +14,6 @@ bash-pipes
 bat
 bat-extras
 bc
-bemenu
 bison
 bluez
 bluez-utils
@@ -99,6 +98,7 @@ jre11-openjdk
 jre11-openjdk-headless
 kanshi
 keepassxc
+kitty
 lf
 lib32-giflib
 lib32-gnutls
@@ -149,6 +149,7 @@ nautilus
 neofetch
 neomutt
 neovim
+nerd-fonts-jetbrains-mono
 nethack
 nethogs
 netstandard-targeting-pack
@@ -256,7 +257,6 @@ transmission-cli
 transmission-gtk
 trash-cli
 tree
-ttf-hack-nerd
 ttf-nerd-fonts-symbols-2048-em
 udiskie
 ueberzug

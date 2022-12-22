@@ -18,6 +18,7 @@ jdownloader2
 linux-wifi-hotspot
 metis
 minecraft-launcher
+nerd-fonts-jetbrains-mono
 onlyoffice-bin
 ookla-speedtest-bin
 opentabletdriver

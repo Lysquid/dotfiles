@@ -40,8 +40,6 @@ bash-pipes
 bat
 bat-extras
 bc
-bemenu
-bemenu-wayland
 binutils
 bison
 blas
@@ -356,6 +354,9 @@ kiconthemes
 kio
 kitemmodels
 kitemviews
+kitty
+kitty-shell-integration
+kitty-terminfo
 kjobwidgets
 kmod
 knewstuff
@@ -695,6 +696,7 @@ libraw1394
 libreoffice-fresh
 librevenge
 librsvg
+librsync
 libsamplerate
 libsasl
 libseccomp
@@ -870,6 +872,7 @@ neofetch
 neomutt
 neon
 neovim
+nerd-fonts-jetbrains-mono
 nethack
 nethogs
 netpbm
@@ -1334,7 +1337,6 @@ tree-sitter
 tslib
 ttf-carlito
 ttf-dejavu
-ttf-hack-nerd
 ttf-liberation
 ttf-nerd-fonts-symbols-2048-em
 ttf-nerd-fonts-symbols-common
