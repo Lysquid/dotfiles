@@ -33,3 +33,7 @@ end
 function icat
     kitty +kitten icat $argv
 end
+
+function emoji
+    kitty +kitten unicode_input --emoji-variation graphic
+end
