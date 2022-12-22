@@ -162,7 +162,7 @@ map gp cd ~/Pictures
 map gv cd ~/Videos
 map gu cd ~/Music
 map gc cd ~/.config
-map go cd ~/Prog
+map go cd ~/Code
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
 map gm cd /run/media/rom1

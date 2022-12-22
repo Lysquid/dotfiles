@@ -1,6 +1,6 @@
 ![screenshot](screenshot.png)
 
-[r/unixporn](https://www.reddit.com/r/unixporn/comments/wc7b33/i3wm_my_functional_first_rice/)
+[r/unixporn](https://www.reddit.com/r/unixporn/comments/zswnv3/sway_wayland_is_the_way_to_go/)
 
 I switched to Sway, but my i3 config is still on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
 
