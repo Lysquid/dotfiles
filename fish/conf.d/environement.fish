@@ -1,6 +1,6 @@
 # Applications
 set -gx BROWSER firefox
-set -gx TERM alacritty
+set -gx TERM kitty
 set -gx EDITOR nvim
 set -gx OPENER mimeopen
 

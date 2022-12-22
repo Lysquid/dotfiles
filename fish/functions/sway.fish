@@ -7,5 +7,5 @@ function sway
     set -gx GDK_BACKEND wayland
     set -gx MOZ_ENABLE_WAYLAND 1
     set -gx BEMENU_BACKEND wayland
-    exec sway --unsupported-gpu > /dev/null 2> /dev/null
+    exec sway --unsupported-gpu $argv > /dev/null 2> /dev/null
 end

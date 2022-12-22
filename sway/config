@@ -30,7 +30,7 @@ set $9 ccedilla
 set $0 agrave
 
 # Preferences
-set $term alacritty
+set $term kitty
 set $cursor_theme Vimix-white-cursors
 set $move_strength 100 px
 
@@ -39,7 +39,7 @@ set $move_strength 100 px
 # on the original workspace that the command was run on.
 set $bemenu_args --ignorecase \
 --line-height 24 \
---fn "Hack Nerd Font 11"  \
+--fn "JetBrainsMono Nerd Font 11"  \
 --tb "#181818" --tf "#3a94da" \
 --fb "#181818" --ff "#bbbbbb" \
 --cb "#181818" --cf "#bbbbbb" \
@@ -52,6 +52,8 @@ set $bemenu bemenu $bemenu_args
 set $menu j4-dmenu-desktop --dmenu='$bemenu' --no-exec | xargs swaymsg exec --
 set $menu_bin bemenu-run --no-exec $bemenu_args | xargs swaymsg exec --
 
+# Font
+font JetBrainsMono Nerd Font 10
 
 ### Output configuration
 
@@ -68,6 +70,7 @@ input type:keyboard {
 }
 
 input type:touchpad {
+    events disabled
     tap enabled
     natural_scroll enabled
     dwt enabled
@@ -442,9 +445,9 @@ bindsym $mod+y exec clipman pick --tool bemenu -T'$bemenu_args \
 --ab "#181818" --af "#bbbbbb"'
 
 # Workspace assignements
-assign [class="firefox"] workspace number 1
+assign [app_id="firefox"] workspace number 1
+assign [app_id="thunderbird"] workspace number 6
 assign [class="Code"] workspace number 2
-assign [class="thunderbird"] workspace number 6
 assign [class="discord"] workspace number 10
 for_window [class="Spotify"] move container to workspace number 9
 

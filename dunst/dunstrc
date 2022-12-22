@@ -7,7 +7,7 @@
     notification_limit = 0
     frame_width = 2
     gap_size = 10
-    font = Hack Nerd Font 10
+    font = JetBrainsMono Nerd Font 10
     min_icon_size = 16
     max_icon_size = 32
     foreground = "#dddddd"
