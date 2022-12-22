@@ -1,4 +1,0 @@
-#!/bin/sh
-
-nitrogen --restore
-i3-msg restart
