@@ -33,7 +33,6 @@
 
 ## More cool softwares
 
-+ [Rclone](https://github.com/rclone/rclone) : cli tool for cloud sync
 + [Virt-Manager](https://virt-manager.org/) : virtual machine manager for QEMU/KVM
 + [Transmission](https://transmissionbt.com/) : BitTorrent client
 + [Lutris](https://lutris.net/) : game launcher
@@ -46,6 +45,7 @@
 + [Qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
 + [rsync](https://wiki.archlinux.org/title/rsync) : backups
++ [Rclone](https://github.com/rclone/rclone) : cli tool for cloud sync
 + [Gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
 + [udiskie](https://github.com/coldfix/udiskie/) : automount disks and USB keys
 + [kanshi](https://sr.ht/~emersion/kanshi/) : automatic switch between display configs
