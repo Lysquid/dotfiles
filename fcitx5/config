@@ -19,10 +19,10 @@ DeactivateKeys=
 TogglePreedit=
 
 [Hotkey/TriggerKeys]
-0=Control+Shift+Shift_R
+0=Super+comma
 
 [Hotkey/EnumerateGroupForwardKeys]
-0=Alt+Super+space
+0=Super+question
 
 [Hotkey/PrevPage]
 0=Up
@@ -52,7 +52,7 @@ CompactInputMethodInformation=True
 # Show first input method information
 ShowFirstInputMethodInformation=True
 # Default page size
-DefaultPageSize=5
+DefaultPageSize=1
 # Override Xkb Option
 OverrideXkbOption=False
 # Custom Xkb Option

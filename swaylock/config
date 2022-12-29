@@ -3,18 +3,18 @@ ignore-empty-password
 show-failed-attempts
 color=000000
 
-ring-color=555555
+ring-color=333333
 key-hl-color=3a94da
 bs-hl-color=e34444
 
-ring-ver-color=555555
-inside-ver-color=555555
+ring-ver-color=333333
+inside-ver-color=333333
 
 ring-wrong-color=e34444
-inside-wrong-color=555555
+inside-wrong-color=333333
 
 ring-clear-color=3a94da
-inside-clear-color=555555
+inside-clear-color=333333
 
-text-color=555555
-text-caps-lock-color=555555
+text-color=333333
+text-caps-lock-color=333333
