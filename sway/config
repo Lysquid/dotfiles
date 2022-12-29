@@ -7,6 +7,7 @@ exec swaylock
 
 # Wallpapers
 set $wallpaper1 wallhaven-8xg6qy.jpg
+set $wallpaper2 wallhaven-9mel2k.png
 
 # Leader key. Use Mod1 for Alt.
 set $mod Mod4
@@ -39,14 +40,29 @@ font JetBrainsMono Nerd Font 10
 
 ### Output configuration
 
+output eDP-1 position 0,180
+output HDMI-A-2 position 1600,0
+
 output eDP-1 bg ~/Pictures/Wallpapers/$wallpaper1 fill
-# Example : output HDMI-A-1 resolution 1920x1080 position 1920,0
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+output HDMI-A-2 bg ~/Pictures/Wallpapers/$wallpaper2 fill
+
+# Workspaces assignements to outputs
+workspace 1 output HDMI-A-2
+workspace 2 output HDMI-A-2
+workspace 3 output HDMI-A-2
+workspace 4 output HDMI-A-2
+workspace 5 output HDMI-A-2
+workspace 6 output HDMI-A-2
+workspace 7 output eDP-1
+workspace 8 output eDP-1
+workspace 9 output eDP-1
+workspace 0 output eDP-1
 
 ### Input configuration
 
 input type:keyboard {
     xkb_layout fr
+    # xkb_variant us
     xkb_options caps:escape_shifted_capslock
     xkb_numlock enabled
 }
@@ -334,7 +350,8 @@ mode "open" {
     bindsym a exec anki
     bindsym c exec qalculate-gtk
     bindsym p exec pinta
-    bindsym o exec gcolor3
+    bindsym l exec gcolor3
+    bindsym o exec obsidian
     bindsym e exec evince
     bindsym q kill
     bindsym Return exec $term
@@ -425,7 +442,7 @@ bindsym $mod+i exec fish --command invert && exit
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi
 
-# Workspace assignements
+# Apps assignements to workspaces
 assign [app_id="firefox"] workspace number 1
 assign [app_id="thunderbird"] workspace number 6
 assign [class="Code"] workspace number 2

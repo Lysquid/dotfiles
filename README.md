@@ -50,7 +50,6 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + [Rclone](https://github.com/rclone/rclone) : cli tool for cloud sync
 + [Gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
 + [udiskie](https://github.com/coldfix/udiskie/) : automount disks and USB keys
-+ [kanshi](https://sr.ht/~emersion/kanshi/) : automatic switch between display configs
 + [wdisplays](https://github.com/artizirk/wdisplays) : graphical display settings
 + [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys) : show keys being typed on screen
 + [youtube-dl](https://github.com/ytdl-org/youtube-dl) : download youtube videos
