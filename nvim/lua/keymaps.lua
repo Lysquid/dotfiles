@@ -9,7 +9,9 @@ vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
 vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<cmd>bdelete<cr>')
 vim.keymap.set('', '<S-CR>', 'o<Esc>') -- insert blank line below in normal mode
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
-vim.keymap.set('', '<C-a>', 'gg0vG$') -- select whole document
+vim.keymap.set('', '<leader>v', 'gg0vG$') -- select whole document
+vim.keymap.set('', 'H', '^')
+vim.keymap.set('', 'L', '$')
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>') -- Esc to leave terminal mode

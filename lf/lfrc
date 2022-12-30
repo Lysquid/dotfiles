@@ -90,15 +90,11 @@ cmd code &{{
     code $fx
 }}
 
-cmd execute !{{
-    $f
-}}
-
 cmd open_with ${{
     mimeopen --ask $f 2> /dev/null
 }}
 
-cmd open-change-default ${{
+cmd open_change_default ${{
     mimeopen --ask-default $f 2> /dev/null
 }}
 
@@ -139,20 +135,19 @@ map dd trash
 map dr trash_restore
 map df delete
 map x cut
-map E execute
 map <enter> open
 map H hide_preview 
 map . set hidden!
 map C code
 map o open_with
-map O open-change-default
-map <c-j> push 5j
-map <c-k> push 5k
+map O open_change_default
+map J push 5j
+map K push 5k
 map X execute_permission
 map U extract
 map <c-f> fzf_jump
 map b background
-map n file_explorer
+map E file_explorer
 
 # Movement
 map gh cd ~/

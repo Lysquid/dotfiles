@@ -56,7 +56,7 @@ workspace 6 output HDMI-A-2
 workspace 7 output eDP-1
 workspace 8 output eDP-1
 workspace 9 output eDP-1
-workspace 0 output eDP-1
+workspace 10 output eDP-1
 
 ### Input configuration
 
