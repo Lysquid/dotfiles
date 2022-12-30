@@ -18,6 +18,7 @@ jdownloader2
 linux-wifi-hotspot
 metis
 minecraft-launcher
+mullvad-vpn-bin
 nerd-fonts-jetbrains-mono
 onlyoffice-bin
 ookla-speedtest-bin
@@ -30,6 +31,7 @@ osu-lazer-bin
 osu-mime
 pfetch
 pipes.sh
+rofi-lbonn-wayland-git
 signal-desktop-beta-bin
 spotify
 spotify-adblock

@@ -41,7 +41,7 @@ font JetBrainsMono Nerd Font 10
 ### Output configuration
 
 output eDP-1 position 0,180
-output HDMI-A-2 position 1600,0
+output HDMI-A-2 mode 1920x1080@120Hz position 1600,0 adaptive_sync on
 
 output eDP-1 bg ~/Pictures/Wallpapers/$wallpaper1 fill
 output HDMI-A-2 bg ~/Pictures/Wallpapers/$wallpaper2 fill
@@ -468,4 +468,3 @@ exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w
 exec wl-paste -t text --watch clipman store
-exec kanshi
