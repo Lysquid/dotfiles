@@ -96,7 +96,6 @@ jdownloader2
 jq
 jre11-openjdk
 jre11-openjdk-headless
-kanshi
 keepassxc
 kitty
 lf
@@ -145,6 +144,7 @@ minecraft-launcher
 mpg123
 mpv
 mtpfs
+mullvad-vpn-bin
 nautilus
 neofetch
 neomutt
@@ -165,6 +165,7 @@ nvidia
 nvidia-prime
 nvidia-settings
 nvtop
+obsidian
 ocl-icd
 octave
 onlyoffice-bin
@@ -229,8 +230,7 @@ rclone
 reflector
 renpy
 ripgrep
-rofi
-rofimoji
+rofi-lbonn-wayland-git
 rsync
 sfml
 signal-desktop-beta-bin
