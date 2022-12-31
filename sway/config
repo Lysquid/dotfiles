@@ -107,6 +107,11 @@ font JetBrainsMono Nerd Font 10
 # Floating modifier
 floating_modifier $mod normal
 
+# Flameshot environnement variable
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 # Bar
 bar swaybar_command waybar
 
