@@ -17,7 +17,6 @@ ostree-finalize-staged.path                disabled        disabled
 systemd-ask-password-console.path          static          -
 systemd-ask-password-wall.path             static          -
 session-1.scope                            transient       -
-session-5.scope                            transient       -
 archlinux-keyring-wkd-sync.service         static          -
 arptables.service                          disabled        disabled
 auditd.service                             disabled        disabled
@@ -73,7 +72,6 @@ initrd-switch-root.service                 static          -
 initrd-udevadm-cleanup-db.service          static          -
 ip6tables.service                          disabled        disabled
 iptables.service                           disabled        disabled
-jdownloader.service                        disabled        disabled
 kmod-static-nodes.service                  static          -
 krb5-kadmind.service                       disabled        disabled
 krb5-kdc.service                           disabled        disabled
@@ -392,6 +390,7 @@ veritysetup-pre.target                     static          -
 veritysetup.target                         static          -
 virt-guest-shutdown.target                 static          -
 archlinux-keyring-wkd-sync.timer           disabled        disabled
+aur-auto-vote.timer                        disabled        disabled
 btrfs-scrub@.timer                         disabled        disabled
 e2scrub_all.timer                          disabled        disabled
 fstrim.timer                               disabled        disabled
@@ -410,4 +409,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-410 unit files listed.
+409 unit files listed.
