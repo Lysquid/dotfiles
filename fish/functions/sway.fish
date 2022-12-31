@@ -1,3 +1,5 @@
+# Script to launch Sway
+
 function sway
     set -gx _JAVA_AWT_WM_NONREPARENTING 1
     set -gx QT_QPA_PLATFORM wayland

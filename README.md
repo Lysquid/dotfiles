@@ -52,6 +52,7 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + [udiskie](https://github.com/coldfix/udiskie/) : automount disks and USB keys
 + [wdisplays](https://github.com/artizirk/wdisplays) : graphical display settings
 + [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys) : show keys being typed on screen
++ [warpd](https://github.com/rvaiya/warpd) : move the mouse with the keyboard
 + [youtube-dl](https://github.com/ytdl-org/youtube-dl) : download youtube videos
 + [ani-cli](https://github.com/pystardust/ani-cli) : cli tool to watch anime
 + [Anki](https://apps.ankiweb.net/) : best flashcard app
