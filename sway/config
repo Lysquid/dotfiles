@@ -11,6 +11,7 @@ set $wallpaper2 wallhaven-9mel2k.png
 
 # Leader key. Use Mod1 for Alt.
 set $mod Mod4
+
 # Home row direction
 set $left h
 set $down j
@@ -35,28 +36,34 @@ set $term kitty
 set $cursor_theme Vimix-white-cursors
 set $move_strength 100 px
 
+# Screens
+set $laptop eDP-1
+set $monitor HDMI-A-2
+
 # Font
 font JetBrainsMono Nerd Font 10
 
 ### Output configuration
 
-output eDP-1 position 0,180
-output HDMI-A-2 mode 1920x1080@120Hz position 1600,0 adaptive_sync on
+# Position
+output $laptop position 0,180
+output $monitor mode 1920x1080@120Hz position 1600,0 adaptive_sync on
 
-output eDP-1 bg ~/Pictures/Wallpapers/$wallpaper1 fill
-output HDMI-A-2 bg ~/Pictures/Wallpapers/$wallpaper2 fill
+# Wallpapers
+output $laptop bg ~/Pictures/Wallpapers/$wallpaper1 fill
+output $monitor bg ~/Pictures/Wallpapers/$wallpaper2 fill
 
 # Workspaces assignements to outputs
-workspace 1 output HDMI-A-2
-workspace 2 output HDMI-A-2
-workspace 3 output HDMI-A-2
-workspace 4 output HDMI-A-2
-workspace 5 output HDMI-A-2
-workspace 6 output HDMI-A-2
-workspace 7 output eDP-1
-workspace 8 output eDP-1
-workspace 9 output eDP-1
-workspace 10 output eDP-1
+workspace 1 output $monitor
+workspace 2 output $monitor
+workspace 3 output $monitor
+workspace 4 output $monitor
+workspace 5 output $monitor
+workspace 6 output $monitor
+workspace 7 output $laptop
+workspace 8 output $laptop
+workspace 9 output $laptop
+workspace 10 output $laptop
 
 ### Input configuration
 
@@ -75,7 +82,7 @@ input type:touchpad {
 }
 
 seat * {
-    hide_cursor when-typing enable
+    hide_cursor when-typing disable
     xcursor_theme $cursor_theme
 }
 
@@ -441,6 +448,14 @@ bindsym $mod+i exec fish --command invert && exit
 
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi
+
+# Mouse control
+bindsym $mod+m exec warpd --hint
+bindsym $mod+Shift+m exec warpd --normal
+
+# Inhibit idle in fullscreen
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
 
 # Apps assignements to workspaces
 assign [app_id="firefox"] workspace number 1
