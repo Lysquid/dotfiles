@@ -1,5 +1,6 @@
 ani-cli
 anki-official-binary-bundle
+aur-auto-vote-git
 bash-pipes
 cava
 cbonsai
@@ -14,9 +15,7 @@ fcitx5-skin-adwaita-dark
 gallery-dl
 greetd
 grimshot
-jdownloader2
 linux-wifi-hotspot
-metis
 minecraft-launcher
 mullvad-vpn-bin
 nerd-fonts-jetbrains-mono
@@ -44,6 +43,7 @@ vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client
 vmware-keymaps
+warpd
 wdisplays
 wl-gammactl
 wshowkeys-git

@@ -26,6 +26,7 @@ atool
 attica
 attr
 audit
+aur-auto-vote-git
 autoconf
 automake
 autorandr
@@ -216,7 +217,6 @@ glibmm
 glpk
 glslang
 glu
-gmime3
 gmp
 gnome-autoar
 gnome-clocks
@@ -316,7 +316,6 @@ java-runtime-common
 jbig2dec
 jdk-openjdk
 jdk11-openjdk
-jdownloader2
 jq
 jre-openjdk
 jre-openjdk-headless
@@ -374,7 +373,6 @@ kwallet
 kwidgetsaddons
 kwindowsystem
 kxmlgui
-kyotocabinet
 l-smash
 lame
 lapack
@@ -814,14 +812,12 @@ linux-wifi-hotspot
 lldb
 llvm-libs
 lm_sensors
-lmdb
 lolcat
 lpsolve
 lsb-release
 lsof
 lua
 lua-language-server
-lua53
 luajit
 lutris
 lv2
@@ -848,7 +844,6 @@ media-player-info
 mesa
 mesa-utils
 meson
-metis
 minecraft-launcher
 miniupnpc
 minizip
@@ -870,7 +865,6 @@ nautilus
 ncurses
 ndctl
 neofetch
-neomutt
 neon
 neovim
 nerd-fonts-jetbrains-mono
@@ -887,7 +881,6 @@ ninja
 nitrogen
 nm-connection-editor
 nodejs
-notmuch-runtime
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -1260,7 +1253,6 @@ seatd
 sed
 serd
 sfml
-sfsexp
 shaderc
 shadow
 shared-mime-info
@@ -1314,7 +1306,6 @@ systemd
 systemd-libs
 systemd-sysvcompat
 taglib
-talloc
 tar
 tbb
 tdb
@@ -1377,6 +1368,7 @@ vte-common
 vte3
 vulkan-headers
 vulkan-icd-loader
+warpd
 wavpack
 waybar
 wayland
@@ -1387,7 +1379,6 @@ webkit2gtk-4.1
 webp-pixbuf-loader
 webrtc-audio-processing
 wf-recorder
-wget
 which
 wildmidi
 wine
@@ -1402,7 +1393,6 @@ wpebackend-fdo
 wshowkeys-git
 x264
 x265
-xapian-core
 xbanish
 xcb-imdkit
 xcb-proto

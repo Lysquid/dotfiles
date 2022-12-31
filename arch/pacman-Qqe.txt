@@ -4,6 +4,7 @@ anki-official-binary-bundle
 arandr
 asciiquarium
 atool
+aur-auto-vote-git
 autoconf
 automake
 autorandr
@@ -92,7 +93,6 @@ java-environment-common
 java-runtime-common
 jdk-openjdk
 jdk11-openjdk
-jdownloader2
 jq
 jre11-openjdk
 jre11-openjdk-headless
@@ -147,7 +147,6 @@ mtpfs
 mullvad-vpn-bin
 nautilus
 neofetch
-neomutt
 neovim
 nerd-fonts-jetbrains-mono
 nethack
@@ -270,6 +269,7 @@ vimix-cursors
 virt-manager
 visual-studio-code-bin
 vmware-horizon-client
+warpd
 waybar
 wdisplays
 wf-recorder
