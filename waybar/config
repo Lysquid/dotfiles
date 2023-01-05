@@ -67,7 +67,7 @@
     },
     "battery": {
         "states": {
-            "critical": 50
+            "critical": 30
         },
         "format": "<span color=\"#3a94da\">{icon}</span> {capacity}",
         "format-charging": "<span color=\"#3a94da\"></span> {capacity}",
