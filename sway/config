@@ -81,9 +81,10 @@ workspace 10 output $laptop
 
 # Keyboard
 input type:keyboard {
-    xkb_layout fr
-    # xkb_variant us
+    xkb_layout fr,fr
+    xkb_variant us,
     xkb_options caps:escape_shifted_capslock
+    xkb_options grp:ctrls_toggle
     xkb_numlock enabled
 }
 
@@ -440,9 +441,7 @@ bindsym $mod+Prior exec playerctl previous
 bindsym $mod+Home exec playerctl play-pause
 bindsym $mod+End exec playerctl stop
 
-# Other XF86
-bindsym XF86Mail exec thunderbird
-bindsym XF86WWW exec firefox
+# Touchpad toggle
 bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enabled disabled \
     && notify-send "Touchpad toggled" -u low -t 1000
 
