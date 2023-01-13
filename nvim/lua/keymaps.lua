@@ -42,6 +42,10 @@ vim.keymap.set('', '<C-h>', '<C-w>h')
 vim.keymap.set('', '<C-j>', '<C-w>j')
 vim.keymap.set('', '<C-k>', '<C-w>k')
 vim.keymap.set('', '<C-q>', '<C-w>q')
+vim.keymap.set('', '<M-l>', '<Cmd>vertical resize +10<CR>')
+vim.keymap.set('', '<M-h>', '<Cmd>vertical resize -10<CR>')
+vim.keymap.set('', '<M-j>', '<Cmd>resize -5<CR>')
+vim.keymap.set('', '<M-k>', '<Cmd>resize +5<CR>')
 
 -- Equivalent for other modes
 vim.keymap.set({ 't', 'i', 's' }, '<C-l>', '<Esc><C-w>l', { remap = true })

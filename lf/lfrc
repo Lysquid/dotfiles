@@ -6,7 +6,7 @@ set ignorecase on
 set icons on
 set incsearch on
 set incfilter on
-set hiddenfiles '.*:/home/rom1/snap'
+set hiddenfiles '.*:/home/rom1/snap:/home/rom1/java.log.*'
 
 # ctpv integration
 set previewer ctpv
