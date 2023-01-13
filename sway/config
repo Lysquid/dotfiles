@@ -83,8 +83,7 @@ workspace 10 output $laptop
 input type:keyboard {
     xkb_layout fr,fr
     xkb_variant us,
-    xkb_options caps:escape_shifted_capslock
-    xkb_options grp:ctrls_toggle
+    xkb_options caps:escape_shifted_capslock,grp:ctrls_toggle
     xkb_numlock enabled
 }
 
@@ -136,10 +135,11 @@ default_border pixel 2
 # Inhibit idle in fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
+for_window [title="^codelldb$"] resize shrink width 40 ppt
 
 # Apps assignements to workspaces
 assign [app_id="firefox"] workspace number 1
-assign [app_id="thunderbird"] workspace number 6
+assign [app_id="thunderbird"] workspace number 3
 assign [class="Code"] workspace number 2
 assign [class="discord"] workspace number 10
 for_window [class="Spotify"] move container to workspace number 9
@@ -163,6 +163,7 @@ exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w
 exec wl-paste -t text --watch clipman store
+exec fish --command night_light
 
 
 
@@ -278,6 +279,7 @@ mode "open" {
     bindsym l exec gcolor3
     bindsym o exec obsidian
     bindsym e exec evince
+    bindsym a exec anki
     bindsym q kill
     bindsym Return exec kitty
     # Return to default mode
@@ -325,8 +327,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Scratchpad
-bindsym $mod+Shift+twosuperior move scratchpad
-bindsym $mod+twosuperior scratchpad show
+bindsym $mod+Shift+grave move scratchpad
+bindsym $mod+grave scratchpad show
 
 # Move your focus around
 bindsym $mod+$left focus left
@@ -465,8 +467,9 @@ bindsym $mod+Shift+x exec loginctl lock-session
 bindsym $mod+n exec makoctl restore
 bindsym $mod+Shift+n exec makoctl dismiss --all
 
-# Invert screen colors
-bindsym $mod+i exec fish --command invert && exit
+# Screen colors
+bindsym $mod+i exec fish --command invert
+bindsym $mod+g exec fish --command night_light
 
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi
