@@ -28,10 +28,7 @@ dapui.setup({
     },
 })
 
--- Keymaps
-vim.keymap.set({ '', 't' }, '<M-F5>', function() dapui.toggle {} end)
-
--- Auto launch and close
+-- Auto open and close
 dap.listeners.after.event_initialized['dapui_config'] = function()
     dapui.open {}
 end
@@ -41,3 +38,6 @@ end
 dap.listeners.before.event_exited['dapui_config'] = function()
     dapui.close {}
 end
+
+-- Toggle command
+vim.api.nvim_create_user_command('DapToggleUI', function() dapui.toggle {} end, {})
