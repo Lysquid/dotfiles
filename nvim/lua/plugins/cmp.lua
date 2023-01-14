@@ -7,6 +7,34 @@ local luasnip = require('luasnip')
 vim.keymap.set({ 'i', 's' }, '<C-n>', '<nop>')
 vim.keymap.set({ 'i', 's' }, '<C-p>', '<nop>')
 
+local kind_icons = {
+    Text = "",
+    Method = "",
+    Function = "",
+    Constructor = "",
+    Field = "",
+    Variable = "",
+    Class = "ﴯ",
+    Interface = "",
+    Module = "",
+    Property = "ﰠ",
+    Unit = "",
+    Value = "",
+    Enum = "",
+    Keyword = "",
+    Snippet = "",
+    Color = "",
+    File = "",
+    Reference = "",
+    Folder = "",
+    EnumMember = "",
+    Constant = "",
+    Struct = "",
+    Event = "",
+    Operator = "",
+    TypeParameter = ""
+}
+
 -- See :help cmp-config
 cmp.setup({
     snippet = {
@@ -23,6 +51,12 @@ cmp.setup({
     }, {
         { name = 'buffer' },
     }),
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
+            return vim_item
+        end
+    },
     -- See :help cmp-mapping
     mapping = {
         -- Doc
@@ -58,6 +92,11 @@ cmp.setup({
     },
 })
 
+function format_no_description(entry, vim_item)
+    vim_item.kind = ''
+    return vim_item
+end
+
 -- Set configuration for specific filetype.
 cmp.setup.filetype('gitcommit', {
     sources = cmp.config.sources({
@@ -65,7 +104,10 @@ cmp.setup.filetype('gitcommit', {
         { name = 'git' }
     }, {
         { name = 'buffer' },
-    })
+    }),
+    formatting = {
+        format = format_no_description
+    }
 })
 
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
@@ -73,6 +115,9 @@ cmp.setup.cmdline({ '/', '?' }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
         { name = 'buffer', keyword_length = 3 }
+    },
+    formatting = {
+        format = format_no_description
     }
 })
 
@@ -83,5 +128,8 @@ cmp.setup.cmdline(':', {
         { name = 'path' }
     }, {
         { name = 'cmdline', keyword_length = 3 }
-    })
+    }),
+    formatting = {
+        format = format_no_description
+    }
 })

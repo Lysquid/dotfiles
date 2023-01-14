@@ -11,11 +11,6 @@ local function import_and_continue() -- Import launch.json the first time
     dap.continue()
 end
 
-local function restart()
-    dap.terminate()
-    dap.run_last()
-end
-
 local function conditional_breakpoint()
     dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
 end
@@ -27,7 +22,6 @@ end
 -- Keymaps
 vim.keymap.set({ '', 't' }, '<F3>', '<Cmd>wa<CR><C-w>l<C-w>v<Cmd>terminal make<CR>i')
 vim.keymap.set({ '', 't' }, '<F4>', dap.run_last)
-vim.keymap.set({ '', 't' }, '<S-F4>', restart)
 vim.keymap.set({ '', 't' }, '<F5>', import_and_continue)
 vim.keymap.set({ '', 't' }, '<S-F5>', dap.terminate)
 vim.keymap.set({ '', 't' }, '<F10>', dap.step_over)
@@ -44,6 +38,8 @@ vim.fn.sign_define('DapBreakpointCondition', { text = '', texthl = '', linehl
 vim.fn.sign_define('DapLogPoint', { text = '', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapStopped', { text = '', texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapBreakpointRejected', { text = '', texthl = '', linehl = '', numhl = '' })
+
+-- Langage configuration
 
 -- Cpp
 dap.adapters.codelldb = {

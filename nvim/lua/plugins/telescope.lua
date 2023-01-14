@@ -4,14 +4,16 @@ require('telescope').setup {
         mappings = {
             i = {
                 ['<C-q>'] = require('telescope.actions').close,
-                ['<C-s>'] = require('telescope.actions').select_horizontal,
                 ['<C-x>'] = require('telescope.actions').delete_buffer,
+                ['<S-CR>'] = require('telescope.actions').select_vertical,
+                ['<C-CR>'] = require('telescope.actions').select_horizontal,
             },
             n = {
                 ['q'] = require('telescope.actions').close,
                 ['<C-q>'] = require('telescope.actions').close,
-                ['<C-s>'] = require('telescope.actions').select_horizontal,
                 ['<C-x>'] = require('telescope.actions').delete_buffer,
+                ['<S-CR>'] = require('telescope.actions').select_vertical,
+                ['<C-CR>'] = require('telescope.actions').select_horizontal,
             },
         },
     },

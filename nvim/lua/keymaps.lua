@@ -7,7 +7,6 @@ vim.keymap.set('', '<leader>', '<nop>')
 -- Shorthands
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
 vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<cmd>bdelete<cr>')
-vim.keymap.set('', '<S-CR>', 'o<Esc>') -- insert blank line below in normal mode
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
 vim.keymap.set('', '<leader>v', 'gg0vG$') -- select whole document
 vim.keymap.set('', 'H', '^')
@@ -20,10 +19,6 @@ vim.keymap.set('', '<leader>t', '<C-w>v<cmd>terminal<cr>i')
 vim.keymap.set('', '<leader>T', '<C-w>s<cmd>terminal<cr>i')
 
 -- Azerty fix
-vim.keymap.set('', '(', '[', { remap = true })
-vim.keymap.set('', ')', ']', { remap = true })
-vim.keymap.set('', '((', '(')
-vim.keymap.set('', '))', ')')
 vim.keymap.set('', 'é', '~', { remap = true })
 vim.keymap.set('', 'è', '`', { remap = true })
 vim.keymap.set('', 'à', '@', { remap = true })

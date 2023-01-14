@@ -16,6 +16,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.mouse = 'a'
+vim.opt.mousemodel = 'extend'
 vim.opt.wrap = false
 vim.opt.timeoutlen = 3000
 vim.opt.scrolloff = 10

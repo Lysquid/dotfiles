@@ -42,6 +42,7 @@ require('packer').startup(function(use)
     use { 'karb94/neoscroll.nvim',
         config = function() require('plugins.neoscroll') end,
     }
+    use { 'tpope/vim-unimpaired' }
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope.nvim',
@@ -113,10 +114,9 @@ require('packer').startup(function(use)
         requires = { 'mfussenegger/nvim-dap' },
         config = function() require('plugins.dap-virtual-text') end,
     }
-    use { 'sakhnik/nvim-gdb',
-        config = function() require('plugins.gdb') end,
-        run = ':!~/.local/share/nvim/site/pack/packer/start/nvim-gdb/install.sh',
-        opt = true,
+    use { 'mfussenegger/nvim-dap-python',
+        requires = { 'mfussenegger/nvim-dap' },
+            config = function() require('plugins.dap-python') end,
     }
 
     -- File explorer
@@ -133,6 +133,9 @@ require('packer').startup(function(use)
         requires = { 'rmagatti/auto-session' },
         config = function() require('plugins.session-lens') end,
     }
+
+    -- Why not
+    use { 'eandrju/cellular-automaton.nvim' }
 
     -- Sync on first launch
     if packer_bootstrap then
