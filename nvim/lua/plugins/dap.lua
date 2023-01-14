@@ -1,18 +1,42 @@
 local dap = require('dap')
 
+-- Keymap functions
+
+local first_launch = true
+local function import_and_continue() -- Import launch.json the first time
+    if first_launch then
+        require('dap.ext.vscode').load_launchjs()
+        first_launch = false
+    end
+    dap.continue()
+end
+
+local function restart()
+    dap.terminate()
+    dap.run_last()
+end
+
+local function conditional_breakpoint()
+    dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+end
+
+local function log_point()
+    dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end
+
 -- Keymaps
-vim.keymap.set({ '', 't' }, '<F3>', '<C-w>l<C-w>v<cmd>terminal<cr>iclear && make; exit<CR>')
-vim.keymap.set({ '', 't' }, '<F4>', '<Cmd>lua require"dap".run_last()<CR>')
-vim.keymap.set({ '', 't' }, '<F5>', '<Cmd>DapLoadLaunchJSON<CR><Cmd>lua require"dap".continue()<CR>')
-vim.keymap.set({ '', 't' }, '<S-F5>', '<Cmd>lua require"dap".terminate()<CR>')
-vim.keymap.set({ '', 't' }, '<C-F5>', '<Cmd>lua require"dap".terminate()<CR><Cmd>lua require"dap".run_last()<CR>')
-vim.keymap.set({ '', 't' }, '<F10>', '<Cmd>lua require"dap".step_over()<CR>')
-vim.keymap.set({ '', 't' }, '<F11>', '<Cmd>lua require"dap".step_into()<CR>')
-vim.keymap.set({ '', 't' }, '<F12>', '<Cmd>lua require"dap".step_out()<CR>')
-vim.keymap.set({ '', 't' }, '<F9>', '<Cmd>lua require"dap".toggle_breakpoint()<CR>')
-vim.keymap.set({ '', 't' }, '<S-F9>', '<Cmd>lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>')
-vim.keymap.set({ '', 't' }, '<C-F9>', '<Cmd>lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>')
-vim.keymap.set({ '', 't' }, '<M-F9>', '<Cmd>lua require"dap".clear_breakpoints()<CR>')
+vim.keymap.set({ '', 't' }, '<F3>', '<Cmd>wa<CR><C-w>l<C-w>v<Cmd>terminal make<CR>i')
+vim.keymap.set({ '', 't' }, '<F4>', dap.run_last)
+vim.keymap.set({ '', 't' }, '<S-F4>', restart)
+vim.keymap.set({ '', 't' }, '<F5>', import_and_continue)
+vim.keymap.set({ '', 't' }, '<S-F5>', dap.terminate)
+vim.keymap.set({ '', 't' }, '<F10>', dap.step_over)
+vim.keymap.set({ '', 't' }, '<F11>', dap.step_into)
+vim.keymap.set({ '', 't' }, '<F12>', dap.step_into)
+vim.keymap.set({ '', 't' }, '<F9>', dap.toggle_breakpoint)
+vim.keymap.set({ '', 't' }, '<S-F9>', conditional_breakpoint)
+vim.keymap.set({ '', 't' }, '<C-F9>', log_point)
+vim.keymap.set({ '', 't' }, '<M-F9>', dap.clear_breakpoints)
 
 -- Icons
 vim.fn.sign_define('DapBreakpoint', { text = '', texthl = '', linehl = '', numhl = '' })
