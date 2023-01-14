@@ -70,6 +70,7 @@ require('packer').startup(function(use)
     use { 'tpope/vim-surround' }
     use { 'wellle/targets.vim' }
     use { 'tpope/vim-repeat' }
+    use { 'smbl64/vim-black-macchiato' }
 
     -- Utilities
     use { 'nvim-lua/plenary.nvim' }
@@ -116,7 +117,7 @@ require('packer').startup(function(use)
     }
     use { 'mfussenegger/nvim-dap-python',
         requires = { 'mfussenegger/nvim-dap' },
-            config = function() require('plugins.dap-python') end,
+        config = function() require('plugins.dap-python') end,
     }
 
     -- File explorer

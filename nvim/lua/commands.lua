@@ -5,6 +5,9 @@
 --   {}
 -- )
 
+-- Setup Python (for black, but not only)
+vim.api.nvim_command('let g:python3_host_prog = $HOME . "/.local/venv/nvim/bin/python"')
+
 -- Open help files in vertical split by default
 vim.api.nvim_create_autocmd({ 'FileType' }, {
     pattern = 'help',
