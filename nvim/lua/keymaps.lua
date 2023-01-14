@@ -2,21 +2,23 @@
 vim.g.mapleader = ' '
 
 -- Disable some defaults
-vim.keymap.set('', '<leader>', '<nop>')
+vim.keymap.set('', '<leader>', '<Nop>')
 
 -- Shorthands
-vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<cmd>write<cr>')
-vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<cmd>bdelete<cr>')
+vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<Cmd>write<CR>')
+vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<Cmd>bdelete<CR>')
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
 vim.keymap.set('', '<leader>v', 'gg0vG$') -- select whole document
 vim.keymap.set('', 'H', '^')
 vim.keymap.set('', 'L', '$')
+vim.keymap.set('v', '<C-c>', '"+y')
+vim.keymap.set('i', '<C-v>', '<Esc>"+pa')
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>') -- Esc to leave terminal mode
-vim.keymap.set('t', '<C-x>', '<cmd>bdelete!<cr>')
-vim.keymap.set('', '<leader>t', '<C-w>v<cmd>terminal<cr>i')
-vim.keymap.set('', '<leader>T', '<C-w>s<cmd>terminal<cr>i')
+vim.keymap.set('t', '<C-x>', '<Cmd>bdelete!<CR>')
+vim.keymap.set('', '<leader>t', '<C-w>v<Cmd>terminal<CR>i')
+vim.keymap.set('', '<leader>T', '<C-w>s<Cmd>terminal<CR>i')
 
 -- Azerty fix
 vim.keymap.set('', 'é', '~', { remap = true })
