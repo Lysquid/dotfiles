@@ -104,7 +104,6 @@ require('packer').startup(function(use)
     -- Debug
     use { 'mfussenegger/nvim-dap',
         config = function() require('plugins.dap') end,
-        opt = false,
     }
     use { 'rcarriga/nvim-dap-ui',
         requires = { 'mfussenegger/nvim-dap' },
@@ -112,6 +111,7 @@ require('packer').startup(function(use)
     }
     use { 'theHamsta/nvim-dap-virtual-text',
         requires = { 'mfussenegger/nvim-dap' },
+        config = function() require('plugins.dap-virtual-text') end,
     }
     use { 'sakhnik/nvim-gdb',
         config = function() require('plugins.gdb') end,
