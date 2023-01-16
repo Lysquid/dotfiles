@@ -8,11 +8,10 @@ vim.keymap.set('', '<leader>', '<Nop>')
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<Cmd>write<CR>')
 vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<Cmd>bdelete<CR>')
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
-vim.keymap.set('', '<leader>v', 'gg0vG$') -- select whole document
+vim.keymap.set('', '<leader>v', 'ggVG0') -- select whole document
 vim.keymap.set('', 'H', '^')
 vim.keymap.set('', 'L', '$')
 vim.keymap.set('v', '<C-c>', '"+y')
-vim.keymap.set('i', '<C-v>', '<Esc>"+pa')
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>') -- Esc to leave terminal mode

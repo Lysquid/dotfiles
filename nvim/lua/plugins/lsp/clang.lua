@@ -13,3 +13,5 @@ require('lspconfig').clangd.setup {
         '--header-insertion-decorators',
     },
 }
+
+vim.keymap.set('', '<leader>S', '<Cmd>ClangdSwitchSourceHeader<CR>')

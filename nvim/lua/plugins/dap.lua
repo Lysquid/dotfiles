@@ -20,7 +20,8 @@ local function log_point()
 end
 
 -- Keymaps
-vim.keymap.set({ '', 't' }, '<F3>', '<Cmd>wa<CR><C-w>l<C-w>v<Cmd>terminal make<CR>i')
+vim.keymap.set('', '<F3>', '<Cmd>wa<CR><C-w>l<C-w>v<Cmd>terminal make<CR>i')
+vim.keymap.set('t', '<F3>', '<C-u>make<CR>')
 vim.keymap.set({ '', 't' }, '<F4>', dap.run_last)
 vim.keymap.set({ '', 't' }, '<F5>', import_and_continue)
 vim.keymap.set({ '', 't' }, '<S-F5>', dap.terminate)
