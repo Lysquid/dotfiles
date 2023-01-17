@@ -20,6 +20,9 @@ vim.opt.mousemodel = 'extend'
 vim.opt.wrap = false
 vim.opt.timeoutlen = 3000
 vim.opt.scrolloff = 10
+vim.opt.undofile = true
+vim.opt.breakindent = true
+vim.opt.updatetime = 500
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('tokyonight-moon')

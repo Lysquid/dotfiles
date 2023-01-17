@@ -6,3 +6,13 @@ require('auto-session').setup {
     auto_save_enabled = true,
     auto_restore_enabled = true,
 }
+
+require('session-lens').setup {
+    theme_conf = require('telescope.themes').get_dropdown {
+        borderchars = {
+            prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
+            results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        },
+    }
+}

@@ -8,8 +8,8 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
 
 local signs = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
 for type, icon in pairs(signs) do
-  local hl = 'DiagnosticSign' .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl})
+    local hl = 'DiagnosticSign' .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl })
 end
 
 vim.diagnostic.config {
@@ -27,7 +27,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-On_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     -- Enable
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -52,8 +52,40 @@ On_attach = function(client, bufnr)
     vim.keymap.set('n', '<leader>=', function() vim.lsp.buf.format { async = true } end, bufopts) -- default: <space>f
 end
 
-Lsp_flags = {}
+-- C++ only
+vim.keymap.set('', '<leader>S', '<Cmd>ClangdSwitchSourceHeader<CR>')
 
-require('plugins.lsp.sumneko_lua')
-require('plugins.lsp.clang')
-require('plugins.lsp.pyright')
+-- Server settings
+local servers = {
+    clangd = {},
+    pyright = {},
+    sumneko_lua = {
+        Lua = {
+            workspace = { checkThirdParty = false },
+            telemetry = { enable = false },
+        },
+    },
+}
+
+-- Setup neovim lua configuration
+require('neodev').setup()
+
+-- Mason
+require('mason').setup()
+
+local mason_lspconfig = require('mason-lspconfig')
+
+-- Automatically install above servers
+mason_lspconfig.setup {
+    ensure_installed = vim.tbl_keys(servers),
+}
+
+-- Configure servers
+mason_lspconfig.setup_handlers {
+    function(server_name)
+        require('lspconfig')[server_name].setup {
+            on_attach = on_attach,
+            settings = servers[server_name],
+        }
+    end,
+}

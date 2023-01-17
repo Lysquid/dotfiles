@@ -1,5 +1,9 @@
 local dap = require('dap')
 
+-- Additional plugins
+require('nvim-dap-virtual-text').setup {}
+require('dap-python').setup('~/.local/share/nvim/mason/packages/debugpy/venv/bin/python')
+
 -- Keymap functions
 
 local first_launch = true
@@ -16,7 +20,7 @@ local function conditional_breakpoint()
 end
 
 local function log_point()
-    dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+    dap.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
 end
 
 -- Keymaps
@@ -47,7 +51,7 @@ dap.adapters.codelldb = {
     type = 'server',
     port = '${port}',
     executable = {
-        command = '/usr/bin/codelldb',
+        command = 'codelldb',
         args = { '--port', '${port}' },
     }
 }
