@@ -34,15 +34,16 @@ require('packer').startup(function(use)
         config = function() require('plugins.indent-blankline') end,
     }
     use { 'norcalli/nvim-colorizer.lua',
-        config = function() require('plugins.colorizer') end,
+        config = function() require('colorizer').setup() end,
     }
     use { 'rktjmp/highlight-current-n.nvim',
         config = function() require('plugins.highlight-current-n') end,
     }
     use { 'karb94/neoscroll.nvim',
-        config = function() require('plugins.neoscroll') end,
+        config = function() require('neoscroll').setup() end,
     }
     use { 'tpope/vim-unimpaired' }
+    use { 'tpope/vim-sleuth' }
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope.nvim',
@@ -65,7 +66,7 @@ require('packer').startup(function(use)
     }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use { 'numToStr/Comment.nvim',
-        config = function() require('plugins.comment') end,
+        config = function() require('Comment').setup() end,
     }
     use { 'tpope/vim-surround' }
     use { 'wellle/targets.vim' }
@@ -76,48 +77,50 @@ require('packer').startup(function(use)
     use { 'nvim-lua/plenary.nvim' }
     use { 'moll/vim-bbye' }
     use { 'ggandor/leap.nvim',
-        config = function() require('plugins.leap') end,
+        config = function() require('leap').add_default_mappings() end,
     }
 
     -- LSP support
     use { 'neovim/nvim-lspconfig',
+        requires = {
+            'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim',
+            'folke/neodev.nvim',
+        },
         config = function() require('plugins.lspconfig') end,
     }
 
     -- Autocomplete
     use { 'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-nvim-lsp-signature-help',
+            'hrsh7th/cmp-nvim-lua',
+            'saadparwaiz1/cmp_luasnip',
+            'petertriho/cmp-git',
+        },
         config = function() require('plugins.cmp') end,
     }
-    use { 'hrsh7th/cmp-nvim-lsp' }
-    use { 'hrsh7th/cmp-buffer' }
-    use { 'hrsh7th/cmp-path' }
-    use { 'hrsh7th/cmp-cmdline' }
-    use { 'hrsh7th/cmp-nvim-lsp-signature-help' }
-    use { 'hrsh7th/cmp-nvim-lua' }
-    use { 'saadparwaiz1/cmp_luasnip' }
-    use { 'petertriho/cmp-git' }
 
     -- Snippets
     use { 'L3MON4D3/LuaSnip',
-        config = function() require('plugins.luasnip') end,
+        requires = { 'rafamadriz/friendly-snippets' },
+        config = function() require('luasnip.loaders.from_vscode').lazy_load() end,
     }
-    use { 'rafamadriz/friendly-snippets' }
 
     -- Debug
     use { 'mfussenegger/nvim-dap',
+        requires = {
+            'theHamsta/nvim-dap-virtual-text',
+            'mfussenegger/nvim-dap-python',
+        },
         config = function() require('plugins.dap') end,
     }
     use { 'rcarriga/nvim-dap-ui',
-        requires = { 'mfussenegger/nvim-dap' },
         config = function() require('plugins.dap-ui') end,
-    }
-    use { 'theHamsta/nvim-dap-virtual-text',
-        requires = { 'mfussenegger/nvim-dap' },
-        config = function() require('plugins.dap-virtual-text') end,
-    }
-    use { 'mfussenegger/nvim-dap-python',
-        requires = { 'mfussenegger/nvim-dap' },
-        config = function() require('plugins.dap-python') end,
     }
 
     -- File explorer
@@ -128,11 +131,8 @@ require('packer').startup(function(use)
 
     -- Sessions manager
     use { 'rmagatti/auto-session',
+        requires = { 'rmagatti/session-lens' },
         config = function() require('plugins.auto-session') end,
-    }
-    use { 'rmagatti/session-lens',
-        requires = { 'rmagatti/auto-session' },
-        config = function() require('plugins.session-lens') end,
     }
 
     -- Why not
@@ -143,3 +143,11 @@ require('packer').startup(function(use)
         require('packer').sync()
     end
 end)
+
+-- Automatically source and re-compile packer whenever you save this file
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+    command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
+    group = packer_group,
+    pattern = vim.fn.expand 'lua/plugins.lua',
+})

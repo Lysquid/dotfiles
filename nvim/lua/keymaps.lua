@@ -2,7 +2,8 @@
 vim.g.mapleader = ' '
 
 -- Disable some defaults
-vim.keymap.set('', '<leader>', '<Nop>')
+vim.keymap.set('', '<Space>', '<Nop>', { silent = true })
+vim.keymap.set('', 'J', '<Nop>', { silent = true })
 
 -- Shorthands
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<Cmd>write<CR>')
@@ -12,6 +13,10 @@ vim.keymap.set('', '<leader>v', 'ggVG0') -- select whole document
 vim.keymap.set('', 'H', '^')
 vim.keymap.set('', 'L', '$')
 vim.keymap.set('v', '<C-c>', '"+y')
+
+-- Navigate with word wrap
+vim.keymap.set('', 'j', 'gj', { silent = true })
+vim.keymap.set('', 'k', 'gk', { silent = true })
 
 -- Terminal
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>') -- Esc to leave terminal mode
