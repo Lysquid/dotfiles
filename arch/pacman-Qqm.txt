@@ -12,15 +12,13 @@ datagrip
 datagrip-jre
 digital
 fcitx5-skin-adwaita-dark
-gallery-dl
 greetd
 grimshot
 linux-wifi-hotspot
 minecraft-launcher
-mullvad-vpn-bin
-nerd-fonts-jetbrains-mono
 onlyoffice-bin
 ookla-speedtest-bin
+openasar-git
 opentabletdriver
 oracle-instantclient-basic
 oracle-instantclient-sqlplus
@@ -39,6 +37,7 @@ tela-icon-theme
 tor-browser
 touchpad-toggle-xinput
 ventoy-bin
+vial-appimage
 vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client

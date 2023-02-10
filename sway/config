@@ -149,8 +149,10 @@ for_window [app_id="gcolor3"] floating enable
 for_window [app_id="qalculate-gtk"] floating enable
 for_window [app_id="wihotspot-gui"] floating enable
 for_window [app_id="nm-connection-editor"] floating enable
+for_window [app_id="nm-openconnect-auth-dialog"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 for_window [app_id="wdisplays"] floating enable
+for_window [title="Figure *"] floating enable
 
 # Startup
 # dex --dry-run --autostart --environment sway
@@ -473,6 +475,7 @@ bindsym $mod+g exec fish --command night_light
 
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi
+bindsym $mod+Shift+y exec clipman clear --all
 
 # Mouse control
 bindsym $mod+m exec warpd --hint

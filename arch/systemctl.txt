@@ -20,6 +20,7 @@ session-1.scope                            transient       -
 archlinux-keyring-wkd-sync.service         static          -
 arptables.service                          disabled        disabled
 auditd.service                             disabled        disabled
+autorandr-lid-listener.service             disabled        disabled
 autorandr.service                          disabled        disabled
 autovt@.service                            alias           -
 avahi-daemon.service                       disabled        disabled
@@ -94,8 +95,6 @@ mdmonitor-oneshot.service                  static          -
 mdmonitor.service                          static          -
 mkinitcpio-generate-shutdown-ramfs.service static          -
 modprobe@.service                          static          -
-mullvad-daemon.service                     enabled         disabled
-mullvad-early-boot-blocking.service        enabled         disabled
 multipathd.service                         disabled        disabled
 ndctl-monitor.service                      disabled        disabled
 NetworkManager-dispatcher.service          enabled         disabled
@@ -409,4 +408,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-409 unit files listed.
+408 unit files listed.

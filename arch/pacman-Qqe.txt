@@ -15,6 +15,7 @@ bash-pipes
 bat
 bat-extras
 bc
+bear
 bison
 bluez
 bluez-utils
@@ -36,7 +37,7 @@ cppreference-devhelp
 ctpv-git
 datagrip
 datagrip-jre
-dbeaver
+debugedit
 devhelp
 dex
 digital
@@ -66,7 +67,7 @@ flatpak
 flex
 fortune-mod
 fzf
-gallery-dl
+gammastep
 gcc
 gcolor3
 gimp
@@ -85,7 +86,7 @@ gvfs-mtp
 hdparm
 helix
 htop
-i3-gaps
+i3-wm
 i3lock
 iptables-nft
 j4-dmenu-desktop
@@ -128,7 +129,6 @@ linux-headers
 linux-wifi-hotspot
 lldb
 lolcat
-lua-language-server
 lutris
 lxappearance
 lxsession-gtk3
@@ -144,11 +144,9 @@ minecraft-launcher
 mpg123
 mpv
 mtpfs
-mullvad-vpn-bin
 nautilus
 neofetch
 neovim
-nerd-fonts-jetbrains-mono
 nethack
 nethogs
 netstandard-targeting-pack
@@ -170,6 +168,7 @@ octave
 onlyoffice-bin
 ookla-speedtest-bin
 openal
+openasar-git
 opentabletdriver
 oracle-instantclient-basic
 oracle-instantclient-sqlplus
@@ -195,7 +194,6 @@ plocate
 polybar
 portaudio
 protobuf
-pyright
 python-attrs
 python-cachecontrol
 python-certifi
@@ -210,7 +208,6 @@ python-idna
 python-itsdangerous
 python-jinja
 python-markupsafe
-python-pep517
 python-pip
 python-platformdirs
 python-pyopenssl
@@ -231,6 +228,7 @@ renpy
 ripgrep
 rofi-lbonn-wayland-git
 rsync
+seahorse
 sfml
 signal-desktop-beta-bin
 simplescreenrecorder
@@ -247,6 +245,7 @@ swaybg
 swayidle
 swaylock
 swtpm
+sxiv
 tela-icon-theme
 texinfo
 thunderbird
@@ -256,6 +255,7 @@ transmission-cli
 transmission-gtk
 trash-cli
 tree
+ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-2048-em
 udiskie
 ueberzug
@@ -264,6 +264,7 @@ umbrello
 unzip
 valgrind
 ventoy-bin
+vial-appimage
 viewnior
 vimix-cursors
 virt-manager

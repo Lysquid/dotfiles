@@ -1,28 +1,28 @@
-add_newline = false
-
-[line_break]
-disabled = true
-
-[python]
-disabled = false
-
-[package]
-disabled = true
-
-[ruby]
-disabled = true
-
-[rust]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[java]
-disabled = false
-
-[golang]
-disabled = true
-
-[aws]
-disabled = true
+# add_newline = false
+#
+# [line_break]
+# disabled = true
+#
+# [python]
+# disabled = false
+#
+# [package]
+# disabled = true
+#
+# [ruby]
+# disabled = true
+#
+# [rust]
+# disabled = true
+#
+# [nodejs]
+# disabled = true
+#
+# [java]
+# disabled = false
+#
+# [golang]
+# disabled = true
+#
+# [aws]
+# disabled = true
