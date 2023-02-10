@@ -1,19 +1,17 @@
-UNIT FILE                           STATE   PRESET
-bluetooth.service                   enabled disabled
-getty@.service                      enabled enabled
-greetd.service                      enabled disabled
-libvirtd.service                    enabled disabled
-mullvad-daemon.service              enabled disabled
-mullvad-early-boot-blocking.service enabled disabled
-NetworkManager-dispatcher.service   enabled disabled
-NetworkManager-wait-online.service  enabled disabled
-NetworkManager.service              enabled disabled
-libvirtd-ro.socket                  enabled disabled
-libvirtd.socket                     enabled disabled
-virtlockd.socket                    enabled disabled
-virtlogd.socket                     enabled disabled
-remote-fs.target                    enabled enabled
-paccache.timer                      enabled disabled
-reflector.timer                     enabled disabled
+UNIT FILE                          STATE   PRESET
+bluetooth.service                  enabled disabled
+getty@.service                     enabled enabled
+greetd.service                     enabled disabled
+libvirtd.service                   enabled disabled
+NetworkManager-dispatcher.service  enabled disabled
+NetworkManager-wait-online.service enabled disabled
+NetworkManager.service             enabled disabled
+libvirtd-ro.socket                 enabled disabled
+libvirtd.socket                    enabled disabled
+virtlockd.socket                   enabled disabled
+virtlogd.socket                    enabled disabled
+remote-fs.target                   enabled enabled
+paccache.timer                     enabled disabled
+reflector.timer                    enabled disabled
 
-16 unit files listed.
+14 unit files listed.

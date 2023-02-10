@@ -43,7 +43,7 @@ require('packer').startup(function(use)
         config = function() require('neoscroll').setup() end,
     }
     use { 'tpope/vim-unimpaired' }
-    use { 'tpope/vim-sleuth' }
+    -- use { 'tpope/vim-sleuth' }
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope.nvim',
@@ -80,7 +80,7 @@ require('packer').startup(function(use)
         config = function() require('leap').add_default_mappings() end,
     }
 
-    -- LSP support
+    -- LSP
     use { 'neovim/nvim-lspconfig',
         requires = {
             'williamboman/mason.nvim',
@@ -111,7 +111,7 @@ require('packer').startup(function(use)
         config = function() require('luasnip.loaders.from_vscode').lazy_load() end,
     }
 
-    -- Debug
+    -- Debugger
     use { 'mfussenegger/nvim-dap',
         requires = {
             'theHamsta/nvim-dap-virtual-text',

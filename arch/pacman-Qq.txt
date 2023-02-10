@@ -1,5 +1,6 @@
 a52dec
 aalib
+abseil-cpp
 acl
 adobe-source-code-pro-fonts
 adwaita-cursors
@@ -18,7 +19,9 @@ appstream-glib
 arandr
 archlinux-keyring
 argon2
+aria2
 arpack
+asar
 asciiquarium
 at-spi2-core
 atkmm
@@ -41,6 +44,7 @@ bash-pipes
 bat
 bat-extras
 bc
+bear
 binutils
 bison
 blas
@@ -91,6 +95,7 @@ cowsay
 cpio
 cppreference
 cppreference-devhelp
+cracklib
 cryptsetup
 ctpv-git
 curl
@@ -100,11 +105,11 @@ datagrip-jre
 dav1d
 db
 db5.3
-dbeaver
 dbus
 dbus-glib
 dbus-python
 dconf
+debugedit
 debuginfod
 default-cursors
 desktop-file-utils
@@ -136,7 +141,9 @@ efibootmgr
 efivar
 egl-wayland
 eglexternalplatform
-electron18
+electron
+electron21
+elfutils
 embree
 enchant
 eog
@@ -181,7 +188,7 @@ fuse-common
 fuse2
 fuse3
 fzf
-gallery-dl
+gammastep
 gavl
 gawk
 gc
@@ -218,6 +225,7 @@ glpk
 glslang
 glu
 gmp
+gn
 gnome-autoar
 gnome-clocks
 gnome-desktop
@@ -232,6 +240,7 @@ go
 go-md2man
 gobject-introspection-runtime
 godot
+gperf
 gperftools
 gpgme
 gpm
@@ -246,6 +255,7 @@ grep
 grim
 grimshot
 groff
+grpc
 grub
 gsettings-desktop-schemas
 gsfonts
@@ -294,7 +304,7 @@ hunspell
 hwdata
 hwloc
 hyphen
-i3-gaps
+i3-wm
 i3lock
 iana-etc
 icu
@@ -621,6 +631,7 @@ libkomparediff2
 libksba
 libksysguard
 liblangtag
+liblc3
 libldac
 libldap
 liblqr
@@ -687,6 +698,7 @@ libportal-gtk4
 libproxy
 libpsl
 libpulse
+libpwquality
 libqalculate
 libqxp
 libraqm
@@ -809,7 +821,9 @@ linux-firmware
 linux-firmware-whence
 linux-headers
 linux-wifi-hotspot
+lld
 lldb
+llvm
 llvm-libs
 lm_sensors
 lolcat
@@ -817,7 +831,6 @@ lpsolve
 lsb-release
 lsof
 lua
-lua-language-server
 luajit
 lutris
 lv2
@@ -858,7 +871,6 @@ msgpack-c
 mtdev
 mtpfs
 mujs
-mullvad-vpn-bin
 multipath-tools
 mypaint-brushes1
 nautilus
@@ -867,7 +879,6 @@ ndctl
 neofetch
 neon
 neovim
-nerd-fonts-jetbrains-mono
 nethack
 nethogs
 netpbm
@@ -879,11 +890,15 @@ networkmanager-openconnect
 nftables
 ninja
 nitrogen
+nlohmann-json
 nm-connection-editor
+node-gyp
 nodejs
+nodejs-nopt
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 npth
 nspr
 nss
@@ -903,6 +918,7 @@ oniguruma
 onlyoffice-bin
 ookla-speedtest-bin
 openal
+openasar-git
 openconnect
 opencore-amr
 openexr
@@ -985,8 +1001,8 @@ portaudio
 procps-ng
 protobuf
 psmisc
-pyright
 python
+python-anyio
 python-appdirs
 python-apsw
 python-async-timeout
@@ -1015,12 +1031,17 @@ python-dnspython
 python-docopt
 python-docutils
 python-evdev
+python-fastjsonschema
 python-feedparser
 python-future
 python-gobject
+python-h11
 python-html2text
 python-html5-parser
 python-html5lib
+python-httpcore
+python-httplib2
+python-httpx
 python-idna
 python-ifaddr
 python-importlib-metadata
@@ -1036,10 +1057,13 @@ python-jinja
 python-keyutils
 python-lxml
 python-markdown
+python-markdown-it-py
 python-markupsafe
+python-mdurl
 python-mechanize
 python-more-itertools
 python-msgpack
+python-multidict
 python-multivolumefile
 python-netifaces
 python-nspektr
@@ -1047,7 +1071,6 @@ python-ordered-set
 python-packaging
 python-pdftotext
 python-pefile
-python-pep517
 python-pillow
 python-pip
 python-platformdirs
@@ -1065,6 +1088,7 @@ python-pygments
 python-pyopenssl
 python-pyparsing
 python-pyppmd
+python-pyproject-hooks
 python-pyqt6
 python-pyqt6-sip
 python-pyqt6-webengine
@@ -1073,16 +1097,20 @@ python-pyzstd
 python-regex
 python-requests
 python-resolvelib
+python-rfc3986
 python-rich
 python-setuptools
 python-sgmllib3k
 python-six
+python-sniffio
 python-soupsieve
 python-tenacity
 python-texttable
 python-tomli
+python-tqdm
 python-trove-classifiers
 python-typing_extensions
+python-uc-micro-py
 python-unrardll
 python-urllib3
 python-validate-pyproject
@@ -1091,6 +1119,7 @@ python-werkzeug
 python-wheel
 python-xlib
 python-yaml
+python-yarl
 python-zeroconf
 python-zipp
 qalculate-gtk
@@ -1249,8 +1278,10 @@ sdl2_image
 sdl2_mixer
 sdl2_ttf
 seabios
+seahorse
 seatd
 sed
+semver
 serd
 sfml
 shaderc
@@ -1299,6 +1330,7 @@ swaybg
 swayidle
 swaylock
 swtpm
+sxiv
 syndication
 syntax-highlighting
 sysfsutils
@@ -1314,6 +1346,7 @@ texinfo
 thin-provisioning-tools
 threadweaver
 thunderbird
+tinycompress
 tor-browser
 totem-pl-parser
 touchpad-toggle-xinput
@@ -1328,6 +1361,7 @@ tree-sitter
 tslib
 ttf-carlito
 ttf-dejavu
+ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-nerd-fonts-symbols-2048-em
 ttf-nerd-fonts-symbols-common
@@ -1352,6 +1386,7 @@ v4l-utils
 valgrind
 vde2
 ventoy-bin
+vial-appimage
 vid.stab
 viewnior
 vimix-cursors
@@ -1379,6 +1414,7 @@ webkit2gtk-4.1
 webp-pixbuf-loader
 webrtc-audio-processing
 wf-recorder
+wget
 which
 wildmidi
 wine
@@ -1440,6 +1476,7 @@ xvidcore
 xxhash
 xz
 yajl
+yarn
 yay
 youtube-dl
 zbar
