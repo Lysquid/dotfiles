@@ -20,3 +20,4 @@ set -gx XMODIFIERS @im=fcitx
 # Path
 set -gx PATH $PATH $HOME/.local/bin
 set -gx PATH $PATH $HOME/.config/bin
+set -g fish_function_path $fish_function_path ~/.config/fish/functions/custom

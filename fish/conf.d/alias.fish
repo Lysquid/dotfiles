@@ -42,3 +42,7 @@ function osu
     swaymsg seat "*" hide_cursor when-typing toggle
     swaymsg output eDP-1 toggle
 end 
+
+function cat
+    bat $argv
+end
