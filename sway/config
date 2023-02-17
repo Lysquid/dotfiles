@@ -466,8 +466,8 @@ bindsym $mod+x exec systemctl suspend
 bindsym $mod+Shift+x exec loginctl lock-session
 
 # Notifications
-bindsym $mod+n exec makoctl restore
-bindsym $mod+Shift+n exec makoctl dismiss --all
+bindsym $mod+Shift+n exec makoctl restore
+bindsym $mod+n exec makoctl dismiss --all
 
 # Screen colors
 bindsym $mod+i exec fish --command invert

@@ -6,7 +6,13 @@
 !/wallpaper.*
 !/screenshot.*
 /Code
-!/fish/**
+!/fish/config.fish
+!/fish/fish_plugins
+!/fish/conf.d/alias.fish
+!/fish/conf.d/environement.fish
+!/fish/conf.d/keybindings.fish
+!/fish/conf.d/lf-icons.fish
+!/fish/functions/custom/**
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 !/lf/**
