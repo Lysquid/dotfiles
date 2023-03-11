@@ -1,6 +1,5 @@
 # Applications
 set -gx BROWSER firefox
-set -gx TERM kitty
 set -gx EDITOR nvim
 set -gx OPENER mimeopen
 
@@ -21,3 +20,6 @@ set -gx XMODIFIERS @im=fcitx
 set -gx PATH $PATH $HOME/.local/bin
 set -gx PATH $PATH $HOME/.config/bin
 set -g fish_function_path $fish_function_path ~/.config/fish/functions/custom
+
+# Plugins
+set sponge_delay 10

@@ -16,7 +16,6 @@
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 !/lf/**
-!/rclone/filter.txt
 !/rofi/**
 !/rsync/**
 !/arch/**
@@ -31,6 +30,7 @@
 !/sway/**
 !/swayidle/**
 !/swaylock/**
+!/swappy/**
 !/waybar/**
 !/bin/**
 !/swappy/**

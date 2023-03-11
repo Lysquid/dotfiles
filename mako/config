@@ -17,10 +17,10 @@ progress-color=#444444
 
 [urgency=low]
 border-color=#444444
-default-timeout=5000
+default-timeout=3000
 
 [urgency=normal]
-default-timeout=8000
+default-timeout=5000
 
 [urgency=high]
 border-color=#e34444

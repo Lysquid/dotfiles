@@ -6,7 +6,7 @@ set ignorecase on
 set icons on
 set incsearch on
 set incfilter on
-set hiddenfiles '.*:/home/rom1/snap:/home/rom1/java.log.*'
+set hiddenfiles '.*:~/snap:~/java.log.*:~/go'
 
 # ctpv integration
 set previewer ctpv
@@ -162,3 +162,4 @@ map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
 map gm cd /run/media/rom1
 map gn cd ~/.config/nvim
+map gr cd ~/Code/Projects

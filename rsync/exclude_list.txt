@@ -16,6 +16,8 @@
 /etc/libvirt
 /etc/ssh
 /etc/mullvad-vpn
+/etc/credstore*
+/etc/cni
 
 .local/share/Steam
 .local/share/Games
@@ -27,6 +29,7 @@
 Videos/Watching
 Downloads
 snap
+go
 .lutris
 .vscode
 .nuget

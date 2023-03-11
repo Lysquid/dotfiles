@@ -20,7 +20,6 @@ arandr
 archlinux-keyring
 argon2
 aria2
-arpack
 asar
 asciiquarium
 at-spi2-core
@@ -38,6 +37,7 @@ axel
 babl
 baobab
 base
+base-devel
 bash
 bash-completion
 bash-pipes
@@ -55,6 +55,7 @@ boost
 boost-libs
 botan
 box2d
+breezy
 brightnessctl
 brotli
 btop
@@ -68,6 +69,7 @@ ca-certificates-utils
 cabextract
 cairo
 cairomm
+cairomm-1.16
 calibre
 cantarell-fonts
 capstone
@@ -80,6 +82,7 @@ cheese
 chmlib
 chromaprint
 chrono-date
+chrpath
 clang
 clipman
 clucene
@@ -135,6 +138,7 @@ duktape
 dunst
 dust
 e2fsprogs
+editix-free
 editorconfig-core-c
 edk2-ovmf
 efibootmgr
@@ -172,9 +176,11 @@ filesystem
 findutils
 firefox
 fish
+fisher
 flac
 flameshot
 flatpak
+flatpak-builder
 flex
 fluidsynth
 fmt
@@ -215,13 +221,12 @@ giflib
 gimp
 git
 gjs
-gl2ps
 glew
 glib-networking
 glib2
 glibc
 glibmm
-glpk
+glibmm-2.68
 glslang
 glu
 gmp
@@ -247,7 +252,6 @@ gpm
 gptfdisk
 grantlee
 graphene
-graphicsmagick
 graphite
 graphviz
 greetd
@@ -278,6 +282,7 @@ gtk2
 gtk3
 gtk4
 gtkmm
+gtkmm-4.0
 gtkmm3
 gtksourceview4
 gts
@@ -291,7 +296,6 @@ gvfs-mtp
 gzip
 harfbuzz
 harfbuzz-icu
-hdf5
 hdparm
 helix
 hicolor-icon-theme
@@ -524,7 +528,6 @@ lib32-zlib
 lib32-zstd
 libabw
 libadwaita
-libaec
 libaio
 libappindicator-gtk3
 libarchive
@@ -571,6 +574,7 @@ libdbusmenu-qt5
 libdc1394
 libdca
 libde265
+libdeflate
 libdrm
 libdv
 libdvdnav
@@ -657,6 +661,7 @@ libmspub
 libmtp
 libmwaw
 libmypaint
+libmysofa
 libnatpmp
 libnautilus-extension
 libndp
@@ -689,6 +694,7 @@ libpciaccess
 libpeas
 libpgm
 libpipeline
+libpipewire
 libplacebo
 libplist
 libpng
@@ -715,6 +721,7 @@ libsecret
 libshout
 libsidplay
 libsigc++
+libsigc++-3.0
 libslirp
 libsm
 libsndfile
@@ -724,6 +731,7 @@ libsoup3
 libsoxr
 libspectre
 libspiro
+libsquish
 libsrtp
 libssh
 libssh2
@@ -864,6 +872,9 @@ mjpegtools
 mkinitcpio
 mkinitcpio-busybox
 mobile-broadband-provider-info
+mongodb-bin
+mongodb-tools-bin
+mongosh-bin
 mpfr
 mpg123
 mpv
@@ -887,6 +898,7 @@ nettle
 network-manager-applet
 networkmanager
 networkmanager-openconnect
+nextdns
 nftables
 ninja
 nitrogen
@@ -913,7 +925,6 @@ nvtop
 oath-toolkit
 obsidian
 ocl-icd
-octave
 oniguruma
 onlyoffice-bin
 ookla-speedtest-bin
@@ -927,6 +938,7 @@ openmpi
 openpmix
 openssh
 openssl
+openssl-1.1
 opentabletdriver
 optipng
 opus
@@ -952,6 +964,7 @@ pam
 pambase
 pango
 pangomm
+pangomm-2.48
 parcellite
 parted
 patch
@@ -996,6 +1009,7 @@ polybar
 poppler
 poppler-data
 poppler-glib
+popsicle-bin
 popt
 portaudio
 procps-ng
@@ -1021,6 +1035,7 @@ python-chardet
 python-click
 python-colorama
 python-commonmark
+python-configobj
 python-cryptography
 python-css-parser
 python-cssselect
@@ -1031,6 +1046,7 @@ python-dnspython
 python-docopt
 python-docutils
 python-evdev
+python-fastbencode
 python-fastjsonschema
 python-feedparser
 python-future
@@ -1061,6 +1077,7 @@ python-markdown-it-py
 python-markupsafe
 python-mdurl
 python-mechanize
+python-merge3
 python-more-itertools
 python-msgpack
 python-multidict
@@ -1069,6 +1086,7 @@ python-netifaces
 python-nspektr
 python-ordered-set
 python-packaging
+python-patiencediff
 python-pdftotext
 python-pefile
 python-pillow
@@ -1164,17 +1182,13 @@ qemu-ui-spice-app
 qemu-ui-spice-core
 qemu-vhost-user-gpu
 qemu-virtiofsd
-qhull
 qrencode
-qrupdate
-qscintilla-qt5
 qt5-base
 qt5-declarative
 qt5-location
 qt5-multimedia
 qt5-speech
 qt5-svg
-qt5-tools
 qt5-translations
 qt5-wayland
 qt5-webchannel
@@ -1204,6 +1218,7 @@ rest
 rhash
 ripgrep
 rofi-lbonn-wayland-git
+rpmextract
 rsync
 rtkit
 rtmpdump
@@ -1273,6 +1288,7 @@ run-parts
 rust
 sbc
 scdoc
+sdl12-compat
 sdl2
 sdl2_image
 sdl2_mixer
@@ -1307,6 +1323,7 @@ speex
 speexdsp
 spice
 spice-gtk
+spice-protocol
 spirv-tools
 spotify
 spotify-adblock
@@ -1319,9 +1336,9 @@ startup-notification
 steam
 stoken
 stpv-git
+studio-3t
 sudo
 suitesparse
-sundials
 svt-av1
 svt-hevc
 swappy
@@ -1331,6 +1348,7 @@ swayidle
 swaylock
 swtpm
 sxiv
+syncthing
 syndication
 syntax-highlighting
 sysfsutils

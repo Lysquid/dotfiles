@@ -24,6 +24,6 @@ function backup_config
     /etc/lightdm/lightdm-gtk-greeter.conf \
     /etc/libvirt/libvirtd.conf \
     /etc/libvirt/qemu.conf \
-    /etc/greetd/** \
+    /etc/greetd/config.toml \
     .config/
 end
