@@ -95,12 +95,15 @@ mdmonitor-oneshot.service                  static          -
 mdmonitor.service                          static          -
 mkinitcpio-generate-shutdown-ramfs.service static          -
 modprobe@.service                          static          -
+mongodb.service                            disabled        disabled
 multipathd.service                         disabled        disabled
 ndctl-monitor.service                      disabled        disabled
 NetworkManager-dispatcher.service          enabled         disabled
 NetworkManager-wait-online.service         enabled         disabled
 NetworkManager.service                     enabled         disabled
+nextdns.service                            disabled        disabled
 nftables.service                           disabled        disabled
+nix-daemon.service                         linked          disabled
 nm-priv-helper.service                     static          -
 nscd.service                               disabled        disabled
 nvidia-hibernate.service                   disabled        disabled
@@ -137,6 +140,8 @@ spice-webdavd.service                      static          -
 sshd.service                               disabled        disabled
 sshdgenkeys.service                        static          -
 sudo_logsrvd.service                       disabled        disabled
+syncthing-resume.service                   disabled        disabled
+syncthing@.service                         disabled        disabled
 system-update-cleanup.service              static          -
 systemd-ask-password-console.service       static          -
 systemd-ask-password-wall.service          static          -
@@ -144,13 +149,15 @@ systemd-backlight@.service                 static          -
 systemd-binfmt.service                     static          -
 systemd-bless-boot.service                 static          -
 systemd-boot-check-no-failures.service     disabled        disabled
-systemd-boot-system-token.service          static          -
+systemd-boot-random-seed.service           static          -
 systemd-boot-update.service                disabled        enabled
 systemd-coredump@.service                  static          -
 systemd-exit.service                       static          -
 systemd-firstboot.service                  static          -
 systemd-fsck-root.service                  enabled-runtime disabled
 systemd-fsck@.service                      static          -
+systemd-growfs-root.service                static          -
+systemd-growfs@.service                    static          -
 systemd-halt.service                       static          -
 systemd-hibernate-resume@.service          static          -
 systemd-hibernate.service                  static          -
@@ -179,6 +186,9 @@ systemd-networkd-wait-online@.service      disabled        disabled
 systemd-networkd.service                   disabled        enabled
 systemd-nspawn@.service                    disabled        disabled
 systemd-oomd.service                       disabled        disabled
+systemd-pcrfs-root.service                 static          -
+systemd-pcrfs@.service                     static          -
+systemd-pcrmachine.service                 static          -
 systemd-pcrphase-initrd.service            static          -
 systemd-pcrphase-sysinit.service           static          -
 systemd-pcrphase.service                   static          -
@@ -261,6 +271,7 @@ libvirtd-tls.socket                        disabled        disabled
 libvirtd.socket                            enabled         disabled
 lvm2-lvmpolld.socket                       static          -
 multipathd.socket                          disabled        disabled
+nix-daemon.socket                          enabled         disabled
 pcscd.socket                               disabled        disabled
 qemu-pr-helper.socket                      disabled        disabled
 rsyncd.socket                              disabled        disabled
@@ -268,7 +279,7 @@ syslog.socket                              static          -
 systemd-coredump.socket                    static          -
 systemd-journal-gatewayd.socket            disabled        disabled
 systemd-journal-remote.socket              disabled        disabled
-systemd-journald-audit.socket              static          -
+systemd-journald-audit.socket              disabled        enabled
 systemd-journald-dev-log.socket            static          -
 systemd-journald-varlink@.socket           static          -
 systemd-journald.socket                    static          -
@@ -408,4 +419,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-408 unit files listed.
+419 unit files listed.

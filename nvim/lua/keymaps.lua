@@ -7,7 +7,7 @@ vim.keymap.set('', 'J', '<Nop>', { silent = true })
 
 -- Shorthands
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<Cmd>write<CR>')
-vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<Cmd>bdelete<CR>')
+vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<Cmd>Bdelete<CR>')
 vim.keymap.set('', '=b', 'gg=G<C-O>') -- fix indentation of the whole buffer
 vim.keymap.set('', '<leader>v', 'ggVG0') -- select whole document
 vim.keymap.set('', 'H', '^')

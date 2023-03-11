@@ -50,3 +50,7 @@ end
 function cat
     bat $argv
 end
+
+function ssh
+    TERM=xterm-color command ssh $argv
+end

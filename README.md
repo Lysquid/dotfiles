@@ -47,7 +47,8 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + [Qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
 + [rsync](https://wiki.archlinux.org/title/rsync) : backups
-+ [Rclone](https://github.com/rclone/rclone) : cli tool for cloud sync
++ [Rclone](https://github.com/rclone/rclone) : cli for cloud sync
++ [Syncthing](https://syncthing.net/) : sync files across devices
 + [Gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
 + [udiskie](https://github.com/coldfix/udiskie/) : automount disks and USB keys
 + [wdisplays](https://github.com/artizirk/wdisplays) : graphical display settings

@@ -59,7 +59,7 @@ vim.keymap.set('', '<leader>S', '<Cmd>ClangdSwitchSourceHeader<CR>')
 local servers = {
     clangd = {},
     pyright = {},
-    sumneko_lua = {
+    lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },

@@ -64,8 +64,8 @@ output $laptop position 0,180
 output $monitor mode 1920x1080@120Hz position 1600,0 adaptive_sync on
 
 # Wallpapers
-output $laptop bg ~/Pictures/Wallpapers/$wallpaper1 fill
-output $monitor bg ~/Pictures/Wallpapers/$wallpaper2 fill
+output $laptop bg ~/Pictures/Wallpapers/PC/$wallpaper1 fill
+output $monitor bg ~/Pictures/Wallpapers/PC/$wallpaper2 fill
 
 # Workspaces assignements to outputs
 workspace 1 output $monitor
@@ -450,16 +450,18 @@ bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enable
     && notify-send "Touchpad toggled" -u low -t 1000
 
 # Screenshots
-set $grimshot grimshot --notify copy
-set $save_screenshot wl-paste > ~/Pictures/Screenshots/$(date +%s).png
-set $edit_screenshot wl-paste | swappy --file -
-bindsym Print exec $grimshot output && $save_screenshot
-bindsym Shift+Print exec $grimshot screen && $save_screenshot
-bindsym Ctrl+Print exec $grimshot area && $save_screenshot
-bindsym Ctrl+Shift+Print exec $grimshot area && $edit_screenshot && $save_screenshot
-bindsym Alt+Print exec $grimshot active && $save_screenshot
-bindsym Alt+Shift+Print exec $grimshot window && $save_screenshot
-bindsym $mod+Print exec $edit_screenshot
+set $screenshot_path ~/Pictures/Screenshots/$(date +%s).png
+# Focused screen
+bindsym Print exec grimshot --notify copy output
+bindsym Shift+Print exec grimshot --notify save output $screenshot_path
+# Focsued window
+bindsym $mod+Print exec grimshot --notify copy active
+bindsym $mod+Shift+Print exec grimshot --notify save active $screenshot_path
+# Area
+bindsym Ctrl+Print exec grimshot --notify copy area
+bindsym Ctrl+Shift+Print exec grimshot --notify save area $screenshot_path
+# Edit
+bindsym Alt+Print exec wl-paste | swappy --file -
 
 # Suspend and lock screen
 bindsym $mod+x exec systemctl suspend
@@ -471,7 +473,7 @@ bindsym $mod+n exec makoctl dismiss --all
 
 # Screen colors
 bindsym $mod+i exec fish --command invert
-bindsym $mod+g exec fish --command night_light
+bindsym $mod+u exec fish --command night_light
 
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi

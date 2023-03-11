@@ -10,6 +10,7 @@ automake
 autorandr
 baobab
 base
+base-devel
 bash-completion
 bash-pipes
 bat
@@ -47,6 +48,7 @@ dotnet-sdk
 dotnet-targeting-pack
 dunst
 dust
+editix-free
 edk2-ovmf
 efibootmgr
 eog
@@ -62,8 +64,10 @@ fd
 ffmpegthumbnailer
 firefox
 fish
+fisher
 flameshot
 flatpak
+flatpak-builder
 flex
 fortune-mod
 fzf
@@ -141,6 +145,8 @@ man-db
 man-pages
 mdcat
 minecraft-launcher
+mongodb-bin
+mongodb-tools-bin
 mpg123
 mpv
 mtpfs
@@ -153,6 +159,7 @@ netstandard-targeting-pack
 network-manager-applet
 networkmanager
 networkmanager-openconnect
+nextdns
 nitrogen
 noto-fonts-cjk
 noto-fonts-emoji
@@ -164,7 +171,6 @@ nvidia-settings
 nvtop
 obsidian
 ocl-icd
-octave
 onlyoffice-bin
 ookla-speedtest-bin
 openal
@@ -192,6 +198,7 @@ pkgconf
 playerctl
 plocate
 polybar
+popsicle-bin
 portaudio
 protobuf
 python-attrs
@@ -238,6 +245,7 @@ sshfs
 starship
 steam
 stpv-git
+studio-3t
 sudo
 swappy
 sway
@@ -246,6 +254,7 @@ swayidle
 swaylock
 swtpm
 sxiv
+syncthing
 tela-icon-theme
 texinfo
 thunderbird
