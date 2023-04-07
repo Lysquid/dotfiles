@@ -6,6 +6,7 @@ libvirtd.service                   enabled disabled
 NetworkManager-dispatcher.service  enabled disabled
 NetworkManager-wait-online.service enabled disabled
 NetworkManager.service             enabled disabled
+systemd-timesyncd.service          enabled enabled
 libvirtd-ro.socket                 enabled disabled
 libvirtd.socket                    enabled disabled
 nix-daemon.socket                  enabled disabled
@@ -15,4 +16,4 @@ remote-fs.target                   enabled enabled
 paccache.timer                     enabled disabled
 reflector.timer                    enabled disabled
 
-15 unit files listed.
+16 unit files listed.

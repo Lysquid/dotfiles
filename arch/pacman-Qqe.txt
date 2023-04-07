@@ -28,6 +28,7 @@ cava
 cbonsai
 chafa
 cheese
+chromium
 clang
 clipman
 cmake
@@ -183,6 +184,7 @@ orchis-theme
 os-prober
 osu-lazer-bin
 otf-font-awesome
+packettracer
 pacman-contrib
 parcellite
 patch
@@ -201,6 +203,7 @@ polybar
 popsicle-bin
 portaudio
 protobuf
+pyenv
 python-attrs
 python-cachecontrol
 python-certifi
@@ -237,6 +240,7 @@ rofi-lbonn-wayland-git
 rsync
 seahorse
 sfml
+shotwell
 signal-desktop-beta-bin
 simplescreenrecorder
 sl
@@ -245,7 +249,6 @@ sshfs
 starship
 steam
 stpv-git
-studio-3t
 sudo
 swappy
 sway
@@ -258,6 +261,7 @@ syncthing
 tela-icon-theme
 texinfo
 thunderbird
+tk
 tor-browser
 touchpad-toggle-xinput
 transmission-cli

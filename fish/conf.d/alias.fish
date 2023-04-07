@@ -19,7 +19,7 @@ function pico8
 end
 
 function pixiv-dl
-    gallery-dl -D ~/Pictures/Wallpapers/ https://www.pixiv.net/en/users/45725525/bookmarks/artworks/wallpaper
+    gallery-dl -D ~/Pictures/Wallpapers/PC/ https://www.pixiv.net/en/users/45725525/bookmarks/artworks/wallpaper
 end
 
 function vmware

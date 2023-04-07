@@ -13,7 +13,6 @@ datagrip-jre
 digital
 editix-free
 fcitx5-skin-adwaita-dark
-greetd
 grimshot
 linux-wifi-hotspot
 minecraft-launcher
@@ -31,15 +30,16 @@ oracle-sqldeveloper
 orchis-theme
 osu-lazer-bin
 osu-mime
+packettracer
 pfetch
 pipes.sh
 popsicle-bin
 rofi-lbonn-wayland-git
 signal-desktop-beta-bin
+simplescreenrecorder
 spotify
 spotify-adblock
 stpv-git
-studio-3t
 tela-icon-theme
 tor-browser
 touchpad-toggle-xinput
