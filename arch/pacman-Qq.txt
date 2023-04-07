@@ -81,6 +81,7 @@ check
 cheese
 chmlib
 chromaprint
+chromium
 chrono-date
 chrpath
 clang
@@ -146,7 +147,6 @@ efivar
 egl-wayland
 eglexternalplatform
 electron
-electron21
 elfutils
 embree
 enchant
@@ -237,6 +237,7 @@ gnome-desktop
 gnome-desktop-4
 gnome-desktop-common
 gnome-keyring
+gnome-online-accounts
 gnome-video-effects
 gnome-weather
 gnupg
@@ -255,6 +256,7 @@ graphene
 graphite
 graphviz
 greetd
+greetd-agreety
 grep
 grim
 grimshot
@@ -551,6 +553,7 @@ libbytesize
 libcaca
 libcacard
 libcamera
+libcamera-ipa
 libcanberra
 libcap
 libcap-ng
@@ -574,6 +577,7 @@ libdbusmenu-qt5
 libdc1394
 libdca
 libde265
+libdecor
 libdeflate
 libdrm
 libdv
@@ -596,7 +600,10 @@ libfontenc
 libfreeaptx
 libfreehand
 libgcrypt
+libgdata
+libgee
 libgexiv2
+libgirepository
 libgit2
 libglvnd
 libgme
@@ -711,6 +718,7 @@ libraqm
 libraw
 libraw1394
 libreoffice-fresh
+librest
 librevenge
 librsvg
 librsync
@@ -730,6 +738,7 @@ libsoup
 libsoup3
 libsoxr
 libspectre
+libspeechd
 libspiro
 libsquish
 libsrtp
@@ -749,6 +758,8 @@ libtirpc
 libtommath
 libtool
 libtpms
+libtraceevent
+libtracefs
 libudev0-shim
 libunistring
 libunrar
@@ -925,6 +936,7 @@ nvtop
 oath-toolkit
 obsidian
 ocl-icd
+onetbb
 oniguruma
 onlyoffice-bin
 ookla-speedtest-bin
@@ -956,6 +968,7 @@ osu-mime
 otf-font-awesome
 p11-kit
 p7zip
+packettracer
 pacman
 pacman-contrib
 pacman-mirrorlist
@@ -1015,6 +1028,7 @@ portaudio
 procps-ng
 protobuf
 psmisc
+pyenv
 python
 python-anyio
 python-appdirs
@@ -1045,6 +1059,7 @@ python-distro
 python-dnspython
 python-docopt
 python-docutils
+python-dulwich
 python-evdev
 python-fastbencode
 python-fastjsonschema
@@ -1187,12 +1202,15 @@ qt5-base
 qt5-declarative
 qt5-location
 qt5-multimedia
+qt5-networkauth
+qt5-script
 qt5-speech
 qt5-svg
 qt5-translations
 qt5-wayland
 qt5-webchannel
 qt5-webengine
+qt5-websockets
 qt5-x11extras
 qt5ct
 qt6-base
@@ -1277,6 +1295,7 @@ ruby-rspec-support
 ruby-ruby2_keywords
 ruby-stdlib
 ruby-stringio
+ruby-sync
 ruby-term-ansicolor
 ruby-test-unit
 ruby-time
@@ -1303,6 +1322,7 @@ sfml
 shaderc
 shadow
 shared-mime-info
+shotwell
 signal-desktop-beta-bin
 simplescreenrecorder
 sl
@@ -1336,7 +1356,6 @@ startup-notification
 steam
 stoken
 stpv-git
-studio-3t
 sudo
 suitesparse
 svt-av1
@@ -1357,7 +1376,7 @@ systemd-libs
 systemd-sysvcompat
 taglib
 tar
-tbb
+tcl
 tdb
 tela-icon-theme
 texinfo
@@ -1365,6 +1384,7 @@ thin-provisioning-tools
 threadweaver
 thunderbird
 tinycompress
+tk
 tor-browser
 totem-pl-parser
 touchpad-toggle-xinput

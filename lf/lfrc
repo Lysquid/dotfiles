@@ -7,6 +7,7 @@ set icons on
 set incsearch on
 set incfilter on
 set hiddenfiles '.*:~/snap:~/java.log.*:~/go'
+set mouse true
 
 # ctpv integration
 set previewer ctpv

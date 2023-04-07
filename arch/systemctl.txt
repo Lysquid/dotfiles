@@ -35,6 +35,7 @@ canberra-system-shutdown.service           disabled        disabled
 console-getty.service                      disabled        disabled
 container-getty@.service                   static          -
 create_ap.service                          disabled        disabled
+cxl-monitor.service                        disabled        disabled
 daxdev-reconfigure@.service                static          -
 dbus-org.bluez.service                     alias           -
 dbus-org.freedesktop.hostname1.service     alias           -
@@ -45,6 +46,7 @@ dbus-org.freedesktop.machine1.service      alias           -
 dbus-org.freedesktop.nm-dispatcher.service alias           -
 dbus-org.freedesktop.portable1.service     alias           -
 dbus-org.freedesktop.timedate1.service     alias           -
+dbus-org.freedesktop.timesync1.service     alias           -
 dbus.service                               static          -
 debug-shell.service                        disabled        disabled
 display-manager.service                    alias           -
@@ -211,7 +213,7 @@ systemd-sysupdate.service                  indirect        disabled
 systemd-sysusers.service                   static          -
 systemd-time-wait-sync.service             disabled        disabled
 systemd-timedated.service                  static          -
-systemd-timesyncd.service                  disabled        enabled
+systemd-timesyncd.service                  enabled         enabled
 systemd-tmpfiles-clean.service             static          -
 systemd-tmpfiles-setup-dev.service         static          -
 systemd-tmpfiles-setup.service             static          -
@@ -419,4 +421,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-419 unit files listed.
+421 unit files listed.
