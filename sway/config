@@ -82,7 +82,7 @@ workspace 10 output $laptop
 # Keyboard
 input type:keyboard {
     xkb_layout fr,fr,fr
-    xkb_variant us,,lafayette42
+    xkb_variant lafayette42,,us
     xkb_options caps:escape_shifted_capslock,grp:ctrls_toggle
     xkb_numlock enabled
 }
@@ -142,6 +142,8 @@ assign [app_id="firefox"] workspace number 1
 assign [app_id="thunderbird"] workspace number 3
 assign [class="Code"] workspace number 2
 assign [class="discord"] workspace number 10
+assign [class="Signal Beta"] workspace number 10
+for_window [class="Signal Beta"] layout tabbed
 for_window [class="Spotify"] move container to workspace number 9
 
 # Floating windows
@@ -282,6 +284,7 @@ mode "open" {
     bindsym o exec obsidian
     bindsym e exec evince
     bindsym a exec anki
+    bindsym i exec signal-desktop-beta
     bindsym q kill
     bindsym Return exec kitty
     # Return to default mode
