@@ -8,31 +8,31 @@ vim.keymap.set({ 'i', 's' }, '<C-n>', '<nop>')
 vim.keymap.set({ 'i', 's' }, '<C-p>', '<nop>')
 
 local kind_icons = {
-    Text = "",
-    Method = "",
-    Function = "",
-    Constructor = "",
-    Field = "",
-    Variable = "",
-    Class = "ﴯ",
-    Interface = "",
-    Module = "",
-    Property = "ﰠ",
-    Unit = "",
-    Value = "",
-    Enum = "",
-    Keyword = "",
-    Snippet = "",
-    Color = "",
-    File = "",
-    Reference = "",
-    Folder = "",
-    EnumMember = "",
-    Constant = "",
-    Struct = "",
-    Event = "",
-    Operator = "",
-    TypeParameter = ""
+  Text = "",
+  Method = "󰆧",
+  Function = "󰊕",
+  Constructor = "",
+  Field = "󰇽",
+  Variable = "󰂡",
+  Class = "󰠱",
+  Interface = "",
+  Module = "",
+  Property = "󰜢",
+  Unit = "",
+  Value = "󰎠",
+  Enum = "",
+  Keyword = "󰌋",
+  Snippet = "",
+  Color = "󰏘",
+  File = "󰈙",
+  Reference = "",
+  Folder = "󰉋",
+  EnumMember = "",
+  Constant = "󰏿",
+  Struct = "",
+  Event = "",
+  Operator = "󰆕",
+  TypeParameter = "󰅲",
 }
 
 -- See :help cmp-config
@@ -43,7 +43,7 @@ cmp.setup({
         end
     },
     sources = cmp.config.sources({
-        { name = 'luasnip' },
+        -- { name = 'luasnip' },
         { name = 'nvim_lsp' },
         { name = 'path' },
         { name = 'nvim_lsp_signature_help' },
@@ -69,8 +69,8 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
         -- Navigate completion results
-        ["<Tab>"] = cmp.mapping.select_next_item(),
-        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        ['<Tab>'] = cmp.mapping.select_next_item(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
         -- Navigate snippet
         ['<C-n>'] = cmp.mapping(function(fallback)
@@ -92,7 +92,7 @@ cmp.setup({
     },
 })
 
-function format_no_description(entry, vim_item)
+local function format_no_description(entry, vim_item)
     vim_item.kind = ''
     return vim_item
 end

@@ -54,10 +54,10 @@
         "interval": 1
     },
     "cpu": {
-        "format": "<span color=\"#3a94da\"></span> {usage}"
+        "format": "<span color=\"#3a94da\"></span> {usage}"
     },
     "memory": {
-        "format": "<span color=\"#3a94da\">﬙</span> {}"
+        "format": "<span color=\"#3a94da\"></span> {}"
     },
     "backlight": {
         "format": "<span color=\"#3a94da\">{icon}</span> {percent}",
@@ -81,16 +81,16 @@
         "tooltip": false,
         "format": "<span color=\"#3a94da\">{icon}</span> {volume}",
         "format-bluetooth": "<span color=\"#3a94da\">{icon} </span> {volume}",
-        "format-bluetooth-muted": "<span color=\"#3a94da\">婢 </span> mute",
-        "format-muted": "<span color=\"#3a94da\">婢</span> mute",
+        "format-bluetooth-muted": "<span color=\"#3a94da\">󰖁 </span> mute",
+        "format-muted": "<span color=\"#3a94da\">󰖁</span> mute",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["奄", "奔", "墳"]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     }
