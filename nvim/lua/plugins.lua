@@ -76,9 +76,6 @@ require('packer').startup(function(use)
     -- Utilities
     use { 'nvim-lua/plenary.nvim' }
     use { 'moll/vim-bbye' }
-    use { 'ggandor/leap.nvim',
-        config = function() require('leap').add_default_mappings() end,
-    }
 
     -- LSP
     use { 'neovim/nvim-lspconfig',
