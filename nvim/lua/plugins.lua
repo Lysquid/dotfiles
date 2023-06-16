@@ -12,9 +12,11 @@ end
 local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
-
     -- Plugin manager
     use { 'wbthomason/packer.nvim' }
+
+    -- Depedencies
+    use { 'nvim-lua/plenary.nvim' }
 
     -- Theming
     use { 'joshdick/onedark.vim' }
@@ -41,6 +43,10 @@ require('packer').startup(function(use)
     }
     use { 'tpope/vim-unimpaired' }
     use { 'sheerun/vim-polyglot' }
+    use{ "gbprod/yanky.nvim",
+        config = function() require('plugins.yanky') end,
+    }
+    use { 'moll/vim-bbye' }
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope.nvim',
@@ -69,10 +75,6 @@ require('packer').startup(function(use)
     use { 'wellle/targets.vim' }
     use { 'tpope/vim-repeat' }
     use { 'smbl64/vim-black-macchiato' }
-
-    -- Utilities
-    use { 'nvim-lua/plenary.nvim' }
-    use { 'moll/vim-bbye' }
 
     -- LSP
     use { 'neovim/nvim-lspconfig',

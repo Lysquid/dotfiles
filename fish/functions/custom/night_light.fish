@@ -1,6 +1,4 @@
-# Night light using gammastep
-
-function night_light
+function night_light -d "Night light using gammastep"
     if pgrep -x gammastep > /dev/null
         pkill gammastep
     else

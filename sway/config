@@ -25,31 +25,6 @@ set $down j
 set $up k
 set $right l
 
-# Azerty
-set $1 ampersand
-set $1 ampersand
-set $2 eacute
-set $3 quotedbl
-set $4 apostrophe
-set $5 parenleft
-set $6 minus
-set $7 egrave
-set $8 underscore
-set $9 ccedilla
-set $0 agrave
-
-# Numpad
-set $KP_1 KP_End
-set $KP_2 KP_Down
-set $KP_3 KP_Next
-set $KP_4 KP_Left
-set $KP_5 KP_Begin
-set $KP_6 KP_Right
-set $KP_7 KP_Home
-set $KP_8 KP_Up
-set $KP_9 KP_Prior
-set $KP_0 KP_Insert
-
 # Preferences
 set $move_strength 100 px
 
@@ -83,21 +58,23 @@ workspace 10 output $laptop
 input type:keyboard {
     xkb_layout us,fr
     xkb_variant ,lafayette42
-    xkb_options caps:escape_shifted_capslock,grp:ctrls_toggle
+    xkb_options caps:escape_shifted_capslock,grp:alt_space_toggle
     xkb_numlock enabled
 }
 
 # Touchpad
 input type:touchpad {
+    # disabled by default
     events disabled
     tap enabled
     natural_scroll enabled
-    dwt enabled
+    # disable while typing
+    dwt enabled     
 }
 
 # Cursor
 seat * {
-    hide_cursor when-typing disable
+    hide_cursor when-typing enable
     xcursor_theme Vimix-white-cursors
 }
 
@@ -107,10 +84,8 @@ font JetBrainsMono Nerd Font 10
 # Floating modifier
 floating_modifier $mod normal
 
-# Flameshot environnement variable
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
-exec hash dbus-update-activation-environment 2>/dev/null && \
-     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# Auto focus urgent windows
+focus_on_window_activation focus
 
 # Bar
 bar swaybar_command waybar
@@ -188,7 +163,6 @@ mode "resize" {
     bindsym Up resize shrink height $move_strength
     bindsym Right resize grow width $move_strength
     # Return to default mode
-    bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
@@ -205,74 +179,6 @@ bindsym $mod+Shift+e mode "power"
 
 # Quick launcher
 mode "open" {
-    # Switch to workspace
-    bindsym 1 workspace number 1
-    bindsym 2 workspace number 2
-    bindsym 3 workspace number 3
-    bindsym 4 workspace number 4
-    bindsym 5 workspace number 5
-    bindsym 6 workspace number 6
-    bindsym 7 workspace number 7
-    bindsym 8 workspace number 8
-    bindsym 9 workspace number 9
-    bindsym 0 workspace number 10
-    # Switch to workspace AZERTY
-    bindsym $1 workspace number 1
-    bindsym $2 workspace number 2
-    bindsym $3 workspace number 3
-    bindsym $4 workspace number 4
-    bindsym $5 workspace number 5
-    bindsym $6 workspace number 6
-    bindsym $7 workspace number 7
-    bindsym $8 workspace number 8
-    bindsym $9 workspace number 9
-    bindsym $0 workspace number 10
-    # Switch to workspace NUMPAD
-    bindsym $KP_1 workspace number 1
-    bindsym $KP_2 workspace number 2
-    bindsym $KP_3 workspace number 3
-    bindsym $KP_4 workspace number 4
-    bindsym $KP_5 workspace number 5
-    bindsym $KP_6 workspace number 6
-    bindsym $KP_7 workspace number 7
-    bindsym $KP_8 workspace number 8
-    bindsym $KP_9 workspace number 9
-    bindsym $KP_0 workspace number 10
-
-    # Move focused container to workspace
-    bindsym Shift+1 move container to workspace number 1
-    bindsym Shift+2 move container to workspace number 2
-    bindsym Shift+3 move container to workspace number 3
-    bindsym Shift+4 move container to workspace number 4
-    bindsym Shift+5 move container to workspace number 5
-    bindsym Shift+6 move container to workspace number 6
-    bindsym Shift+7 move container to workspace number 7
-    bindsym Shift+8 move container to workspace number 8
-    bindsym Shift+9 move container to workspace number 9
-    bindsym Shift+0 move container to workspace number 10
-    # Move focused container to workspace AZERTY
-    bindsym Shift+$1 move container to workspace number 1
-    bindsym Shift+$2 move container to workspace number 2
-    bindsym Shift+$3 move container to workspace number 3
-    bindsym Shift+$4 move container to workspace number 4
-    bindsym Shift+$5 move container to workspace number 5
-    bindsym Shift+$6 move container to workspace number 6
-    bindsym Shift+$7 move container to workspace number 7
-    bindsym Shift+$8 move container to workspace number 8
-    bindsym Shift+$9 move container to workspace number 9
-    bindsym Shift+$0 move container to workspace number 10
-    # Move focused container to workspace NUMPAD
-    bindsym Shift+$KP_1 move container to workspace number 1
-    bindsym Shift+$KP_2 move container to workspace number 2
-    bindsym Shift+$KP_3 move container to workspace number 3
-    bindsym Shift+$KP_4 move container to workspace number 4
-    bindsym Shift+$KP_5 move container to workspace number 5
-    bindsym Shift+$KP_6 move container to workspace number 6
-    bindsym Shift+$KP_7 move container to workspace number 7
-    bindsym Shift+$KP_8 move container to workspace number 8
-    bindsym Shift+$KP_9 move container to workspace number 9
-    bindsym Shift+$KP_0 move container to workspace number 10
-    # Launch apps
     bindsym f exec firefox
     bindsym t exec thunderbird
     bindsym v exec code
@@ -282,11 +188,8 @@ mode "open" {
     bindsym p exec pinta
     bindsym l exec gcolor3
     bindsym o exec obsidian
-    bindsym e exec evince
     bindsym a exec anki
     bindsym i exec signal-desktop-beta
-    bindsym q kill
-    bindsym Return exec kitty
     # Return to default mode
     bindsym Escape mode "default"
 }
@@ -318,7 +221,7 @@ bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
@@ -332,8 +235,18 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Scratchpad
-bindsym $mod+Shift+grave move scratchpad
-bindsym $mod+grave scratchpad show
+bindsym $mod+Shift+BackSpace move scratchpad
+bindsym $mod+BackSpace scratchpad show
+
+# Alt+tab behavior
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab move container to workspace back_and_forth
+
+# Move between adjacent workspace
+bindsym $mod+Prior workspace prev
+bindsym $mod+Next workspace next
+bindsym $mod+Shift+Prior move container to workspace prev
+bindsym $mod+Shift+Next move container to workspace next
 
 # Move your focus around
 bindsym $mod+$left focus left
@@ -368,28 +281,6 @@ bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-# Switch to workspace AZERTY
-bindsym $mod+$1 workspace number 1
-bindsym $mod+$2 workspace number 2
-bindsym $mod+$3 workspace number 3
-bindsym $mod+$4 workspace number 4
-bindsym $mod+$5 workspace number 5
-bindsym $mod+$6 workspace number 6
-bindsym $mod+$7 workspace number 7
-bindsym $mod+$8 workspace number 8
-bindsym $mod+$9 workspace number 9
-bindsym $mod+$0 workspace number 10
-# Switch to workspace NUMPAD
-bindsym $mod+$KP_1 workspace number 1
-bindsym $mod+$KP_2 workspace number 2
-bindsym $mod+$KP_3 workspace number 3
-bindsym $mod+$KP_4 workspace number 4
-bindsym $mod+$KP_5 workspace number 5
-bindsym $mod+$KP_6 workspace number 6
-bindsym $mod+$KP_7 workspace number 7
-bindsym $mod+$KP_8 workspace number 8
-bindsym $mod+$KP_9 workspace number 9
-bindsym $mod+$KP_0 workspace number 10
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1
@@ -402,28 +293,6 @@ bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
-# Move focused container to workspace AZERTY
-bindsym $mod+Shift+$1 move container to workspace number 1
-bindsym $mod+Shift+$2 move container to workspace number 2
-bindsym $mod+Shift+$3 move container to workspace number 3
-bindsym $mod+Shift+$4 move container to workspace number 4
-bindsym $mod+Shift+$5 move container to workspace number 5
-bindsym $mod+Shift+$6 move container to workspace number 6
-bindsym $mod+Shift+$7 move container to workspace number 7
-bindsym $mod+Shift+$8 move container to workspace number 8
-bindsym $mod+Shift+$9 move container to workspace number 9
-bindsym $mod+Shift+$0 move container to workspace number 10
-# Move focused container to workspace NUMPAD
-bindsym $mod+Shift+$KP_1 move container to workspace number 1
-bindsym $mod+Shift+$KP_2 move container to workspace number 2
-bindsym $mod+Shift+$KP_3 move container to workspace number 3
-bindsym $mod+Shift+$KP_4 move container to workspace number 4
-bindsym $mod+Shift+$KP_5 move container to workspace number 5
-bindsym $mod+Shift+$KP_6 move container to workspace number 6
-bindsym $mod+Shift+$KP_7 move container to workspace number 7
-bindsym $mod+Shift+$KP_8 move container to workspace number 8
-bindsym $mod+Shift+$KP_9 move container to workspace number 9
-bindsym $mod+Shift+$KP_0 move container to workspace number 10
 
 # Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -441,12 +310,6 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioStop exec playerctl stop
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-# Alternate media controls
-bindsym $mod+Next exec playerctl next
-bindsym $mod+Prior exec playerctl previous
-bindsym $mod+Home exec playerctl play-pause
-bindsym $mod+End exec playerctl stop
 
 # Touchpad toggle
 bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enabled disabled \
