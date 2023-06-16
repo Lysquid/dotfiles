@@ -1,6 +1,5 @@
-# Script to launch Sway
 
-function sway
+function sway -d "Script to launch Sway"
     set -gx _JAVA_AWT_WM_NONREPARENTING 1
     set -gx QT_QPA_PLATFORM wayland
     set -gx XDG_CURRENT_DESKTOP sway

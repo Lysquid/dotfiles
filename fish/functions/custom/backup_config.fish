@@ -1,6 +1,4 @@
-# Backup all config files that are not in .config
-
-function backup_config
+function backup_config -d "Backup all config files that are not in .config"
     pacman -Qq > ~/.config/arch/pacman-Qq.txt
     pacman -Qqe > ~/.config/arch/pacman-Qqe.txt
     pacman -Qqm > ~/.config/arch/pacman-Qqm.txt

@@ -9,6 +9,7 @@ require('auto-session').setup {
     session_lens = {
         load_on_setup = true,
         theme_conf = require('telescope.themes').get_dropdown {
+            winblend = 0;
             borderchars = {
                 prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
                 results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },

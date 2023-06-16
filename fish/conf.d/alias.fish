@@ -16,13 +16,14 @@ abbr --add -- ga git add
 abbr --add -- gc git commit -m
 abbr --add -- gca git commit -a -m
 abbr --add -- gpl git pull
-abbr --add -- gps git push
+abbr --add -- gph git push
 abbr --add -- gl git log --graph --oneline --decorate
 abbr --add -- gck git git checkout
 abbr --add -- gb git branch
 abbr --add -- gcl git clone
 abbr --add -- gmv git mv
 abbr --add -- gr git remote
+abbr --add -- gd git diff
 
 function rm 
     command rm -I $argv
