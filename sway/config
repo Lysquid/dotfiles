@@ -81,8 +81,8 @@ workspace 10 output $laptop
 
 # Keyboard
 input type:keyboard {
-    xkb_layout fr,fr,fr
-    xkb_variant lafayette42,,us
+    xkb_layout us,fr
+    xkb_variant ,lafayette42
     xkb_options caps:escape_shifted_capslock,grp:ctrls_toggle
     xkb_numlock enabled
 }

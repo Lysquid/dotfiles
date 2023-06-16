@@ -39,11 +39,8 @@ require('packer').startup(function(use)
     use { 'rktjmp/highlight-current-n.nvim',
         config = function() require('plugins.highlight-current-n') end,
     }
-    use { 'karb94/neoscroll.nvim',
-        config = function() require('neoscroll').setup() end,
-    }
     use { 'tpope/vim-unimpaired' }
-    -- use { 'tpope/vim-sleuth' }
+    use { 'sheerun/vim-polyglot' }
 
     -- Fuzzy finder
     use { 'nvim-telescope/telescope.nvim',
@@ -128,7 +125,6 @@ require('packer').startup(function(use)
 
     -- Sessions manager
     use { 'rmagatti/auto-session',
-        requires = { 'rmagatti/session-lens' },
         config = function() require('plugins.auto-session') end,
     }
 

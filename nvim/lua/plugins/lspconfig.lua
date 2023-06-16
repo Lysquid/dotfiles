@@ -50,10 +50,10 @@ local on_attach = function(_, bufnr)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 
     vim.keymap.set('n', '<leader>=', function() vim.lsp.buf.format { async = true } end, bufopts) -- default: <space>f
-end
 
--- C++ only
-vim.keymap.set('', '<leader>S', '<Cmd>ClangdSwitchSourceHeader<CR>')
+    -- C++ only
+    vim.keymap.set('', '<leader>S', '<Cmd>ClangdSwitchSourceHeader<CR>')
+end
 
 -- Server settings
 local servers = {

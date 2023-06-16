@@ -1,3 +1,29 @@
+# Most used
+abbr --add n nvim
+abbr --add l lfcd
+abbr --add t trash-put
+abbr --add c clear
+abbr --add m make
+
+# Alternatives
+abbr --add cat bat
+abbr --add find fd
+abbr --add grep rg
+
+# Git
+abbr --add -- gs git status
+abbr --add -- ga git add
+abbr --add -- gc git commit -m
+abbr --add -- gca git commit -a -m
+abbr --add -- gpl git pull
+abbr --add -- gps git push
+abbr --add -- gl git log --graph --oneline --decorate
+abbr --add -- gck git git checkout
+abbr --add -- gb git branch
+abbr --add -- gcl git clone
+abbr --add -- gmv git mv
+abbr --add -- gr git remote
+
 function rm 
     command rm -I $argv
 end
@@ -22,10 +48,6 @@ function vmware
     GTK_THEME=Orchis vmware-view $argv
 end
 
-function tra
-    trash-put $argv
-end
-
 function i3
     exec startx /bin/i3 > /dev/null 2> /dev/null $argv
 end
@@ -43,10 +65,10 @@ function osu
     swaymsg output eDP-1 toggle
 end 
 
-function cat
-    bat $argv
-end
-
 function ssh
     TERM=xterm-color command ssh $argv
+end
+
+function weather
+    curl wttr.in
 end
