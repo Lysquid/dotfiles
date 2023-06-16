@@ -19,7 +19,8 @@ DeactivateKeys=
 TogglePreedit=
 
 [Hotkey/TriggerKeys]
-0=Super+comma
+0=Hiragana_Katakana
+1=Super+comma
 
 [Hotkey/EnumerateGroupForwardKeys]
 0=Super+question

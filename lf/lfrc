@@ -2,10 +2,9 @@
 set shell sh
 set shellopts '-eu'
 set ifs "\n"
-set ignorecase on
-set icons on
-set incsearch on
-set incfilter on
+set ignorecase true
+set icons true
+set incfilter true
 set hiddenfiles '.*:~/snap:~/java.log.*:~/go'
 set mouse true
 

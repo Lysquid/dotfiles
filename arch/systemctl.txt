@@ -228,7 +228,6 @@ systemd-vconsole-setup.service             static          -
 systemd-volatile-root.service              static          -
 teamd@.service                             static          -
 transmission.service                       disabled        disabled
-udisks2-zram-setup@.service                static          -
 udisks2.service                            disabled        disabled
 ufw.service                                disabled        disabled
 upower.service                             disabled        disabled
@@ -421,4 +420,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-421 unit files listed.
+420 unit files listed.

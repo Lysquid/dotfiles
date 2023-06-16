@@ -23,6 +23,7 @@ vim.opt.scrolloff = 10
 vim.opt.undofile = true
 vim.opt.breakindent = true
 vim.opt.updatetime = 500
+vim.opt.pumheight = 10
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('tokyonight-moon')

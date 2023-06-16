@@ -8,6 +8,7 @@ aur-auto-vote-git
 autoconf
 automake
 autorandr
+avr-gcc-85
 baobab
 base
 base-devel
@@ -21,6 +22,7 @@ bison
 bluez
 bluez-utils
 boost
+breeze
 brightnessctl
 btop
 calibre
@@ -39,6 +41,7 @@ cppreference-devhelp
 ctpv-git
 datagrip
 datagrip-jre
+db-derby
 debugedit
 devhelp
 dex
@@ -80,6 +83,7 @@ git
 gnome-clocks
 gnome-keyring
 gnome-weather
+gnu-netcat
 go
 godot
 greetd
@@ -102,6 +106,7 @@ jdk11-openjdk
 jq
 jre11-openjdk
 jre11-openjdk-headless
+kdenlive
 keepassxc
 kitty
 lf
@@ -154,6 +159,7 @@ mtpfs
 nautilus
 neofetch
 neovim
+netbeans
 nethack
 nethogs
 netstandard-targeting-pack
@@ -177,9 +183,6 @@ ookla-speedtest-bin
 openal
 openasar-git
 opentabletdriver
-oracle-instantclient-basic
-oracle-instantclient-sqlplus
-oracle-sqldeveloper
 orchis-theme
 os-prober
 osu-lazer-bin
@@ -197,6 +200,7 @@ pinta
 pipewire-alsa
 pipewire-pulse
 pkgconf
+plantuml
 playerctl
 plocate
 polybar
@@ -230,13 +234,14 @@ python-urllib3
 python-werkzeug
 qalculate-gtk
 qemu-desktop
+qmk
 qt5ct
 qt6-wayland
 rclone
 reflector
-renpy
 ripgrep
 rofi-lbonn-wayland-git
+rstudio-desktop-bin
 rsync
 seahorse
 sfml
@@ -262,14 +267,16 @@ tela-icon-theme
 texinfo
 thunderbird
 tk
+toipe
 tor-browser
 touchpad-toggle-xinput
+traceroute
 transmission-cli
 transmission-gtk
 trash-cli
 tree
 ttf-jetbrains-mono-nerd
-ttf-nerd-fonts-symbols-2048-em
+ttf-nerd-fonts-symbols
 udiskie
 ueberzug
 ufw
