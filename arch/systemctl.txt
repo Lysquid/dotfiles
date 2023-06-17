@@ -83,7 +83,6 @@ krb5-kpropd@.service                       static          -
 ldconfig.service                           static          -
 libvirt-guests.service                     disabled        disabled
 libvirtd.service                           enabled         disabled
-lightdm.service                            disabled        disabled
 lm_sensors.service                         disabled        disabled
 lvm2-lvmpolld.service                      static          -
 lvm2-monitor.service                       static          -
@@ -420,4 +419,4 @@ systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 xfs_scrub_all.timer                        disabled        disabled
 
-420 unit files listed.
+419 unit files listed.

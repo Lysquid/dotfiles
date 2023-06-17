@@ -14,6 +14,7 @@ background-color=#222222
 border-color=#3a94da
 text-color=#dddddd
 progress-color=#444444
+ignore-timeout=1
 
 [urgency=low]
 border-color=#444444

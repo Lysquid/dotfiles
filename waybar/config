@@ -49,7 +49,7 @@
     },
     "clock": {
         "format": "{:%a %d %b %R}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "{calendar}",
         "format-alt": "{:%d/%m/%y %T}",
         "interval": 1
     },
@@ -63,7 +63,8 @@
         "format": "<span color=\"#3a94da\">{icon}</span> {percent}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "on-scroll-up": "brightnessctl set 5%+%",
-        "on-scroll-down": "brightnessctl set 5%-"
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip": false
     },
     "battery": {
         "states": {

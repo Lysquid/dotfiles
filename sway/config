@@ -3,6 +3,9 @@
 # Lock session on startup
 exec swaylock
 
+# Fix GTK+ applications take 20 seconds to start
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
 
 
 
@@ -137,7 +140,7 @@ exec lxpolkit
 exec nm-applet --indicator
 exec playerctld daemon
 exec mako
-exec udiskie --smart-tray --no-file-manager
+exec udiskie --smart-tray --no-file-manager --no-notify
 exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w

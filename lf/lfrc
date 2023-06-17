@@ -14,12 +14,6 @@ set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
-# stpv integration
-# set previewer stpv
-# set cleaner stpvimgclr
-# &stpvimg --listen $id
-# cmd on-quit $stpvimg --end $id
-
 cmd open ${{
     case $(file --mime-type -Lb $f) in
         text/*) $EDITOR $fx;;

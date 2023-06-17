@@ -1,13 +1,14 @@
-function backup_config -d "Backup all config files that are not in .config"
+function backup_config -d "Backup system configuration"
+    # installed softwares
     pacman -Qq > ~/.config/arch/pacman-Qq.txt
     pacman -Qqe > ~/.config/arch/pacman-Qqe.txt
-    pacman -Qqm > ~/.config/arch/pacman-Qqm.txt
+    pacman -Qqem > ~/.config/arch/pacman-Qqem.txt
 
     # systemd unit files
     systemctl list-unit-files --state=enabled > ~/.config/arch/systemctl-enabled.txt
     systemctl list-unit-files > ~/.config/arch/systemctl.txt
 
-    # edited etc files
+    # edited files not in .config
     rsync --relative \
     /etc/fstab \
     /etc/pacman.conf \
@@ -18,8 +19,6 @@ function backup_config -d "Backup all config files that are not in .config"
     /etc/locale.conf \
     /etc/locale.gen \
     /etc/xdg/reflector/reflector.conf \
-    /etc/lightdm/lightdm.conf \
-    /etc/lightdm/lightdm-gtk-greeter.conf \
     /etc/libvirt/libvirtd.conf \
     /etc/libvirt/qemu.conf \
     /etc/greetd/config.toml \
