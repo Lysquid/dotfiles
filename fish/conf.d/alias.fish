@@ -5,12 +5,6 @@ abbr --add t trash-put
 abbr --add c clear
 abbr --add m make
 
-# Alternatives
-abbr --add cat bat
-abbr --add find fd
-abbr --add grep rg
-abbr --add diff delta
-
 # Git
 abbr --add -- gs git status
 abbr --add -- ga git add

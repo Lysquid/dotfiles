@@ -1,3 +1,4 @@
+ancient-packages
 ani-cli
 anki-official-binary-bundle
 aur-auto-vote-git
@@ -6,13 +7,9 @@ bash-pipes
 cava
 cbonsai
 clipman
-cppreference-devhelp
 ctpv-git
 datagrip
 datagrip-jre
-db-derby
-digital
-editix-free
 fcitx5-skin-adwaita-dark
 grimshot
 linux-wifi-hotspot
@@ -36,10 +33,8 @@ spotify-adblock
 tela-icon-theme
 toipe
 tor-browser
-touchpad-toggle-xinput
 ueberzugpp
 ventoy-bin
-vial-appimage
 vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client
@@ -47,5 +42,4 @@ warpd
 wdisplays
 wl-gammactl
 wshowkeys-git
-xbanish
 yay

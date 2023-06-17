@@ -18,7 +18,7 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + Cursor theme : [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors)
 + Terminal : [kitty](https://sw.kovidgoyal.net/kitty/)
 + Shell : [fish](https://fishshell.com/)
-+ Prompt : [Starship](https://starship.rs/)
++ Prompt : [tide](https://github.com/IlanCosman/tide)
 + Editor : [Neovim](https://neovim.io/)
 + File manager : [lf](https://github.com/gokcehan/lf/)
 + Application launcher : [rofi](https://github.com/davatorium/rofi)
@@ -26,41 +26,47 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + Mail client : [Thunderbird](https://www.thunderbird.net)
 + Image viewer : [Viewnior](https://github.com/hellosiyan/Viewnior)
 + Media player : [mpv](https://mpv.io/)
-+ Document viewer : [Evince](https://wiki.gnome.org/Apps/Evince)
++ Document reader : [Evince](https://wiki.gnome.org/Apps/Evince)
 + Notification daemon : [mako](https://github.com/emersion/mako)
-+ Input method : [Fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
-+ Clipboard manager : [Clipman](https://github.com/yory8/clipman)
++ Clipboard manager : [clipman](https://github.com/yory8/clipman)
++ Input method : [fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
 + Editor colorscheme : [TokyoNight](https://github.com/folke/tokyonight.nvim)
 + Wallpaper : [言の葉の庭](https://www.reddit.com/r/wallpaper/comments/n9kuz5)
 
 ## More cool softwares
 
-+ [Virt-Manager](https://virt-manager.org/) : virtual machine manager for QEMU/KVM
-+ [Transmission](https://transmissionbt.com/) : BitTorrent client
-+ [Lutris](https://lutris.net/) : game launcher
-+ [Godot](https://godotengine.org/) : game engine
-+ [Pinta](https://www.pinta-project.com/) : image editor
++ [btm](https://github.com/ClementTsang/bottom) : better top, in rust
++ [fd](https://github.com/sharkdp/fd) : better find, in rust
++ [ripgrep](https://github.com/BurntSushi/ripgrep) : better grep, in rust
++ [bat](https://github.com/sharkdp/bat) : better cat, in rust
++ [delta](https://github.com/dandavison/delta) : better diff, in rust
++ [fzf](https://github.com/junegunn/fzf) : fuzzy finder
++ [grim](https://sr.ht/~emersion/grim/) : screenshot
 + [swappy](https://github.com/jtheoof/swappy) : screenshot editor
-+ [grim](https://sr.ht/~emersion/grim/) : screenshot tool
-+ [wf-recorder](https://github.com/ammen99/wf-recorder) : screen recorder
-+ [Calibre](https://calibre-ebook.com/) : ebook reader and manager
-+ [Qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
++ [qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
-+ [rsync](https://wiki.archlinux.org/title/rsync) : backups
-+ [Rclone](https://github.com/rclone/rclone) : cli for cloud sync
-+ [Syncthing](https://syncthing.net/) : sync files across devices
-+ [Gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
 + [udiskie](https://github.com/coldfix/udiskie/) : automount disks and USB keys
 + [wdisplays](https://github.com/artizirk/wdisplays) : graphical display settings
 + [wshowkeys](https://git.sr.ht/~sircmpwn/wshowkeys) : show keys being typed on screen
-+ [warpd](https://github.com/rvaiya/warpd) : move the mouse with the keyboard
-+ [youtube-dl](https://github.com/ytdl-org/youtube-dl) : download youtube videos
-+ [ani-cli](https://github.com/pystardust/ani-cli) : cli tool to watch anime
-+ [Anki](https://apps.ankiweb.net/) : best flashcard app
-+ [btop](https://github.com/aristocratos/btop) : ressource monitor
++ [tealdeer](https://github.com/dbrgn/tealdeer) : cheatsheets for console commands
 + [trash-cli](https://github.com/andreafrancia/trash-cli) : trash management
-+ [playerctl](https://github.com/altdesktop/playerctl) : controll media players from the command line
++ [playerctl](https://github.com/altdesktop/playerctl) : control media players from the terminal
 + [dust](https://github.com/bootandy/dust) : see what is taking place on the disk
++ [wf-recorder](https://github.com/ammen99/wf-recorder) : screen recorder
++ [warpd](https://github.com/rvaiya/warpd) : move the mouse with the keyboard
++ [rsync](https://wiki.archlinux.org/title/rsync) : backups
++ [Syncthing](https://syncthing.net/) : sync files across devices
++ [gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
++ [yt-dlp](https://github.com/yt-dlp/yt-dlp) : download youtube videos
++ [ytfzf](https://github.com/pystardust/ytfzf/) : youtube in the terminal
++ [ani-cli](https://github.com/pystardust/ani-cli) : watch anime from the terminal
++ [Pinta](https://www.pinta-project.com/) : image editor
++ [Anki](https://apps.ankiweb.net/) : best flashcard app
++ [Calibre](https://calibre-ebook.com/) : ebook reader and manager
++ [Virt-Manager](https://virt-manager.org/) : virtual machine manager for QEMU/KVM
++ [Transmission](https://transmissionbt.com/) : BitTorrent client
++ [Godot](https://godotengine.org/) : game engine
++ [Lutris](https://lutris.net/) : game launcher
 
 ## Inspirations
 
