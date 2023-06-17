@@ -8,8 +8,9 @@ set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
 set -gx LESS '-R --use-color -Dd+r$Du+b'
 set -gx QT_QPA_PLATFORMTHEME qt5ct
 set -gx GTK_THEME Orchis-Dark
-# set -gx _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+set -gx GTK2_RC_FILES ~/.config/gtk-2.0/gtkrc
+# set -gx _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
 # Input
 set -gx GTK_IM_MODULE fcitx

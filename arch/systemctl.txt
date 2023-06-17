@@ -20,15 +20,11 @@ session-1.scope                            transient       -
 archlinux-keyring-wkd-sync.service         static          -
 arptables.service                          disabled        disabled
 auditd.service                             disabled        disabled
-autorandr-lid-listener.service             disabled        disabled
-autorandr.service                          disabled        disabled
 autovt@.service                            alias           -
 avahi-daemon.service                       disabled        disabled
 avahi-dnsconfd.service                     disabled        disabled
-blk-availability.service                   disabled        disabled
 bluetooth-mesh.service                     disabled        disabled
 bluetooth.service                          enabled         disabled
-btrfs-scrub@.service                       static          -
 canberra-system-bootup.service             disabled        disabled
 canberra-system-shutdown-reboot.service    disabled        disabled
 canberra-system-shutdown.service           disabled        disabled
@@ -51,7 +47,6 @@ dbus.service                               static          -
 debug-shell.service                        disabled        disabled
 display-manager.service                    alias           -
 dm-event.service                           static          -
-dmraid.service                             disabled        disabled
 dnsmasq.service                            disabled        disabled
 e2scrub@.service                           static          -
 e2scrub_all.service                        static          -
@@ -84,8 +79,6 @@ ldconfig.service                           static          -
 libvirt-guests.service                     disabled        disabled
 libvirtd.service                           enabled         disabled
 lm_sensors.service                         disabled        disabled
-lvm2-lvmpolld.service                      static          -
-lvm2-monitor.service                       static          -
 man-db.service                             static          -
 mdadm-grow-continue@.service               static          -
 mdadm-last-resort@.service                 static          -
@@ -253,9 +246,6 @@ wpa_supplicant-nl80211@.service            disabled        disabled
 wpa_supplicant-wired@.service              disabled        disabled
 wpa_supplicant.service                     disabled        disabled
 wpa_supplicant@.service                    disabled        disabled
-xfs_scrub@.service                         static          -
-xfs_scrub_all.service                      static          -
-xfs_scrub_fail@.service                    static          -
 machine.slice                              static          -
 system-systemd\x2dcryptsetup.slice         static          -
 user.slice                                 static          -
@@ -269,7 +259,6 @@ libvirtd-ro.socket                         enabled         disabled
 libvirtd-tcp.socket                        disabled        disabled
 libvirtd-tls.socket                        disabled        disabled
 libvirtd.socket                            enabled         disabled
-lvm2-lvmpolld.socket                       static          -
 multipathd.socket                          disabled        disabled
 nix-daemon.socket                          enabled         disabled
 pcscd.socket                               disabled        disabled
@@ -401,7 +390,6 @@ veritysetup.target                         static          -
 virt-guest-shutdown.target                 static          -
 archlinux-keyring-wkd-sync.timer           disabled        disabled
 aur-auto-vote.timer                        disabled        disabled
-btrfs-scrub@.timer                         disabled        disabled
 e2scrub_all.timer                          disabled        disabled
 fstrim.timer                               disabled        disabled
 man-db.timer                               disabled        disabled
@@ -417,6 +405,5 @@ shadow.timer                               static          -
 systemd-sysupdate-reboot.timer             disabled        disabled
 systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
-xfs_scrub_all.timer                        disabled        disabled
 
-419 unit files listed.
+406 unit files listed.

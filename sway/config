@@ -132,10 +132,8 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="nm-openconnect-auth-dialog"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 for_window [app_id="wdisplays"] floating enable
-for_window [title="Figure *"] floating enable
 
 # Startup
-# dex --dry-run --autostart --environment sway
 exec lxpolkit
 exec nm-applet --indicator
 exec playerctld daemon
@@ -146,7 +144,8 @@ exec fcitx5 -d
 exec swayidle -w
 exec wl-paste -t text --watch clipman store
 exec fish --command night_light
-
+# See apps that want to be started at boot
+# dex --dry-run --autostart --environment sway
 
 
 
@@ -305,7 +304,8 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # Sreen brightness controls
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
-bindsym XF86ScreenSaver exec xset dpms force off
+set $toggle_screen output $laptop power toggle; output $monitor power toggle
+bindsym XF86ScreenSaver $toggle_screen
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -332,9 +332,10 @@ bindsym Ctrl+Shift+Print exec grimshot --notify save area $screenshot_path
 # Edit
 bindsym Alt+Print exec wl-paste | swappy --file -
 
-# Suspend and lock screen
+# Lock and toggle screen
 bindsym $mod+x exec systemctl suspend
 bindsym $mod+Shift+x exec loginctl lock-session
+bindsym $mod+z $toggle_screen
 
 # Notifications
 bindsym $mod+Shift+n exec makoctl restore
@@ -351,3 +352,8 @@ bindsym $mod+Shift+y exec clipman clear --all
 # Mouse control
 bindsym $mod+m exec warpd --hint
 bindsym $mod+Shift+m exec warpd --normal
+
+
+
+# Focus workspace 1 at startup
+workspace 1
