@@ -1,4 +1,3 @@
-alacritty
 ani-cli
 anki-official-binary-bundle
 arandr
@@ -22,9 +21,9 @@ bison
 bluez
 bluez-utils
 boost
+bottom
 breeze
 brightnessctl
-btop
 calibre
 cava
 cbonsai
@@ -50,7 +49,6 @@ discord
 dnsmasq
 dotnet-sdk
 dotnet-targeting-pack
-dunst
 dust
 editix-free
 edk2-ovmf
@@ -69,7 +67,6 @@ ffmpegthumbnailer
 firefox
 fish
 fisher
-flameshot
 flatpak
 flatpak-builder
 flex
@@ -80,6 +77,7 @@ gcc
 gcolor3
 gimp
 git
+git-delta
 gnome-clocks
 gnome-keyring
 gnome-weather
@@ -95,8 +93,6 @@ gvfs-mtp
 hdparm
 helix
 htop
-i3-wm
-i3lock
 iptables-nft
 j4-dmenu-desktop
 java-environment-common
@@ -131,8 +127,6 @@ libnet
 libreoffice-fresh
 libtool
 libvirt
-lightdm
-lightdm-gtk-greeter
 linux
 linux-firmware
 linux-headers
@@ -167,7 +161,6 @@ network-manager-applet
 networkmanager
 networkmanager-openconnect
 nextdns
-nitrogen
 noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
@@ -189,13 +182,11 @@ osu-lazer-bin
 otf-font-awesome
 packettracer
 pacman-contrib
-parcellite
 patch
 peek
 perl-file-mimeinfo
 perl-image-exiftool
 pfetch
-picom
 pinta
 pipewire-alsa
 pipewire-pulse
@@ -203,7 +194,6 @@ pkgconf
 plantuml
 playerctl
 plocate
-polybar
 popsicle-bin
 portaudio
 protobuf
@@ -247,13 +237,10 @@ seahorse
 sfml
 shotwell
 signal-desktop-beta-bin
-simplescreenrecorder
 sl
 spotify-adblock
 sshfs
-starship
 steam
-stpv-git
 sudo
 swappy
 sway
@@ -263,6 +250,7 @@ swaylock
 swtpm
 sxiv
 syncthing
+tealdeer
 tela-icon-theme
 texinfo
 thunderbird
@@ -278,7 +266,7 @@ tree
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
 udiskie
-ueberzug
+ueberzugpp
 ufw
 umbrello
 unzip
@@ -286,6 +274,7 @@ valgrind
 ventoy-bin
 vial-appimage
 viewnior
+vim
 vimix-cursors
 virt-manager
 visual-studio-code-bin
@@ -313,5 +302,6 @@ xorg-xinit
 xorg-xinput
 xorg-xwayland
 yay
-youtube-dl
+yt-dlp
+ytfzf
 zip

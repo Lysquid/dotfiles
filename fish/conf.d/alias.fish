@@ -9,6 +9,7 @@ abbr --add m make
 abbr --add cat bat
 abbr --add find fd
 abbr --add grep rg
+abbr --add diff delta
 
 # Git
 abbr --add -- gs git status
@@ -16,7 +17,7 @@ abbr --add -- ga git add
 abbr --add -- gc git commit -m
 abbr --add -- gca git commit -a -m
 abbr --add -- gpl git pull
-abbr --add -- gph git push
+abbr --add -- gps git push
 abbr --add -- gl git log --graph --oneline --decorate
 abbr --add -- gck git git checkout
 abbr --add -- gb git branch
@@ -35,10 +36,6 @@ end
 
 function rickroll
     curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash
-end
-
-function reload
-    source .config/fish/**.fish
 end
 
 function pico8

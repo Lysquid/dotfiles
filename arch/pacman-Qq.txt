@@ -6,7 +6,6 @@ acl
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
-alacritty
 alsa-card-profiles
 alsa-lib
 alsa-plugins
@@ -63,13 +62,13 @@ boost
 boost-libs
 botan
 botan2
+bottom
 box2d
 breeze
 breeze-icons
 breezy
 brightnessctl
 brotli
-btop
 btrfs-progs
 bubblewrap
 bzip2
@@ -85,8 +84,10 @@ calibre
 cantarell-fonts
 capstone
 cava
+cblas
 cbonsai
 cdparanoia
+cfitsio
 chafa
 check
 cheese
@@ -152,7 +153,6 @@ dotnet-targeting-pack
 double-conversion
 dtc
 duktape
-dunst
 dust
 e2fsprogs
 ebook-tools
@@ -164,6 +164,7 @@ efivar
 egl-wayland
 eglexternalplatform
 electron
+electron25
 elfutils
 embree
 embree3
@@ -196,7 +197,6 @@ firefox
 fish
 fisher
 flac
-flameshot
 flatpak
 flatpak-builder
 flex
@@ -239,6 +239,7 @@ ghostscript
 giflib
 gimp
 git
+git-delta
 gjs
 glew
 glib-networking
@@ -303,7 +304,6 @@ gtk-vnc
 gtk2
 gtk3
 gtk4
-gtkmm
 gtkmm-4.0
 gtkmm3
 gtksourceview4
@@ -330,8 +330,6 @@ hunspell
 hwdata
 hwloc
 hyphen
-i3-wm
-i3lock
 iana-etc
 icu
 ijs
@@ -589,11 +587,11 @@ libcddb
 libcdio
 libcdio-paranoia
 libcdr
+libcgif
 libcheese
 libcloudproviders
 libcmis
 libcolord
-libconfig
 libcue
 libcups
 libcurl-gnutls
@@ -618,7 +616,6 @@ libelf
 libepoxy
 libepubgen
 libetonyek
-libev
 libevdev
 libevent
 libexif
@@ -761,6 +758,7 @@ libshout
 libsidplay
 libsigc++
 libsigc++-3.0
+libsixel
 libslirp
 libsm
 libsndfile
@@ -805,6 +803,7 @@ libuv
 libva
 libvdpau
 libverto
+libvips
 libvirt
 libvirt-glib
 libvirt-python
@@ -841,7 +840,6 @@ libxinerama
 libxkbcommon
 libxkbcommon-x11
 libxkbfile
-libxklavier
 libxml2
 libxmlb
 libxmu
@@ -864,8 +862,6 @@ libyuv
 libzip
 libzmf
 licenses
-lightdm
-lightdm-gtk-greeter
 lilv
 linux
 linux-api-headers
@@ -948,7 +944,6 @@ networkmanager-openconnect
 nextdns
 nftables
 ninja
-nitrogen
 nlohmann-json
 nm-connection-editor
 node-gyp
@@ -980,6 +975,7 @@ openal
 openasar-git
 openconnect
 opencore-amr
+opencv
 openexr
 openjpeg2
 openmpi
@@ -1010,7 +1006,6 @@ pambase
 pango
 pangomm
 pangomm-2.48
-parcellite
 parted
 patch
 patchelf
@@ -1034,7 +1029,6 @@ perl-timedate
 perl-uri
 pfetch
 phodav
-picom
 pinentry
 pinta
 pipes.sh
@@ -1051,7 +1045,6 @@ plocate
 podofo
 polkit
 polkit-qt5
-polybar
 poppler
 poppler-data
 poppler-glib
@@ -1370,7 +1363,6 @@ signon-kwallet-extension
 signon-plugin-oauth2
 signon-ui
 signond
-simplescreenrecorder
 sl
 slang
 slop
@@ -1397,11 +1389,9 @@ sqlite
 sratom
 srt
 sshfs
-starship
 startup-notification
 steam
 stoken
-stpv-git
 sudo
 suitesparse
 svt-av1
@@ -1424,6 +1414,7 @@ taglib
 tar
 tcl
 tdb
+tealdeer
 tela-icon-theme
 texinfo
 thin-provisioning-tools
@@ -1451,12 +1442,14 @@ ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
+turbo-base64
 twolame
 tzdata
 uchardet
 udiskie
 udisks2
-ueberzug
+ueberzugpp
+ueberzugpp-debug
 ufw
 umbrello
 unibilium
@@ -1475,6 +1468,8 @@ ventoy-bin
 vial-appimage
 vid.stab
 viewnior
+vim
+vim-runtime
 vimix-cursors
 virglrenderer
 virt-install
@@ -1565,7 +1560,8 @@ xz
 yajl
 yarn
 yay
-youtube-dl
+yt-dlp
+ytfzf
 zbar
 zenity
 zeromq
