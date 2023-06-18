@@ -17,7 +17,7 @@ abbr --add -- gck git git checkout
 abbr --add -- gb git branch
 abbr --add -- gcl git clone
 abbr --add -- gmv git mv
-abbr --add -- gr git remote
+abbr --add -- gr git restore
 abbr --add -- gd git diff
 
 function rm 
@@ -38,10 +38,6 @@ end
 
 function vmware
     GTK_THEME=Orchis vmware-view $argv
-end
-
-function i3
-    exec startx /bin/i3 > /dev/null 2> /dev/null $argv
 end
 
 function icat

@@ -113,14 +113,12 @@ default_border pixel 2
 # Inhibit idle in fullscreen
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
-for_window [title="^codelldb$"] resize shrink width 40 ppt
 
 # Apps assignements to workspaces
-assign [app_id="firefox"] workspace number 1
-assign [app_id="thunderbird"] workspace number 3
-assign [class="Code"] workspace number 2
-assign [class="discord"] workspace number 10
-assign [class="Signal Beta"] workspace number 10
+assign [app_id="firefox" window_type="normal"] workspace number 1
+assign [app_id="thunderbird" window_type="normal"] workspace number 3
+assign [class="discord" window_type="normal"] workspace number 10
+assign [class="Signal Beta" window_type="normal"] workspace number 10
 for_window [class="Signal Beta"] layout tabbed
 for_window [class="Spotify"] move container to workspace number 9
 
@@ -138,7 +136,7 @@ exec lxpolkit
 exec nm-applet --indicator
 exec playerctld daemon
 exec mako
-exec udiskie --smart-tray --no-file-manager --no-notify
+exec udiskie --smart-tray --no-file-manager
 exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w
@@ -188,10 +186,11 @@ mode "open" {
     bindsym s exec LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
     bindsym c exec qalculate-gtk
     bindsym p exec pinta
-    bindsym l exec gcolor3
+    bindsym g exec gcolor3
     bindsym o exec obsidian
     bindsym a exec anki
     bindsym i exec signal-desktop-beta
+    bindsym n exec nautilus
     # Return to default mode
     bindsym Escape mode "default"
 }
@@ -331,6 +330,9 @@ bindsym Ctrl+Print exec grimshot --notify copy area
 bindsym Ctrl+Shift+Print exec grimshot --notify save area $screenshot_path
 # Edit
 bindsym Alt+Print exec wl-paste | swappy --file -
+
+# Color picker
+bindsym $mod+c exec hyprpicker --autocopy
 
 # Lock and toggle screen
 bindsym $mod+x exec systemctl suspend
