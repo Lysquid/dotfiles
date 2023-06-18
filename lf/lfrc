@@ -8,12 +8,13 @@ set incfilter true
 set hiddenfiles '.*:~/snap:~/java.log.*:~/go:~/R'
 set mouse true
 
-# ctpv integration
+# Previewer
 set previewer ctpv
 set cleaner ctpvclear
 &ctpv -s $id
 &ctpvquit $id
 
+# Functions
 cmd open ${{
     case $(file --mime-type -Lb $f) in
         text/*) $EDITOR $fx;;
@@ -21,7 +22,6 @@ cmd open ${{
     esac
 }}
 
-# Custom functions
 cmd mkdir %{{
     IFS=" "
     mkdir -p "$*"
@@ -97,19 +97,7 @@ cmd execute_permission :{{
     :reload
 }}
 
-cmd fzf_jump ${{
-    res="$(fzfp)"
-    if [ -d "$res" ] ; then
-        cmd="cd"
-    elif [ -f "$res" ] ; then
-        cmd="select"
-    else
-        exit 0
-    fi
-    lf -remote "send $id $cmd \"$res\""
-}}
-
-cmd background ${{
+cmd wallpaper ${{
     swaymsg output '*' bg $f fill
 }}
 
@@ -117,14 +105,52 @@ cmd file_explorer &{{
     nautilus .
 }}
 
+cmd fzf_jump ${{
+    res="$(fd --maxdepth 1 | fzf --reverse --header=$(pwd)/* || exit 0)"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+    exit 0
+}}
+
+cmd fzf_jump_recursive ${{
+    res="$(fd | fzf --reverse --header=$(pwd)/** || exit 0)"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
+    fi
+}}
+
+cmd fzf_search ${{
+    RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
+    res="$(
+        FZF_DEFAULT_COMMAND="$RG_PREFIX ''" \
+            fzf --bind "change:reload:$RG_PREFIX {q} || true" \
+            --ansi --layout=reverse --header 'Search in files' \
+            | cut -d':' -f1 | sed 's/\\/\\\\/g;s/"/\\"/g'
+    )"
+    [ -n "$res" ] || exit 0 && lf -remote "send $id select \"$res\""
+}}
+map <c-f> :fzf_search
+
 # Remove some defaults
 map d
 
-# Bindings to built in function
+# Bindings
 map r rename
 map a push :mkfile<space>
 map A push :mkdir<space>
-map <c-y> editor
 map dd trash
 map dr trash_restore
 map df delete
@@ -132,16 +158,16 @@ map x cut
 map <enter> open
 map H hide_preview 
 map . set hidden!
-map C code
 map o open_with
 map O open_change_default
-map J push 5j
-map K push 5k
-map X execute_permission
-map U extract
-map <c-f> fzf_jump
-map b background
+map C code
 map E file_explorer
+map U extract
+map b wallpaper
+map f fzf_jump
+map F fzf_jump_recursive
+map s find
+map X execute_permission
 
 # Movement
 map gh cd ~/
@@ -151,9 +177,9 @@ map gp cd ~/Pictures
 map gv cd ~/Videos
 map gu cd ~/Music
 map gc cd ~/.config
+map gn cd ~/.config/nvim
+map gm cd /run/media/rom1
 map go cd ~/Code
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
-map gm cd /run/media/rom1
-map gn cd ~/.config/nvim
-map gr cd ~/Code/Projects
+map gj cd ~/Code/Projects

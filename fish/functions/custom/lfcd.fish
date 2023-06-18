@@ -5,15 +5,17 @@
 #     mkdir -p ~/.config/fish/functions
 #     ln -s "/path/to/lfcd.fish" ~/.config/fish/functions
 #
-# You may also like to assign a key to this command:
+# You may also like to assign a key (Ctrl-O) to this command:
 #
 #     bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
 #
 # You may put this in a function called fish_user_key_bindings.
 
 function lfcd
+    set -x SHELL /bin/bash # Added for scripts compatibility
     set tmp (mktemp)
-    lf -last-dir-path=$tmp $argv
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    command lf -last-dir-path=$tmp $argv
     if test -f "$tmp"
         set dir (cat $tmp)
         rm -f $tmp

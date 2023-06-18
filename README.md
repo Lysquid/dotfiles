@@ -2,7 +2,7 @@
 
 [r/unixporn](https://www.reddit.com/r/unixporn/comments/zswnv3/sway_wayland_is_the_way_to_go/)
 
-I switched to Sway, but my i3 config is still on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
+I switched to Sway, but my old i3 config is still on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
 
 ## Config
 
@@ -56,7 +56,8 @@ I switched to Sway, but my i3 config is still on [this branch](https://github.co
 + [warpd](https://github.com/rvaiya/warpd) : move the mouse with the keyboard
 + [rsync](https://wiki.archlinux.org/title/rsync) : backups
 + [Syncthing](https://syncthing.net/) : sync files across devices
-+ [gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : color picker
++ [hyprpicker](https://github.com/hyprwm/hyprpicker) : screen color picker
++ [gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : wheel color picker
 + [yt-dlp](https://github.com/yt-dlp/yt-dlp) : download youtube videos
 + [ytfzf](https://github.com/pystardust/ytfzf/) : youtube in the terminal
 + [ani-cli](https://github.com/pystardust/ani-cli) : watch anime from the terminal
