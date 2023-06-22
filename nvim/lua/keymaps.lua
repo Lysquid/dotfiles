@@ -12,8 +12,7 @@ vim.keymap.set('', '<leader>v', 'ggVG0') -- select whole document
 -- Conventional shorcuts
 vim.keymap.set({ '', 'i', 's' }, '<C-s>', '<Cmd>write<CR>')
 vim.keymap.set('', '<C-c>', '"+y')
-vim.keymap.set({ 'i', 's' }, '<C-v>', '<Esc>"+pa')
-vim.keymap.set('v', '<C-v>', 'd"+P')
+vim.keymap.set('', '<C-k>', '<C-v>', { remap = true })
 vim.keymap.set({ 'i', 's', 'c' }, '<C-BS>', '<C-w>')
 
 -- Page up and down

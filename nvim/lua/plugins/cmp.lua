@@ -66,6 +66,7 @@ cmp.setup({
         -- Trigger completion
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
+        ['<Enter>'] = cmp.mapping.confirm({ select = true }),
         ['<Tab>'] = cmp.mapping.confirm({ select = true }),
 
         -- Navigate completion results

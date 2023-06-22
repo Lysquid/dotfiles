@@ -60,7 +60,7 @@ workspace 10 output $laptop
 # Keyboard
 input type:keyboard {
     xkb_layout us,fr
-    xkb_variant ,lafayette42
+    xkb_variant ,lafayette43
     xkb_options caps:escape_shifted_capslock,grp:alt_space_toggle
     xkb_numlock enabled
 }
@@ -116,7 +116,7 @@ for_window [app_id="^.*"] inhibit_idle fullscreen
 
 # Apps assignements to workspaces
 assign [app_id="firefox" window_type="normal"] workspace number 1
-assign [app_id="thunderbird" window_type="normal"] workspace number 3
+assign [app_id="thunderbird"] workspace number 3
 assign [class="discord" window_type="normal"] workspace number 10
 assign [class="Signal Beta" window_type="normal"] workspace number 10
 for_window [class="Signal Beta"] layout tabbed
