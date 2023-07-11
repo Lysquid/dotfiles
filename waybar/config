@@ -3,7 +3,7 @@
 {
     "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "backlight", "cpu", "memory", "battery", "tray"],
+    "modules-right": ["battery", "cpu", "memory", "pulseaudio", "backlight", "tray"],
 
     "sway/workspaces": {
         "disable-scroll": true

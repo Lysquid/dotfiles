@@ -142,7 +142,6 @@ cmd fzf_search ${{
     )"
     [ -n "$res" ] || exit 0 && lf -remote "send $id select \"$res\""
 }}
-map <c-f> :fzf_search
 
 # Remove some defaults
 map d
@@ -166,7 +165,7 @@ map U extract
 map b wallpaper
 map f fzf_jump
 map F fzf_jump_recursive
-map s find
+map <c-f> :fzf_search
 map X execute_permission
 
 # Movement

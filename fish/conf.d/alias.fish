@@ -13,7 +13,7 @@ abbr --add -- gca git commit -a -m
 abbr --add -- gpl git pull
 abbr --add -- gps git push
 abbr --add -- gl git log --graph --oneline --decorate
-abbr --add -- gck git git checkout
+abbr --add -- gck git checkout
 abbr --add -- gb git branch
 abbr --add -- gcl git clone
 abbr --add -- gmv git mv
