@@ -60,7 +60,7 @@ workspace 10 output $laptop
 # Keyboard
 input type:keyboard {
     xkb_layout us,fr
-    xkb_variant ,lafayette43
+    xkb_variant ,
     xkb_options caps:escape_shifted_capslock,grp:alt_space_toggle
     xkb_numlock enabled
 }
@@ -130,6 +130,8 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="nm-openconnect-auth-dialog"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 for_window [app_id="wdisplays"] floating enable
+for_window [class="Gmtk 2023"] floating enable
+for_window [class="Godot"] floating enable
 
 # Startup
 exec lxpolkit
@@ -191,6 +193,7 @@ mode "open" {
     bindsym a exec anki
     bindsym i exec signal-desktop-beta
     bindsym n exec nautilus
+    bindsym w exec wihotspot
     # Return to default mode
     bindsym Escape mode "default"
 }
@@ -236,8 +239,8 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Scratchpad
-bindsym $mod+Shift+BackSpace move scratchpad
-bindsym $mod+BackSpace scratchpad show
+bindsym $mod+Shift+Escape move scratchpad
+bindsym $mod+Escape scratchpad show
 
 # Alt+tab behavior
 bindsym $mod+Tab workspace back_and_forth

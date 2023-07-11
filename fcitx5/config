@@ -9,6 +9,8 @@ EnumerateForwardKeys=
 EnumerateBackwardKeys=
 # Skip first input method while enumerating
 EnumerateSkipFirst=False
+# Enumerate Input Method Group Forward
+EnumerateGroupForwardKeys=
 # Enumerate Input Method Group Backward
 EnumerateGroupBackwardKeys=
 # Activate Input Method
@@ -19,11 +21,7 @@ DeactivateKeys=
 TogglePreedit=
 
 [Hotkey/TriggerKeys]
-0=Hiragana_Katakana
-1=Super+comma
-
-[Hotkey/EnumerateGroupForwardKeys]
-0=Super+question
+0=Super+Insert
 
 [Hotkey/PrevPage]
 0=Up
