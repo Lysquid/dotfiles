@@ -30,6 +30,7 @@ Videos/Watching
 Downloads
 snap
 go
+R
 .lutris
 .vscode
 .nuget

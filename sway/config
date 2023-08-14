@@ -104,6 +104,7 @@ client.background       #000000
 
 # Gaps
 gaps inner 10
+gaps bottom 50
 smart_borders no_gaps
 smart_gaps on
 
@@ -130,7 +131,7 @@ for_window [app_id="nm-connection-editor"] floating enable
 for_window [app_id="nm-openconnect-auth-dialog"] floating enable
 for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
 for_window [app_id="wdisplays"] floating enable
-for_window [class="Gmtk 2023"] floating enable
+for_window [class="Kenney 2023"] floating enable
 for_window [class="Godot"] floating enable
 
 # Startup
@@ -196,6 +197,7 @@ mode "open" {
     bindsym w exec wihotspot
     # Return to default mode
     bindsym Escape mode "default"
+    bindsym Space mode "default"
 }
 bindsym $mod+o mode "open"
 
@@ -338,9 +340,8 @@ bindsym Alt+Print exec wl-paste | swappy --file -
 bindsym $mod+c exec hyprpicker --autocopy
 
 # Lock and toggle screen
-bindsym $mod+x exec systemctl suspend
 bindsym $mod+Shift+x exec loginctl lock-session
-bindsym $mod+z $toggle_screen
+bindsym $mod+Shift+z $toggle_screen
 
 # Notifications
 bindsym $mod+Shift+n exec makoctl restore
