@@ -17,6 +17,7 @@ ostree-finalize-staged.path                disabled        disabled
 systemd-ask-password-console.path          static          -
 systemd-ask-password-wall.path             static          -
 session-1.scope                            transient       -
+adb.service                                disabled        disabled
 archlinux-keyring-wkd-sync.service         static          -
 arptables.service                          disabled        disabled
 auditd.service                             disabled        disabled
@@ -64,6 +65,7 @@ gpm.service                                disabled        disabled
 greetd.service                             enabled         disabled
 healthd.service                            disabled        disabled
 hostapd.service                            disabled        disabled
+hostapd@.service                           disabled        disabled
 initrd-cleanup.service                     static          -
 initrd-parse-etc.service                   static          -
 initrd-switch-root.service                 static          -
@@ -105,6 +107,8 @@ nvidia-persistenced.service                disabled        disabled
 nvidia-powerd.service                      disabled        disabled
 nvidia-resume.service                      disabled        disabled
 nvidia-suspend.service                     disabled        disabled
+openvpn-client@.service                    disabled        disabled
+openvpn-server@.service                    disabled        disabled
 ostree-boot-complete.service               static          -
 ostree-finalize-staged-hold.service        static          -
 ostree-finalize-staged.service             static          -
@@ -140,11 +144,13 @@ system-update-cleanup.service              static          -
 systemd-ask-password-console.service       static          -
 systemd-ask-password-wall.service          static          -
 systemd-backlight@.service                 static          -
+systemd-battery-check.service              static          -
 systemd-binfmt.service                     static          -
 systemd-bless-boot.service                 static          -
 systemd-boot-check-no-failures.service     disabled        disabled
 systemd-boot-random-seed.service           static          -
 systemd-boot-update.service                disabled        enabled
+systemd-confext.service                    disabled        disabled
 systemd-coredump@.service                  static          -
 systemd-exit.service                       static          -
 systemd-firstboot.service                  static          -
@@ -153,7 +159,6 @@ systemd-fsck@.service                      static          -
 systemd-growfs-root.service                static          -
 systemd-growfs@.service                    static          -
 systemd-halt.service                       static          -
-systemd-hibernate-resume@.service          static          -
 systemd-hibernate.service                  static          -
 systemd-homed-activate.service             disabled        disabled
 systemd-homed.service                      disabled        enabled
@@ -175,7 +180,7 @@ systemd-machine-id-commit.service          static          -
 systemd-machined.service                   static          -
 systemd-modules-load.service               static          -
 systemd-network-generator.service          disabled        enabled
-systemd-networkd-wait-online.service       disabled        disabled
+systemd-networkd-wait-online.service       disabled        enabled
 systemd-networkd-wait-online@.service      disabled        disabled
 systemd-networkd.service                   disabled        enabled
 systemd-nspawn@.service                    disabled        disabled
@@ -196,6 +201,7 @@ systemd-remount-fs.service                 enabled-runtime disabled
 systemd-repart.service                     static          -
 systemd-resolved.service                   disabled        enabled
 systemd-rfkill.service                     static          -
+systemd-soft-reboot.service                static          -
 systemd-suspend-then-hibernate.service     static          -
 systemd-suspend.service                    static          -
 systemd-sysctl.service                     static          -
@@ -248,6 +254,7 @@ wpa_supplicant.service                     disabled        disabled
 wpa_supplicant@.service                    disabled        disabled
 machine.slice                              static          -
 system-systemd\x2dcryptsetup.slice         static          -
+system-systemd\x2dveritysetup.slice        static          -
 user.slice                                 static          -
 avahi-daemon.socket                        disabled        disabled
 dbus.socket                                static          -
@@ -373,6 +380,7 @@ sleep.target                               static          -
 slices.target                              static          -
 smartcard.target                           static          -
 sockets.target                             static          -
+soft-reboot.target                         static          -
 sound.target                               static          -
 suspend-then-hibernate.target              static          -
 suspend.target                             static          -
@@ -406,4 +414,4 @@ systemd-sysupdate-reboot.timer             disabled        disabled
 systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 
-406 unit files listed.
+414 unit files listed.

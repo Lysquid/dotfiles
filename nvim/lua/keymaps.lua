@@ -53,5 +53,5 @@ vim.keymap.set({ '', 'i', 's' }, '<C-x>', '<Cmd>Bdelete<CR>')
 vim.keymap.set('t', '<C-x>', '<Cmd>bdelete!<CR>')
 
 -- Tabs
-vim.keymap.set('', '<C-PageUp>', 'gT')
-vim.keymap.set('', '<C-PageDown>', 'gt')
+vim.keymap.set({ '', 't', 'i', 's' }, '<C-PageUp>', '<Cmd>tabnext<CR>')
+vim.keymap.set({ '', 't', 'i', 's' }, '<C-PageDown>', '<Cmd>tabprev<CR>')

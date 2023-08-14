@@ -1,4 +1,5 @@
 ancient-packages
+android-sdk-platform-tools
 ani-cli
 anki-official-binary-bundle
 arandr
@@ -37,8 +38,6 @@ cmatrix
 compiler-rt
 cowsay
 ctpv-git
-datagrip
-datagrip-jre
 debugedit
 devhelp
 dex
@@ -49,6 +48,7 @@ dotnet-targeting-pack
 dust
 edk2-ovmf
 efibootmgr
+element-desktop
 eog
 evince
 fakeroot
@@ -60,6 +60,7 @@ fcitx5-qt
 fcitx5-skin-adwaita-dark
 fd
 ffmpegthumbnailer
+file-roller
 firefox
 fish
 fisher
@@ -72,9 +73,11 @@ gammastep
 gcc
 gcolor3
 gdb
+gendesk
 gimp
 git
 git-delta
+gitkraken
 gnome-keyring
 gnu-netcat
 go
@@ -88,12 +91,14 @@ gvfs-mtp
 hdparm
 helix
 htop
+hyprpicker
 iptables-nft
 j4-dmenu-desktop
 java-environment-common
 java-runtime-common
 jdk-openjdk
 jdk11-openjdk
+jetbrains-toolbox
 jq
 jre11-openjdk
 jre11-openjdk-headless
@@ -147,13 +152,12 @@ mtpfs
 nautilus
 neofetch
 neovim
-netbeans
 nethack
-nethogs
 netstandard-targeting-pack
 network-manager-applet
 networkmanager
 networkmanager-openconnect
+networkmanager-openvpn
 nextdns
 ninja
 nodejs
@@ -168,11 +172,10 @@ nvidia-settings
 nvtop
 obsidian
 ocl-icd
-onlyoffice-bin
 ookla-speedtest-bin
 openal
-openasar-git
 opentabletdriver
+openvpn
 orchis-theme
 os-prober
 osu-lazer-bin
@@ -180,6 +183,7 @@ otf-font-awesome
 packettracer
 pacman-contrib
 patch
+pdfsam
 perl-file-mimeinfo
 perl-image-exiftool
 pfetch
@@ -193,6 +197,7 @@ plocate
 popsicle-bin
 portaudio
 protobuf
+protonvpn
 pyenv
 python-attrs
 python-cachecontrol
@@ -209,6 +214,7 @@ python-itsdangerous
 python-jinja
 python-markupsafe
 python-pip
+python-pipx
 python-platformdirs
 python-pyopenssl
 python-pyrsistent
@@ -230,6 +236,8 @@ rofi-lbonn-wayland-git
 rstudio-desktop-bin
 rsync
 rust
+scons
+scrcpy
 sfml
 shotwell
 signal-desktop-beta-bin
@@ -267,7 +275,6 @@ unzip
 valgrind
 ventoy-bin
 viewnior
-vim
 vimix-cursors
 virt-manager
 visual-studio-code-bin
@@ -278,7 +285,6 @@ wdisplays
 wf-recorder
 wget
 which
-wine
 wireplumber
 wl-clipboard
 wl-gammactl

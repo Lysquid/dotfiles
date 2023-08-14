@@ -16,6 +16,7 @@
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 /gtk-3.0/bookmarks
+!/helix/**
 !/lf/**
 !/rofi/**
 !/rsync/**
