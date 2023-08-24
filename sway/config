@@ -60,7 +60,7 @@ workspace 10 output $laptop
 # Keyboard
 input type:keyboard {
     xkb_layout us,fr
-    xkb_variant ,
+    xkb_variant ,lafayette43
     xkb_options caps:escape_shifted_capslock,grp:alt_space_toggle
     xkb_numlock enabled
 }
@@ -104,7 +104,6 @@ client.background       #000000
 
 # Gaps
 gaps inner 10
-gaps bottom 50
 smart_borders no_gaps
 smart_gaps on
 
