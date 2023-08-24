@@ -1,7 +1,5 @@
 ![screenshot](screenshot.png)
 
-[r/unixporn](https://www.reddit.com/r/unixporn/comments/zswnv3/sway_wayland_is_the_way_to_go/)
-
 I switched to Sway, but my old i3 config is still on [this branch](https://github.com/Lysquid/dotfiles/tree/i3).
 
 ## Config
