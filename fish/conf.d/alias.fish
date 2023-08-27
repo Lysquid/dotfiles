@@ -12,8 +12,9 @@ abbr --add -- gc git commit -m
 abbr --add -- gca git commit -a -m
 abbr --add -- gpl git pull
 abbr --add -- gps git push
-abbr --add -- gl git log --graph --oneline --decorate
-abbr --add -- gla git log --graph --oneline --decorate --all
+abbr --add -- gpsf git push --force
+abbr --add -- glb git log --graph --oneline --decorate
+abbr --add -- gl git log --graph --oneline --decorate --all
 abbr --add -- gck git checkout
 abbr --add -- gb git checkout -b
 abbr --add -- gcl git clone
