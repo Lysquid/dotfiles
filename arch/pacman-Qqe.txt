@@ -3,6 +3,7 @@ android-sdk-platform-tools
 ani-cli
 anki-official-binary-bundle
 arandr
+arch-install-scripts
 asciiquarium
 atool
 aur-auto-vote-git
@@ -43,6 +44,9 @@ devhelp
 dex
 discord
 dnsmasq
+docker
+docker-buildx
+docker-compose
 dotnet-sdk
 dotnet-targeting-pack
 dust
@@ -97,7 +101,6 @@ j4-dmenu-desktop
 java-environment-common
 java-runtime-common
 jdk-openjdk
-jdk11-openjdk
 jetbrains-toolbox
 jq
 jre11-openjdk
@@ -141,10 +144,10 @@ make
 mako
 man-db
 man-pages
+mariadb
 mdcat
 meson
 minecraft-launcher
-mongodb-bin
 mongodb-tools-bin
 mpg123
 mpv
@@ -214,6 +217,7 @@ python-itsdangerous
 python-jinja
 python-markupsafe
 python-pip
+python-pipenv
 python-pipx
 python-platformdirs
 python-pyopenssl
@@ -238,14 +242,15 @@ rsync
 rust
 scons
 scrcpy
+seahorse
 sfml
-shotwell
 signal-desktop-beta-bin
 sl
 spotify-adblock
 sshfs
 steam
 sudo
+supertuxkart
 swappy
 sway
 swaybg

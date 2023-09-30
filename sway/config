@@ -11,10 +11,6 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 
 ### Variables
 
-# Wallpapers
-set $wallpaper1 wallhaven-8xg6qy.jpg
-set $wallpaper2 wallhaven-9mel2k.png
-
 # Screens
 set $laptop eDP-1
 set $monitor HDMI-A-2
@@ -52,8 +48,8 @@ output $laptop position 0,180
 output $monitor mode 1920x1080@120Hz position 1600,0 adaptive_sync on
 
 # Wallpapers
-output $laptop bg ~/Pictures/Wallpapers/PC/$wallpaper1 fill
-output $monitor bg ~/Pictures/Wallpapers/PC/$wallpaper2 fill
+output $laptop bg ~/.config/wallpaper1.jpg fill
+output $monitor bg ~/.config/wallpaper2.png fill
 
 # Workspaces assignements to outputs
 workspace 1 output $monitor
@@ -69,8 +65,7 @@ workspace 10 output $laptop
 
 # Keyboard
 input type:keyboard {
-    xkb_layout us,fr
-    xkb_variant ,
+    xkb_layout fr
     xkb_options grp:alt_space_toggle
     xkb_numlock enabled
 }

@@ -25,4 +25,4 @@ default-timeout=5000
 
 [urgency=high]
 border-color=#e34444
-default-timeout=0
+default-timeout=7000

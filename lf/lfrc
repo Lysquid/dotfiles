@@ -162,7 +162,7 @@ map O open_change_default
 map C code
 map E file_explorer
 map U extract
-map b wallpaper
+map B wallpaper
 map f fzf_jump
 map F fzf_jump_recursive
 map <c-f> :fzf_search
@@ -182,3 +182,4 @@ map go cd ~/Code
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
 map gj cd ~/Code/Projects
+map ga cd /mnt/data

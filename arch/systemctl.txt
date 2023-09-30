@@ -16,6 +16,7 @@ gpm.path                                   static          -
 ostree-finalize-staged.path                disabled        disabled
 systemd-ask-password-console.path          static          -
 systemd-ask-password-wall.path             static          -
+machine-qemu\x2d5\x2dNixOS.scope           transient       -
 session-1.scope                            transient       -
 adb.service                                disabled        disabled
 archlinux-keyring-wkd-sync.service         static          -
@@ -31,6 +32,7 @@ canberra-system-shutdown-reboot.service    disabled        disabled
 canberra-system-shutdown.service           disabled        disabled
 console-getty.service                      disabled        disabled
 container-getty@.service                   static          -
+containerd.service                         disabled        disabled
 create_ap.service                          disabled        disabled
 cxl-monitor.service                        disabled        disabled
 daxdev-reconfigure@.service                static          -
@@ -49,6 +51,7 @@ debug-shell.service                        disabled        disabled
 display-manager.service                    alias           -
 dm-event.service                           static          -
 dnsmasq.service                            disabled        disabled
+docker.service                             enabled         disabled
 e2scrub@.service                           static          -
 e2scrub_all.service                        static          -
 e2scrub_fail@.service                      static          -
@@ -82,6 +85,8 @@ libvirt-guests.service                     disabled        disabled
 libvirtd.service                           enabled         disabled
 lm_sensors.service                         disabled        disabled
 man-db.service                             static          -
+mariadb.service                            enabled         disabled
+mariadb@.service                           disabled        disabled
 mdadm-grow-continue@.service               static          -
 mdadm-last-resort@.service                 static          -
 mdcheck_continue.service                   static          -
@@ -91,8 +96,9 @@ mdmonitor-oneshot.service                  static          -
 mdmonitor.service                          static          -
 mkinitcpio-generate-shutdown-ramfs.service static          -
 modprobe@.service                          static          -
-mongodb.service                            disabled        disabled
 multipathd.service                         disabled        disabled
+mysql.service                              alias           -
+mysqld.service                             alias           -
 ndctl-monitor.service                      disabled        disabled
 NetworkManager-dispatcher.service          enabled         disabled
 NetworkManager-wait-online.service         enabled         disabled
@@ -213,6 +219,7 @@ systemd-time-wait-sync.service             disabled        disabled
 systemd-timedated.service                  static          -
 systemd-timesyncd.service                  enabled         enabled
 systemd-tmpfiles-clean.service             static          -
+systemd-tmpfiles-setup-dev-early.service   static          -
 systemd-tmpfiles-setup-dev.service         static          -
 systemd-tmpfiles-setup.service             static          -
 systemd-udev-settle.service                static          -
@@ -259,6 +266,7 @@ user.slice                                 static          -
 avahi-daemon.socket                        disabled        disabled
 dbus.socket                                static          -
 dm-event.socket                            static          -
+docker.socket                              disabled        disabled
 git-daemon.socket                          disabled        disabled
 krb5-kpropd.socket                         disabled        disabled
 libvirtd-admin.socket                      disabled        disabled
@@ -266,6 +274,10 @@ libvirtd-ro.socket                         enabled         disabled
 libvirtd-tcp.socket                        disabled        disabled
 libvirtd-tls.socket                        disabled        disabled
 libvirtd.socket                            enabled         disabled
+mariadb-extra.socket                       static          -
+mariadb-extra@.socket                      static          -
+mariadb.socket                             static          -
+mariadb@.socket                            static          -
 multipathd.socket                          disabled        disabled
 nix-daemon.socket                          enabled         disabled
 pcscd.socket                               disabled        disabled
@@ -414,4 +426,4 @@ systemd-sysupdate-reboot.timer             disabled        disabled
 systemd-sysupdate.timer                    disabled        disabled
 systemd-tmpfiles-clean.timer               static          -
 
-414 unit files listed.
+426 unit files listed.
