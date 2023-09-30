@@ -18,6 +18,8 @@
 /etc/mullvad-vpn
 /etc/credstore*
 /etc/cni
+/etc/openvpn/client
+/etc/openvpn/server
 
 .local/share/Steam
 .local/share/Games

@@ -16,7 +16,6 @@ hyprpicker
 jetbrains-toolbox
 linux-wifi-hotspot
 minecraft-launcher
-mongodb-bin
 mongodb-tools-bin
 nextdns
 ookla-speedtest-bin

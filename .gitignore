@@ -3,7 +3,7 @@
 !.gitignore
 
 !/README.*
-!/wallpaper.*
+!/wallpaper*.*
 !/screenshot.*
 /Code
 !/fish/config.fish

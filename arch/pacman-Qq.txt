@@ -20,6 +20,7 @@ aom
 appstream
 appstream-glib
 arandr
+arch-install-scripts
 archlinux-keyring
 argon2
 aria2
@@ -42,6 +43,7 @@ avr-binutils
 avr-gcc-85
 avr-libc
 avrdude
+ayatana-ido
 babl
 baobab
 base
@@ -68,6 +70,7 @@ box2d
 breeze
 breeze-icons
 breezy
+bridge-utils
 brightnessctl
 brotli
 bubblewrap
@@ -108,11 +111,13 @@ cmatrix
 cogl
 compiler-rt
 confuse
+containerd
 convertlit
 coreutils
 cowsay
 cpio
 cppdap
+cracklib
 cryptsetup
 ctpv-git
 curl
@@ -138,6 +143,9 @@ discord
 djvulibre
 dnsmasq
 dnssec-anchors
+docker
+docker-buildx
+docker-compose
 dosfstools
 dotnet-host
 dotnet-runtime
@@ -324,8 +332,9 @@ jasper
 java-environment-common
 java-runtime-common
 jbig2dec
+jbigkit
 jdk-openjdk
-jdk11-openjdk
+jemalloc
 jetbrains-toolbox
 jq
 jre-openjdk
@@ -455,6 +464,7 @@ lib32-libxau
 lib32-libxcb
 lib32-libxcomposite
 lib32-libxcrypt
+lib32-libxcrypt-compat
 lib32-libxcursor
 lib32-libxdamage
 lib32-libxdmcp
@@ -517,6 +527,8 @@ libatomic_ops
 libavc1394
 libavif
 libavtp
+libayatana-appindicator
+libayatana-indicator
 libb2
 libb64
 libblockdev
@@ -552,6 +564,7 @@ libdca
 libde265
 libdecor
 libdeflate
+libdovi
 libdrm
 libdv
 libdvdnav
@@ -574,15 +587,12 @@ libfreeaptx
 libfreehand
 libftdi
 libgcrypt
-libgdata
-libgee
 libgexiv2
 libgirepository
 libgit2
 libglvnd
 libgme
 libgnome-keyring
-libgoa
 libgpg-error
 libgphoto2
 libgsf
@@ -654,6 +664,7 @@ libnma-common
 libnotify
 libnsl
 libnumbertext
+libnvme
 libodfgen
 libogg
 libomxil-bellagio
@@ -678,6 +689,7 @@ libportal-gtk4
 libproxy
 libpsl
 libpulse
+libpwquality
 libqalculate
 libqxp
 libraqm
@@ -761,6 +773,7 @@ libxau
 libxcb
 libxcomposite
 libxcrypt
+libxcrypt-compat
 libxcursor
 libxcvt
 libxdamage
@@ -824,6 +837,9 @@ make
 mako
 man-db
 man-pages
+mariadb
+mariadb-clients
+mariadb-libs
 mathjax
 mbedtls2
 md4c
@@ -842,9 +858,7 @@ mkinitcpio
 mkinitcpio-busybox
 mlt
 mobile-broadband-provider-info
-mongodb-bin
 mongodb-tools-bin
-mongosh-bin
 mpfr
 mpg123
 mpv
@@ -894,6 +908,7 @@ oath-toolkit
 obsidian
 ocl-icd
 onetbb
+onevpl
 oniguruma
 ookla-speedtest-bin
 openal
@@ -989,6 +1004,7 @@ psmisc
 purpose
 pyenv
 python
+python-annotated-types
 python-appdirs
 python-apsw
 python-argcomplete
@@ -1070,6 +1086,7 @@ python-patiencediff
 python-pdftotext
 python-pillow
 python-pip
+python-pipenv
 python-pipx
 python-platformdirs
 python-ply
@@ -1083,6 +1100,7 @@ python-pycparser
 python-pycryptodome
 python-pycryptodomex
 python-pydantic
+python-pydantic-core
 python-pygments
 python-pyopenssl
 python-pyppmd
@@ -1091,6 +1109,7 @@ python-pyqt6-sip
 python-pyqt6-webengine
 python-pyrate-limiter
 python-pyrsistent
+python-pyserial
 python-pythondialog
 python-pyusb
 python-pyxdg
@@ -1121,6 +1140,8 @@ python-unrardll
 python-urllib3
 python-userpath
 python-validate-pyproject
+python-virtualenv
+python-virtualenv-clone
 python-webencodings
 python-werkzeug
 python-wheel
@@ -1134,8 +1155,10 @@ qemu-audio-dbus
 qemu-audio-jack
 qemu-audio-oss
 qemu-audio-pa
+qemu-audio-pipewire
 qemu-audio-sdl
 qemu-audio-spice
+qemu-base
 qemu-block-curl
 qemu-block-dmg
 qemu-block-nfs
@@ -1207,7 +1230,6 @@ readline
 recode
 redland
 reflector
-rest
 rhash
 ripgrep
 rofi-lbonn-wayland-git
@@ -1269,13 +1291,16 @@ ruby-time
 ruby-tmpdir
 ruby-uri
 rubygems
+runc
 rust
 sbc
+scdoc
 scons
 scrcpy
 sdl2
 sdl2_image
 seabios
+seahorse
 seatd
 sed
 semver
@@ -1284,7 +1309,6 @@ sfml
 shaderc
 shadow
 shared-mime-info
-shotwell
 signal-desktop-beta-bin
 signon-kwallet-extension
 signon-plugin-oauth2
@@ -1321,6 +1345,7 @@ steam
 stoken
 sudo
 suitesparse
+supertuxkart
 svt-av1
 svt-hevc
 swappy
@@ -1409,6 +1434,7 @@ webkit2gtk
 webkit2gtk-4.1
 webp-pixbuf-loader
 webrtc-audio-processing
+webrtc-audio-processing-1
 wf-recorder
 wget
 which
