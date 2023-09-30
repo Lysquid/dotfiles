@@ -1,4 +1,3 @@
-require('indent_blankline').setup {
-    show_trailing_blankline_indent = false,
-    use_treesitter = true,
+require('ibl').setup {
+    scope = { enabled = false },
 }
