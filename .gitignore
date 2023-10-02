@@ -24,6 +24,17 @@
 /gtk-3.0/bookmarks
 !/languagetool/**
 !/lf/**
+!/rofi/**
+!/rsync/**
+!/arch/**
+!/fcitx5/config
+!/fcitx5/profile
+/fcitx5/conf/cached_layouts
+/fcitx5/conf/notifications.conf
+/fcitx5/profile
+!/starship/**
+!/etc/**
+!/nixos/**
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
 !/README.*
