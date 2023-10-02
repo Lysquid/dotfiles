@@ -27,6 +27,7 @@
 /fcitx5/profile
 !/starship/**
 !/etc/**
+!/nixos/**
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
 !/sway/**
