@@ -35,6 +35,7 @@
 !/starship/**
 !/etc/**
 !/nixos/**
+/nixos/hardware-configuration.nix
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
 !/README.*
