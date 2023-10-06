@@ -41,6 +41,14 @@
     keyMap = "fr";
     # useXkbConfig = true; # use xkbOptions in tty.
   };
+  # i18n.inputMethod = {
+  #   enabled = "ibus";
+  #   ibus.engines = with pkgs.ibus-engines; [ mozc anthy ];
+  # };
+  i18n.inputMethod = {
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
+  };
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -95,15 +103,16 @@
     hyprpicker
     kitty
     lf
+    libsForQt5.qtstyleplugin-kvantum
     gnumake
     mako
     mpv
     neofetch
-    neovim
     networkmanagerapplet
     orchis-theme
     glib
     gnome.nautilus
+    perl536Packages.FileMimeInfo
     pfetch
     playerctl
     ripgrep
@@ -114,25 +123,27 @@
     swayidle
     swaylock
     sway-contrib.grimshot
+    sxiv
     tealdeer
     tela-icon-theme
     trash-cli
     tree
     udiskie
     unzip
+    viewnior
     vimPlugins.packer-nvim
     wdisplays
     wget
     wshowkeys
     wl-clipboard
     wl-gammactl
+    xdg-utils
     zip
   ];
 
   environment.variables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
     GTK_THEME = "Orchis-Dark";
+    QT_STYLE_OVERRIDE = "kvantum";
    };
 
   environment.shells = [ pkgs.fish ];
@@ -149,6 +160,10 @@
     };
     firefox.enable = true;
     fish.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
 
     sway = {
       enable = true;
@@ -168,8 +183,9 @@
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
-  # xdg.icons.enable = true;
-  xdg.mime.enable = true;
+  xdg.mime.defaultApplications = {
+    "text/*" = "nvim.desktop";
+  };
 
   # List services that you want to enable:
 
@@ -178,6 +194,7 @@
 
   services.pipewire = {
     enable = true;
+    wireplumber.enable = true;
     alsa.enable = true;
     pulse.enable = true;
   };
@@ -194,7 +211,7 @@
     enable = true;
     settings = {
       default_session = {
-        command = "sway > /dev/null 2> /dev/null";
+        command = "dbus-run-session sway > /dev/null 2> /dev/null";
         user = "rom1";
       };
     };
