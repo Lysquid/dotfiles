@@ -21,11 +21,16 @@
 /etc/openvpn/client
 /etc/openvpn/server
 
+/mnt/data/lost+found
+
 .local/share/Steam
 .local/share/Games
 .local/share/lutris
 .local/share/Trash
 .local/share/onlyoffice
+.local/share/JetBrains
+.local/share/PrismLauncher
+.local/share/godot
 .local/lib/python*
 
 Videos/Watching

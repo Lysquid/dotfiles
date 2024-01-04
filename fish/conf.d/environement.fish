@@ -10,7 +10,8 @@ set -gx QT_QPA_PLATFORMTHEME qt5ct
 set -gx GTK_THEME Orchis-Dark
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -gx GTK2_RC_FILES ~/.config/gtk-2.0/gtkrc
-# set -gx _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
+set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+set -gx _JAVA_OPTIONS '-Dawt.useSystemAAFontSettings=on'
 
 # Input
 set -gx GTK_IM_MODULE fcitx
