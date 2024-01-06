@@ -22,26 +22,8 @@ set $monitor HDMI-A-2
 # Leader key
 set $mod Mod4
 
-# Home row direction
-set $left h
-set $down j
-set $up k
-set $right l
-
 # Preferences
 set $move_strength 100 px
-
-# Azerty
-set $1 ampersand
-set $2 eacute
-set $3 quotedbl
-set $4 apostrophe
-set $5 parenleft
-set $6 minus
-set $7 egrave
-set $8 underscore
-set $9 ccedilla
-set $0 agrave
 
 
 
@@ -56,15 +38,15 @@ output $laptop bg ~/Pictures/Wallpapers/PC/$wallpaper1 fill
 output $monitor bg ~/Pictures/Wallpapers/PC/$wallpaper2 fill
 
 # Workspaces assignements to outputs
-workspace 1 output $monitor
-workspace 2 output $monitor
-workspace 3 output $monitor
-workspace 4 output $monitor
-workspace 5 output $monitor
-workspace 6 output $monitor
-workspace 7 output $laptop
-workspace 8 output $laptop
-workspace 9 output $laptop
+workspace 1  output $monitor
+workspace 2  output $monitor
+workspace 3  output $monitor
+workspace 4  output $monitor
+workspace 5  output $monitor
+workspace 6  output $monitor
+workspace 7  output $laptop
+workspace 8  output $laptop
+workspace 9  output $laptop
 workspace 10 output $laptop
 
 # Keyboard
@@ -133,20 +115,21 @@ for_window [class="Spotify"] move container to workspace number 9
 
 # Floating windows
 for_window [app_id="gcolor3"] floating enable
-for_window [app_id="qalculate-gtk"] floating enable
-for_window [app_id="wihotspot-gui"] floating enable
-for_window [app_id="nm-connection-editor"] floating enable
-for_window [app_id="nm-openconnect-auth-dialog"] floating enable
-for_window [app_id="org.fcitx.fcitx5-config-qt"] floating enable
+for_window [app_id="qalculate*"] floating enable
+for_window [app_id="wihotspot*"] floating enable
+for_window [app_id="nm-*"] floating enable
+for_window [app_id="blueman*"] floating enable
+for_window [app_id="org.fcitx*"] floating enable
 for_window [app_id="wdisplays"] floating enable
-for_window [class="fr.blazanome.routeplanner.view.RoutePlannerApplication"] floating enable
 for_window [class="Godot"] floating enable
+for_window [class="fr.blazanome.routeplanner.view.RoutePlannerApplication"] floating enable
 
 # Startup
 exec lxpolkit
 exec nm-applet --indicator
+exec blueman-applet
 exec playerctld daemon
-exec mako
+exec dunst
 exec udiskie --smart-tray --no-file-manager
 exec trash-empty -f 30
 exec fcitx5 -d
@@ -164,11 +147,6 @@ exec fish --command night_light
 
 # Resizing containers
 mode "resize" {
-    bindsym $left resize shrink width $move_strength
-    bindsym $down resize grow height $move_strength
-    bindsym $up resize shrink height $move_strength
-    bindsym $right resize grow width $move_strength
-    # With arrow keys
     bindsym Left resize shrink width $move_strength
     bindsym Down resize grow height $move_strength
     bindsym Up resize shrink height $move_strength
@@ -221,22 +199,23 @@ bindsym $mod+Return exec kitty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+Shift+Delete kill
 
 # Launcher
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Shift+p exec rofi -show run
 
 # Reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 
 # Split direction
-bindsym $mod+b splith
+bindsym $mod+h splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
 bindsym $mod+t layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+d layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -249,10 +228,11 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Scratchpad
-bindsym $mod+Shift+Escape move scratchpad
-bindsym $mod+Escape scratchpad show
+bindsym $mod+Shift+Backspace move scratchpad
+bindsym $mod+Backspace scratchpad show
 
 # Alt+tab behavior
+bindsym Alt+Tab workspace back_and_forth
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
@@ -263,72 +243,40 @@ bindsym $mod+Shift+Prior move container to workspace prev
 bindsym $mod+Shift+Next move container to workspace next
 
 # Move your focus around
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
-# With arrow keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Move the focused window
-bindsym $mod+Shift+$left move left $move_strength
-bindsym $mod+Shift+$down move down $move_strength
-bindsym $mod+Shift+$up move up $move_strength
-bindsym $mod+Shift+$right move right $move_strength
-# With arrow keys
 bindsym $mod+Shift+Left move left $move_strength
 bindsym $mod+Shift+Down move down $move_strength
 bindsym $mod+Shift+Up move up $move_strength
 bindsym $mod+Shift+Right move right $move_strength
 
 # Switch to workspace
-bindsym $mod+1 workspace number 1
-bindsym $mod+2 workspace number 2
-bindsym $mod+3 workspace number 3
-bindsym $mod+4 workspace number 4
-bindsym $mod+5 workspace number 5
-bindsym $mod+6 workspace number 6
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
-# Azerty
-bindsym $mod+$1 workspace number 1
-bindsym $mod+$2 workspace number 2
-bindsym $mod+$3 workspace number 3
-bindsym $mod+$4 workspace number 4
-bindsym $mod+$5 workspace number 5
-bindsym $mod+$6 workspace number 6
-bindsym $mod+$7 workspace number 7
-bindsym $mod+$8 workspace number 8
-bindsym $mod+$9 workspace number 9
-bindsym $mod+$0 workspace number 10
+bindcode $mod+10 workspace number 1
+bindcode $mod+11 workspace number 2
+bindcode $mod+12 workspace number 3
+bindcode $mod+13 workspace number 4
+bindcode $mod+14 workspace number 5
+bindcode $mod+15 workspace number 6
+bindcode $mod+16 workspace number 7
+bindcode $mod+17 workspace number 8
+bindcode $mod+18 workspace number 9
+bindcode $mod+19 workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
-# Azerty
-bindsym $mod+Shift+$1 move container to workspace number 1
-bindsym $mod+Shift+$2 move container to workspace number 2
-bindsym $mod+Shift+$3 move container to workspace number 3
-bindsym $mod+Shift+$4 move container to workspace number 4
-bindsym $mod+Shift+$5 move container to workspace number 5
-bindsym $mod+Shift+$6 move container to workspace number 6
-bindsym $mod+Shift+$7 move container to workspace number 7
-bindsym $mod+Shift+$8 move container to workspace number 8
-bindsym $mod+Shift+$9 move container to workspace number 9
-bindsym $mod+Shift+$0 move container to workspace number 10
+bindcode $mod+Shift+10 move container to workspace number 1
+bindcode $mod+Shift+11 move container to workspace number 2
+bindcode $mod+Shift+12 move container to workspace number 3
+bindcode $mod+Shift+13 move container to workspace number 4
+bindcode $mod+Shift+14 move container to workspace number 5
+bindcode $mod+Shift+15 move container to workspace number 6
+bindcode $mod+Shift+16 move container to workspace number 7
+bindcode $mod+Shift+17 move container to workspace number 8
+bindcode $mod+Shift+18 move container to workspace number 9
+bindcode $mod+Shift+19 move container to workspace number 10
 
 # Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -350,7 +298,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Touchpad toggle
 bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enabled disabled \
-    && notify-send "Touchpad toggled" -u low -t 1000
+    && notify-send "Touchpad toggled" -i input-touchpad -u low -t 1000
 
 # Screenshots
 set $screenshot_path ~/Pictures/Screenshots/$(date +%s).png
@@ -367,27 +315,23 @@ bindsym Ctrl+Shift+Print exec grimshot --notify save area $screenshot_path
 bindsym Alt+Print exec wl-paste | swappy --file -
 
 # Color picker
-bindsym $mod+c exec hyprpicker --autocopy
+bindsym $mod+Shift+h exec hyprpicker --autocopy
 
 # Lock and toggle screen
-bindsym $mod+Shift+x exec loginctl lock-session
+bindsym $mod+l exec loginctl lock-session
 bindsym $mod+Shift+z $toggle_screen
 
 # Notifications
-bindsym $mod+Shift+n exec makoctl restore
-bindsym $mod+n exec makoctl dismiss --all
+bindsym $mod+Shift+n exec dunstctl history-pop
+bindsym $mod+n exec dunstctl close-all
 
 # Screen colors
-bindsym $mod+i exec fish --command invert
-bindsym $mod+u exec fish --command night_light
+bindsym $mod+Shift+i exec fish --command invert
+bindsym $mod+Shift+u exec fish --command night_light
 
 # Clipboard history
 bindsym $mod+y exec clipman pick --tool rofi
 bindsym $mod+Shift+y exec clipman clear --all
-
-# Mouse control
-bindsym $mod+m exec warpd --hint
-bindsym $mod+Shift+m exec warpd --normal
 
 
 

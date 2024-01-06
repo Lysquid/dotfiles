@@ -6,6 +6,7 @@
 !/wallpaper*.*
 !/screenshot.*
 /Code
+!/dunst/**
 !/fish/config.fish
 !/fish/fish_plugins
 !/fish/conf.d/alias.fish
@@ -36,5 +37,4 @@
 !/waybar/**
 !/bin/**
 !/swappy/**
-!/mako/**
 !/kitty/**

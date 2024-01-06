@@ -159,7 +159,7 @@ map H hide_preview
 map . set hidden!
 map o open_with
 map O open_change_default
-map C code
+map V code
 map E file_explorer
 map U extract
 map B wallpaper
@@ -175,11 +175,11 @@ map gw cd ~/Downloads
 map gp cd ~/Pictures
 map gv cd ~/Videos
 map gu cd ~/Music
-map gc cd ~/.config
+map go cd ~/.config
 map gn cd ~/.config/nvim
 map gm cd /run/media/rom1
-map go cd ~/Code
+map gc cd ~/Code
 map gs cd ~/Pictures/Screenshots
 map gi cd ~/Documents/INSA
-map gj cd ~/Code/Projects
+map gr cd ~/Projects
 map ga cd /mnt/data
