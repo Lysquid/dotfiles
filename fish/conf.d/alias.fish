@@ -12,16 +12,17 @@ abbr --add -- gc git commit -m
 abbr --add -- gca git commit -a -m
 abbr --add -- gpl git pull
 abbr --add -- gps git push
-abbr --add -- gpsf git push --force
+abbr --add -- gpf git push --force
 abbr --add -- glb git log --graph --oneline --decorate
 abbr --add -- gl git log --graph --oneline --decorate --all
-abbr --add -- gck git checkout
+abbr --add -- gk git checkout
 abbr --add -- gb git checkout -b
-abbr --add -- gcl git clone
+abbr --add -- gc git clone
 abbr --add -- gmv git mv
 abbr --add -- grt git restore
-abbr --add -- grb git rebase
+abbr --add -- gr git rebase
 abbr --add -- gd git diff
+abbr --add -- gsh git stash
 
 function rm 
     command rm -I $argv
