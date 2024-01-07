@@ -3,6 +3,7 @@ function backup_config -d "Backup system configuration"
     pacman -Qq > ~/.config/arch/pacman-Qq.txt
     pacman -Qqe > ~/.config/arch/pacman-Qqe.txt
     pacman -Qqem > ~/.config/arch/pacman-Qqem.txt
+    pipx list --short > ~/.config/arch/pipx.txt
 
     # systemd unit files
     systemctl list-unit-files --state=enabled > ~/.config/arch/systemctl-enabled.txt

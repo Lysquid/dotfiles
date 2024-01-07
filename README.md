@@ -51,7 +51,6 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + [playerctl](https://github.com/altdesktop/playerctl) : control media players from the terminal
 + [dust](https://github.com/bootandy/dust) : see what is taking place on the disk
 + [wf-recorder](https://github.com/ammen99/wf-recorder) : screen recorder
-+ [warpd](https://github.com/rvaiya/warpd) : move the mouse with the keyboard
 + [rsync](https://wiki.archlinux.org/title/rsync) : backups
 + [Syncthing](https://syncthing.net/) : sync files across devices
 + [hyprpicker](https://github.com/hyprwm/hyprpicker) : screen color picker
