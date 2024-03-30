@@ -5,7 +5,7 @@ set ifs "\n"
 set ignorecase true
 set icons true
 set incfilter true
-set hiddenfiles '.*:~/snap:~/java.log.*:~/go:~/R'
+set hiddenfiles '.*:~/snap:~/java.log.*:~/go:~/R:~/Zotero'
 set mouse true
 
 # Previewer
@@ -142,6 +142,11 @@ cmd fzf_search ${{
     )"
     [ -n "$res" ] || exit 0 && lf -remote "send $id select \"$res\""
 }}
+
+# Local settings
+setlocal ~/Downloads sortby time
+setlocal ~/Pictures/Camera sortby time
+setlocal ~/Pictures/Screenshots sortby time
 
 # Remove some defaults
 map d

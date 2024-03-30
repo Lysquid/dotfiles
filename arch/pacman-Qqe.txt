@@ -1,6 +1,8 @@
 android-sdk-platform-tools
 ani-cli
 anki-bin
+antlr4
+antlr4-runtime
 arandr
 arch-install-scripts
 asciiquarium
@@ -24,7 +26,7 @@ bluez
 bluez-utils
 boost
 bottom
-breeze
+breeze5
 brightnessctl
 calibre
 cava
@@ -58,6 +60,8 @@ element-desktop
 eog
 evince
 fakeroot
+fasttext
+fasttext-langid-models
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -73,6 +77,7 @@ fisher
 flatpak
 flatpak-builder
 flex
+foliate
 fortune-mod
 fzf
 gallery-dl
@@ -100,6 +105,8 @@ gvfs-mtp
 hdparm
 helix
 htop
+hunspell-en_us
+hunspell-fr
 hyprpicker
 intel-ucode
 iptables-nft
@@ -107,7 +114,6 @@ j4-dmenu-desktop
 java-environment-common
 java-runtime-common
 jdk-openjdk
-jdk17-openjdk
 jetbrains-toolbox
 jq
 jre11-openjdk
@@ -116,6 +122,7 @@ kdenlive
 keepassxc
 keychain
 kitty
+languagetool
 lf
 lib32-giflib
 lib32-gnutls
@@ -182,6 +189,7 @@ nvidia-settings
 nvtop
 obsidian
 ocl-icd
+onlyoffice-bin
 ookla-speedtest-bin
 openal
 opentabletdriver
@@ -192,6 +200,7 @@ osu-lazer-bin
 otf-font-awesome
 pacman-contrib
 patch
+pdfsam
 perl-file-mimeinfo
 perl-image-exiftool
 pfetch
@@ -204,6 +213,7 @@ playerctl
 plocate
 popsicle-bin
 portaudio
+postgresql
 prismlauncher-qt5-bin
 protobuf
 protonvpn
@@ -271,6 +281,7 @@ tela-icon-theme
 texinfo
 thunderbird
 tk
+toipe
 torbrowser-launcher
 traceroute
 transmission-cli
@@ -295,9 +306,8 @@ wdisplays
 wf-recorder
 wget
 which
-whisper.cpp
-whisper.cpp-model-medium
 wireplumber
+wireshark-qt
 wl-clipboard
 wl-gammactl
 wshowkeys-git
@@ -316,3 +326,4 @@ yay
 yt-dlp
 ytfzf
 zip
+zotero-beta-bin

@@ -32,6 +32,7 @@
 .local/share/PrismLauncher
 .local/share/godot
 .local/lib/python*
+.local/pipx
 
 Videos/Watching
 Downloads
@@ -47,6 +48,7 @@ R
 .jd
 .config/Code
 .config/discord
+.rustup
 
 *Cache*
 *cache*

@@ -30,8 +30,8 @@ set $move_strength 100 px
 ### General
 
 # Outputs position
-output $laptop position 0,180
-output $monitor mode 1920x1080@120Hz position 1600,0 adaptive_sync on
+output $laptop position 1920,180
+output $monitor mode 1920x1080@120Hz position 0,0 adaptive_sync on
 
 # Wallpapers
 output $laptop bg ~/Pictures/Wallpapers/PC/$wallpaper1 fill
@@ -121,8 +121,8 @@ for_window [app_id="nm-*"] floating enable
 for_window [app_id="blueman*"] floating enable
 for_window [app_id="org.fcitx*"] floating enable
 for_window [app_id="wdisplays"] floating enable
+for_window [app_id="Zotero"] floating enable
 for_window [class="Godot"] floating enable
-for_window [class="fr.blazanome.routeplanner.view.RoutePlannerApplication"] floating enable
 
 # Startup
 exec lxpolkit
@@ -185,7 +185,8 @@ mode "open" {
     bindsym Escape mode "default"
     bindsym Space mode "default"
 }
-bindsym $mod+o mode "open"
+# bindsym $mod+o mode "open"
+bindsym $mod+Menu mode "open"
 
 
 
@@ -236,11 +237,9 @@ bindsym Alt+Tab workspace back_and_forth
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth
 
-# Move between adjacent workspace
-bindsym $mod+Prior workspace prev
-bindsym $mod+Next workspace next
-bindsym $mod+Shift+Prior move container to workspace prev
-bindsym $mod+Shift+Next move container to workspace next
+# Allow switch between workspaces with swipes
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
 
 # Move your focus around
 bindsym $mod+Left focus left
