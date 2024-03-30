@@ -17,7 +17,7 @@ abbr --add -- glb git log --graph --oneline --decorate
 abbr --add -- gl git log --graph --oneline --decorate --all
 abbr --add -- gk git checkout
 abbr --add -- gb git checkout -b
-abbr --add -- gc git clone
+abbr --add -- gcl git clone
 abbr --add -- gmv git mv
 abbr --add -- grt git restore
 abbr --add -- gr git rebase

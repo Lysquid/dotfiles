@@ -22,7 +22,8 @@
 !/rofi/**
 !/rsync/**
 !/arch/**
-!/fcitx5/**
+!/fcitx5/config
+!/fcitx5/profile
 /fcitx5/conf/cached_layouts
 /fcitx5/conf/notifications.conf
 /fcitx5/profile
@@ -38,3 +39,4 @@
 !/bin/**
 !/swappy/**
 !/kitty/**
+!/languagetool/**

@@ -20,13 +20,13 @@ session-1.scope                              transient       -
 adb.service                                  disabled        disabled
 archlinux-keyring-wkd-sync.service           static          -
 arptables.service                            disabled        disabled
+audit-rules.service                          disabled        disabled
 auditd.service                               disabled        disabled
 autovt@.service                              alias           -
 avahi-daemon.service                         disabled        disabled
 avahi-dnsconfd.service                       disabled        disabled
 blk-availability.service                     disabled        disabled
 blueman-mechanism.service                    disabled        disabled
-bluetooth-mesh.service                       disabled        disabled
 bluetooth.service                            enabled         disabled
 btrfs-scrub@.service                         static          -
 canberra-system-bootup.service               disabled        disabled
@@ -38,6 +38,7 @@ containerd.service                           disabled        disabled
 create_ap.service                            disabled        disabled
 cxl-monitor.service                          disabled        disabled
 daxdev-reconfigure@.service                  static          -
+dbus-broker.service                          static          -
 dbus-org.bluez.service                       alias           -
 dbus-org.freedesktop.hostname1.service       alias           -
 dbus-org.freedesktop.import1.service         alias           -
@@ -48,8 +49,9 @@ dbus-org.freedesktop.nm-dispatcher.service   alias           -
 dbus-org.freedesktop.portable1.service       alias           -
 dbus-org.freedesktop.timedate1.service       alias           -
 dbus-org.freedesktop.timesync1.service       alias           -
-dbus.service                                 static          -
+dbus.service                                 alias           -
 debug-shell.service                          disabled        disabled
+dirmngr@.service                             static          -
 display-manager.service                      alias           -
 dm-event.service                             static          -
 dnsmasq.service                              disabled        disabled
@@ -66,6 +68,7 @@ fstrim.service                               static          -
 geoclue.service                              static          -
 getty@.service                               enabled         enabled
 git-daemon@.service                          static          -
+gpg-agent@.service                           static          -
 gpm.service                                  disabled        disabled
 greetd.service                               enabled         disabled
 healthd.service                              disabled        disabled
@@ -77,11 +80,14 @@ initrd-switch-root.service                   static          -
 initrd-udevadm-cleanup-db.service            static          -
 ip6tables.service                            disabled        disabled
 iptables.service                             disabled        disabled
+keyboxd@.service                             static          -
 kmod-static-nodes.service                    static          -
 krb5-kadmind.service                         disabled        disabled
 krb5-kdc.service                             disabled        disabled
 krb5-kpropd.service                          disabled        disabled
 krb5-kpropd@.service                         static          -
+languagetool.service                         linked          disabled
+lastlog2-import.service                      disabled        disabled
 ldconfig.service                             static          -
 libvirt-guests.service                       disabled        disabled
 libvirtd.service                             enabled         disabled
@@ -89,7 +95,7 @@ lm_sensors.service                           disabled        disabled
 lvm2-lvmpolld.service                        static          -
 lvm2-monitor.service                         static          -
 man-db.service                               static          -
-mariadb.service                              enabled         disabled
+mariadb.service                              disabled        disabled
 mariadb@.service                             disabled        disabled
 mdadm-grow-continue@.service                 static          -
 mdadm-last-resort@.service                   static          -
@@ -123,12 +129,14 @@ ostree-finalize-staged-hold.service          static          -
 ostree-finalize-staged.service               static          -
 ostree-prepare-root.service                  static          -
 ostree-remount.service                       disabled        disabled
+ostree-state-overlay@.service                disabled        disabled
 paccache.service                             static          -
 pacman-filesdb-refresh.service               static          -
 pam_namespace.service                        static          -
 pcscd.service                                indirect        disabled
 plocate-updatedb.service                     static          -
 polkit.service                               static          -
+postgresql.service                           disabled        disabled
 qemu-pr-helper.service                       static          -
 quotaon.service                              static          -
 reflector.service                            disabled        disabled
@@ -160,7 +168,7 @@ systemd-boot-check-no-failures.service       disabled        disabled
 systemd-boot-random-seed.service             static          -
 systemd-boot-update.service                  disabled        enabled
 systemd-bsod.service                         static          -
-systemd-confext.service                      disabled        disabled
+systemd-confext.service                      disabled        enabled
 systemd-coredump@.service                    static          -
 systemd-exit.service                         static          -
 systemd-firstboot.service                    static          -
@@ -225,7 +233,7 @@ systemd-storagetm.service                    static          -
 systemd-suspend-then-hibernate.service       static          -
 systemd-suspend.service                      static          -
 systemd-sysctl.service                       static          -
-systemd-sysext.service                       disabled        disabled
+systemd-sysext.service                       disabled        enabled
 systemd-sysext@.service                      static          -
 systemd-sysupdate-reboot.service             indirect        disabled
 systemd-sysupdate.service                    indirect        disabled
@@ -283,9 +291,15 @@ system-systemd\x2dveritysetup.slice          static          -
 user.slice                                   static          -
 avahi-daemon.socket                          disabled        disabled
 dbus.socket                                  static          -
+dirmngr@.socket                              static          -
 dm-event.socket                              static          -
 docker.socket                                disabled        disabled
 git-daemon.socket                            disabled        disabled
+gpg-agent-browser@.socket                    static          -
+gpg-agent-extra@.socket                      static          -
+gpg-agent-ssh@.socket                        static          -
+gpg-agent@.socket                            static          -
+keyboxd@.socket                              static          -
 krb5-kpropd.socket                           disabled        disabled
 libvirtd-admin.socket                        disabled        disabled
 libvirtd-ro.socket                           enabled         disabled
@@ -297,7 +311,7 @@ mariadb-extra.socket                         static          -
 mariadb-extra@.socket                        static          -
 mariadb.socket                               static          -
 mariadb@.socket                              static          -
-multipathd.socket                            disabled        disabled
+multipathd.socket                            static          -
 nix-daemon.socket                            enabled         disabled
 pcscd.socket                                 disabled        disabled
 qemu-pr-helper.socket                        disabled        disabled
@@ -449,4 +463,4 @@ systemd-sysupdate-reboot.timer               disabled        disabled
 systemd-sysupdate.timer                      disabled        disabled
 systemd-tmpfiles-clean.timer                 static          -
 
-449 unit files listed.
+463 unit files listed.

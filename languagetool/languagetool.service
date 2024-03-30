@@ -1,0 +1,14 @@
+[Unit]
+Description=LanguageTool
+
+[Service]
+ExecStart=languagetool --http --config /home/rom1/.config/languagetool/server.properties
+User=rom1
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
+# sudo ln -s /home/rom1/.config/languagetool/languagetool.service /etc/systemd/system/
