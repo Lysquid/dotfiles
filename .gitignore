@@ -17,9 +17,6 @@
 !/fish/conf.d/lf-icons.fish
 !/fish/fish_plugins
 !/fish/functions/custom/**
-!/gtk-*.0/**
-/gtk-2.0/gtkfilechooser.ini
-/gtk-3.0/bookmarks
 !/helix/**
 !/kitty/**
 !/languagetool/**
