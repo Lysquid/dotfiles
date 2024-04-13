@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -36,6 +37,20 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
+  
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "fr_FR.UTF-8";
+    LC_IDENTIFICATION = "fr_FR.UTF-8";
+    LC_MEASUREMENT = "fr_FR.UTF-8";
+    LC_MONETARY = "fr_FR.UTF-8";
+    LC_NAME = "fr_FR.UTF-8";
+    LC_NUMERIC = "fr_FR.UTF-8";
+    LC_PAPER = "fr_FR.UTF-8";
+    LC_TELEPHONE = "fr_FR.UTF-8";
+    LC_TIME = "fr_FR.UTF-8";
+  };
+
+
   console = {
   #   font = "Lat2-Terminus16";
     keyMap = "fr";
@@ -73,12 +88,20 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rom1 = {
     isNormalUser = true;
+    description = "Romain";
     extraGroups = [ 
       "wheel"
       "networkmanager"
     ];
   };
   users.defaultUserShell = pkgs.fish;
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      rom1.imports = [./home.nix ];
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -103,9 +126,9 @@
     hyprpicker
     kitty
     lf
-    libsForQt5.qtstyleplugin-kvantum
     gnumake
-    mako
+    dunst
+    libnotify
     mpv
     neofetch
     networkmanagerapplet
@@ -125,7 +148,6 @@
     sway-contrib.grimshot
     sxiv
     tealdeer
-    tela-icon-theme
     trash-cli
     tree
     udiskie
@@ -141,11 +163,6 @@
     zip
     vscodium-fhs
   ];
-
-  environment.variables = {
-    GTK_THEME = "Orchis-Dark";
-    QT_STYLE_OVERRIDE = "kvantum";
-   };
 
   environment.shells = [ pkgs.fish ];
 
@@ -175,7 +192,7 @@
   };
 
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
