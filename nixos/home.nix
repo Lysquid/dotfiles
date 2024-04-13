@@ -66,6 +66,17 @@
     size = 16;
   };
 
+
+  dconf.settings = {
+    "org/gnome/desktop/input-sources" = {
+      show-all-sources = true;
+      sources = [
+          ( pkgs.lib.gvariant.mkTuple [ "xkb" "fr" ] )
+          ( pkgs.lib.gvariant.mkTuple [ "xkb" "us" ] )
+        ];
+    };
+  };
+
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
   # xdg.configFile = {
   #   "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
