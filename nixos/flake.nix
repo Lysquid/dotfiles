@@ -12,11 +12,22 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.sway = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+        ./sway.nix
+        inputs.home-manager.nixosModules.default
+      ];
+    };
+
+    nixosConfigurations.gnome = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
+      modules = [
+        ./configuration.nix
+        ./gnome.nix
         inputs.home-manager.nixosModules.default
       ];
     };
