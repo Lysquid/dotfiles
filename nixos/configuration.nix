@@ -60,10 +60,7 @@
   #   enabled = "ibus";
   #   ibus.engines = with pkgs.ibus-engines; [ mozc anthy ];
   # };
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [ fcitx5-mozc ];
-  };
+
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
@@ -84,6 +81,9 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
+  services.xserver.xkb = {
+    layout = "fr,us,ru";
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rom1 = {
@@ -109,8 +109,6 @@
     bat
     bottom
     bibata-cursors
-    brightnessctl
-    clipman
     ctpv
     delta
     du-dust
@@ -123,7 +121,6 @@
     fzf
     gcc
     htop
-    hyprpicker
     kitty
     lf
     gnumake
@@ -131,34 +128,20 @@
     libnotify
     mpv
     neofetch
-    networkmanagerapplet
-    orchis-theme
     glib
     gnome.nautilus
     perl536Packages.FileMimeInfo
     pfetch
-    playerctl
     ripgrep
-    rofi-wayland
     rsync
-    slurp
-    swaybg
-    swayidle
-    swaylock
-    sway-contrib.grimshot
     sxiv
     tealdeer
     trash-cli
     tree
-    udiskie
     unzip
-    viewnior
     vimPlugins.packer-nvim
-    wdisplays
     wget
     wshowkeys
-    wl-clipboard
-    wl-gammactl
     xdg-utils
     zip
     vscodium-fhs
@@ -182,13 +165,7 @@
       enable = true;
       defaultEditor = true;
     };
-
-    sway = {
-      enable = true;
-      extraPackages = [];
-      wrapperFeatures.gtk = true;
-    };
-    waybar.enable = true;
+    dconf.enable = true;
   };
 
 
@@ -210,30 +187,9 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-  services.pipewire = {
-    enable = true;
-    wireplumber.enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-  };
 
   services.dbus.enable = true;
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    # gtk portal needed to make gtk apps happy
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  };
 
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "dbus-run-session sway > /dev/null 2> /dev/null";
-        user = "rom1";
-      };
-    };
-  };
 
   documentation.man.generateCaches = false;
 
