@@ -22,11 +22,13 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  
 
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  systemd.network.wait-online.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
@@ -56,10 +58,6 @@
     keyMap = "fr";
     # useXkbConfig = true; # use xkbOptions in tty.
   };
-  # i18n.inputMethod = {
-  #   enabled = "ibus";
-  #   ibus.engines = with pkgs.ibus-engines; [ mozc anthy ];
-  # };
 
 
   # Enable the X11 windowing system.
@@ -80,9 +78,11 @@
   hardware.bluetooth.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
-  services.xserver.xkb = {
-    layout = "fr,us,ru";
+  services.xserver = {
+    libinput.enable = true;
+    xkb = {
+      layout = "fr,us";
+    };
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -108,13 +108,11 @@
   environment.systemPackages = with pkgs; [
     bat
     bottom
-    bibata-cursors
     ctpv
     delta
     du-dust
     fd
     fishPlugins.done
-    fishPlugins.fzf-fish
     fishPlugins.sponge
     fishPlugins.tide
     fishPlugins.z
@@ -161,6 +159,11 @@
     };
     firefox.enable = true;
     fish.enable = true;
+    fish.shellAbbrs = {
+      nr = "sudo nixos-rebuild switch";
+      ns = "sudo nixos-rebuild --flake ~/.config/nixos#sway switch";
+      ng = "sudo nixos-rebuild --flake ~/.config/nixos#gnome switch";
+    };
     neovim = {
       enable = true;
       defaultEditor = true;
