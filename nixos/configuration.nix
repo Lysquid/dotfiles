@@ -143,6 +143,7 @@
     xdg-utils
     zip
     vscodium-fhs
+    libreoffice-fresh
   ];
 
   environment.shells = [ pkgs.fish ];
@@ -158,11 +159,14 @@
       enableSSHSupport = true;
     };
     firefox.enable = true;
-    fish.enable = true;
-    fish.shellAbbrs = {
-      nr = "sudo nixos-rebuild switch";
-      ns = "sudo nixos-rebuild --flake ~/.config/nixos#sway switch";
-      ng = "sudo nixos-rebuild --flake ~/.config/nixos#gnome switch";
+    fish = {
+      enable = true;
+      shellAbbrs = {
+        nr = "sudo nixos-rebuild switch";
+        ns = "sudo nixos-rebuild --flake ~/.config/nixos#sway switch";
+        ng = "sudo nixos-rebuild --flake ~/.config/nixos#gnome switch";
+      };
+      # TODO: remove environment.fish (conflicts with nix config, ex: ibus) 
     };
     neovim = {
       enable = true;
@@ -192,6 +196,10 @@
 
 
   services.dbus.enable = true;
+
+  services.languagetool = {
+    enable = true;
+  };
 
 
   documentation.man.generateCaches = false;

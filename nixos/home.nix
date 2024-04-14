@@ -6,6 +6,7 @@
   home.username = "rom1";
   home.homeDirectory = "/home/rom1";
   
+  
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -39,6 +40,8 @@
     # '';
   };
 
+  targets.genericLinux.enable = true;
+
   gtk = {
     enable = true;
     theme = {
@@ -63,10 +66,29 @@
     # x11.enable = true;
     name = "Bibata-Modern-Ice";
     package = pkgs.bibata-cursors;
-    size = 16;
+    size = 18;
   };
 
+  nixpkgs.config.allowUnfree = true;
 
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium-fhs;
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+      mhutchie.git-graph
+      github.copilot
+      github.copilot-chat
+      ms-python.python
+      ms-python.vscode-pylance
+      ms-python.isort
+      # davidlday.languagetool-linter     # out of date
+    ];
+  };
+
+  # tried to fix vscode not appearing in gnome 
+  xdg.mime.enable = true;
+  xdg.systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
 
 
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
