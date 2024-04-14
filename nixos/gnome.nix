@@ -65,7 +65,7 @@
               ];
           };
           "org/gnome/desktop/wm/preferences" = {
-            num-workspaces = 6;
+            num-workspaces = 5;
             resize-with-right-button = true;
             action-middle-click-titlebar= "lower";
             button-layout = "appmenu:minimize,maximize,close";
