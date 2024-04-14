@@ -67,15 +67,7 @@
   };
 
 
-  dconf.settings = {
-    "org/gnome/desktop/input-sources" = {
-      show-all-sources = true;
-      sources = [
-          ( pkgs.lib.gvariant.mkTuple [ "xkb" "fr" ] )
-          ( pkgs.lib.gvariant.mkTuple [ "xkb" "us" ] )
-        ];
-    };
-  };
+
 
   # Now symlink the `~/.config/gtk-4.0/` folder declaratively:
   # xdg.configFile = {
