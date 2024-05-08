@@ -1,30 +1,19 @@
 function backup_config -d "Backup system configuration"
+    rm -rf ~/.confg/apps ~/.config/etc
+
     # installed softwares
-    pacman -Qq > ~/.config/arch/pacman-all.txt
-    pacman -Qqe > ~/.config/arch/pacman-explicit.txt
-    pacman -Qqem > ~/.config/arch/pacman-aur.txt
+    pacman -Qq > ~/.config/apps/pacman-all.txt
+    pacman -Qqe > ~/.config/apps/pacman-explicit.txt
+    pacman -Qqem > ~/.config/apps/pacman-aur.txt
     # pipx
-    pipx list --short > ~/.config/arch/pipx.txt
+    pipx list --short > ~/.config/apps/pipx.txt
     # vscode extensions
-    code --list-extensions > ~/.config/arch/code-extensions.txt
+    code --list-extensions > ~/.config/apps/code-extensions.txt
 
     # systemd unit files
-    systemctl list-unit-files --state=enabled > ~/.config/arch/systemctl-enabled.txt
+    systemctl list-unit-files --state=enabled > ~/.config/apps/systemctl-enabled.txt
 
     # edited files not in .config
-    rsync --relative \
-    /etc/fstab \
-    /etc/pacman.conf \
-    /etc/default/grub \
-    /etc/environment \
-    /etc/hostname \
-    /etc/locale.conf \
-    /etc/locale.gen \
-    /etc/xdg/reflector/reflector.conf \
-    /etc/libvirt/libvirtd.conf \
-    /etc/libvirt/qemu.conf \
-    /etc/greetd/config.toml \
-    /etc/udev/rules.d/9*.rules \
-    /etc/ssh/sshd_config \
-    .config/
+    rsync --files-from=(realpath ~/.config/rsync/etc_modified_list.txt) / ~/.config
+
 end

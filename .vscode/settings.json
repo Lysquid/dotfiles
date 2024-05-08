@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/fish/functions/_*.fish": true,
+        "**/fish/fishd.tmp.*": true,
+    }
+}

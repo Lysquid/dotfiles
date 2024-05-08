@@ -1,0 +1,16 @@
+/etc/default/grub
+/etc/fstab
+/etc/greetd/config.toml
+/etc/hostname
+/etc/hosts
+/etc/libvirt/libvirtd.conf
+/etc/libvirt/qemu.conf
+/etc/lightdm/lightdm.conf
+/etc/lightdm/lightdm-gtk-greeter.conf
+/etc/locale.conf
+/etc/locale.gen
+/etc/pacman.conf
+/etc/ssh/sshd_config
+/etc/udev/rules.d/98-discharging-battery.rules
+/etc/udev/rules.d/99-viia.rules
+/etc/xdg/reflector/reflector.conf

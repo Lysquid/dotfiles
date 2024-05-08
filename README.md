@@ -10,7 +10,7 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + Status bar : [Waybar](https://github.com/Alexays/Waybar)
 + Display manager : [greetd](https://git.sr.ht/~kennylevinsen/greetd)
 + Lock screen : [swaylock](https://github.com/swaywm/swaylock)
-+ Font : [JetBrainsMono Nerd Font](https://www.jetbrains.com/lp/mono/)
++ Font : [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 + Gtk theme : [Orchis](https://github.com/vinceliuice/Orchis-theme)
 + Icon theme : [Tela](https://github.com/vinceliuice/Tela-icon-theme)
 + Cursor theme : [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors)

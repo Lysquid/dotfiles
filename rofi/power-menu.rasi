@@ -1,5 +1,0 @@
-@import "config"
-
-listview {
-  lines: 5;
-}
