@@ -24,7 +24,16 @@ abbr --add -- gr git rebase
 abbr --add -- gd git diff
 abbr --add -- gsh git stash
 
-function rm 
+# Fish shell for root user when switching with su
+function su
+   command su --shell=/usr/bin/fish $argv
+end
+
+function config_tide
+    tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Sparse --icons='Few icons' --transient=No
+end
+
+function rm
     command rm -I $argv
 end
 

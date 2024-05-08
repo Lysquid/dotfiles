@@ -5,7 +5,6 @@
 #
 QT_QPA_PLATFORMTHEME=qt5ct
 GTK_THEME=Orchis-Dark
-# _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx

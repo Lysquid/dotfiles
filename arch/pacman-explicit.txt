@@ -1,3 +1,4 @@
+alacritty
 android-sdk-platform-tools
 ani-cli
 anki-bin
@@ -52,6 +53,7 @@ docker-buildx
 docker-compose
 dotnet-sdk
 dotnet-targeting-pack
+doxygen
 dunst
 dust
 edk2-ovmf
@@ -108,6 +110,7 @@ htop
 hunspell-en_us
 hunspell-fr
 hyprpicker
+inotify-tools
 intel-ucode
 iptables-nft
 j4-dmenu-desktop
@@ -117,7 +120,6 @@ jdk-openjdk
 jetbrains-toolbox
 jq
 jre11-openjdk
-jre11-openjdk-headless
 kdenlive
 keepassxc
 keychain
@@ -279,6 +281,10 @@ syncthing
 tealdeer
 tela-icon-theme
 texinfo
+texlive-fontsrecommended
+texlive-latexextra
+texlive-latexrecommended
+texlive-plaingeneric
 thunderbird
 tk
 toipe
@@ -288,8 +294,10 @@ transmission-cli
 transmission-gtk
 trash-cli
 tree
+ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-mono
 udiskie
 ueberzugpp
 ufw

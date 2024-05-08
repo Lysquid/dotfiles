@@ -1,0 +1,2 @@
+# Suspend when battery is discharging
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-50]", RUN+="/usr/bin/systemctl suspend"
