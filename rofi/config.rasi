@@ -3,15 +3,16 @@ configuration {
   display-run: "run:";
   display-window: "Windows:";
   drun-display-format: "{name}";
-  font: "JetBrainsMono Nerd Font 10";
+  font: "JetBrains Mono 10";
   modi: "drun,run";
+  show-icons: true;
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #18181888;
-  bg-alt: #29292988;
+  bg: #18181899;
+  bg-alt: #29292999;
 
   fg: #eeeeee;
   fg-alt: #888888;
@@ -44,6 +45,7 @@ element-text {
   background-color: transparent;
   text-color: inherit;
   vertical-align: 0.5;
+  margin: 0 12;
 }
 
 element-icon {
@@ -52,7 +54,7 @@ element-icon {
 
 entry {
   background-color: @bg-alt;
-  padding: 12;
+  padding: 12 10;
 }
 
 inputbar {

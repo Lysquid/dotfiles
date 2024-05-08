@@ -73,7 +73,7 @@ seat * {
 }
 
 # Font
-font JetBrainsMono Nerd Font 10
+font JetBrains Mono 10
 
 # Floating modifier
 floating_modifier $mod normal
