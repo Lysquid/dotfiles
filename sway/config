@@ -196,7 +196,7 @@ bindsym $mod+Menu mode "open"
 ### Key bindings
 
 # Terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # Kill focused window
 bindsym $mod+Shift+q kill
