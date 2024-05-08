@@ -1,0 +1,62 @@
+{
+  "editor.cursorBlinking": "solid",
+  "editor.smoothScrolling": true,
+  "editor.fontFamily": "JetBrains Mono, Symbols Nerd Font Mono",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.suggestSelection": "first",
+
+  "files.autoSave": "afterDelay",
+
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 10,
+  "workbench.editorAssociations": {
+    "*.png": "imagePreview.previewEditor",
+    "*.jpg": "imagePreview.previewEditor"
+  },
+
+  "window.titleBarStyle": "custom",
+  "window.dialogStyle": "custom",
+  
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  "debug.toolBarLocation": "docked",
+  "debug.console.closeOnEnd": true,
+
+  "terminal.integrated.cursorStyle": "line",
+  
+  "telemetry.telemetryLevel": "off",
+
+  "security.workspace.trust.enabled": false,
+
+  // Spell Checker
+  "cSpell.language": "en,fr",
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.userWords": [
+    "keymap",
+    "klayan",
+    "minigrep"
+  ],
+
+  // Copilot
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+
+  // Git
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // Python
+  "python.defaultInterpreterPath": "/bin/python",
+
+  // XML
+  "redhat.telemetry.enabled": false,
+}

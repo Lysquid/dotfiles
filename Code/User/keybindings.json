@@ -1,0 +1,19 @@
+[
+    {
+        "key": "alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateForward"
+    },
+    {
+        "key": "ctrl+7",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "workbench.action.splitEditor"
+    },
+]

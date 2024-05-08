@@ -5,7 +5,6 @@
 !/alacritty/**
 !/arch/**
 !/bin/**
-/Code
 !/Code/User/keybindings.json
 !/Code/User/settings.json
 !/dunst/**
