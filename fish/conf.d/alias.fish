@@ -1,9 +1,20 @@
-# Most used
+# Short abbreviations
 abbr --add n nvim
 abbr --add l lfcd
 abbr --add t trash-put
-abbr --add c clear
 abbr --add m make
+abbr --add zi -- zoxide query -i
+
+# Alternatives
+abbr --add cd z
+abbr --add ls lsd
+abbr --add grep rg
+abbr --add cat bat
+abbr --add man batman
+abbr --add diff delta
+abbr --add find fd
+abbr --add vi nvim
+abbr --add vim nvim
 
 # Git
 abbr --add -- gs git status

@@ -46,6 +46,7 @@ ctpv-git
 debugedit
 devhelp
 dex
+difftastic
 discord
 dnsmasq
 docker
@@ -62,6 +63,7 @@ element-desktop
 eog
 evince
 fakeroot
+fastfetch
 fasttext
 fasttext-langid-models
 fcitx5
@@ -80,6 +82,7 @@ flatpak
 flatpak-builder
 flex
 foliate
+foot
 fortune-mod
 fzf
 gallery-dl
@@ -153,6 +156,7 @@ linux-headers
 linux-wifi-hotspot
 lldb
 lolcat
+lsd
 lutris
 lynx
 m4
@@ -168,7 +172,7 @@ mpg123
 mpv
 mtpfs
 nautilus
-neofetch
+navi
 neovim
 nethack
 netstandard-targeting-pack
@@ -267,6 +271,7 @@ sl
 spotify-adblock
 sshfs
 steam
+stpv-git
 sudo
 supertuxkart
 swappy
@@ -335,3 +340,4 @@ yt-dlp
 ytfzf
 zip
 zotero-beta-bin
+zoxide

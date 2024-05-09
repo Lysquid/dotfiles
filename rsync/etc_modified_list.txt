@@ -1,4 +1,5 @@
 /etc/default/grub
+/etc/environment
 /etc/fstab
 /etc/greetd/config.toml
 /etc/hostname

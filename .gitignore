@@ -10,14 +10,17 @@
 !/Code/User/settings.json
 !/dunst/**
 !/etc/**
+!/fastfetch/config.jsonc
 !/fcitx5/config
 !/fcitx5/profile
+!/fish/config.fish
 !/fish/conf.d/alias.fish
 !/fish/conf.d/environement.fish
 !/fish/conf.d/keybindings.fish
 !/fish/conf.d/lf-icons.fish
 !/fish/fish_plugins
 !/fish/functions/custom/**
+!/foot/foot.ini
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 /gtk-3.0/bookmarks

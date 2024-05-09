@@ -14,7 +14,7 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + Gtk theme : [Orchis](https://github.com/vinceliuice/Orchis-theme)
 + Icon theme : [Tela](https://github.com/vinceliuice/Tela-icon-theme)
 + Cursor theme : [Vimix cursors](https://github.com/vinceliuice/Vimix-cursors)
-+ Terminal : [kitty](https://sw.kovidgoyal.net/kitty/)
++ Terminal : [foot](https://codeberg.org/dnkl/foot)
 + Shell : [fish](https://fishshell.com/)
 + Prompt : [tide](https://github.com/IlanCosman/tide)
 + Editor : [Neovim](https://neovim.io/)
@@ -33,6 +33,8 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 
 ## More cool softwares
 
++ [zoxide](https://github.com/ajeetdsouza/zoxide) : better cd, in rust
++ [lsd](https://github.com/lsd-rs/lsd) : better ls, in rust
 + [btm](https://github.com/ClementTsang/bottom) : better top, in rust
 + [fd](https://github.com/sharkdp/fd) : better find, in rust
 + [ripgrep](https://github.com/BurntSushi/ripgrep) : better grep, in rust
@@ -40,6 +42,7 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + [delta](https://github.com/dandavison/delta) : better diff, in rust
 + [fzf](https://github.com/junegunn/fzf) : fuzzy finder
 + [grim](https://sr.ht/~emersion/grim/) : screenshot
++ [fastfetch](https://github.com/fastfetch-cli/) : neofetch replacement
 + [swappy](https://github.com/jtheoof/swappy) : screenshot editor
 + [qalculate](https://github.com/Qalculate/qalculate-gtk) : calculator
 + [yay](https://github.com/Jguer/yay) : AUR helper
@@ -56,7 +59,6 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + [hyprpicker](https://github.com/hyprwm/hyprpicker) : screen color picker
 + [gcolor3](https://www.hjdskes.nl/projects/gcolor3/) : wheel color picker
 + [yt-dlp](https://github.com/yt-dlp/yt-dlp) : download youtube videos
-+ [ytfzf](https://github.com/pystardust/ytfzf/) : youtube in the terminal
 + [ani-cli](https://github.com/pystardust/ani-cli) : watch anime from the terminal
 + [Pinta](https://www.pinta-project.com/) : image editor
 + [Anki](https://apps.ankiweb.net/) : best flashcard app

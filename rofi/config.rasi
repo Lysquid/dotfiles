@@ -45,7 +45,7 @@ element-text {
   background-color: transparent;
   text-color: inherit;
   vertical-align: 0.5;
-  margin: 0 12;
+  margin: 0 10;
 }
 
 element-icon {
@@ -54,7 +54,7 @@ element-icon {
 
 entry {
   background-color: @bg-alt;
-  padding: 12 10;
+  padding: 12 8;
 }
 
 inputbar {
