@@ -20,6 +20,7 @@ set $mod Mod4
 
 # Preferences
 set $move_strength 100 px
+set $terminal foot
 
 
 
@@ -177,6 +178,7 @@ mode "open" {
     bindsym i exec signal-desktop-beta
     bindsym n exec nautilus
     bindsym w exec wihotspot
+    bindsym Return exec $terminal
     # Return to default mode
     bindsym Escape mode "default"
     bindsym Space mode "default"
@@ -192,7 +194,8 @@ bindsym $mod+Menu mode "open"
 ### Key bindings
 
 # Terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $terminal
+bindsym $mod+Ctrl+Return exec swaymsg splitv && $terminal
 
 # Kill focused window
 bindsym $mod+Shift+q kill

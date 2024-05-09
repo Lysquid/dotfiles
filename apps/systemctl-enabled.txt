@@ -1,6 +1,5 @@
 UNIT FILE                          STATE   PRESET
 bluetooth.service                  enabled disabled
-docker.service                     enabled disabled
 getty@.service                     enabled enabled
 greetd.service                     enabled disabled
 libvirtd.service                   enabled disabled
@@ -17,4 +16,4 @@ remote-fs.target                   enabled enabled
 paccache.timer                     enabled disabled
 reflector.timer                    enabled disabled
 
-17 unit files listed.
+16 unit files listed.

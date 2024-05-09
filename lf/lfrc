@@ -7,19 +7,37 @@ set icons true
 set incfilter true
 set hiddenfiles '.*:~/snap:~/java.log.*:~/go:~/R:~/Zotero'
 set mouse true
+set sixel true
 
 # Previewer
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+set previewer stpv
+set cleaner stpvimgclr
+&stpvimg --listen $id
+cmd on-quit $stpvimg --end $id
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
 
 # Functions
 cmd open ${{
-    case $(file --mime-type -Lb $f) in
-        text/*) $EDITOR $fx;;
-        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
-    esac
+    for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;
+}}
+
+cmd open_with ${{
+    TERMINAL="alacritty --command" mimeopen --ask $f || exit 0
+}}
+
+cmd open_change_default ${{
+    TERMINAL="alacritty --command" mimeopen --ask-default $f || exit 0
+}}
+
+cmd pager ${{
+    if [ -f "$f" ]; then
+        bat --pager "less -c" --paging always "$f"
+    else
+        lsd -al --color always | less -r -c
+    fi
 }}
 
 cmd mkdir %{{
@@ -32,10 +50,6 @@ cmd mkfile %{{
     IFS=" "
     touch "$*"
     lf -remote "send $id select \"$*\""
-}}
-
-cmd editor ${{
-    $EDITOR
 }}
 
 cmd trash %{{
@@ -82,14 +96,6 @@ cmd hide_preview :{{
 
 cmd code &{{
     code $fx
-}}
-
-cmd open_with ${{
-    mimeopen --ask $f 2> /dev/null
-}}
-
-cmd open_change_default ${{
-    mimeopen --ask-default $f 2> /dev/null
 }}
 
 cmd execute_permission :{{
@@ -143,35 +149,62 @@ cmd fzf_search ${{
     [ -n "$res" ] || exit 0 && lf -remote "send $id select \"$res\""
 }}
 
+cmd zi ${{
+	result="$(zoxide query -i | sed 's/\\/\\\\/g;s/"/\\"/g')"
+	lf -remote "send $id cd \"$result\""
+}}
+
+cmd on-cd &{{
+    zoxide add "$PWD"
+}}
+
 # Local settings
 setlocal ~/Downloads sortby time
 setlocal ~/Pictures/Camera sortby time
 setlocal ~/Pictures/Screenshots sortby time
 
-# Remove some defaults
+# Move some defaults
 map d
+map i
+map t
+map y
+map v
+map p
+map ih set hidden!
+map ir set reverse!
+map in set info
+map is set info size
+map it set info time
+map ia set info size:time
 
 # Bindings
 map r rename
 map a push :mkfile<space>
-map A push :mkdir<space>
-map dd trash
-map dr trash_restore
-map df delete
-map x cut
+map d push :mkdir<space>
+map <delete> trash
+map <c-z> trash_restore
+map <s-delete> delete
+map <c-c> copy
+map <c-x> cut
+map <c-v> paste
+map <c-a> invert
+map <esc> quit
 map <enter> open
-map H hide_preview 
+map p pager
+map h hide_preview 
 map . set hidden!
 map o open_with
 map O open_change_default
-map V code
+map v code
 map E file_explorer
 map U extract
 map B wallpaper
 map f fzf_jump
 map F fzf_jump_recursive
-map <c-f> :fzf_search
+map <c-f> fzf_search
 map X execute_permission
+map z zi
+map <backspace2> :clear; unselect;
 
 # Movement
 map gh cd ~/

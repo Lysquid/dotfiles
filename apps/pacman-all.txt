@@ -154,6 +154,7 @@ dex
 dfu-programmer
 dfu-util
 dialog
+difftastic
 diffutils
 discord
 djvulibre
@@ -199,9 +200,11 @@ extra-cmake-modules
 faac
 faad2
 fakeroot
+fastfetch
 fasttext
 fasttext-debug
 fasttext-langid-models
+fcft
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
@@ -230,6 +233,7 @@ fluidsynth
 fmt
 foliate
 fontconfig
+foot
 fortune-mod
 frameworkintegration
 frameworkintegration5
@@ -891,6 +895,7 @@ libusb
 libusb-compat
 libusbmuxd
 libutempter
+libutf8proc
 libuv
 libva
 libvdpau
@@ -969,6 +974,7 @@ lm_sensors
 lolcat
 lpsolve
 lsb-release
+lsd
 lsof
 lua
 lua52
@@ -1017,9 +1023,9 @@ mujs
 multipath-tools
 mypaint-brushes1
 nautilus
+navi
 ncurses
 ndctl
-neofetch
 neon
 neovim
 nethack
@@ -1532,6 +1538,7 @@ sshfs
 startup-notification
 steam
 stoken
+stpv-git
 sudo
 suitesparse
 supertuxkart
@@ -1715,6 +1722,7 @@ yay
 yay-debug
 yt-dlp
 ytfzf
+yyjson
 zbar
 zenity
 zeromq
@@ -1724,6 +1732,7 @@ zix
 zlib
 zotero-beta-bin
 zotero-beta-bin-debug
+zoxide
 zstd
 zvbi
 zxing-cpp

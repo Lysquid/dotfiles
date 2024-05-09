@@ -35,6 +35,7 @@ rofi-lbonn-wayland-git
 rstudio-desktop-bin
 signal-desktop-beta-bin
 spotify-adblock
+stpv-git
 tela-icon-theme
 toipe
 ueberzugpp

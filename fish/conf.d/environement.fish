@@ -1,8 +1,3 @@
-# Fish
-set fish_greeting
-set -g fish_function_path $fish_function_path ~/.config/fish/functions/custom
-set sponge_delay 10
-
 # Applications
 set -gx BROWSER firefox
 set -gx EDITOR nvim
