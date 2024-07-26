@@ -16,7 +16,10 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     clipman
+    dunst
+    foot
     hyprpicker
+    libnotify
     rofi-wayland
     networkmanagerapplet
     playerctl
@@ -24,8 +27,8 @@
     swayidle
     swaylock
     sway-contrib.grimshot
+    sxiv
     slurp
-    udiskie
     viewnior
     wdisplays
     wl-clipboard
@@ -57,7 +60,7 @@
   };
 
   i18n.inputMethod = {
-    enabled = "fcitx5";
+    type = "fcitx5";
     fcitx5.addons = with pkgs; [ fcitx5-mozc ];
   };
 
