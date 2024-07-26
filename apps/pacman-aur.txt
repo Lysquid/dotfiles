@@ -6,14 +6,15 @@ avr-gcc-85
 bash-pipes
 cava
 cbonsai
-clipman
 cpulimit
 ctpv-git
+etcher-bin
 fasttext
 fasttext-langid-models
 fcitx5-skin-adwaita-dark
 gallery-dl
 gitkraken
+gohugo-extended-bin
 grimshot
 hyprpicker
 jetbrains-toolbox
@@ -21,7 +22,6 @@ linux-wifi-hotspot
 minecraft-launcher
 nextdns
 ngrok
-onlyoffice-bin
 ookla-speedtest-bin
 opentabletdriver
 orchis-theme
@@ -29,10 +29,7 @@ osu-lazer-bin
 pdfsam
 pfetch
 popsicle-bin
-prismlauncher-qt5-bin
-protonvpn
 rofi-lbonn-wayland-git
-rstudio-desktop-bin
 signal-desktop-beta-bin
 spotify-adblock
 stpv-git
