@@ -1,5 +1,6 @@
 bierner.folder-source-actions
 bradlc.vscode-tailwindcss
+budparr.language-hugo-vscode
 codezombiech.gitignore
 davidanson.vscode-markdownlint
 davidlday.languagetool-linter
@@ -13,6 +14,7 @@ github.copilot
 github.copilot-chat
 jdinhlife.gruvbox
 jebbs.plantuml
+jnoortheen.nix-ide
 jock.svg
 llvm-vs-code-extensions.vscode-clangd
 mechatroner.rainbow-csv

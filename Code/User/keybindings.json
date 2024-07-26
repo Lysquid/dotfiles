@@ -16,4 +16,14 @@
         "key": "ctrl+8",
         "command": "workbench.action.splitEditor"
     },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+    },
+    {
+        "key": "ctrl+shift+8",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
 ]

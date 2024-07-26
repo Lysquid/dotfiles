@@ -21,15 +21,15 @@ cmd on-quit $stpvimg --end $id
 
 # Functions
 cmd open ${{
-    for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;
+    for f in $fx; do setsid mimeopen $f > /dev/null 2> /dev/null & done;
 }}
 
 cmd open_with ${{
-    TERMINAL="alacritty --command" mimeopen --ask $f || exit 0
+    mimeopen --ask $f || exit 0
 }}
 
 cmd open_change_default ${{
-    TERMINAL="alacritty --command" mimeopen --ask-default $f || exit 0
+    mimeopen --ask-default $f || exit 0
 }}
 
 cmd pager ${{
@@ -181,7 +181,7 @@ map ia set info size:time
 map r rename
 map a push :mkfile<space>
 map d push :mkdir<space>
-map <delete> trash
+map <delete><delete> trash
 map <c-z> trash_restore
 map <s-delete> delete
 map <c-c> copy
