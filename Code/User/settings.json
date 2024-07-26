@@ -29,15 +29,21 @@
   
   "telemetry.telemetryLevel": "off",
 
+  "update.mode": "manual",
+
   "security.workspace.trust.enabled": false,
 
   // Spell Checker
   "cSpell.language": "en,fr",
   "cSpell.diagnosticLevel": "Hint",
   "cSpell.userWords": [
+    "Erglace",
     "keymap",
     "klayan",
     "minigrep"
+  ],
+  "languageToolLinter.languageTool.ignoredWordsGlobal": [
+    "erglace"
   ],
 
   // Copilot

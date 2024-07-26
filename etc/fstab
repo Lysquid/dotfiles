@@ -3,13 +3,16 @@
 
 # <file system> <dir> <type> <options> <dump> <pass>
 # /dev/sda5
-UUID=f2a66d21-f6ac-4a44-9c2d-31832459266a	/         	ext4      	rw,relatime	0 1
+UUID=f2a66d21-f6ac-4a44-9c2d-31832459266a	/         	    ext4      	rw,relatime     0 1
 
 # /dev/sda4
-UUID=CA3E-D176      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=CA3E-D176      	                    /boot     	    vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # /dev/sdb1
-UUID=319f5779-2909-4b2f-802a-3c6ff65ac547   /mnt/data 	ext4      	defaults,x-gvfs-show    0 2
+UUID=319f5779-2909-4b2f-802a-3c6ff65ac547   /mnt/data 	    ext4        defaults,nofail,x-gvfs-show    0 2
+
+# /dev/sda3
+UUID=347C9E7F7C9E3B94                       /mnt/windows    ntfs-3g     defaults,nofail,x-gvfs-show,uid=1000,gid=1000,dmask=022,fmask=133    0 0
 
 # swap
 /swapfile 				none 		swap 		defaults 	0 0

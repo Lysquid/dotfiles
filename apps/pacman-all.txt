@@ -1,4 +1,3 @@
-a52dec
 aalib
 abseil-cpp
 accounts-qml-module
@@ -6,6 +5,7 @@ acl
 adobe-source-code-pro-fonts
 adwaita-cursors
 adwaita-icon-theme
+adwaita-icon-theme-legacy
 alacritty
 alsa-card-profiles
 alsa-lib
@@ -18,6 +18,7 @@ android-tools
 android-udev
 ani-cli
 anki-bin
+anki-bin-debug
 antlr4
 antlr4-runtime
 aom
@@ -112,7 +113,7 @@ chrpath
 clang
 clblast
 cli11
-clipman
+cliphist
 clucene
 clutter
 clutter-gst
@@ -122,6 +123,7 @@ cmark
 cmatrix
 cogl
 compiler-rt
+composefs
 confuse
 containerd
 convertlit
@@ -142,7 +144,6 @@ dbus
 dbus-broker
 dbus-broker-units
 dbus-glib
-dbus-python
 dconf
 debugedit
 debuginfod
@@ -153,7 +154,6 @@ device-mapper
 dex
 dfu-programmer
 dfu-util
-dialog
 difftastic
 diffutils
 discord
@@ -185,13 +185,12 @@ efivar
 egl-wayland
 eglexternalplatform
 electron28
-electron29
-element-desktop
-element-web
+electron30
 elfutils
 embree3
 enchant
 eog
+etcher-bin
 evince
 exempi
 exiv2
@@ -298,6 +297,8 @@ gnutls
 go
 gobject-introspection-runtime
 godot
+gohugo-extended-bin
+gohugo-extended-bin-debug
 gperftools
 gpgme
 gpm
@@ -323,8 +324,8 @@ gst-plugins-bad-libs
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
-gst-plugins-ugly
 gstreamer
+gtest
 gtk-layer-shell
 gtk-update-icon-cache
 gtk-vnc
@@ -405,6 +406,7 @@ hwdata
 hwloc
 hyphen
 hyprpicker
+hyprpicker-debug
 iana-etc
 icu
 ijs
@@ -484,6 +486,7 @@ kio
 kio5
 kirigami
 kirigami2
+kitemmodels
 kitemviews
 kitemviews5
 kitty
@@ -764,6 +767,7 @@ liblangtag
 liblc3
 libldac
 libldap
+libliftoff
 liblqr
 liblrdf
 libltc
@@ -783,7 +787,6 @@ libmodplug
 libmpc
 libmpcdec
 libmpdclient
-libmpeg2
 libmspub
 libmtp
 libmwaw
@@ -968,15 +971,18 @@ linux-firmware
 linux-firmware-whence
 linux-headers
 linux-wifi-hotspot
+linux-wifi-hotspot-debug
 lldb
 llvm-libs
 lm_sensors
+lmdb
 lolcat
 lpsolve
 lsb-release
 lsd
 lsof
 lua
+lua51-lpeg
 lua52
 luajit
 lutris
@@ -1005,6 +1011,7 @@ mesa-utils
 meson
 microsoft-gsl
 minecraft-launcher
+minecraft-launcher-debug
 miniupnpc
 minizip
 mjpegtools
@@ -1066,7 +1073,6 @@ obsidian
 ocl-icd
 onetbb
 oniguruma
-onlyoffice-bin
 ookla-speedtest-bin
 openal
 openblas
@@ -1079,7 +1085,6 @@ openexr
 openjpeg2
 openssh
 openssl
-openssl-1.1
 opentabletdriver
 openvpn
 optipng
@@ -1155,13 +1160,9 @@ portaudio
 postgresql
 postgresql-libs
 potrace
-prismlauncher-qt5-bin
 prismlauncher-qt5-bin-debug
 procps-ng
 protobuf
-protonvpn
-protonvpn-cli
-protonvpn-gui
 psmisc
 pugixml
 purpose
@@ -1175,7 +1176,6 @@ python-argcomplete
 python-async-timeout
 python-attrs
 python-autocommand
-python-bcrypt
 python-beautifulsoup4
 python-blinker
 python-brotli
@@ -1195,6 +1195,7 @@ python-cryptography
 python-css-parser
 python-cssselect
 python-dateutil
+python-dbus
 python-decorator
 python-distlib
 python-distro
@@ -1212,7 +1213,6 @@ python-filelock
 python-flask
 python-flask-cors
 python-future
-python-gnupg
 python-gobject
 python-gpgme
 python-halo
@@ -1228,7 +1228,6 @@ python-inflate64
 python-inflect
 python-installer
 python-itsdangerous
-python-jaraco.classes
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
@@ -1236,10 +1235,10 @@ python-jeepney
 python-jinja
 python-jsonschema
 python-jsonschema-specifications
-python-keyring
 python-keyutils
 python-log_symbols
 python-lxml
+python-lxml-html-clean
 python-markdown
 python-markdown-it-py
 python-markupsafe
@@ -1264,8 +1263,6 @@ python-pipx
 python-platformdirs
 python-ply
 python-protobuf
-python-proton-client
-python-protonvpn-nm-lib
 python-psutil
 python-py7zr
 python-pybcj
@@ -1288,9 +1285,7 @@ python-pyrate-limiter
 python-pyrsistent
 python-pyserial
 python-pysocks
-python-pythondialog
 python-pyusb
-python-pyxdg
 python-pyzstd
 python-referencing
 python-regex
@@ -1298,14 +1293,12 @@ python-requests
 python-resolvelib
 python-rich
 python-rpds-py
-python-secretstorage
 python-send2trash
 python-setuptools
 python-sgmllib3k
 python-six
 python-soupsieve
 python-spinners
-python-systemd
 python-tenacity
 python-termcolor
 python-texttable
@@ -1315,6 +1308,7 @@ python-tqdm
 python-trove-classifiers
 python-typeguard
 python-typing_extensions
+python-tzlocal
 python-uc-micro-py
 python-unrardll
 python-urllib3
@@ -1330,6 +1324,7 @@ python-xxhash
 python-yaml
 python-zeroconf
 python-zipp
+python-zstandard
 qalculate-gtk
 qca-qt5
 qca-qt6
@@ -1380,7 +1375,6 @@ qrencode
 qt5-base
 qt5-declarative
 qt5-graphicaleffects
-qt5-imageformats
 qt5-location
 qt5-multimedia
 qt5-networkauth
@@ -1411,7 +1405,6 @@ qt6-webchannel
 qt6-webengine
 quazip-qt6
 quicklisp
-r
 range-v3
 raptor
 rasqal
@@ -1426,7 +1419,6 @@ rhash
 ripgrep
 rofi-lbonn-wayland-git
 rpmextract
-rstudio-desktop-bin
 rsync
 rtkit
 rtmpdump
@@ -1598,7 +1590,6 @@ tree-sitter-python
 tree-sitter-query
 tree-sitter-vimdoc
 tslib
-ttf-carlito
 ttf-dejavu
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
@@ -1628,6 +1619,7 @@ valgrind
 vapoursynth
 vde2
 ventoy-bin
+ventoy-bin-debug
 verdict
 vid.stab
 viewnior
@@ -1652,7 +1644,6 @@ waybar
 wayland
 wayland-protocols
 wdisplays
-webkit2gtk
 webkit2gtk-4.1
 webkitgtk-6.0
 webp-pixbuf-loader
@@ -1669,6 +1660,7 @@ wl-clipboard
 wl-gammactl
 wlroots
 wlroots0.16
+wlroots0.17
 woff2
 wolfssl
 wpa_supplicant
@@ -1721,7 +1713,6 @@ yajl
 yay
 yay-debug
 yt-dlp
-ytfzf
 yyjson
 zbar
 zenity

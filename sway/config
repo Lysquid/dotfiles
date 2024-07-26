@@ -31,8 +31,8 @@ set $terminal foot
 ### General
 
 # Outputs position
-output $laptop position 1920,180
-output $monitor mode 1920x1080@120Hz position 0,0 adaptive_sync on
+output $laptop position 0,180
+output $monitor mode 1920x1080@120Hz position 1600,0 adaptive_sync on
 
 # Wallpapers
 output $laptop bg ~/Pictures/Wallpapers/PC/$wallpaper1 fill
@@ -123,6 +123,7 @@ for_window [app_id="blueman*"] floating enable
 for_window [app_id="org.fcitx*"] floating enable
 for_window [app_id="wdisplays"] floating enable
 for_window [app_id="Zotero"] floating enable
+for_window [app_id="firefox" title="Extension: *"] floating enable
 for_window [class="Godot"] floating enable
 
 # Startup
@@ -135,7 +136,7 @@ exec udiskie --smart-tray --no-file-manager
 exec trash-empty -f 30
 exec fcitx5 -d
 exec swayidle -w
-exec wl-paste -t text --watch clipman store
+exec wl-paste --watch cliphist store
 exec fish --command night_light
 # See apps that want to be started at boot
 # dex --dry-run --autostart --environment sway
@@ -306,13 +307,13 @@ bindsym XF86TouchpadToggle exec swaymsg input type:touchpad events toggle enable
 set $screenshot_path ~/Pictures/Screenshots/$(date +%s).png
 # Focused screen
 bindsym Print exec grimshot --notify copy output
-bindsym Shift+Print exec grimshot --notify save output $screenshot_path
+bindsym Ctrl+Print exec grimshot --notify save output $screenshot_path
 # Focsued window
 bindsym $mod+Print exec grimshot --notify copy active
-bindsym $mod+Shift+Print exec grimshot --notify save active $screenshot_path
+bindsym $mod+Ctrl+Print exec grimshot --notify save active $screenshot_path
 # Area
-bindsym Ctrl+Print exec grimshot --notify copy area
-bindsym Ctrl+Shift+Print exec grimshot --notify save area $screenshot_path
+bindsym Shift+Print exec grimshot --notify copy area
+bindsym Shift+Ctrl+Print exec grimshot --notify save area $screenshot_path
 # Edit
 bindsym Alt+Print exec wl-paste | swappy --file -
 
@@ -332,8 +333,8 @@ bindsym $mod+Shift+i exec fish --command invert
 bindsym $mod+Shift+u exec fish --command night_light
 
 # Clipboard history
-bindsym $mod+y exec clipman pick --tool rofi
-bindsym $mod+Shift+y exec clipman clear --all
+bindsym $mod+y exec cliphist list | rofi -dmenu -p clipboard | cliphist decode | wl-copy
+bindsym $mod+Shift+y exec cliphist wipe
 
 
 

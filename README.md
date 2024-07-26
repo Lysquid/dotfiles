@@ -26,7 +26,7 @@ I switched to Sway, but my old i3 config is still on [this branch](https://githu
 + Media player : [mpv](https://mpv.io/)
 + Document reader : [Evince](https://wiki.gnome.org/Apps/Evince)
 + Notification daemon : [dunst](https://github.com/dunst-project/dunst)
-+ Clipboard manager : [clipman](https://github.com/yory8/clipman)
++ Clipboard manager : [cliphist](https://github.com/sentriz/cliphist)
 + Input method : [fcitx5](https://fcitx-im.org/wiki/Fcitx_5)
 + Editor colorscheme : [TokyoNight](https://github.com/folke/tokyonight.nvim)
 + Wallpaper : [言の葉の庭](https://www.reddit.com/r/wallpaper/comments/n9kuz5)

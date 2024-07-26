@@ -36,7 +36,7 @@ chafa
 cheese
 chromium
 clang
-clipman
+cliphist
 cmake
 cmatrix
 compiler-rt
@@ -59,8 +59,8 @@ dunst
 dust
 edk2-ovmf
 efibootmgr
-element-desktop
 eog
+etcher-bin
 evince
 fakeroot
 fastfetch
@@ -100,6 +100,7 @@ gnome-keyring
 gnu-netcat
 go
 godot
+gohugo-extended-bin
 graphviz
 greetd
 grim
@@ -195,7 +196,6 @@ nvidia-settings
 nvtop
 obsidian
 ocl-icd
-onlyoffice-bin
 ookla-speedtest-bin
 openal
 opentabletdriver
@@ -220,9 +220,7 @@ plocate
 popsicle-bin
 portaudio
 postgresql
-prismlauncher-qt5-bin
 protobuf
-protonvpn
 pyenv
 python-attrs
 python-cachecontrol
@@ -259,7 +257,6 @@ rclone
 reflector
 ripgrep
 rofi-lbonn-wayland-git
-rstudio-desktop-bin
 rsync
 rustup
 scons
@@ -337,7 +334,6 @@ xorg-xinput
 xorg-xwayland
 yay
 yt-dlp
-ytfzf
 zip
 zotero-beta-bin
 zoxide

@@ -3,14 +3,12 @@
 !.gitignore
 
 !.vscode/settings.json
-!/alacritty/**
-!/arch/**
+!/apps/**
 !/bin/**
 !/Code/User/keybindings.json
 !/Code/User/settings.json
 !/dunst/**
 !/etc/**
-!/fastfetch/config.jsonc
 !/fcitx5/config
 !/fcitx5/profile
 !/fish/config.fish
@@ -24,8 +22,6 @@
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 /gtk-3.0/bookmarks
-!/helix/**
-!/kitty/**
 !/languagetool/**
 !/lf/**
 !/nvim/**
@@ -34,7 +30,6 @@
 !/rofi/**
 !/rsync/**
 !/screenshot.*
-!/swappy/**
 !/swappy/**
 !/sway/**
 !/swayidle/**
