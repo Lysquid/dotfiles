@@ -59,32 +59,6 @@
     # useXkbConfig = true; # use xkbOptions in tty.
   };
 
-
-  # Enable the X11 windowing system.
-  # services.xserver.enable = true;
-
-
-  
-
-  # Configure keymap in X11
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e,caps:escape";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound.
-  sound.enable = true;
-  hardware.bluetooth.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver = {
-    libinput.enable = true;
-    xkb = {
-      layout = "fr,us";
-    };
-  };
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rom1 = {
     isNormalUser = true;
@@ -108,9 +82,9 @@
   environment.systemPackages = with pkgs; [
     bat
     bottom
-    ctpv
     delta
     du-dust
+    fastfetch
     fd
     fishPlugins.done
     fishPlugins.sponge
@@ -118,33 +92,29 @@
     fishPlugins.z
     fzf
     gcc
-    htop
-    kitty
-    lf
     gnumake
-    dunst
-    libnotify
-    mpv
-    neofetch
-    glib
-    gnome.nautilus
+    htop
+    lf
+    lsd
+    navi
+    ntfs3g
     perl536Packages.FileMimeInfo
-    pfetch
     ripgrep
     rsync
-    sxiv
     tealdeer
     trash-cli
     tree
     unzip
     vimPlugins.packer-nvim
     wget
-    wshowkeys
     xdg-utils
+    yt-dlp
     zip
-    vscodium-fhs
-    libreoffice-fresh
+    zoxide
   ];
+
+  # TODO: remove
+  nixpkgs.config.allowUnfree = true;
 
   environment.shells = [ pkgs.fish ];
 
@@ -158,7 +128,6 @@
       enable = true;
       enableSSHSupport = true;
     };
-    firefox.enable = true;
     fish = {
       enable = true;
       shellAbbrs = {
@@ -172,33 +141,11 @@
       enable = true;
       defaultEditor = true;
     };
-    dconf.enable = true;
   };
 
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk
-    noto-fonts-emoji
-    cantarell-fonts
-    jetbrains-mono
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-  ];
 
   xdg.mime.defaultApplications = {
     "text/*" = "nvim.desktop";
-  };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-
-  services.dbus.enable = true;
-
-  services.languagetool = {
-    enable = true;
   };
 
 
