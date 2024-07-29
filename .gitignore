@@ -19,11 +19,13 @@
 !/fish/fish_plugins
 !/fish/functions/custom/**
 !/foot/foot.ini
+!/gnome/**
 !/gtk-*.0/**
 /gtk-2.0/gtkfilechooser.ini
 /gtk-3.0/bookmarks
 !/languagetool/**
 !/lf/**
+!/nautilus/.hidden
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
 !/README.*

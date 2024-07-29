@@ -1,11 +1,9 @@
 function backup_config -d "Backup system configuration"
     
     set apps ~/.config/apps
-    rm -rf $apps ~/.config/etc
-    mkdir $apps
+    rm -rf ~/.config/etc
 
     # pacman
-    pacman -Qq > $apps/pacman-all.txt
     pacman -Qqe > $apps/pacman-explicit.txt
     pacman -Qqem > $apps/pacman-aur.txt
 
@@ -16,10 +14,7 @@ function backup_config -d "Backup system configuration"
     code --list-extensions > $apps/code-extensions.txt
 
     # systemd unit files
-    systemctl list-unit-files --state=enabled > $apps/systemctl-enabled.txt
-
-    # dconf
-    dconf dump /org/gnome/ | grep -v location > $apps/dconf.txt
+    systemctl list-unit-files --state=enabled > $apps/systemd-units.txt
 
     # edited files not in .config
     rsync --files-from=(realpath ~/.config/rsync/etc_modified_list.txt) / ~/.config
