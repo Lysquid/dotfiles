@@ -1,0 +1,104 @@
+[com/mattjakeman/ExtensionManager]
+show-unsupported=true
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+cursor-theme='Breeze_Light'
+icon-theme='Tela-dark'
+monospace-font-name='JetBrainsMono Nerd Font 11'
+
+[org/gnome/desktop/input-sources]
+show-all-sources=true
+sources=[('xkb', 'fr'), ('ibus', 'mozc-on'), ('xkb', 'us')]
+
+[org/gnome/desktop/wm/preferences]
+num-workspaces=4
+resize-with-right-button=true
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+
+[org/gnome/mutter]
+dynamic-workspaces=false
+
+[org/gnome/shell]
+enabled-extensions=['disable-workspace-animation@ethnarque', 'clipboard-indicator@tudmotu.com', 'focus-changer@heartmire']
+favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Console.desktop', 'code.desktop']
+
+[org/gnome/shell/extensions/clipboard-indicator]
+toggle-menu=['<Super>Menu']
+
+[org/gnome/shell/extensions/focus-changer]
+focus-down=['']
+focus-left=['<Super>BackSpace']
+focus-right=['<Super>Delete']
+focus-up=['']
+
+[org/gnome/shell/keybindings]
+toggle-overview=['<Super>Return']
+switch-to-application-1=@as []
+switch-to-application-2=@as []
+switch-to-application-3=@as []
+switch-to-application-4=@as []
+switch-to-application-5=@as []
+switch-to-application-6=@as []
+switch-to-application-7=@as []
+switch-to-application-8=@as []
+switch-to-application-9=@as []
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/backgrounds/gnome/blobs-l.svg'
+
+[org/gnome/desktop/wm/keybindings]
+switch-to-workspace-1=['<Super>1']
+switch-to-workspace-2=['<Super>2']
+switch-to-workspace-3=['<Super>3']
+switch-to-workspace-4=['<Super>4']
+move-to-workspace-1=['<Shift><Super>1']
+move-to-workspace-2=['<Shift><Super>2']
+move-to-workspace-3=['<Shift><Super>3']
+move-to-workspace-4=['<Shift><Super>4']
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+email=['<Super>u']
+home=['<Super>e']
+www=['<Super>f']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>t'
+command='kgx'
+name='Launch Console'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>c'
+command='code'
+name='Launch Code'
+
+[org/gnome/settings-daemon/plugins/power]
+power-button-action='interactive'
+
+[org/gnome/terminal/legacy/profiles:]
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+visible-name='Default'
+audible-bell=false
+cursor-blink-mode='off'
+use-system-font=true
+
+[org/gnome/system/locale]
+region='fr_FR.UTF-8'
+
+[org/gnome/system/location]
+enabled=true
+
+[org/gnome/desktop/privacy]
+remove-old-trash-files=true
+remove-old-temp-files=true
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+
+[system/locale]
+region='fr_FR.UTF-8'

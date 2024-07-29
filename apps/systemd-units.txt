@@ -1,12 +1,15 @@
 UNIT FILE                          STATE   PRESET
+cups.path                          enabled disabled
 bluetooth.service                  enabled disabled
+cups.service                       enabled disabled
+gdm.service                        enabled disabled
 getty@.service                     enabled enabled
-greetd.service                     enabled disabled
 libvirtd.service                   enabled disabled
 NetworkManager-dispatcher.service  enabled disabled
 NetworkManager-wait-online.service enabled disabled
 NetworkManager.service             enabled disabled
 systemd-timesyncd.service          enabled enabled
+cups.socket                        enabled disabled
 libvirtd-ro.socket                 enabled disabled
 libvirtd.socket                    enabled disabled
 nix-daemon.socket                  enabled disabled
@@ -16,4 +19,4 @@ remote-fs.target                   enabled enabled
 paccache.timer                     enabled disabled
 reflector.timer                    enabled disabled
 
-16 unit files listed.
+19 unit files listed.

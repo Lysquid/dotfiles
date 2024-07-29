@@ -3,4 +3,10 @@
 #
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
-GTK_THEME=Orchis-Dark
+
+# Fix ibus dark theme
+MOZC_IBUS_CANDIDATE_WINDOW=ibus
+
+# Fixed lag on Gnome
+GBM_BACKEND=nvidia-drm
+__GLX_VENDOR_LIBRARY_NAME=nvidia
