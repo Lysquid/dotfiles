@@ -1,0 +1,13 @@
+UNIT FILE                    STATE   PRESET
+opentabletdriver.service     enabled enabled
+ssh-agent.service            enabled enabled
+syncthing.service            enabled enabled
+wireplumber.service          enabled enabled
+xdg-user-dirs-update.service enabled enabled
+gcr-ssh-agent.socket         enabled enabled
+gnome-keyring-daemon.socket  enabled enabled
+p11-kit-server.socket        enabled enabled
+pipewire-pulse.socket        enabled enabled
+pipewire.socket              enabled enabled
+
+10 unit files listed.

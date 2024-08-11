@@ -1,2 +1,2 @@
 animdl 1.7.27
-kalamine 0.36
+kalamine 0.38

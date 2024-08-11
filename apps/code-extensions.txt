@@ -38,6 +38,7 @@ ms-vscode.makefile-tools
 ms-vscode.remote-explorer
 ms-vsliveshare.vsliveshare
 naumovs.color-highlight
+redhat.fabric8-analytics
 redhat.java
 redhat.vscode-xml
 rust-lang.rust-analyzer
