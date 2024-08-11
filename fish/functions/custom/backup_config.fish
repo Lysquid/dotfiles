@@ -4,8 +4,8 @@ function backup_config -d "Backup system configuration"
     rm -rf ~/.config/etc
 
     # pacman
-    pacman -Qqe > $apps/pacman-explicit.txt
     pacman -Qqem > $apps/pacman-aur.txt
+    pacman -Qqe | rg -vxf $apps/pacman-aur.txt > $apps/pacman-explicit.txt
 
     # pipx (can't remove version numbers)
     pipx list --short > $apps/pipx.txt
@@ -15,6 +15,12 @@ function backup_config -d "Backup system configuration"
 
     # systemd unit files
     systemctl list-unit-files --state=enabled > $apps/systemd-units.txt
+
+    # systemd user unit files
+    systemctl list-unit-files --state=enabled --user > $apps/systemd-user-units.txt
+
+    # flatpak
+    flatpak list --app --columns=name,application > $apps/flatpak.txt
 
     # edited files not in .config
     rsync --files-from=(realpath ~/.config/rsync/etc_modified_list.txt) / ~/.config
