@@ -15,16 +15,12 @@ etcher-bin
 extension-manager
 fasttext
 fasttext-langid-models
-fcitx5-skin-adwaita-dark
 gallery-dl
 gitkraken
 gnome-shell-extension-clipboard-indicator
 gohugo-extended-bin
-grimshot
-hyprpicker
 ibus-mozc
 jetbrains-toolbox
-linux-wifi-hotspot
 minecraft-launcher
 nextdns
 ngrok
@@ -33,10 +29,8 @@ opentabletdriver
 orchis-theme
 osu-lazer-bin
 pdfsam
-pfetch
 popsicle-bin
 postman-bin
-rofi-lbonn-wayland-git
 signal-desktop-beta-bin
 spotify-adblock
 stpv-git
@@ -48,8 +42,5 @@ ventoy-bin
 vimix-cursors
 visual-studio-code-bin
 vmware-horizon-client
-wdisplays
-wl-gammactl
-wshowkeys-git
 yay
 zotero-beta-bin

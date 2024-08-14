@@ -1,13 +1,10 @@
 /etc/default/grub
 /etc/environment
 /etc/fstab
-/etc/greetd/config.toml
 /etc/hostname
 /etc/hosts
 /etc/libvirt/libvirtd.conf
 /etc/libvirt/qemu.conf
-/etc/lightdm/lightdm.conf
-/etc/lightdm/lightdm-gtk-greeter.conf
 /etc/locale.conf
 /etc/locale.gen
 /etc/pacman.conf

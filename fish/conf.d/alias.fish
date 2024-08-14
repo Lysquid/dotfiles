@@ -62,8 +62,8 @@ if type -q osu-lazer
     end 
 end
 
-# Really needed, as it otherwise breaks foot
-if test $TERM != "xterm-color"
+# Needed for alacritty or foot
+if test $TERM != "xterm-256color"
     function ssh
         TERM=xterm-color command ssh $argv
     end
