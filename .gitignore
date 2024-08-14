@@ -17,7 +17,6 @@
 !/fish/functions/custom/**
 !/gnome/**
 !/languagetool/**
-!/lf/**
 !/nautilus/.hidden
 !/nvim/**
 /nvim/plugin/packer_compiled.lua

@@ -9,7 +9,6 @@ camunda-modeler
 cava
 cbonsai
 cpulimit
-ctpv-git
 docker-desktop
 etcher-bin
 extension-manager
@@ -33,11 +32,9 @@ popsicle-bin
 postman-bin
 signal-desktop-beta-bin
 spotify-adblock
-stpv-git
 teams
 tela-icon-theme
 toipe
-ueberzugpp
 ventoy-bin
 vimix-cursors
 visual-studio-code-bin
