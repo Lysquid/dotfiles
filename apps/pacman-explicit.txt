@@ -27,7 +27,6 @@ chafa
 cheese
 chromium
 clang
-cliphist
 cmake
 cmatrix
 compiler-rt
@@ -44,7 +43,6 @@ docker-compose
 dotnet-sdk
 dotnet-targeting-pack
 doxygen
-dunst
 dust
 edk2-ovmf
 efibootmgr
@@ -52,7 +50,6 @@ endeavour
 evince
 fakeroot
 fastfetch
-fcitx5-gtk
 fd
 ffmpegthumbnailer
 file-roller
@@ -63,7 +60,6 @@ flatpak
 flatpak-builder
 flex
 foliate
-foot
 fortune-mod
 fzf
 gammastep
@@ -107,9 +103,7 @@ gnu-netcat
 go
 godot
 graphviz
-greetd
 grilo-plugins
-grim
 grub
 gvfs-afc
 gvfs-dnssd
@@ -134,12 +128,12 @@ j4-dmenu-desktop
 java-environment-common
 java-runtime-common
 jdk-openjdk
+jdk17-openjdk
 jq
 jre11-openjdk
 kdenlive
 keepassxc
 keychain
-kitty
 languagetool
 lf
 lib32-giflib
@@ -185,6 +179,7 @@ meson
 mpg123
 mpv
 mtpfs
+mutter
 nautilus
 navi
 neovim
@@ -221,7 +216,6 @@ pipewire-alsa
 pipewire-pulse
 pkgconf
 plantuml
-playerctl
 plocate
 portaudio
 postgresql
@@ -254,7 +248,6 @@ python-tenacity
 python-typing_extensions
 python-urllib3
 python-werkzeug
-qalculate-gtk
 qemu-desktop
 qmk
 qt5ct
@@ -277,11 +270,6 @@ steam
 sudo
 supertuxkart
 sushi
-swappy
-sway
-swaybg
-swayidle
-swaylock
 swi-prolog
 swtpm
 sxiv
@@ -306,14 +294,10 @@ ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
-udiskie
 ufw
 unzip
 valgrind
-viewnior
 virt-manager
-waybar
-wf-recorder
 wget
 which
 wireplumber
