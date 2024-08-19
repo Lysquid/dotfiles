@@ -16,7 +16,6 @@ nix-daemon.socket                  enabled disabled
 virtlockd.socket                   enabled disabled
 virtlogd.socket                    enabled disabled
 remote-fs.target                   enabled enabled
-paccache.timer                     enabled disabled
 reflector.timer                    enabled disabled
 
-19 unit files listed.
+18 unit files listed.

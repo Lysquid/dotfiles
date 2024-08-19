@@ -7,6 +7,7 @@
 /etc/libvirt/qemu.conf
 /etc/locale.conf
 /etc/locale.gen
+/etc/paccache-hook.conf
 /etc/pacman.conf
 /etc/ssh/sshd_config
 /etc/udev/rules.d/98-discharging-battery.rules

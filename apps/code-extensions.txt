@@ -53,6 +53,7 @@ vadimcn.vscode-lldb
 viktorqvarfordt.vscode-pitch-black-theme
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
+vscjava.vscode-gradle
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
 vscjava.vscode-java-pack

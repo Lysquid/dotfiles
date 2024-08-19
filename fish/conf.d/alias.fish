@@ -50,7 +50,7 @@ function ip
 end
 
 if type -q tide
-    function config_tide
+    function tide-config -d "my saved tide config"
         tide configure --auto --style=Lean --prompt_colors='16 colors' --show_time='24-hour format' --lean_prompt_height='Two lines' --prompt_connection=Disconnected --prompt_spacing=Sparse --icons='Few icons' --transient=No
     end
 end
@@ -82,6 +82,10 @@ if type -q pacman
     function pacman-uneeded -d "Detect unneeded packages such as dependency cycles"
         # list all dependencies, filter out optional dependencies, show the unneeded ones
         comm -23 (pacman -Qqd | sort | psub) (pacman -Qqdtt | sort | psub) | sudo pacman -Rsu --print -
+    end
+
+    function pacman-files -d "List modified packages config files"
+        pacman -Qii | awk '/\[modified\]/ {print $(NF - 1)}' | sort
     end
 
 end
