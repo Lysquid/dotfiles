@@ -69,3 +69,19 @@ if test $TERM != "xterm-256color"
     end
 end
 
+if type -q pacman
+
+    function pacman-orphans -d "Remove orphan packages"
+        if set orphans (pacman -Qdtq)
+            pacman -Rns $orphans
+        else
+            echo "no orphans found"
+        end
+    end
+
+    function pacman-uneeded -d "Detect unneeded packages such as dependency cycles"
+        # list all dependencies, filter out optional dependencies, show the unneeded ones
+        comm -23 (pacman -Qqd | sort | psub) (pacman -Qqdtt | sort | psub) | sudo pacman -Rsu --print -
+    end
+
+end
