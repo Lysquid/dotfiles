@@ -6,6 +6,7 @@ function backup_config -d "Backup system configuration"
     # pacman
     pacman -Qqem > $apps/pacman-aur.txt
     pacman -Qqe | rg -vxf $apps/pacman-aur.txt > $apps/pacman-explicit.txt
+    comm -13 (pacman -Qqdt | sort | psub) (pacman -Qqdtt | sort | psub) > $apps/pacman-optdeps.txt
 
     # pipx (can't remove version numbers)
     pipx list --short > $apps/pipx.txt
