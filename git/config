@@ -1,0 +1,23 @@
+[user]
+	name = Lysquid
+	email = 8axop2rj@anonaddy.com
+
+[core]
+	autocrlf = input
+	editor = micro
+    pager = delta
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default

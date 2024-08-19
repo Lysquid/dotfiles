@@ -16,6 +16,7 @@
 !/fish/fish_plugins
 !/fish/functions/custom/**
 !/gnome/**
+!/git/**
 !/languagetool/**
 !/nautilus/.hidden
 !/nvim/**
