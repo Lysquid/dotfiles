@@ -1,6 +1,9 @@
 [com/mattjakeman/ExtensionManager]
 show-unsupported=true
 
+[org/gnome/Console]
+audible-bell=false
+
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
 cursor-theme='Breeze_Light'
@@ -10,6 +13,9 @@ monospace-font-name='JetBrainsMono Nerd Font 11'
 [org/gnome/desktop/input-sources]
 show-all-sources=true
 sources=[('xkb', 'fr'), ('ibus', 'mozc-on'), ('xkb', 'us')]
+
+[org/gnome/desktop/sound]
+event-sounds=false
 
 [org/gnome/desktop/wm/preferences]
 num-workspaces=4
