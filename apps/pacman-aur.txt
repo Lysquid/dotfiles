@@ -5,7 +5,6 @@ aur-auto-vote-git
 avr-gcc-85
 bash-pipes
 c-lolcat
-camunda-modeler
 cava
 docker-desktop
 extension-manager
@@ -25,11 +24,8 @@ paccache-hook
 pacman-log-orphans-hook
 paru
 pdfsam
-popsicle-bin
-postman-bin
 signal-desktop-beta-bin
 spotify-adblock
-teams
 tela-icon-theme
 toipe
 ventoy-bin

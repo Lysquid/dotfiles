@@ -2,21 +2,20 @@
 !*/
 !.gitignore
 
-!.vscode/settings.json
 !/apps/**
 !/bin/**
 !/Code/User/keybindings.json
 !/Code/User/settings.json
 !/etc/**
-!/fish/config.fish
 !/fish/conf.d/alias.fish
 !/fish/conf.d/environement.fish
 !/fish/conf.d/keybindings.fish
 !/fish/conf.d/lf-icons.fish
+!/fish/config.fish
 !/fish/fish_plugins
 !/fish/functions/custom/**
-!/gnome/**
 !/git/**
+!/gnome/**
 !/languagetool/**
 !/nautilus/.hidden
 !/nvim/**
@@ -24,4 +23,6 @@
 !/README.*
 !/rsync/**
 !/screenshot.*
+!/systemd/user/*
+!.vscode/settings.json
 !/wallpaper*.*
