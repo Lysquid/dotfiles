@@ -70,7 +70,6 @@ hunspell-en_us
 hunspell-fr
 intel-ucode
 jdk-openjdk
-jdk17-openjdk
 kdenlive
 keepassxc
 languagetool
@@ -149,6 +148,7 @@ xdg-user-dirs-gtk
 xf86-input-wacom
 xf86-video-intel
 xorg-xev
+xournalpp
 yt-dlp
 zed
 zip
