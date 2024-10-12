@@ -24,7 +24,7 @@ resize-with-right-button=true
 default-folder-viewer='list-view'
 
 [org/gnome/shell]
-enabled-extensions=['clipboard-indicator@tudmotu.com']
+enabled-extensions=['clipboard-indicator@tudmotu.com', 'instantworkspaceswitcher@amalantony.net']
 favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Console.desktop', 'code.desktop', 'org.mozilla.Thunderbird.desktop']
 
 [org/gnome/shell/extensions/clipboard-indicator]
