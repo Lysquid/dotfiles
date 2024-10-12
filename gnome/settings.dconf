@@ -24,32 +24,14 @@ resize-with-right-button=true
 default-folder-viewer='list-view'
 
 [org/gnome/shell]
-enabled-extensions=['disable-workspace-animation@ethnarque', 'clipboard-indicator@tudmotu.com', 'focus-changer@heartmire']
-favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Console.desktop', 'code.desktop']
+enabled-extensions=['clipboard-indicator@tudmotu.com']
+favorite-apps=['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Console.desktop', 'code.desktop', 'org.mozilla.Thunderbird.desktop']
 
 [org/gnome/shell/extensions/clipboard-indicator]
 toggle-menu=['<Super>Menu']
 
-[org/gnome/shell/extensions/focus-changer]
-focus-down=['']
-focus-left=['<Super>BackSpace']
-focus-right=['<Super>Delete']
-focus-up=['']
-
-[org/gnome/desktop/screensaver]
-picture-uri='file:///usr/share/backgrounds/gnome/blobs-l.svg'
-
 [org/gnome/settings-daemon/plugins/power]
 power-button-action='interactive'
-
-[org/gnome/terminal/legacy/profiles:]
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
-
-[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
-visible-name='Default'
-audible-bell=false
-cursor-blink-mode='off'
-use-system-font=true
 
 [org/gnome/system/locale]
 region='fr_FR.UTF-8'
