@@ -28,7 +28,7 @@
   "terminal.integrated.cursorStyle": "line",
   
   "telemetry.telemetryLevel": "off",
-
+  
   "update.mode": "manual",
 
   "security.workspace.trust.enabled": false,
@@ -59,6 +59,7 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
+  "git.blame.editorDecoration.enabled": false,
 
   // Python
   "python.defaultInterpreterPath": "/bin/python",

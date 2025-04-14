@@ -12,7 +12,7 @@ monospace-font-name='JetBrainsMono Nerd Font 11'
 
 [org/gnome/desktop/input-sources]
 show-all-sources=true
-sources=[('xkb', 'fr'), ('ibus', 'mozc-on'), ('xkb', 'us')]
+sources=[('xkb', 'fr'), ('ibus', 'mozc-on'), ('xkb', 'fr+us')]
 
 [org/gnome/desktop/sound]
 event-sounds=false

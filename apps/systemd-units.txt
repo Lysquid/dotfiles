@@ -8,6 +8,9 @@ libvirtd.service                   enabled disabled
 NetworkManager-dispatcher.service  enabled disabled
 NetworkManager-wait-online.service enabled disabled
 NetworkManager.service             enabled disabled
+nvidia-hibernate.service           enabled disabled
+nvidia-resume.service              enabled disabled
+nvidia-suspend.service             enabled disabled
 systemd-timesyncd.service          enabled enabled
 cups.socket                        enabled disabled
 libvirtd-ro.socket                 enabled disabled
@@ -18,4 +21,4 @@ virtlogd.socket                    enabled disabled
 remote-fs.target                   enabled enabled
 reflector.timer                    enabled disabled
 
-18 unit files listed.
+21 unit files listed.

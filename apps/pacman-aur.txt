@@ -5,13 +5,11 @@ aur-auto-vote-git
 avr-gcc-85
 bash-pipes
 c-lolcat
-cava
 docker-desktop
 extension-manager
 fasttext
 gallery-dl
 gnome-shell-extension-clipboard-indicator
-gohugo-extended-bin
 ibus-mozc
 jetbrains-toolbox
 minecraft-launcher
@@ -24,6 +22,7 @@ paccache-hook
 pacman-log-orphans-hook
 paru
 pdfsam
+pinta
 signal-desktop-beta-bin
 spotify-adblock
 tela-icon-theme

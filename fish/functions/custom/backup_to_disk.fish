@@ -8,6 +8,6 @@ function backup_to_disk -d "Backup all useful files to an external disk"
     /etc \
     /home \
     /mnt \
-    "/run/media/rom1/Backup Disk/arch" \
+    "/run/media/rom1/Backup/arch" \
     $argv
 end

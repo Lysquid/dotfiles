@@ -1,9 +1,15 @@
-set -g fish_greeting
+set fish_greeting
 
-set -g fish_function_path $fish_function_path ~/.config/fish/functions/custom
+set fish_function_path $fish_function_path ~/.config/fish/functions/custom
 
-set -g sponge_delay 10
+if type -q fisher
+    set sponge_delay 10
+end
 
-navi widget fish | source
+if type -q navi
+    navi widget fish | source
+end
 
-zoxide init fish | source
+if type -q zoxide
+    zoxide init fish | source
+end

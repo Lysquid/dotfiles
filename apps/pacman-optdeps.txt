@@ -1,6 +1,6 @@
+7zip
 bash-completion
 dnsmasq
-docker-buildx
 efibootmgr
 fasttext-langid-models
 gnome-control-center
@@ -24,7 +24,6 @@ networkmanager
 noto-fonts-cjk
 npm
 os-prober
-p7zip
 pipewire-alsa
 power-profiles-daemon
 python-pipx
