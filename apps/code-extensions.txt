@@ -12,6 +12,7 @@ firefox-devtools.vscode-firefox-debug
 geequlim.godot-tools
 github.copilot
 github.copilot-chat
+james-yu.latex-workshop
 jdinhlife.gruvbox
 jebbs.plantuml
 jnoortheen.nix-ide
@@ -45,7 +46,6 @@ rust-lang.rust-analyzer
 skyapps.fish-vscode
 streetsidesoftware.code-spell-checker
 streetsidesoftware.code-spell-checker-french
-svelte.svelte-vscode
 tamasfe.even-better-toml
 twxs.cmake
 tyriar.luna-paint

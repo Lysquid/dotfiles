@@ -128,7 +128,9 @@ sxiv
 syncthing
 sysprof
 tealdeer
+texlive-binextra
 texlive-fontsrecommended
+texlive-langfrench
 texlive-latexextra
 texlive-latexrecommended
 texlive-plaingeneric

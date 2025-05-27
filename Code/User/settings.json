@@ -11,6 +11,8 @@
 
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 10,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 8,
   "workbench.editorAssociations": {
     "*.png": "imagePreview.previewEditor",
     "*.jpg": "imagePreview.previewEditor"
@@ -66,4 +68,12 @@
 
   // XML
   "redhat.telemetry.enabled": false,
+
+  // Latex
+  "latex-workshop.view.pdf.invert": 0.88,
+  "latex-workshop.view.pdf.invertMode.grayscale": 0,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "[latex]": {
+    "editor.wordWrap": "on"
+  }
 }
