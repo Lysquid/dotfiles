@@ -1,6 +1,10 @@
 # Applications
-set -gx BROWSER firefox
-set -gx EDITOR nvim
+if type -q firefox
+    set -gx BROWSER firefox
+end
+if type -q nvim
+    set -gx EDITOR nvim
+end
 
 # Colors
 set -gx MANPAGER 'less -R --use-color -Dd+r -Du+b'
