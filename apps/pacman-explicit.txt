@@ -1,5 +1,5 @@
 adw-gtk-theme
-alacritty
+android-tools
 audacity
 baobab
 base
@@ -11,7 +11,6 @@ bottom
 breeze
 calibre
 cava
-cheese
 chromium
 clang
 cmake
@@ -38,7 +37,6 @@ fzf
 gcc
 gcolor3
 gdm
-geary
 gimp
 git
 git-delta
@@ -61,7 +59,6 @@ gnome-text-editor
 gnome-tweaks
 gnome-user-docs
 gnome-weather
-gnu-netcat
 go
 godot
 graphviz
@@ -70,7 +67,6 @@ helix
 htop
 hugo
 hunspell-en_us
-hunspell-fr
 intel-ucode
 jdk-openjdk
 kdenlive
@@ -93,20 +89,18 @@ nautilus
 navi
 neovim
 nethack
+networkmanager
 networkmanager-openconnect
 networkmanager-openvpn
 nodejs
 noto-fonts
 ntfs-3g
-nvidia
 nvidia-prime
 nvtop
 obsidian
-orca
 otf-font-awesome
 pacman-contrib
 plantuml
-postgresql
 pyenv
 python
 python-pipenv
@@ -118,6 +112,8 @@ rsync
 rustup
 seahorse
 shotwell
+showtime
+signal-desktop
 simple-scan
 sl
 snapshot
@@ -135,8 +131,6 @@ texlive-latexextra
 texlive-latexrecommended
 texlive-plaingeneric
 thunderbird
-torbrowser-launcher
-totem
 traceroute
 transmission-gtk
 trash-cli
@@ -149,7 +143,6 @@ unzip
 virt-manager
 wget
 which
-wireshark-qt
 xdg-user-dirs-gtk
 xf86-input-wacom
 xf86-video-intel

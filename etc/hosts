@@ -1,3 +1,7 @@
 # Static table lookup for hostnames.
 # See hosts(5) for details.
 127.0.0.1        localhost
+# Added by Docker Desktop
+# To allow the same kube context to work on the host and the container:
+127.0.0.1	kubernetes.docker.internal
+# End of section

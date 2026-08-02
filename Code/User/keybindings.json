@@ -9,7 +9,7 @@
         "when": "canNavigateForward"
     },
     {
-        "key": "ctrl+7",
+        "key": "ctrl+[Backquote]",
         "command": "terminal.focus"
     },
     {

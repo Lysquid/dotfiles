@@ -25,6 +25,8 @@
 /etc/vpnc
 
 /mnt/data/lost+found
+/mnt/data/Games
+/mnt/data/Videos/Movies
 /mnt/windows
 
 Downloads

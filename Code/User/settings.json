@@ -6,6 +6,7 @@
   "editor.minimap.enabled": false,
   "editor.minimap.renderCharacters": false,
   "editor.suggestSelection": "first",
+  "editor.accessibilitySupport": "off",
 
   "files.autoSave": "afterDelay",
 
@@ -27,7 +28,10 @@
   "debug.toolBarLocation": "docked",
   "debug.console.closeOnEnd": true,
 
+  "diffEditor.ignoreTrimWhitespace": false,
+
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   
   "telemetry.telemetryLevel": "off",
   
@@ -44,17 +48,10 @@
     "klayan",
     "minigrep"
   ],
+  "languageToolLinter.languageTool.disabledRules": "PLACE_DE_LA_VIRGULE",
   "languageToolLinter.languageTool.ignoredWordsGlobal": [
     "erglace"
   ],
-
-  // Copilot
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
 
   // Git
   "git.confirmSync": false,
@@ -66,6 +63,11 @@
   // Python
   "python.defaultInterpreterPath": "/bin/python",
 
+  // Elm
+  "[elm]": {
+    "editor.formatOnSave": true
+  },
+
   // XML
   "redhat.telemetry.enabled": false,
 
@@ -74,6 +76,8 @@
   "latex-workshop.view.pdf.invertMode.grayscale": 0,
   "latex-workshop.latex.autoBuild.run": "never",
   "[latex]": {
-    "editor.wordWrap": "on"
-  }
+    "editor.wordWrap": "on",
+    "editor.scrollBeyondLastColumn": 0,
+    "editor.stickyScroll.scrollWithEditor": false,
+  },
 }
