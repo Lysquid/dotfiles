@@ -16,3 +16,6 @@ set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Path
 set -gx PATH $PATH $HOME/.local/bin
+
+# Tide fix
+set -gx tide_character_vi_icon_default "❯"
