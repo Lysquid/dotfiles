@@ -20,6 +20,7 @@
 !/nautilus/.hidden
 !/nvim/**
 /nvim/plugin/packer_compiled.lua
+!/pacman/**
 !/paru/**
 !/README.*
 !/rsync/**
@@ -27,3 +28,4 @@
 !/systemd/user/*
 !.vscode/settings.json
 !/wallpaper*.*
+!/zed/settings.json

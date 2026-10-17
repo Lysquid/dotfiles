@@ -1,4 +1,5 @@
 {
+  "chat.titleBar.openInAgentsWindow.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.smoothScrolling": true,
   "editor.fontFamily": "JetBrains Mono, Symbols Nerd Font Mono",
@@ -7,9 +8,7 @@
   "editor.minimap.renderCharacters": false,
   "editor.suggestSelection": "first",
   "editor.accessibilitySupport": "off",
-
   "files.autoSave": "afterDelay",
-
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.indent": 10,
   "workbench.editor.limit.enabled": true,
@@ -18,59 +17,47 @@
     "*.png": "imagePreview.previewEditor",
     "*.jpg": "imagePreview.previewEditor"
   },
-
   "window.titleBarStyle": "custom",
   "window.dialogStyle": "custom",
-  
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-
   "debug.toolBarLocation": "docked",
   "debug.console.closeOnEnd": true,
-
   "diffEditor.ignoreTrimWhitespace": false,
-
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  
   "telemetry.telemetryLevel": "off",
-  
   "update.mode": "manual",
-
   "security.workspace.trust.enabled": false,
-
-  // Spell Checker
-  "cSpell.language": "en,fr",
-  "cSpell.diagnosticLevel": "Hint",
-  "cSpell.userWords": [
-    "Erglace",
-    "keymap",
-    "klayan",
-    "minigrep"
-  ],
-  "languageToolLinter.languageTool.disabledRules": "PLACE_DE_LA_VIRGULE",
-  "languageToolLinter.languageTool.ignoredWordsGlobal": [
-    "erglace"
-  ],
-
+  // Elm
+  "[elm]": {
+    "editor.formatOnSave": true
+  },
   // Git
   "git.confirmSync": false,
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "never",
   "git.blame.editorDecoration.enabled": false,
-
-  // Python
-  "python.defaultInterpreterPath": "/bin/python",
-
-  // Elm
-  "[elm]": {
-    "editor.formatOnSave": true
+  // GitHub
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
   },
-
-  // XML
-  "redhat.telemetry.enabled": false,
-
+  // JSON
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // LanguageTool
+  "languageToolLinter.languageTool.disabledRules": "PLACE_DE_LA_VIRGULE",
+  "languageToolLinter.languageTool.ignoredWordsGlobal": [
+    "erglace"
+  ],
   // Latex
   "latex-workshop.view.pdf.invert": 0.88,
   "latex-workshop.view.pdf.invertMode.grayscale": 0,
@@ -80,4 +67,17 @@
     "editor.scrollBeyondLastColumn": 0,
     "editor.stickyScroll.scrollWithEditor": false,
   },
+  // Python
+  "python.defaultInterpreterPath": "/bin/python",
+  // cSpell
+  "cSpell.language": "en,fr",
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.userWords": [
+    "Erglace",
+    "keymap",
+    "klayan",
+    "minigrep"
+  ],
+  // XML
+  "redhat.telemetry.enabled": false,
 }

@@ -22,6 +22,8 @@ dex
 difftastic
 discord
 docker
+docker-buildx
+docker-compose
 dust
 evince
 fastfetch
@@ -100,6 +102,8 @@ nvtop
 obsidian
 otf-font-awesome
 pacman-contrib
+pinta
+pkgstats
 plantuml
 pyenv
 python

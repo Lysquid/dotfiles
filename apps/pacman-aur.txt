@@ -1,11 +1,9 @@
 android-sdk-platform-tools
-ani-cli
 anki-bin
 aur-auto-vote-git
 avr-gcc-85
 bash-pipes
 c-lolcat
-docker-desktop
 droidcam
 elm-bin
 fasttext
@@ -14,7 +12,6 @@ gnome-shell-extension-clipboard-indicator
 hunspell-fr
 ibus-mozc
 itgmania-bin
-jetbrains-toolbox
 lib32-nvidia-580xx-utils
 minecraft-launcher
 nextdns
@@ -26,7 +23,6 @@ paccache-hook
 pacman-log-orphans-hook
 paru
 pdfsam
-pinta
 r-quick-share-bin
 tela-icon-theme
 toipe

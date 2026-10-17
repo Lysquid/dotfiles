@@ -1,3 +1,4 @@
+batisteo.vscode-django
 bierner.folder-source-actions
 bradlc.vscode-tailwindcss
 budparr.language-hugo-vscode
@@ -10,6 +11,7 @@ editorconfig.editorconfig
 esbenp.prettier-vscode
 firefox-devtools.vscode-firefox-debug
 geequlim.godot-tools
+github.vscode-github-actions
 james-yu.latex-workshop
 jebbs.plantuml
 jnoortheen.nix-ide
@@ -39,7 +41,6 @@ ms-vscode.remote-explorer
 ms-vscode.test-adapter-converter
 ms-vsliveshare.vsliveshare
 naumovs.color-highlight
-openai.chatgpt
 redhat.fabric8-analytics
 redhat.java
 redhat.vscode-xml
